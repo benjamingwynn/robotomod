@@ -1,17 +1,17 @@
-# Updater-script in Roboto
+# Updater-script in RobotoMOD
 
 # LICENSE:
 #
 # Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
 # Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ )
 #
-# Distributed with Roboto
+# Distributed with RobotoMOD
 #
 # Based on .sense installation script using AROMA with "devpackage"
 #
 # Thanks to amarullz for the original AROMA installation manifest
 
-ui_print("@Roboto");
+ui_print("@RobotoMOD");
 ui_print("@Installing - please wait");
 set_progress(0.0);
 ui_print(" ");
@@ -64,8 +64,8 @@ ui_print("Extraction of main finished");
 	set_perm(0, 0, 0777, "/tmp/backuptool.sh");
 	set_perm(0, 0, 0644, "/tmp/backuptool.functions");
 	run_program("/tmp/backuptool.sh", "backup");
-	symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
-	symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
+	symlink("RobotoMOD-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
+	symlink("RobotoMOD-Regular.ttf", "/system/fonts/DroidSans.ttf");
 	symlink("busybox", "/system/xbin/[", "/system/xbin/[[",
 	        "/system/xbin/adjtimex", "/system/xbin/arp", "/system/xbin/ash",
 	        "/system/xbin/awk", "/system/xbin/base64", "/system/xbin/basename",
@@ -250,9 +250,9 @@ set_progress(0.4);
 
 #-- Custom Applications first
 ui_print("@Installing packages");
-#-- Intall the Roboto app
-ui_print("Installing Roboto app");
-package_extract_dir("packages/robotoapp", "/data/app");
+#-- Intall the RobotoMOD app
+ui_print("Installing RobotoMOD app");
+package_extract_dir("packages/RobotoMODapp", "/data/app");
 #-- Install other apps
 
     if
@@ -928,4 +928,4 @@ set_progress(1.00);
 #-- Finish
 ui_print(" ");
 ui_print("@Finished");
-ui_print("Roboto is now installed on your phone");
+ui_print("RobotoMOD is now installed on your phone");

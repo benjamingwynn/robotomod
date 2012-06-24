@@ -1,11 +1,11 @@
-# aroma-config in Roboto
+# aroma-config in RobotoMOD
 
 # LICENSE:
 #
 # Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
 # Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ )
 #
-# Distributed with Roboto
+# Distributed with RobotoMOD
 #
 # Based on .sense installation script using AROMA with "devpackage"
 #
@@ -26,7 +26,7 @@ anisplash(
 # [[Build information]] 
 
 calibrate("2.5717","26","1.7809","30");
-ini_set("rom_name",             "Roboto");
+ini_set("rom_name",             "RobotoMOD");
 ini_set("rom_version",          "1");
 ini_set("rom_author",           "benjamingwynn");
 ini_set("rom_device",           "HTC Wildfire S");
@@ -49,7 +49,7 @@ viewbox(
   
   #-- Text
 
-"Welcome to Roboto - this ROM is designed to be the ultimate ICS based ROM for the HTC Wildfire S. I hope you enjoy using my ROM! If you like it then please consior donating, the link is on the main thread/download page.\n\n"+
+"Welcome to RobotoMOD - this ROM is designed to be the ultimate ICS based ROM for the HTC Wildfire S. I hope you enjoy using my ROM! If you like it then please consior donating, the link is on the main thread/download page.\n\n"+
 
 "<~welcome.text1> <b>"+
 ini_get("rom_name")+
@@ -70,7 +70,7 @@ ini_get("rom_name")+
 
 agreebox(
   #-- Title
-    "Welcome to Roboto",
+    "Welcome to RobotoMOD",
   
   #-- Subtitle / Description
     "A quick README for you to read",
@@ -79,7 +79,7 @@ agreebox(
     "@license",
   
   #-- Text Content ( Read from <AROMA Resource Dir>/*.txt )
-    resread("roboto.txt"),
+    resread("RobotoMOD.txt"),
 
   #-- Checkbox Text
     "I've read through all of the above",
@@ -92,7 +92,7 @@ agreebox(
 
 agreebox(
   #-- Title
-    "Roboto Licence",
+    "RobotoMOD Licence",
   
   #-- Subtitle / Description
     "Please read through this licence:",
@@ -117,13 +117,13 @@ agreebox(
     "Known bugs & Credits",
   
   #-- Subtitle / Description
-    "These are the known bugs and contributors to Roboto:",
+    "These are the known bugs and contributors to RobotoMOD:",
   
   #-- Icon
     "@update",
   
   #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
-    resread("roboto-2.txt"),
+    resread("RobotoMOD-2.txt"),
 
   #-- Checkbox Text
     "I understand these bugs and will not report them",
@@ -140,7 +140,7 @@ menubox(
       "Core",
 	  
     #-- Sub Title
-      "Roboto can run on two different primary ROMS, AOKP and CM9 - please select one from bellow.",
+      "RobotoMOD can run on two different primary ROMS, AOKP and CM9 - please select one from bellow.",
 	  
     #-- Icon:
       "@default",
@@ -311,7 +311,7 @@ selectbox(
 
 checkbox(
     #-- Title
-      "Add stuff to Roboto",
+      "Add stuff to RobotoMOD",
 	  
     #-- Sub Title
       "You are now able to add stuff that's not normally in the ROM",
@@ -391,7 +391,7 @@ menubox(
       "Launcher",
 	  
     #-- Sub Title
-      "Please select what launcher you would like with Roboto",
+      "Please select what launcher you would like with RobotoMOD",
 	  
     #-- Icon:
       "@apps",
@@ -455,7 +455,7 @@ menubox(
       "Wipe data?",
 	  
     #-- Sub Title
-      "Wiping data can fix issues with your phone after installing Roboto. It is highly recommended you do this. Please note that if you do wipe data then you will lose all of your apps/app data but nothing on your SDCard will be lost.",
+      "Wiping data can fix issues with your phone after installing RobotoMOD. It is highly recommended you do this. Please note that if you do wipe data then you will lose all of your apps/app data but nothing on your SDCard will be lost.",
 	  
     #-- Icon:
       "@alert",
@@ -501,7 +501,7 @@ setvar("retstatus",
       "@install",
 	
 	#-- Installation Finish Message
-      "Roboto installed!"
+      "RobotoMOD installed!"
   )
 );
 
@@ -515,7 +515,7 @@ viewbox(
   
   #-- Text
     "<#selectbg_g><b>Congratulations...</b></#>\n\n"+
-    "Roboto has been installed."+
+    "RobotoMOD has been installed."+
     "Installer Status: "+getvar("retstatus"),
 
   #-- Icon

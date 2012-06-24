@@ -1,11 +1,16 @@
-Known bugs with Roboto:
+Known bugs with RobotoMOD:
 
 - No none bugs at this point in time
 
 Credits:
 
+The following people mainly contributed to Roboto:
+
+- benjamingwynn & dudeman1996
+
 Thanks to the following people for helping with parts of Roboto:
 
+- *se-nsei (graphics)
 - alquez (original msm7k kernel and marvel device tree)
 - rezo609 (MiHome app)
 - modpunk (CM9 device tree)
@@ -23,5 +28,4 @@ Thanks to the following people for helping with parts of Roboto:
 
 Thanks to these other people too:
 
-- dudeman1996
 - simonsimons34

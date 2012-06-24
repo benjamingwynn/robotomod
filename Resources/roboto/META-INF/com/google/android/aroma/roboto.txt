@@ -1,0 +1,29 @@
+<@center><b><#selectbg_g>Welcome</#></b>
+
+Welcome to Roboto, let's run you past some basics...
+
+Roboto is a free, open ROM. Anybody can take the source used in any part of Roboto (where avalible) and use it. This is stated in the licence on the next page, that's the legal stuff. Roboto is based on Android and always will be.
+
+Updates
+
+When Roboto is updated you will be notified on the main thread, at the date of the writing of this document (20/06/12 - DD/MM/YY) the thread has not been created. Upon the next update this text document will be updated. It is recommended you re-read through this document when it is done so. You will also be able to download updates aprox. 72 hours after they are published to the main hosting server, goo.im thanks to an update notification system installed called Goo Manager. There is an option to not install this software during the installation, if you wish for it to be disabled.
+
+Your information
+
+I will NEVER collect, store or use your information in anyway when you're using this ROM. However, thrid party packages (such as software you download from the internet) may be able to do. People who look over your shoulder when you are typing in credit card information may also be able to see some information, but this is not my doing. Please note that both ROM 'cores' (CM9 and AOKP) have statistic monitoring applications - I recommend you read their privicy policies.
+
+This document
+
+I'm not sure if anybody reads this document anyway, but any updates to it will be stated at the top of the document whenever it is updated. This will include what was changed briefly and when it was changed.
+
+Packages
+
+I am totally NOT responsible if a package doesn't work, blame the developer of that package. Please do not report that something does not work when somebody has already pointed out that it doesn't work. I will remove broken packages in updates to come.
+
+Bugs
+
+Roboto has been tested quite well and should never give you any problems when using any packages, however - sometimes shit happens and there may be one line of code that is incorrect and may cause a package to install or even the wrong package to install. When something bad does happen please take a log of the problem - I highly recommend using the Android SDK 'adb logcat' command to report a problem.
+
+CDMA support
+
+Roboto V1.0 does not YET provide full CDMA support.

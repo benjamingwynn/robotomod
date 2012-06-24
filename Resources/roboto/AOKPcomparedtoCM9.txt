@@ -1,0 +1,789 @@
+Only in cm9: addon.d
+Only in aokp/app: AOKPtips.apk
+Only in cm9/app: Apollo.apk
+Binary files aokp/app/ApplicationsProvider.apk and cm9/app/ApplicationsProvider.apk differ
+Only in aokp/app: AppWidgetPicker.apk
+Binary files aokp/app/BackupRestoreConfirmation.apk and cm9/app/BackupRestoreConfirmation.apk differ
+Binary files aokp/app/Bluetooth.apk and cm9/app/Bluetooth.apk differ
+Binary files aokp/app/Browser.apk and cm9/app/Browser.apk differ
+Binary files aokp/app/Calculator.apk and cm9/app/Calculator.apk differ
+Binary files aokp/app/Calendar.apk and cm9/app/Calendar.apk differ
+Binary files aokp/app/CalendarProvider.apk and cm9/app/CalendarProvider.apk differ
+Binary files aokp/app/Camera.apk and cm9/app/Camera.apk differ
+Binary files aokp/app/CertInstaller.apk and cm9/app/CertInstaller.apk differ
+Only in cm9/app: CMWallpapers.apk
+Binary files aokp/app/Contacts.apk and cm9/app/Contacts.apk differ
+Binary files aokp/app/ContactsProvider.apk and cm9/app/ContactsProvider.apk differ
+Binary files aokp/app/DefaultContainerService.apk and cm9/app/DefaultContainerService.apk differ
+Binary files aokp/app/DeskClock.apk and cm9/app/DeskClock.apk differ
+Binary files aokp/app/Development.apk and cm9/app/Development.apk differ
+Binary files aokp/app/DownloadProvider.apk and cm9/app/DownloadProvider.apk differ
+Binary files aokp/app/DownloadProviderUi.apk and cm9/app/DownloadProviderUi.apk differ
+Binary files aokp/app/DrmProvider.apk and cm9/app/DrmProvider.apk differ
+Only in cm9/app: DSPManager.apk
+Binary files aokp/app/Email.apk and cm9/app/Email.apk differ
+Binary files aokp/app/Exchange.apk and cm9/app/Exchange.apk differ
+Binary files aokp/app/Galaxy4.apk and cm9/app/Galaxy4.apk differ
+Binary files aokp/app/Gallery2.apk and cm9/app/Gallery2.apk differ
+Only in aokp/app: GanOptimizer.apk
+Binary files aokp/app/HoloSpiralWallpaper.apk and cm9/app/HoloSpiralWallpaper.apk differ
+Binary files aokp/app/HTMLViewer.apk and cm9/app/HTMLViewer.apk differ
+Binary files aokp/app/KeyChain.apk and cm9/app/KeyChain.apk differ
+Binary files aokp/app/LatinIME.apk and cm9/app/LatinIME.apk differ
+Only in aokp/app: LatinImeDictionaryPack.apk
+Binary files aokp/app/LiveWallpapers.apk and cm9/app/LiveWallpapers.apk differ
+Binary files aokp/app/LiveWallpapersPicker.apk and cm9/app/LiveWallpapersPicker.apk differ
+Binary files aokp/app/MagicSmokeWallpapers.apk and cm9/app/MagicSmokeWallpapers.apk differ
+Binary files aokp/app/MediaProvider.apk and cm9/app/MediaProvider.apk differ
+Only in aokp/app: Microbes.apk
+Binary files aokp/app/Mms.apk and cm9/app/Mms.apk differ
+Only in aokp/app: Music.apk
+Only in aokp/app: MusicFX.apk
+Binary files aokp/app/NoiseField.apk and cm9/app/NoiseField.apk differ
+Only in aokp/app: NovaLauncher.apk
+Binary files aokp/app/PackageInstaller.apk and cm9/app/PackageInstaller.apk differ
+Binary files aokp/app/PhaseBeam.apk and cm9/app/PhaseBeam.apk differ
+Binary files aokp/app/Phone.apk and cm9/app/Phone.apk differ
+Binary files aokp/app/PicoTts.apk and cm9/app/PicoTts.apk differ
+Binary files aokp/app/Provision.apk and cm9/app/Provision.apk differ
+Only in cm9/app: QuickSearchBox.apk
+Only in aokp/app: ROMControl.apk
+Only in cm9/app: RomManager.apk
+Binary files aokp/app/Settings.apk and cm9/app/Settings.apk differ
+Binary files aokp/app/SettingsProvider.apk and cm9/app/SettingsProvider.apk differ
+Binary files aokp/app/SharedStorageBackup.apk and cm9/app/SharedStorageBackup.apk differ
+Binary files aokp/app/SoundRecorder.apk and cm9/app/SoundRecorder.apk differ
+Only in cm9/app: SpareParts.apk
+Binary files aokp/app/SpeechRecorder.apk and cm9/app/SpeechRecorder.apk differ
+Only in cm9/app: Stk.apk
+Binary files aokp/app/Superuser.apk and cm9/app/Superuser.apk differ
+Only in aokp/app: SwagPapers.apk
+Binary files aokp/app/SystemUI.apk and cm9/app/SystemUI.apk differ
+Only in aokp/app: Tag.apk
+Binary files aokp/app/TelephonyProvider.apk and cm9/app/TelephonyProvider.apk differ
+Only in cm9/app: Term.apk
+Binary files aokp/app/ThemeChooser.apk and cm9/app/ThemeChooser.apk differ
+Binary files aokp/app/ThemeManager.apk and cm9/app/ThemeManager.apk differ
+Only in cm9/app: Torch.apk
+Binary files aokp/app/Trebuchet.apk and cm9/app/Trebuchet.apk differ
+Only in aokp/app: UnicornPorn.apk
+Binary files aokp/app/UserDictionaryProvider.apk and cm9/app/UserDictionaryProvider.apk differ
+Binary files aokp/app/VideoEditor.apk and cm9/app/VideoEditor.apk differ
+Binary files aokp/app/VisualizationWallpapers.apk and cm9/app/VisualizationWallpapers.apk differ
+Binary files aokp/app/VoiceDialer.apk and cm9/app/VoiceDialer.apk differ
+Binary files aokp/app/VpnDialogs.apk and cm9/app/VpnDialogs.apk differ
+Binary files aokp/app/WAPPushManager.apk and cm9/app/WAPPushManager.apk differ
+Binary files aokp/bin/adb and cm9/bin/adb differ
+Binary files aokp/bin/app_process and cm9/bin/app_process differ
+Binary files aokp/bin/audioloop and cm9/bin/audioloop differ
+Only in cm9/bin: backuptool.functions
+Only in cm9/bin: backuptool.sh
+Binary files aokp/bin/BlobCache_test and cm9/bin/BlobCache_test differ
+Binary files aokp/bin/bluetoothd and cm9/bin/bluetoothd differ
+Binary files aokp/bin/bootanimation and cm9/bin/bootanimation differ
+Binary files aokp/bin/brcm_patchram_plus and cm9/bin/brcm_patchram_plus differ
+Binary files aokp/bin/bugreport and cm9/bin/bugreport differ
+Only in cm9/bin: compcache
+Binary files aokp/bin/dalvikvm and cm9/bin/dalvikvm differ
+Binary files aokp/bin/dbus-daemon and cm9/bin/dbus-daemon differ
+Binary files aokp/bin/debuggerd and cm9/bin/debuggerd differ
+Binary files aokp/bin/decoder and cm9/bin/decoder differ
+Binary files aokp/bin/dexopt and cm9/bin/dexopt differ
+Binary files aokp/bin/dhcpcd and cm9/bin/dhcpcd differ
+Binary files aokp/bin/dnsmasq and cm9/bin/dnsmasq differ
+Binary files aokp/bin/drmserver and cm9/bin/drmserver differ
+Binary files aokp/bin/dspcrashd and cm9/bin/dspcrashd differ
+Binary files aokp/bin/dump_image and cm9/bin/dump_image differ
+Binary files aokp/bin/dumpstate and cm9/bin/dumpstate differ
+Binary files aokp/bin/dumpsys and cm9/bin/dumpsys differ
+Binary files aokp/bin/erase_image and cm9/bin/erase_image differ
+Binary files aokp/bin/flash_image and cm9/bin/flash_image differ
+Binary files aokp/bin/fsck_msdos and cm9/bin/fsck_msdos differ
+Binary files aokp/bin/gdbjithelper and cm9/bin/gdbjithelper differ
+Binary files aokp/bin/gzip and cm9/bin/gzip differ
+Only in cm9/bin: handle_compcache
+Binary files aokp/bin/hciattach and cm9/bin/hciattach differ
+Binary files aokp/bin/hostapd and cm9/bin/hostapd differ
+Binary files aokp/bin/hostapd_cli and cm9/bin/hostapd_cli differ
+Binary files aokp/bin/InputChannel_test and cm9/bin/InputChannel_test differ
+Binary files aokp/bin/InputDispatcher_test and cm9/bin/InputDispatcher_test differ
+Binary files aokp/bin/InputEvent_test and cm9/bin/InputEvent_test differ
+Binary files aokp/bin/InputPublisherAndConsumer_test and cm9/bin/InputPublisherAndConsumer_test differ
+Binary files aokp/bin/InputReader_test and cm9/bin/InputReader_test differ
+Binary files aokp/bin/installd and cm9/bin/installd differ
+Binary files aokp/bin/ip and cm9/bin/ip differ
+Binary files aokp/bin/ip6tables and cm9/bin/ip6tables differ
+Binary files aokp/bin/iptables and cm9/bin/iptables differ
+Binary files aokp/bin/keystore and cm9/bin/keystore differ
+Binary files aokp/bin/keystore_cli and cm9/bin/keystore_cli differ
+Binary files aokp/bin/linker and cm9/bin/linker differ
+Binary files aokp/bin/logcat and cm9/bin/logcat differ
+Binary files aokp/bin/logwrapper and cm9/bin/logwrapper differ
+Binary files aokp/bin/Looper_test and cm9/bin/Looper_test differ
+Binary files aokp/bin/mediaserver and cm9/bin/mediaserver differ
+Binary files aokp/bin/mksh and cm9/bin/mksh differ
+Binary files aokp/bin/mkyaffs2image and cm9/bin/mkyaffs2image differ
+Binary files aokp/bin/mtpd and cm9/bin/mtpd differ
+Binary files aokp/bin/ndc and cm9/bin/ndc differ
+Binary files aokp/bin/netcfg and cm9/bin/netcfg differ
+Binary files aokp/bin/netd and cm9/bin/netd differ
+Binary files aokp/bin/ObbFile_test and cm9/bin/ObbFile_test differ
+Binary files aokp/bin/omx_tests and cm9/bin/omx_tests differ
+Binary files aokp/bin/pand and cm9/bin/pand differ
+Binary files aokp/bin/ping and cm9/bin/ping differ
+Binary files aokp/bin/ping6 and cm9/bin/ping6 differ
+Binary files aokp/bin/pppd and cm9/bin/pppd differ
+Binary files aokp/bin/qemud and cm9/bin/qemud differ
+Binary files aokp/bin/qemu-props and cm9/bin/qemu-props differ
+Binary files aokp/bin/racoon and cm9/bin/racoon differ
+Binary files aokp/bin/radiooptions and cm9/bin/radiooptions differ
+Binary files aokp/bin/record and cm9/bin/record differ
+Binary files aokp/bin/recordvideo and cm9/bin/recordvideo differ
+Binary files aokp/bin/rild and cm9/bin/rild differ
+Binary files aokp/bin/run-as and cm9/bin/run-as differ
+Binary files aokp/bin/schedtest and cm9/bin/schedtest differ
+Binary files aokp/bin/screencap and cm9/bin/screencap differ
+Binary files aokp/bin/screenshot and cm9/bin/screenshot differ
+Binary files aokp/bin/sdcard and cm9/bin/sdcard differ
+Binary files aokp/bin/sdptool and cm9/bin/sdptool differ
+Binary files aokp/bin/sensorservice and cm9/bin/sensorservice differ
+Binary files aokp/bin/service and cm9/bin/service differ
+Binary files aokp/bin/servicemanager and cm9/bin/servicemanager differ
+Binary files aokp/bin/sf2 and cm9/bin/sf2 differ
+Binary files aokp/bin/showlease and cm9/bin/showlease differ
+Binary files aokp/bin/simg2img and cm9/bin/simg2img differ
+Binary files aokp/bin/skia_test and cm9/bin/skia_test differ
+Binary files aokp/bin/stagefright and cm9/bin/stagefright differ
+Binary files aokp/bin/stream and cm9/bin/stream differ
+Binary files aokp/bin/String8_test and cm9/bin/String8_test differ
+Binary files aokp/bin/surfaceflinger and cm9/bin/surfaceflinger differ
+Only in cm9/bin: sysinit
+Binary files aokp/bin/system_server and cm9/bin/system_server differ
+Binary files aokp/bin/tc and cm9/bin/tc differ
+Binary files aokp/bin/testid3 and cm9/bin/testid3 differ
+Binary files aokp/bin/toolbox and cm9/bin/toolbox differ
+Only in aokp/bin: uim-sysfs
+Binary files aokp/bin/Unicode_test and cm9/bin/Unicode_test differ
+Binary files aokp/bin/unyaffs and cm9/bin/unyaffs differ
+Binary files aokp/bin/vdc and cm9/bin/vdc differ
+Binary files aokp/bin/vold and cm9/bin/vold differ
+Binary files aokp/bin/wpa_cli and cm9/bin/wpa_cli differ
+Binary files aokp/bin/wpa_supplicant and cm9/bin/wpa_supplicant differ
+Binary files aokp/bin/ZipFileRO_test and cm9/bin/ZipFileRO_test differ
+diff -r aokp/etc/apns-conf.xml cm9/etc/apns-conf.xml
+42,44c42
+<   <apn carrier="TELFORT" mcc="204" mnc="12" apn="internet" type="default,supl" />
+<   <apn carrier="Telfort" mcc="204" mnc="12" apn="internet" mmsc="http://mp.mobiel.kpn/mmsc" mmsproxy="193.113.200.195" mmsport="8080" type="default,supl,mms" />
+<   <apn carrier="TELFORT MMS" mcc="204" mnc="12" apn="portalmmm.nl" mmsc="http://mp.mobiel.kpn/mmsc" mmsproxy="10.10.100.20" mmsport="9201" type="mms" />
+---
+>   <apn carrier="Telfort" mcc="204" mnc="12" apn="internet" proxy="193.113.200.195" port="8080" mmsc="http://mms" mmsproxy="193.113.200.195" mmsport="8080" type="default,supl,mms" />
+66c64
+<   <apn carrier="SFR MMS" mcc="208" mnc="10" apn="mmssfr" mmsc="http://mms1" mmsproxy="10.151.0.1" mmsport="8080" type="mms" />
+---
+>   <apn carrier="SFR MMS" mcc="208" mnc="10" apn="sl2sfr" mmsc="http://mms1" mmsproxy="10.151.0.1" mmsport="8080" type="mms" />
+69a68
+>   <apn carrier="Web La Poste" mcc="208" mnc="10" apn="wapdebitel" proxy="192.168.21.3" port="8080" type="default,supl" />
+94a94,95
+>   <apn carrier="Tuenti Internet" mcc="214" mnc="05" apn="tuenti.com" user="tuenti" password="tuenti" type="default,supl" />
+>   <apn carrier="Tuenti MMS" mcc="214" mnc="05" apn="tuenti.com" user="tuenti" password="tuenti" mmsc="http://tuenti.com" mmsproxy="10.138.255.43" mmsport="8080" type="mms" />
+107a109
+>   <apn carrier="Telenor Net" mcc="216" mnc="01" apn="net" type="default,supl" />
+120c122
+<   <apn carrier="ERONET MMS" mcc="218" mnc="03" apn="mms.eronet.ba" user="" server="" password="" mmsc="http://mms.gprs.eronet.ba/mms/wapenc" mmsproxy="010.012.003.001" mmsport="8080" type="mms"/>
+---
+>   <apn carrier="ERONET MMS" mcc="218" mnc="03" apn="mms.eronet.ba" user="" server="" password="" mmsc="http://mms.gprs.eronet.ba/mms/wapenc" mmsproxy="010.012.003.011" mmsport="8080" type="mms"/>
+126a129
+>   <apn carrier="VIPnet" mcc="219" mnc="10" apn="data.cip.hr" user="38591" password="38591" server="219.91.99.91" type="default,supl" />
+130,131c133,134
+<   <apn carrier="MTS RS" mcc="220" mnc="03" apn="gprswap" user="mts" password="064" proxy="172.017.088.198" port="8080" type="default,supl,mms" />
+<   <apn carrier="MTS RS MMS" mcc="220" mnc="03" apn="mms" user="mts" password="064" mmsc="http://mms.mts064.telekom.rs/mms/wapenc" mmsproxy="172.017.085.131" mmsport="8080" type="default,supl,mms" />
+---
+>   <apn carrier="MTS RS" mcc="220" mnc="03" apn="gprswap" user="mts" password="064" proxy="172.017.088.198" port="8080" type="default,supl" />
+>   <apn carrier="MTS RS MMS" mcc="220" mnc="03" apn="mms" user="mts" password="064" mmsc="http://mms.mts064.telekom.rs/mms/wapenc" mmsproxy="172.017.085.131" mmsport="8080" type="mms" />
+157c160
+<   <apn carrier="Cosmote WNW RO" mcc="226" mnc="03" apn="wnw" user="wnw" password="wnw" proxy="20.252.1.62" port="8080" type="default,supl" />
+---
+>   <apn carrier="Cosmote WNW RO" mcc="226" mnc="03" apn="wnw" user="wnw" password="wnw" proxy="10.252.1.62" port="8080" type="default,supl" />
+166a170
+>   <apn carrier="Orange Prepaid CH" mcc="238" mnc="03" apn="click" type="default,supl" />
+199a204
+>   <apn carrier="Tesco UK" mcc="234" mnc="01" apn="prepay.tesco-mobile.com" user="tescowap" password="password" server="http://wap.tesco-mobile.com/" proxy="193.113.200.195" port="9201" type="default,supl,mms" />
+220a226,228
+>   <apn carrier="Lebara UK" mcc="234" mnc="15" apn="uk.lebara.mobi" user="web" password="web" type="default,supl" />
+>   <apn carrier="LEbara UK MMS" mcc="234" mnc="15" apn="uk.lebara.mobi" user="web" password="web" server="*" mmsc="http://mms.lebara.co.uk/servlets/mms" mmsproxy="212.183.137.012" mmsport="8799" type="mms" />
+>   <apn carrier="Talkmobile" mcc="234" mnc="15" apn="talkmobile.co.uk" user="wap" password="wap" mmsc="http://mms.talkmobile.co.uk/servlets/mms" mmsproxy="212.183.137.12" mmsport="8799" type="default,supl,mms" />
+224,225d231
+<   <apn carrier="Virgin UK" mcc="234" mnc="30" apn="goto.virginmobile.uk" user="user" type="default,supl" />
+<   <apn carrier="Virgin UK MMS" mcc="234" mnc="30" apn="goto.virginmobile.uk" mmsc="http://mms.virginmobile.co.uk:8002" mmsproxy="193.30.166.2" mmsport="8080" type="mms" />
+227c233
+<   <apn carrier="Virgin UK MMS" mcc="234" mnc="31" apn="pp.vodafone.co.uk" user="wap" password="wap" mmsc="http://mms.virginmobile.co.uk:8002" mmsproxy="149.254.201.135" mmsport="8080" type="mms" />
+---
+>   <apn carrier="Virgin UK MMS" mcc="234" mnc="31" apn="goto.virginmobile.uk" user="" password="" mmsc="http://mms.virginmobile.co.uk:8002" mmsproxy="193.30.166.2" mmsport="8080" type="mms" />
+229c235
+<   <apn carrier="Virgin UK MMS" mcc="234" mnc="32" apn="pp.vodafone.co.uk" user="wap" password="wap" mmsc="http://mms.virginmobile.co.uk:8002" mmsproxy="149.254.201.135" mmsport="8080" type="mms" />
+---
+>   <apn carrier="Virgin UK MMS" mcc="234" mnc="32" apn="goto.virginmobile.uk" user="" password="" mmsc="http://mms.virginmobile.co.uk:8002" mmsproxy="193.30.166.2" mmsport="8080" type="mms" />
+251a258
+>   <apn carrier="Onfone" mcc="238" mnc="02" apn="internet.sp.dk" proxy="212.088.064.008" mmsc="http://mms.telenor.dk" mmsproxy="212.088.064.008" mmsport="8080" type="default,supl,mms" />
+272a280
+>   <apn carrier="Universal" mcc="240" mnc="08" apn="sp-services" proxy="172.030.253.241" port="8799" mmsc="http://mms" mmsproxy="172.30.253.241" mmsport="8799" type="default,supl,mms" />
+432,433c440,442
+<   <apn carrier="blau DE" mcc="262" mnc="05" apn="internet.eplus.de" user="blau" password="blau" type="default,supl" />
+<   <apn carrier="blau DE MMS" mcc="262" mnc="05" apn="mms.eplus.de" user="mms" password="eplus" mmsc="http://mms/eplus" mmsproxy="212.23.97.153" mmsport="5080" type="mms" />
+---
+>   <apn carrier="1und1" mcc="262" mnc="02" apn="web.vodafone.de" user="" password="" type="default,supl" />
+>   <apn carrier="blau DE" mcc="262" mnc="03" apn="internet.eplus.de" user="blau" password="blau" type="default,supl" />
+>   <apn carrier="blau DE MMS" mcc="262" mnc="03" apn="mms.eplus.de" user="mms" password="eplus" mmsc="http://mms/eplus" mmsproxy="212.23.97.153" mmsport="5080" type="mms" />
+441a451
+>   <apn carrier="o2 Prepaid" mcc="262" mnc="07" apn="pinternet.interkon.de" mmsc="http://10.81.0.7:8002" mmsproxy="82.113.100.6" mmsport="8080" type="default,supl,mms" />
+495c505
+<   <apn carrier="Vodafone TR MMS" mcc="286" mnc="02" apn="mms" user="vodafone" password="vodafone" mmsc="http://217.31.233.18:6001/MM1Servlet" mmsproxy="217.31.233.18" mmsport="9201" type="mms" />
+---
+>   <apn carrier="Vodafone TR MMS" mcc="286" mnc="02" apn="mms" user="vodafone" password="vodafone" mmsc="http://217.31.233.18:6001/MM1Servlet" mmsproxy="217.31.233.18" mmsport="9401" type="mms" />
+506c516
+<   <apn carrier="Tusmobil Internet" mcc="293" mnc="70" apn="internet.tusmobil.si" user="tusmobil" password="internet" type="default" />
+---
+>   <apn carrier="Tusmobil Internet" mcc="293" mnc="70" apn="internet.tusmobil.si" user="tusmobil" password="internet" type="default,supl" />
+514a525,526
+>   <apn carrier="Telus SP Tether" mcc="302" mnc="220" apn="isp.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="74.49.0.18" mmsport="80" type="default, supl, mms" />
+>   <apn carrier="Koodo SP" mcc="302" mnc="220" apn="sp.koodo.com" proxy="74.49.0.18" port="80" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="74.49.0.18" mmsport="80" type="default,supl,mms" />
+523c535
+<   <apn carrier="Bell Internet" mcc="302" mnc="610" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,supl,mms" />
+---
+>   <apn carrier="Bell Flex" mcc="302" mnc="610" apn="inet.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,supl,mms" />
+530a543,544
+>   <apn carrier="Sasktel 3G" mcc="302" mnc="780" apn="inet.stm.sk.ca" type="default,supl" />
+>   <apn carrier="Sasktel MMS" mcc="302" mnc="780" apn="proxy.stm.sk.ca" port="80" mmsc="http://mms.sasktel.com" mmsproxy="mig.sasktel.com" mmsport="80" type="mms" />
+563a578
+>   <apn carrier="ATT LTE" mcc="310" mnc="410" apn="pta" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,supl,mms" />
+564a580,581
+>   <apn carrier="Viero" mcc="310" mnc="450" apn="internet.vedge.com" proxy="10.168.3.23" port="9401" type="default,supl" />
+>   <apn carrier="Viero MMS" mcc="310" mnc="450" apn="mms" mmsc="http://mms.viero.com" mmsproxy="10.168.3.23" mmsport="9401" type="mms" />
+593,594c610
+<   <apn carrier="Videotron" mcc="302" mnc="500" apn="media.videotron" type="default,supl" />
+<   <apn carrier="Videotron MMS" mcc="302" mnc="500" apn="media.videotron" mmsc="http://media.videotron.com/" mmsproxy="10.208.89.17" mmsport="8080" type="mms" />
+---
+>   <apn carrier="Videotron" mcc="302" mnc="500" apn="media.videotron" mmsc="http://media.videotron.com/" mmsproxy="10.208.89.17" mmsport="8080" type="default,supl,mms" />
+970c986
+<   <apn carrier="Orange JO" mcc="416" mnc="77" apn="inet.orange.jo" user="net" password="net" type="default,supl" />
+---
+>   <apn carrier="Orange JO" mcc="416" mnc="77" apn="net.orange.jo" user="net" password="net" type="default,supl" />
+996,998c1012,1014
+<   <apn carrier="Tesco UK" mcc="425" mnc="01" apn="prepay.tesco-mobile.com" user="tescowap" password="password" server="http://wap.tesco-mobile.com/" proxy="193.113.200.195" port="9201" type="default,supl,mms" />
+<   <apn carrier="Orange IL" mcc="425" mnc="01" apn="uinternet" user="orange" password="orange" type="default,supl" />
+<   <apn carrier="Orange IL" mcc="425" mnc="01" apn="wap.orange.co.il" user="" password="" proxy="192.118.11.55" mmsc="http://192.168.220.15/servlets/mms" type="mms" />
+---
+>   <apn carrier="Orange IL" mcc="425" mnc="01" apn="internet" user="orange" password="orange" type="default,supl" />
+>   <apn carrier="Orange IL MMS" mcc="425" mnc="01" apn="wap.orange.co.il" mmsc="http://192.168.220.15/servlets/mms" mmsport="8080" type="mms" />
+>   <apn carrier="Vodafone MT" mcc="425" mnc="01" apn="Internet" username="Internet" password="Internet" type="default,supl" />
+1002a1019,1023
+>   <apn carrier="Rami Levy" mcc="425" mnc="03" apn="internet.rl" user="rl@3g" password="rl" type="default,supl" />
+>   <apn carrier="Rami Levey MMS" mcc="425" mnc="03" apn="internet.rl" user="rl@3g" password="rl" server="pelephone" mmsc="http://mmsu.pelephone.net.il" mmsproxy="10.170.9.54" mmsport="9093" type="mms" />
+>   <apn carrier="Jawwal Internet" mcc="425" mnc="05" apn="internet" type="default,supl" />
+>   <apn carrier="Jawwal WAP" mcc="425" mnc="05" apn="wap" proxy="213.244.118.129" port="8080" type="default,supl" />
+>   <apn carrier="Jawwal MMS" mcc="425" mnc="05" apn="mms" mmsc="http://mms.jawwal.ps/servlets/mms" mmsproxy="213.244.118.129" mmsport="8080" type="mms" />
+1005c1026
+<   <apn carrier="BATELCO BH MMS" mcc="426" mnc="01" apn="mms.batelco.com" user="mms" password="mms" mmsc="http://192.168.36.10/servlets/mms" mmsproxy="192.168.1.2" mmsport="9201" type="mms" />
+---
+>   <apn carrier="BATELCO BH MMS" mcc="426" mnc="01" apn="mms.batelco.com" user="wap" password="wap" mmsc="http://192.168.36.10/servlets/mms" mmsproxy="192.168.1.2" mmsport="80" type="mms" />
+1021a1043,1045
+>   <apn carrier="Softbank(desire)" mcc="440" mnc="20" apn="open.softbank.ne.jp" user="softbankX06HT" password="KfNSDrQQs2AtFQ9M" mmsc="http://mms/" mmsproxy="andmms.softbank.ne.jp" mmsport="8080" type="default,supl,mms" />
+>   <apn carrier="Softbank(datasim)" mcc="440" mnc="20" apn="softbank" user="ai@softbank" password="softbank" type="default,supl" />
+>   <apn carrier="Softbank(internet)" mcc="420" mnc="20" apn="andglobal.softbank.ne.jp" user="andg001softbank" password="pumbbghkpgyysxa" mmsc="http://mms/" mmsproxy="andmms.softbank.ne.jp" mmsport="8080" type="default,mms" />
+1022a1047
+>   <apn carrier="SK Telecom (Roaming)" mcc="450" mnc="05" apn="roaming.sktelecom.com" server="*" mmsc="vmms.nate.com" mmsport="8082" type="default,supl,mms" />
+1024,1025c1049,1050
+<   <apn carrier="Mobifone MMS" mcc="452" mnc="00" apn="m-i090" user="wap" password="wap" mmsc="http://203.162.21.114/mmsc" mmsproxy="203.162.21.114" mmsport="8000" type="mms" />
+<   <apn carrier="Mobifone" mcc="452" mnc="00" apn="m-wap" user="mms" password="mms" type="default,supl" />
+---
+>   <apn carrier="Mobifone MMS" mcc="452" mnc="01" apn="m-i090" user="wap" password="wap" mmsc="http://203.162.21.114/mmsc" mmsproxy="203.162.21.114" mmsport="8000" type="mms" />
+>   <apn carrier="Mobifone" mcc="452" mnc="01" apn="m-wap" user="mms" password="mms" type="default,supl" />
+1108,1109c1133,1134
+<   <apn carrier="Celcom" mcc="502" mnc="13" apn="celcom3g" type="default,supl" />
+<   <apn carrier="Celcom MMS" mcc="502" mnc="13" apn="celcom3g" user="mms" password="mms" mmsc="http://mms.celcom.net.my" mmsproxy="10.128.1.242" mmsport="8080" type="mms" />
+---
+>   <apn carrier="Xpax" mcc="502" mnc="13" apn="celcom" type="default,supl" />
+>   <apn carrier="Xpax MMS" mcc="502" mnc="13" apn="celcom3g" user="mms" password="mms" mmsx="http://mms.celcom.net.my" mmsproxy="10.128.1.242" mmsport="8080" type="mms" />
+1127a1153
+>   <apn carrier="Apex Telecom" mcc="505" mnc="02" apn="splns357" user="" password="" mmsc="" mmsproxy="" mmsport="" type="default,supl" />
+1145a1172
+>   <apn carrier="Indosat GPRS" mcc="510" mnc="01" apn="indosatgprs" user="indosat" password="indosat" type="default,supl" />
+1162c1189,1191
+<   <apn carrier="SUN MMS" mcc="515" mnc="05" apn="mms" mmsc="http://mmscenter.suncellular.com.ph" mmsproxy="202.138.159.78" mmsport="9201" type="mms" />
+---
+>   <apn carrier="SUN MMS" mcc="515" mnc="05" apn="mms" mmsc="http://mmscenter.suncellular.com.ph" mmsproxy="202.138.159.78" mmsport="8080" type="mms" />
+>   <apn carrier="TrueMove-H" mcc="520" mnc="00" apn="internet" user="ture" password="ture" type="default,supl" />
+>   <apn carrier="TrueMove-H MMS" mcc="520" mnc="00" apn="hmms" user="true" password="true" mmsc="http://mms.trueh.com:8002" mmsproxy="10.4.7.39" mmsport="8080" type="mms" />
+1172,1173c1201,1202
+<   <apn carrier="IDEAS" mcc="525" mnc="01" apn="e-ideas" user="*" password="*" server="*" type="default,supl,mms" />
+<   <apn carrier="IDEAS MMS" mcc="525" mnc="01" apn="e-ideas" user="65IDEAS" password="65" mmsc="http://mms.singtel.com:10021/mmsc" mmsproxy="165.21.42.84" mmsport="8080" type="mms" />
+---
+>   <apn carrier="IDEAS" mcc="525" mnc="01" apn="e-ideas" type="default,supl,mms" />
+>   <apn carrier="IDEAS MMS" mcc="525" mnc="01" apn="e-ideas" user="65IDEAS" password="65ideas" mmsc="http://mms.singtel.com:10021/mmsc" mmsproxy="165.21.42.84" mmsport="8080" type="mms" />
+1175c1204
+<   <apn carrier="SingTel MMS" mcc="525" mnc="02" apn="e-ideas" user="65IDEAS" password="IDEAS" mmsc="http://mms.singtel.com:10021/mmsc" mmsproxy="165.21.42.84" mmsport="8080" type="mms" />
+---
+>   <apn carrier="SingTel MMS" mcc="525" mnc="02" apn="e-ideas" user="65IDEAS" password="65ideas" mmsc="http://mms.singtel.com:10021/mmsc" mmsproxy="165.21.42.84" mmsport="8080" type="mms" />
+1178c1207
+<   <apn carrier="M1 MMS" mcc="525" mnc="03" apn="miworld" user="65" password="user123" mmsc="http://mmsgw:8002" mmsproxy="172.16.14.10" mmsport="8080" type="mms" />
+---
+>   <apn carrier="M1 MMS" mcc="525" mnc="03" apn="miworld" user="65" password="user123" mmsc="http://mmsgw:8002" mmsproxy="172.16.14.10" mmsport="8080" authenticatiotype="PAP" type="mms" />
+1180c1209
+<   <apn carrier="Sunsurf Internet" mcc="525" mnc="03" apn="sunsurf" type="default,supl,mms" />
+---
+>   <apn carrier="Sunsurf Internet" mcc="525" mnc="03" apn="sunsurf" type="default,supl" />
+1206a1236,1239
+>   <apn carrier="Wap OPT KNC" mcc="546" mnc="01" apn="wap" user="Wap" password="Wap123" proxy="192.168.39.101" port="3130" type="default,supl" />
+>   <apn carrier="Internet OPT KNC" mcc="546" mnc="01" apn="internet" user="internet" type="default,supl" />
+>   <apn carrier="3g OPT KNC" mcc="546" mnc="01" apn="3g" user="3g" type="default,supl" />
+>   <apn carrier="Mms OPT KNC" mcc="546" mnc="01" apn="mms" user="mms" password="mms123" mmsproxy="192.168.39.201" mmsport="3130" mmsc="http://mms.mobitag.nc/mmsc/" type="mms" />
+1211c1244
+<   <apn carrier="Mobilis" mcc="603" mnc="01" apn="internet" user="inernet" password="internet" type="default,supl" />
+---
+>   <apn carrier="Mobilis" mcc="603" mnc="01" apn="internet" user="internet" password="internet" type="default,supl" />
+1244a1278,1279
+>   <apn carrier="Movicel Angola" mcc="631" mnc="04" apn="internet.movicel.co.ao" type="default,supl" />
+>   <apn carrier="Movicel Angola MMS" mcc="631" mnc="04" apn="mms.movicel.co.ao" mmsc="http://10.33.14.180:8080" mmsproxy="10.33.15.133" mmsport="8080" type="mms" />
+1248a1284,1289
+>   <apn carrier="Airtel Tanzania" mcc="640" mnc="05" apn="internet" type="default,supl" />
+>   <apn carrier="Airtel UG" mcc="641" mnc="01" apn="web.ug.zain.com" type="default,supl" />
+>   <apn carrier="MTN UG" mcc="641" mnc="10" apn="yellopix.mtn.co.ug" type="default,supl" />
+>   <apn carrier="Uganda Telecom" mcc="641" mnc="11" apn="utweb" type="default,supl" />
+>   <apn carrier="Orange UG" mcc="641" mnc="14" apn="orange.ug" type="default,supl" />
+>   <apn carrier="Waridtel UG" mcc="641" mnc="22" apn="web.waridtel.co.ug" type="default,supl" />
+1266a1308,1313
+>   <apn carrier="Movistar SV" mcc="706" mnc="04" apn="internet.movistar.sv" user="movistarsv" password="movistarsv" type="default, supl" />
+>   <apn carrier="Movistar SV MMS" mcc="706" mnc="04" apn="mms.movistar.sv" user="movistarsv" password="movistarsv" mmsc="http://mms.movistar.sv" mmsproxy="10.12.20.1" mmsport="80" type="mms" />
+>   <apn carrier="Movistar SV" mcc="706" mnc="040" apn="internet.movistar.sv" user="movistarsv" password="movistarsv" type="default, supl" />
+>   <apn carrier="Movistar SV MMS" mcc="706" mnc="040" apn="mms.movistar.sv" user="movistarsv" password="movistarsv" mmsc="http://mms.movistar.sv" mmsproxy="10.12.20.1" mmsport="80" type="mms" />
+>   <apn carrier="Cable and Wireless Panama" mcc="714" mnc="01" apn="apn01.cwpanama.com.pa" type="default,supl" />
+>   <apn carrier="Cable and Wireless Panama MMS" mcc="714" mnc="01" apn="apn02.cwpanama.com.pa" mmsc="http://mms.zonamovil.com.pa:80/i.bin" mmsproxy="172.25.3.5" mmsport="8080" type="mms" />
+1268a1316,1317
+>   <apn carrier="Movistar AR" mcc="722" mnc="07" apn="wap.gprs.unifon.com.ar" proxy="200.5.86.10" port="80" user="wap" password="wap" authenticationtype="PAP" type="defaul,supl" />
+>   <apn carrier="Movistar AR MMS" mcc="722" mnc="07" apn="mms.gprs.unifon.com.ar" user="mms" password="mms" mmsc="http://movistar.com.ar" mmsproxy="200.68.32.239" mmsport="8080" authenticationtype="PAP" type="mms" />
+1270a1320,1321
+>   <apn carrier="Claro AR" mcc="722" mnc="310" apn="igprs.claro.com.ar" user="ctigprs" password="ctigpr999" type="default,supl" />
+>   <apn carrier="Claro AR MMS" mcc="722" mnc="310" apn="mms.ctimovil.com.ar" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.ar" mmsproxy="170.051.255.240" mmsport="8080" type="mms" />
+1319,1320c1370,1373
+<   <apn carrier="Digitel" mcc="734" mnc="02" apn="gprsweb.digitel.com.ve" proxy="213.026.205.001" mmsc="http://expresate.digitel.com.ve" mmsproxy="213.026.205.001" mmsport="8080" type="default,supl,mms" />
+<   <apn carrier="Movistar VE" mcc="734" mnc="04" apn="internet.movistar.ve" proxy="200.35.64.73" mmsc="http://mms.movistar.ve" mmsproxy="200.35.64.73" mmsport="9001" type="default,supl,mms" />
+---
+>   <apn carrier="Movistar CO" mcc="732" mnc="123" apn="internet.movistar.com.co" user="movistar" password="movistar" type="default,supl" />
+>   <apn carrier="Digitel" mcc="734" mnc="02" apn="gprsweb.digitel.ve" proxy="213.026.205.001" type="default,supl" />
+>   <apn carrier="Digitel MMS" mcc="734" mnc="02" apn="expresate.digitel.ve" mmsc="http://expresate.digitel.ve" mmsproxy="213.026.205.001" mmsport="8080" type="mms" />
+>   <apn carrier="Movistar VE" mcc="734" mnc="04" apn="internet.movistar.ve" mmsc="http://mms.movistar.ve" mmsproxy="200.35.64.73" mmsport="9001" type="default,supl,mms" />
+1322a1376,1377
+>   <apn carrier="Viva GPRS" mcc="736" mnc="01" apn="internet.nuevatel.com" proxy="192.168.101.4" port="3128" type="default,supl" />
+>   <apn carrier="Viva MMS" mcc="736" mnc="01" apn="mms.nuevatel.com" server="mmsgw.nuevatel.com:1981" mmsc="http://mmsgw.nuevatel.com:1981" mmsproxy="192.168.101.4" mmsport="3128" type="mms" />
+1326a1382,1383
+>   <apn carrier="Antel" mcc="748" mnc="01" apn="wap" proxy="200.40.246.2" port="3128" server="www.dale.com.uy" mmsc="http://mmsc.mms.ancelutil.com.uy" mmsproxy="200.40.246.2" mmspor="3128" type="default,supl,mms" />
+>   <apn carrier="BAM Pepaga Antel" mcc="748" mnc="01" apn="prepago.ancel" user="bam" password="bam" type="default,supl" />
+1331,1333d1387
+<   <apn carrier="Wap OPT KNC" mcc="546" mnc="01" apn="wap" user="Wap" password="Wap123" proxy="192.168.39.101" port="3130" type="default,supl" />
+<   <apn carrier="Mms OPT KNC" mcc="546" mnc="01" apn="mms" user="mms" password="mms123" mmsproxy="192.168.39.201" mmsport="3130" mmsc="http://mms.mobitag.nc/mmsc/" type="mms" />
+<   <apn carrier="Internet OPT KNC" mcc="546" mnc="01" apn="internet" user="internet" type="default,supl" />
+diff -r aokp/etc/bluetooth/audio.conf cm9/etc/bluetooth/audio.conf
+52a53,61
+> # The Sony car stereo Ford is using under their brand as '6000 CD' has a
+> # completely broken AVRCP 1.3 implementation. After recognizing AVRCP 1.3 TG
+> # capabilities and exchanging a few PDUs, the car stereo disconnects and
+> # reconnects BT, also resetting USB devices if connected to it.
+> # To avoid that and allow at least HFP and A2DP to work, prevent any AVRCP 1.3
+> # PDUs from being sent on those models - add the device to the black list.
+> # Since 2012 Ford models have it fixed, removing the device from the list
+> # will result in full functionality.
+> MetaDataBlackList=Ford Audio
+Only in cm9/etc: CHANGELOG-CM.txt
+Only in aokp/etc: cron
+Only in cm9/etc/init.d: 00banner
+Only in aokp/etc/init.d: 00check
+Only in aokp/etc/init.d: 01zipalign
+Only in aokp/etc/init.d: 02sysctl
+Only in aokp/etc/init.d: 03firstboot
+Only in aokp/etc/init.d: 05freemem
+Only in aokp/etc/init.d: 06removecache
+Only in aokp/etc/init.d: 07fixperms
+Only in aokp/etc/init.d: 09cron
+Only in aokp/etc/init.d: 10sdboost
+Only in cm9/etc/init.d: 90userinit
+Only in aokp/etc/init.d: 98tweaks
+Only in cm9/etc: init.local.rc
+Only in aokp/etc: init_trigger.disabled
+Only in aokp/etc: liberty.bsh
+diff -r aokp/etc/mkshrc cm9/etc/mkshrc
+16c16
+< export HOME HOSTNAME MKSH PS1 SHELL TERM USER
+---
+> export HOME HOSTNAME MKSH SHELL TERM USER
+Only in cm9/etc: nano
+Binary files aokp/etc/NOTICE.html.gz and cm9/etc/NOTICE.html.gz differ
+Only in cm9/etc/permissions: com.cyanogenmod.android.xml
+diff -r aokp/etc/permissions/com.tmobile.software.themes.xml cm9/etc/permissions/com.tmobile.software.themes.xml
+19a20
+> 
+Binary files aokp/etc/ppp/ip-up-vpn and cm9/etc/ppp/ip-up-vpn differ
+Only in aokp/etc: resolv.conf
+Binary files aokp/etc/security/otacerts.zip and cm9/etc/security/otacerts.zip differ
+Only in cm9/etc: spn-conf.xml
+Only in aokp/etc: sysctl.conf
+Binary files aokp/fonts/DroidSansMono.ttf and cm9/fonts/DroidSansMono.ttf differ
+Binary files aokp/fonts/DroidSerif-BoldItalic.ttf and cm9/fonts/DroidSerif-BoldItalic.ttf differ
+Binary files aokp/fonts/DroidSerif-Bold.ttf and cm9/fonts/DroidSerif-Bold.ttf differ
+Binary files aokp/fonts/DroidSerif-Italic.ttf and cm9/fonts/DroidSerif-Italic.ttf differ
+Binary files aokp/fonts/DroidSerif-Regular.ttf and cm9/fonts/DroidSerif-Regular.ttf differ
+Binary files aokp/framework/am.jar and cm9/framework/am.jar differ
+Binary files aokp/framework/android.policy.jar and cm9/framework/android.policy.jar differ
+Binary files aokp/framework/android.test.runner.jar and cm9/framework/android.test.runner.jar differ
+Binary files aokp/framework/apache-xml.jar and cm9/framework/apache-xml.jar differ
+Binary files aokp/framework/bmgr.jar and cm9/framework/bmgr.jar differ
+Binary files aokp/framework/bouncycastle.jar and cm9/framework/bouncycastle.jar differ
+Binary files aokp/framework/bu.jar and cm9/framework/bu.jar differ
+Binary files aokp/framework/com.android.future.usb.accessory.jar and cm9/framework/com.android.future.usb.accessory.jar differ
+Binary files aokp/framework/com.android.location.provider.jar and cm9/framework/com.android.location.provider.jar differ
+Binary files aokp/framework/core.jar and cm9/framework/core.jar differ
+Binary files aokp/framework/core-junit.jar and cm9/framework/core-junit.jar differ
+Binary files aokp/framework/ext.jar and cm9/framework/ext.jar differ
+Binary files aokp/framework/filterfw.jar and cm9/framework/filterfw.jar differ
+Binary files aokp/framework/framework.jar and cm9/framework/framework.jar differ
+Binary files aokp/framework/framework-res.apk and cm9/framework/framework-res.apk differ
+Binary files aokp/framework/ime.jar and cm9/framework/ime.jar differ
+Binary files aokp/framework/input.jar and cm9/framework/input.jar differ
+Binary files aokp/framework/javax.obex.jar and cm9/framework/javax.obex.jar differ
+Binary files aokp/framework/monkey.jar and cm9/framework/monkey.jar differ
+Binary files aokp/framework/pm.jar and cm9/framework/pm.jar differ
+Binary files aokp/framework/services.jar and cm9/framework/services.jar differ
+Binary files aokp/framework/svc.jar and cm9/framework/svc.jar differ
+Binary files aokp/lib/bluez-plugin/audio.so and cm9/lib/bluez-plugin/audio.so differ
+Binary files aokp/lib/bluez-plugin/bluetooth-health.so and cm9/lib/bluez-plugin/bluetooth-health.so differ
+Binary files aokp/lib/bluez-plugin/input.so and cm9/lib/bluez-plugin/input.so differ
+Binary files aokp/lib/bluez-plugin/network.so and cm9/lib/bluez-plugin/network.so differ
+Binary files aokp/lib/drm/libfwdlockengine.so and cm9/lib/drm/libfwdlockengine.so differ
+Binary files aokp/lib/hw/audio.a2dp.default.so and cm9/lib/hw/audio.a2dp.default.so differ
+Binary files aokp/lib/hw/audio_policy.default.so and cm9/lib/hw/audio_policy.default.so differ
+Binary files aokp/lib/hw/audio_policy.marvel.so and cm9/lib/hw/audio_policy.marvel.so differ
+Binary files aokp/lib/hw/audio.primary.default.so and cm9/lib/hw/audio.primary.default.so differ
+Binary files aokp/lib/hw/audio.primary.marvel.so and cm9/lib/hw/audio.primary.marvel.so differ
+Binary files aokp/lib/hw/camera.goldfish.so and cm9/lib/hw/camera.goldfish.so differ
+Binary files aokp/lib/hw/camera.marvel.so and cm9/lib/hw/camera.marvel.so differ
+Binary files aokp/lib/hw/copybit.msm7x27.so and cm9/lib/hw/copybit.msm7x27.so differ
+Binary files aokp/lib/hw/gps.goldfish.so and cm9/lib/hw/gps.goldfish.so differ
+Binary files aokp/lib/hw/gps.marvel.so and cm9/lib/hw/gps.marvel.so differ
+Binary files aokp/lib/hw/gralloc.default.so and cm9/lib/hw/gralloc.default.so differ
+Binary files aokp/lib/hw/gralloc.msm7x27.so and cm9/lib/hw/gralloc.msm7x27.so differ
+Binary files aokp/lib/hw/hwcomposer.default.so and cm9/lib/hw/hwcomposer.default.so differ
+Binary files aokp/lib/hw/hwcomposer.msm7x27.so and cm9/lib/hw/hwcomposer.msm7x27.so differ
+Binary files aokp/lib/hw/lights.goldfish.so and cm9/lib/hw/lights.goldfish.so differ
+Binary files aokp/lib/hw/lights.marvel.so and cm9/lib/hw/lights.marvel.so differ
+Binary files aokp/lib/hw/sensors.goldfish.so and cm9/lib/hw/sensors.goldfish.so differ
+Binary files aokp/lib/hw/sensors.marvel.so and cm9/lib/hw/sensors.marvel.so differ
+Binary files aokp/lib/invoke_mock_media_player.so and cm9/lib/invoke_mock_media_player.so differ
+Binary files aokp/lib/libandroid_runtime.so and cm9/lib/libandroid_runtime.so differ
+Binary files aokp/lib/libandroid_servers.so and cm9/lib/libandroid_servers.so differ
+Binary files aokp/lib/libandroid.so and cm9/lib/libandroid.so differ
+Binary files aokp/lib/libaudioeffect_jni.so and cm9/lib/libaudioeffect_jni.so differ
+Binary files aokp/lib/libaudioflinger.so and cm9/lib/libaudioflinger.so differ
+Binary files aokp/lib/libaudioutils.so and cm9/lib/libaudioutils.so differ
+Binary files aokp/lib/libbcc.so and cm9/lib/libbcc.so differ
+diff -r aokp/lib/libbcc.so.sha1 cm9/lib/libbcc.so.sha1
+1c1
+< RKÊRRóû¼Å”°ñ4dl-‹
+\ No newline at end of file
+---
+> _~<A0Çn¤ƒJu‘¢âYÈ—
+\ No newline at end of file
+Binary files aokp/lib/libbcinfo.so and cm9/lib/libbcinfo.so differ
+Binary files aokp/lib/libbinder.so and cm9/lib/libbinder.so differ
+Binary files aokp/lib/libbluedroid.so and cm9/lib/libbluedroid.so differ
+Binary files aokp/lib/libbluetoothd.so and cm9/lib/libbluetoothd.so differ
+Binary files aokp/lib/libbluetooth.so and cm9/lib/libbluetooth.so differ
+Binary files aokp/lib/libbtio.so and cm9/lib/libbtio.so differ
+Binary files aokp/lib/libcamera_client.so and cm9/lib/libcamera_client.so differ
+Binary files aokp/lib/libcameraservice.so and cm9/lib/libcameraservice.so differ
+Binary files aokp/lib/libchromium_net.so and cm9/lib/libchromium_net.so differ
+Binary files aokp/lib/libc_malloc_debug_leak.so and cm9/lib/libc_malloc_debug_leak.so differ
+Binary files aokp/lib/libc_malloc_debug_qemu.so and cm9/lib/libc_malloc_debug_qemu.so differ
+Binary files aokp/lib/libcrypto.so and cm9/lib/libcrypto.so differ
+Binary files aokp/lib/libc.so and cm9/lib/libc.so differ
+Binary files aokp/lib/libctest.so and cm9/lib/libctest.so differ
+Binary files aokp/lib/libcutils.so and cm9/lib/libcutils.so differ
+Binary files aokp/lib/libdbus.so and cm9/lib/libdbus.so differ
+Binary files aokp/lib/libdefcontainer_jni.so and cm9/lib/libdefcontainer_jni.so differ
+Binary files aokp/lib/libdiskconfig.so and cm9/lib/libdiskconfig.so differ
+Binary files aokp/lib/libdl.so and cm9/lib/libdl.so differ
+Binary files aokp/lib/libdrm1_jni.so and cm9/lib/libdrm1_jni.so differ
+Binary files aokp/lib/libdrm1.so and cm9/lib/libdrm1.so differ
+Binary files aokp/lib/libdrmframework_jni.so and cm9/lib/libdrmframework_jni.so differ
+Binary files aokp/lib/libdrmframework.so and cm9/lib/libdrmframework.so differ
+Binary files aokp/lib/libdvm.so and cm9/lib/libdvm.so differ
+Binary files aokp/lib/libeffects.so and cm9/lib/libeffects.so differ
+Binary files aokp/lib/libEGL.so and cm9/lib/libEGL.so differ
+Binary files aokp/lib/libemoji.so and cm9/lib/libemoji.so differ
+Binary files aokp/lib/libETC1.so and cm9/lib/libETC1.so differ
+Binary files aokp/lib/libexif.so and cm9/lib/libexif.so differ
+Binary files aokp/lib/libexpat.so and cm9/lib/libexpat.so differ
+Binary files aokp/lib/libext2_blkid.so and cm9/lib/libext2_blkid.so differ
+Binary files aokp/lib/libext2_com_err.so and cm9/lib/libext2_com_err.so differ
+Binary files aokp/lib/libext2_e2p.so and cm9/lib/libext2_e2p.so differ
+Binary files aokp/lib/libext2fs.so and cm9/lib/libext2fs.so differ
+Binary files aokp/lib/libext2_profile.so and cm9/lib/libext2_profile.so differ
+Binary files aokp/lib/libext2_uuid.so and cm9/lib/libext2_uuid.so differ
+Binary files aokp/lib/libext4_utils.so and cm9/lib/libext4_utils.so differ
+Binary files aokp/lib/libFFTEm.so and cm9/lib/libFFTEm.so differ
+Binary files aokp/lib/libfilterfw.so and cm9/lib/libfilterfw.so differ
+Binary files aokp/lib/libfilterpack_imageproc.so and cm9/lib/libfilterpack_imageproc.so differ
+Binary files aokp/lib/libgabi++.so and cm9/lib/libgabi++.so differ
+Binary files aokp/lib/libgenlock.so and cm9/lib/libgenlock.so differ
+Binary files aokp/lib/libGLESv1_CM.so and cm9/lib/libGLESv1_CM.so differ
+Binary files aokp/lib/libGLESv2_dbg.so and cm9/lib/libGLESv2_dbg.so differ
+Binary files aokp/lib/libGLESv2.so and cm9/lib/libGLESv2.so differ
+Binary files aokp/lib/libglib.so and cm9/lib/libglib.so differ
+Binary files aokp/lib/libgui.so and cm9/lib/libgui.so differ
+Binary files aokp/lib/libhardware_legacy.so and cm9/lib/libhardware_legacy.so differ
+Binary files aokp/lib/libhardware.so and cm9/lib/libhardware.so differ
+Binary files aokp/lib/libharfbuzz.so and cm9/lib/libharfbuzz.so differ
+Binary files aokp/lib/libhtc_ril.so and cm9/lib/libhtc_ril.so differ
+Binary files aokp/lib/libhwui.so and cm9/lib/libhwui.so differ
+Binary files aokp/lib/libicui18n.so and cm9/lib/libicui18n.so differ
+Binary files aokp/lib/libicuuc.so and cm9/lib/libicuuc.so differ
+Binary files aokp/lib/libinput.so and cm9/lib/libinput.so differ
+Binary files aokp/lib/libiprouteutil.so and cm9/lib/libiprouteutil.so differ
+Only in cm9/lib: libjackpal-androidterm4.so
+Binary files aokp/lib/libjnigraphics.so and cm9/lib/libjnigraphics.so differ
+Binary files aokp/lib/libjni_latinime.so and cm9/lib/libjni_latinime.so differ
+Binary files aokp/lib/libjni_mosaic.so and cm9/lib/libjni_mosaic.so differ
+Binary files aokp/lib/libjpeg.so and cm9/lib/libjpeg.so differ
+Binary files aokp/lib/liblog.so and cm9/lib/liblog.so differ
+Binary files aokp/lib/liblzo.so and cm9/lib/liblzo.so differ
+Binary files aokp/lib/libmedia_jni.so and cm9/lib/libmedia_jni.so differ
+Binary files aokp/lib/libmediaplayerservice.so and cm9/lib/libmediaplayerservice.so differ
+Binary files aokp/lib/libmedia.so and cm9/lib/libmedia.so differ
+Binary files aokp/lib/libmemalloc.so and cm9/lib/libmemalloc.so differ
+Only in aokp/lib: libmicrobes_jni.so
+Binary files aokp/lib/libm.so and cm9/lib/libm.so differ
+Binary files aokp/lib/libmtp.so and cm9/lib/libmtp.so differ
+Binary files aokp/lib/libnativehelper.so and cm9/lib/libnativehelper.so differ
+Binary files aokp/lib/libncurses.so and cm9/lib/libncurses.so differ
+Binary files aokp/lib/libnetlink.so and cm9/lib/libnetlink.so differ
+Binary files aokp/lib/libnetutils.so and cm9/lib/libnetutils.so differ
+Binary files aokp/lib/libnfc_ndef.so and cm9/lib/libnfc_ndef.so differ
+Binary files aokp/lib/libOmxCore.so and cm9/lib/libOmxCore.so differ
+Binary files aokp/lib/libOpenMAXAL.so and cm9/lib/libOpenMAXAL.so differ
+Binary files aokp/lib/libOpenSLES.so and cm9/lib/libOpenSLES.so differ
+Binary files aokp/lib/liboverlay.so and cm9/lib/liboverlay.so differ
+Binary files aokp/lib/libpagemap.so and cm9/lib/libpagemap.so differ
+Binary files aokp/lib/libpixelflinger.so and cm9/lib/libpixelflinger.so differ
+Binary files aokp/lib/libpng.so and cm9/lib/libpng.so differ
+Binary files aokp/lib/libpowermanager.so and cm9/lib/libpowermanager.so differ
+Binary files aokp/lib/libpower.so and cm9/lib/libpower.so differ
+Binary files aokp/lib/libQcomUI.so and cm9/lib/libQcomUI.so differ
+Binary files aokp/lib/libreference-ril.so and cm9/lib/libreference-ril.so differ
+Binary files aokp/lib/libril.so and cm9/lib/libril.so differ
+Binary files aokp/lib/librpc.so and cm9/lib/librpc.so differ
+Binary files aokp/lib/librs_jni.so and cm9/lib/librs_jni.so differ
+Binary files aokp/lib/libRS.so and cm9/lib/libRS.so differ
+Binary files aokp/lib/librtp_jni.so and cm9/lib/librtp_jni.so differ
+Binary files aokp/lib/libsensorservice.so and cm9/lib/libsensorservice.so differ
+Binary files aokp/lib/libskia.so and cm9/lib/libskia.so differ
+Binary files aokp/lib/libsonivox.so and cm9/lib/libsonivox.so differ
+Binary files aokp/lib/libsoundpool.so and cm9/lib/libsoundpool.so differ
+Binary files aokp/lib/libspeexresampler.so and cm9/lib/libspeexresampler.so differ
+Binary files aokp/lib/libsqlite_jni.so and cm9/lib/libsqlite_jni.so differ
+Binary files aokp/lib/libsqlite.so and cm9/lib/libsqlite.so differ
+Binary files aokp/lib/libSR_AudioIn.so and cm9/lib/libSR_AudioIn.so differ
+Binary files aokp/lib/libsrec_jni.so and cm9/lib/libsrec_jni.so differ
+Binary files aokp/lib/libssl.so and cm9/lib/libssl.so differ
+Binary files aokp/lib/libstagefright_amrnb_common.so and cm9/lib/libstagefright_amrnb_common.so differ
+Binary files aokp/lib/libstagefright_avc_common.so and cm9/lib/libstagefright_avc_common.so differ
+Binary files aokp/lib/libstagefright_enc_common.so and cm9/lib/libstagefright_enc_common.so differ
+Binary files aokp/lib/libstagefright_foundation.so and cm9/lib/libstagefright_foundation.so differ
+Binary files aokp/lib/libstagefrighthw.so and cm9/lib/libstagefrighthw.so differ
+Binary files aokp/lib/libstagefright_omx.so and cm9/lib/libstagefright_omx.so differ
+Binary files aokp/lib/libstagefright.so and cm9/lib/libstagefright.so differ
+Binary files aokp/lib/libstagefright_soft_aacdec.so and cm9/lib/libstagefright_soft_aacdec.so differ
+Binary files aokp/lib/libstagefright_soft_amrdec.so and cm9/lib/libstagefright_soft_amrdec.so differ
+Binary files aokp/lib/libstagefright_soft_g711dec.so and cm9/lib/libstagefright_soft_g711dec.so differ
+Binary files aokp/lib/libstagefright_soft_h264dec.so and cm9/lib/libstagefright_soft_h264dec.so differ
+Binary files aokp/lib/libstagefright_soft_mp3dec.so and cm9/lib/libstagefright_soft_mp3dec.so differ
+Binary files aokp/lib/libstagefright_soft_mpeg4dec.so and cm9/lib/libstagefright_soft_mpeg4dec.so differ
+Binary files aokp/lib/libstagefright_soft_vorbisdec.so and cm9/lib/libstagefright_soft_vorbisdec.so differ
+Binary files aokp/lib/libstagefright_soft_vpxdec.so and cm9/lib/libstagefright_soft_vpxdec.so differ
+Binary files aokp/lib/libstagefright_yuv.so and cm9/lib/libstagefright_yuv.so differ
+Binary files aokp/lib/libstdc++.so and cm9/lib/libstdc++.so differ
+Binary files aokp/lib/libstlport.so and cm9/lib/libstlport.so differ
+Binary files aokp/lib/libsurfaceflinger.so and cm9/lib/libsurfaceflinger.so differ
+Binary files aokp/lib/libsystem_server.so and cm9/lib/libsystem_server.so differ
+Binary files aokp/lib/libsysutils.so and cm9/lib/libsysutils.so differ
+Binary files aokp/lib/libthread_db.so and cm9/lib/libthread_db.so differ
+Binary files aokp/lib/libtilerenderer.so and cm9/lib/libtilerenderer.so differ
+Binary files aokp/lib/libtinyalsa.so and cm9/lib/libtinyalsa.so differ
+Binary files aokp/lib/libttscompat.so and cm9/lib/libttscompat.so differ
+Binary files aokp/lib/libttspico.so and cm9/lib/libttspico.so differ
+Binary files aokp/lib/libui.so and cm9/lib/libui.so differ
+Binary files aokp/lib/libusbhost.so and cm9/lib/libusbhost.so differ
+Binary files aokp/lib/libutils.so and cm9/lib/libutils.so differ
+Binary files aokp/lib/libvariablespeed.so and cm9/lib/libvariablespeed.so differ
+Binary files aokp/lib/libvideoeditor_jni.so and cm9/lib/libvideoeditor_jni.so differ
+Binary files aokp/lib/libvideoeditorplayer.so and cm9/lib/libvideoeditorplayer.so differ
+Binary files aokp/lib/libvorbisidec.so and cm9/lib/libvorbisidec.so differ
+Binary files aokp/lib/libwebcore.so and cm9/lib/libwebcore.so differ
+Binary files aokp/lib/libwebrtc_audio_preprocessing.so and cm9/lib/libwebrtc_audio_preprocessing.so differ
+Binary files aokp/lib/libwilhelm.so and cm9/lib/libwilhelm.so differ
+Binary files aokp/lib/libwpa_client.so and cm9/lib/libwpa_client.so differ
+Only in cm9/lib: libxml2.so
+Binary files aokp/lib/libz.so and cm9/lib/libz.so differ
+Binary files aokp/lib/modules/bcm4329.ko and cm9/lib/modules/bcm4329.ko differ
+Binary files aokp/lib/soundfx/libaudiopreprocessing.so and cm9/lib/soundfx/libaudiopreprocessing.so differ
+Binary files aokp/lib/soundfx/libbundlewrapper.so and cm9/lib/soundfx/libbundlewrapper.so differ
+Only in cm9/lib/soundfx: libcyanogen-dsp.so
+Binary files aokp/lib/soundfx/libreverbwrapper.so and cm9/lib/soundfx/libreverbwrapper.so differ
+Binary files aokp/lib/soundfx/libvisualizer.so and cm9/lib/soundfx/libvisualizer.so differ
+Only in aokp/media/audio/alarms: Alarm_Beep_01.ogg
+Only in aokp/media/audio/alarms: Alarm_Beep_02.ogg
+Only in aokp/media/audio/alarms: Alarm_Beep_03.ogg
+Only in aokp/media/audio/alarms: Alarm_Buzzer.ogg
+Only in aokp/media/audio/alarms: Alarm_Classic.ogg
+Only in aokp/media/audio/alarms: Alarm_Rooster_02.ogg
+Only in cm9/media/audio/alarms: Copernicium.ogg
+Only in cm9/media/audio/alarms: Curium.ogg
+Only in cm9/media/audio/alarms: CyanAlarm.ogg
+Only in cm9/media/audio/notifications: Acrux.ogg
+Binary files aokp/media/audio/notifications/Altair.ogg and cm9/media/audio/notifications/Altair.ogg differ
+Binary files aokp/media/audio/notifications/Antares.ogg and cm9/media/audio/notifications/Antares.ogg differ
+Only in aokp/media/audio/notifications: Beat_Box_Android.ogg
+Binary files aokp/media/audio/notifications/Betelgeuse.ogg and cm9/media/audio/notifications/Betelgeuse.ogg differ
+Only in aokp/media/audio/notifications: CaffeineSnake.ogg
+Only in aokp/media/audio/notifications: Cricket.ogg
+Only in cm9/media/audio/notifications: CyanMail.ogg
+Only in cm9/media/audio/notifications: CyanMessage.ogg
+Only in cm9/media/audio/notifications: CyanPing.ogg
+Binary files aokp/media/audio/notifications/Deneb.ogg and cm9/media/audio/notifications/Deneb.ogg differ
+Only in aokp/media/audio/notifications: Doink.ogg
+Only in aokp/media/audio/notifications: Drip.ogg
+Only in aokp/media/audio/notifications: F1_MissedCall.ogg
+Only in aokp/media/audio/notifications: F1_New_MMS.ogg
+Only in aokp/media/audio/notifications: F1_New_SMS.ogg
+Only in aokp/media/audio/notifications: Heaven.ogg
+Only in aokp/media/audio/notifications: moonbeam.ogg
+Only in cm9/media/audio/notifications: Naughty.ogg
+Only in aokp/media/audio/notifications: pixiedust.ogg
+Only in aokp/media/audio/notifications: pizzicato.ogg
+Only in aokp/media/audio/notifications: Plastic_Pipe.ogg
+Only in cm9/media/audio/notifications: Pong.ogg
+Only in aokp/media/audio/notifications: regulus.ogg
+Only in cm9/media/audio/notifications: Regulus.ogg
+Only in aokp/media/audio/notifications: sirius.ogg
+Only in cm9/media/audio/notifications: Sirius.ogg
+Only in aokp/media/audio/notifications: SpaceSeed.ogg
+Only in aokp/media/audio/notifications: TaDa.ogg
+Only in aokp/media/audio/notifications: Tinkerbell.ogg
+Only in aokp/media/audio/notifications: tweeters.ogg
+Only in cm9/media/audio/ringtones: Acheron.ogg
+Only in aokp/media/audio/ringtones: Backroad.ogg
+Only in cm9/media/audio/ringtones: BentleyDubs.ogg
+Only in cm9/media/audio/ringtones: Bootes.ogg
+Only in aokp/media/audio/ringtones: BOOTES.ogg
+Only in cm9/media/audio/ringtones: CaribbeanIce.ogg
+Only in cm9/media/audio/ringtones: Cassiopeia.ogg
+Only in aokp/media/audio/ringtones: CASSIOPEIA.ogg
+Only in cm9/media/audio/ringtones: CrazyDream.ogg
+Only in cm9/media/audio/ringtones: CyanTone.ogg
+Only in cm9/media/audio/ringtones: DreamTheme.ogg
+Binary files aokp/media/audio/ringtones/Eridani.ogg and cm9/media/audio/ringtones/Eridani.ogg differ
+Only in aokp/media/audio/ringtones: FreeFlight.ogg
+Only in cm9/media/audio/ringtones: FriendlyGhost.ogg
+Only in cm9/media/audio/ringtones: GameOverGuitar.ogg
+Only in cm9/media/audio/ringtones: InsertCoin.ogg
+Only in cm9/media/audio/ringtones: Iridium.ogg
+Binary files aokp/media/audio/ringtones/Lyra.ogg and cm9/media/audio/ringtones/Lyra.ogg differ
+Only in cm9/media/audio/ringtones: Nasqueron.ogg
+Only in cm9/media/audio/ringtones: NewPlayer.ogg
+Only in cm9/media/audio/ringtones: Noises1.ogg
+Only in cm9/media/audio/ringtones: Noises2.ogg
+Only in cm9/media/audio/ringtones: Noises3.ogg
+Only in cm9/media/audio/ringtones: Revelation.ogg
+Only in aokp/media/audio/ringtones: Ring_Classic_02.ogg
+Only in aokp/media/audio/ringtones: Ring_Digital_02.ogg
+Only in aokp/media/audio/ringtones: Ring_Synth_02.ogg
+Only in aokp/media/audio/ringtones: Ring_Synth_04.ogg
+Only in cm9/media/audio/ringtones: RomancingTheTone.ogg
+Only in cm9/media/audio/ringtones: Savannah.ogg
+Only in cm9/media/audio/ringtones: SitarVsSitar.ogg
+Only in cm9/media/audio/ringtones: SpringyJalopy.ogg
+Binary files aokp/media/audio/ringtones/Testudo.ogg and cm9/media/audio/ringtones/Testudo.ogg differ
+Only in cm9/media/audio/ringtones: Thunderfoot.ogg
+Only in cm9/media/audio/ringtones: VeryAlarmed.ogg
+Binary files aokp/media/audio/ringtones/Vespa.ogg and cm9/media/audio/ringtones/Vespa.ogg differ
+Only in cm9/media/audio/ui: Media_Volume.ogg
+Only in cm9/media/audio/ui: VideoStop.ogg
+Only in cm9/media/audio/ui: VolumeIncremental.ogg
+Binary files aokp/media/bootanimation.zip and cm9/media/bootanimation.zip differ
+Only in cm9/usr/share: vim
+Binary files aokp/usr/share/zoneinfo/zoneinfo.dat and cm9/usr/share/zoneinfo/zoneinfo.dat differ
+Binary files aokp/usr/share/zoneinfo/zoneinfo.idx and cm9/usr/share/zoneinfo/zoneinfo.idx differ
+diff -r aokp/usr/share/zoneinfo/zoneinfo.version cm9/usr/share/zoneinfo/zoneinfo.version
+1c1
+< 2011n
+---
+> 2012b
+Only in cm9/vendor: etc
+Binary files aokp/vendor/firmware/fw_bcm4329.bin and cm9/vendor/firmware/fw_bcm4329.bin differ
+Binary files aokp/xbin/add-property-tag and cm9/xbin/add-property-tag differ
+Binary files aokp/xbin/agent and cm9/xbin/agent differ
+Binary files aokp/xbin/attest and cm9/xbin/attest differ
+Binary files aokp/xbin/avinfo and cm9/xbin/avinfo differ
+Binary files aokp/xbin/avtest and cm9/xbin/avtest differ
+Binary files aokp/xbin/bash and cm9/xbin/bash differ
+Binary files aokp/xbin/bdaddr and cm9/xbin/bdaddr differ
+Binary files aokp/xbin/btool and cm9/xbin/btool differ
+Only in aokp/xbin: bt_sco_app
+Binary files aokp/xbin/bttest and cm9/xbin/bttest differ
+Binary files aokp/xbin/busybox and cm9/xbin/busybox differ
+Binary files aokp/xbin/check-lost+found and cm9/xbin/check-lost+found differ
+Binary files aokp/xbin/cpueater and cm9/xbin/cpueater differ
+Binary files aokp/xbin/daemonize and cm9/xbin/daemonize differ
+Binary files aokp/xbin/dbus-monitor and cm9/xbin/dbus-monitor differ
+Binary files aokp/xbin/dbus-send and cm9/xbin/dbus-send differ
+Binary files aokp/xbin/dexdump and cm9/xbin/dexdump differ
+Binary files aokp/xbin/dhdutil and cm9/xbin/dhdutil differ
+Binary files aokp/xbin/directiotest and cm9/xbin/directiotest differ
+Only in cm9/xbin: dropbear
+Only in cm9/xbin: dropbearkey
+Binary files aokp/xbin/hciconfig and cm9/xbin/hciconfig differ
+Binary files aokp/xbin/hcidump and cm9/xbin/hcidump differ
+Binary files aokp/xbin/hcitool and cm9/xbin/hcitool differ
+Binary files aokp/xbin/hstest and cm9/xbin/hstest differ
+Only in cm9/xbin: iwmulticall
+Only in aokp/xbin: kfmapp
+Binary files aokp/xbin/l2ping and cm9/xbin/l2ping differ
+Binary files aokp/xbin/l2test and cm9/xbin/l2test differ
+Binary files aokp/xbin/latencytop and cm9/xbin/latencytop differ
+Binary files aokp/xbin/librank and cm9/xbin/librank differ
+Binary files aokp/xbin/lmptest and cm9/xbin/lmptest differ
+Binary files aokp/xbin/micro_bench and cm9/xbin/micro_bench differ
+Only in cm9/xbin: nano
+Binary files aokp/xbin/nc and cm9/xbin/nc differ
+Binary files aokp/xbin/netperf and cm9/xbin/netperf differ
+Binary files aokp/xbin/netserver and cm9/xbin/netserver differ
+Binary files aokp/xbin/opcontrol and cm9/xbin/opcontrol differ
+Binary files aokp/xbin/openvpn and cm9/xbin/openvpn differ
+Binary files aokp/xbin/oprofiled and cm9/xbin/oprofiled differ
+Binary files aokp/xbin/procmem and cm9/xbin/procmem differ
+Binary files aokp/xbin/procrank and cm9/xbin/procrank differ
+Binary files aokp/xbin/rawbu and cm9/xbin/rawbu differ
+Binary files aokp/xbin/rctest and cm9/xbin/rctest differ
+Binary files aokp/xbin/rfcomm and cm9/xbin/rfcomm differ
+Only in cm9/xbin: rsync
+Binary files aokp/xbin/sane_schedstat and cm9/xbin/sane_schedstat differ
+Binary files aokp/xbin/scotest and cm9/xbin/scotest differ
+Binary files aokp/xbin/scp and cm9/xbin/scp differ
+Binary files aokp/xbin/sdptest and cm9/xbin/sdptest differ
+Only in cm9/xbin: sftp-server
+Binary files aokp/xbin/showmap and cm9/xbin/showmap differ
+Binary files aokp/xbin/showslab and cm9/xbin/showslab differ
+Binary files aokp/xbin/sqlite3 and cm9/xbin/sqlite3 differ
+Binary files aokp/xbin/ssh and cm9/xbin/ssh differ
+Binary files aokp/xbin/strace and cm9/xbin/strace differ
+Binary files aokp/xbin/su and cm9/xbin/su differ
+Binary files aokp/xbin/tcpdump and cm9/xbin/tcpdump differ
+Binary files aokp/xbin/timeinfo and cm9/xbin/timeinfo differ
+Only in cm9/xbin: vim

@@ -1,0 +1,931 @@
+# Updater-script in Roboto
+
+# LICENSE:
+#
+# Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
+# Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ )
+#
+# Distributed with Roboto
+#
+# Based on .sense installation script using AROMA with "devpackage"
+#
+# Thanks to amarullz for the original AROMA installation manifest
+
+ui_print("@Roboto");
+ui_print("@Installing - please wait");
+set_progress(0.0);
+ui_print(" ");
+ui_print("@Preparing for installation...");
+
+# Format SYSTEM
+ui_print("Erasing system...");
+format("MTD", "system");
+#- Mount SYSTEM
+ui_print("Mounting system...");
+mount("MTD", "system", "/system");
+set_progress(0.1);
+# "DEVPACKAGE" SCRIPTING ENGINE and folder layout
+
+#- Data Wipe?
+
+    if
+      file_getprop("/tmp/aroma/wipedata.prop","selected") == "1"
+    then
+      ui_print("Wiping data...");
+      format("MTD", "userdata");
+    endif;
+
+# Main system files.
+
+ui_print("Mounting data...");
+mount("MTD", "userdata", "/data");
+
+# First extract the APK's and stuff. If you have a GSM Wildfire S then that is all you need so far
+ui_print("@Installing system files");
+ui_print("Extraction of main started");
+package_extract_dir("system", "/system");
+ui_print("Extraction of main finished");
+
+#
+#
+#
+
+#
+#
+#
+    if
+	file_getprop("/tmp/aroma/core.prop","selected") == "1"
+    then
+	ui_print("@Installing CM9 core");
+	package_extract_dir("cm9", "/system");
+	set_progress(0.2);
+	package_extract_file("system/bin/backuptool.sh", "/tmp/backuptool.sh");
+	package_extract_file("system/bin/backuptool.functions", "/tmp/backuptool.functions");
+	set_perm(0, 0, 0777, "/tmp/backuptool.sh");
+	set_perm(0, 0, 0644, "/tmp/backuptool.functions");
+	run_program("/tmp/backuptool.sh", "backup");
+	symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
+	symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
+	symlink("busybox", "/system/xbin/[", "/system/xbin/[[",
+	        "/system/xbin/adjtimex", "/system/xbin/arp", "/system/xbin/ash",
+	        "/system/xbin/awk", "/system/xbin/base64", "/system/xbin/basename",
+	        "/system/xbin/bbconfig", "/system/xbin/blkid", "/system/xbin/blockdev",
+	        "/system/xbin/brctl", "/system/xbin/bunzip2", "/system/xbin/bzcat",
+	        "/system/xbin/bzip2", "/system/xbin/cal", "/system/xbin/cat",
+	        "/system/xbin/catv", "/system/xbin/chattr", "/system/xbin/chgrp",
+	        "/system/xbin/chmod", "/system/xbin/chown", "/system/xbin/chroot",
+	        "/system/xbin/clear", "/system/xbin/cmp", "/system/xbin/comm",
+	        "/system/xbin/cp", "/system/xbin/cpio", "/system/xbin/crond",
+	        "/system/xbin/crontab", "/system/xbin/cut", "/system/xbin/date",
+	        "/system/xbin/dc", "/system/xbin/dd", "/system/xbin/depmod",
+	        "/system/xbin/devmem", "/system/xbin/df", "/system/xbin/diff",
+	        "/system/xbin/dirname", "/system/xbin/dmesg", "/system/xbin/dnsd",
+	        "/system/xbin/dos2unix", "/system/xbin/du", "/system/xbin/echo",
+	        "/system/xbin/ed", "/system/xbin/egrep", "/system/xbin/env",
+	        "/system/xbin/expand", "/system/xbin/expr", "/system/xbin/false",
+	        "/system/xbin/fdisk", "/system/xbin/fgrep", "/system/xbin/find",
+	        "/system/xbin/flash_lock", "/system/xbin/flash_unlock",
+	        "/system/xbin/flashcp", "/system/xbin/flock", "/system/xbin/fold",
+	        "/system/xbin/free", "/system/xbin/freeramdisk", "/system/xbin/fsync",
+	        "/system/xbin/ftpget", "/system/xbin/ftpput", "/system/xbin/fuser",
+	        "/system/xbin/getopt", "/system/xbin/grep", "/system/xbin/groups",
+	        "/system/xbin/gunzip", "/system/xbin/gzip", "/system/xbin/halt",
+	        "/system/xbin/head", "/system/xbin/hexdump", "/system/xbin/id",
+	        "/system/xbin/ifconfig", "/system/xbin/insmod", "/system/xbin/install",
+	        "/system/xbin/iostat", "/system/xbin/ip", "/system/xbin/kill",
+	        "/system/xbin/killall", "/system/xbin/killall5", "/system/xbin/length",
+	        "/system/xbin/less", "/system/xbin/ln", "/system/xbin/losetup",
+	        "/system/xbin/ls", "/system/xbin/lsattr", "/system/xbin/lsmod",
+	        "/system/xbin/lsusb", "/system/xbin/lzcat", "/system/xbin/lzma",
+	        "/system/xbin/lzop", "/system/xbin/lzopcat", "/system/xbin/man",
+	        "/system/xbin/md5sum", "/system/xbin/mesg", "/system/xbin/mkdir",
+	        "/system/xbin/mke2fs", "/system/xbin/mkfifo", "/system/xbin/mkfs.ext2",
+	        "/system/xbin/mkfs.vfat", "/system/xbin/mknod", "/system/xbin/mkswap",
+	        "/system/xbin/mktemp", "/system/xbin/modinfo", "/system/xbin/modprobe",
+	        "/system/xbin/more", "/system/xbin/mount", "/system/xbin/mountpoint",
+	        "/system/xbin/mpstat", "/system/xbin/mv", "/system/xbin/nanddump",
+	        "/system/xbin/nandwrite", "/system/xbin/netstat", "/system/xbin/nice",
+	        "/system/xbin/nohup", "/system/xbin/nslookup", "/system/xbin/ntpd",
+	        "/system/xbin/od", "/system/xbin/patch", "/system/xbin/pgrep",
+	        "/system/xbin/pidof", "/system/xbin/ping", "/system/xbin/pkill",
+	        "/system/xbin/pmap", "/system/xbin/poweroff", "/system/xbin/printenv",
+	        "/system/xbin/printf", "/system/xbin/ps", "/system/xbin/pstree",
+	        "/system/xbin/pwd", "/system/xbin/pwdx", "/system/xbin/rdev",
+	        "/system/xbin/readlink", "/system/xbin/realpath", "/system/xbin/renice",
+	        "/system/xbin/reset", "/system/xbin/resize", "/system/xbin/rev",
+	        "/system/xbin/rm", "/system/xbin/rmdir", "/system/xbin/rmmod",
+	        "/system/xbin/route", "/system/xbin/run-parts", "/system/xbin/rx",
+	        "/system/xbin/sed", "/system/xbin/seq", "/system/xbin/setconsole",
+	        "/system/xbin/setserial", "/system/xbin/setsid", "/system/xbin/sh",
+	        "/system/xbin/sha1sum", "/system/xbin/sha256sum",
+	        "/system/xbin/sha512sum", "/system/xbin/sleep", "/system/xbin/sort",
+	        "/system/xbin/split", "/system/xbin/stat", "/system/xbin/strings",
+	        "/system/xbin/stty", "/system/xbin/sum", "/system/xbin/swapoff",
+	        "/system/xbin/swapon", "/system/xbin/sync", "/system/xbin/sysctl",
+	        "/system/xbin/tac", "/system/xbin/tail", "/system/xbin/tar",
+	        "/system/xbin/taskset", "/system/xbin/tee", "/system/xbin/telnet",
+	        "/system/xbin/telnetd", "/system/xbin/test", "/system/xbin/tftp",
+	        "/system/xbin/tftpd", "/system/xbin/time", "/system/xbin/timeout",
+	        "/system/xbin/top", "/system/xbin/touch", "/system/xbin/tr",
+	        "/system/xbin/traceroute", "/system/xbin/true", "/system/xbin/ttysize",
+	        "/system/xbin/tune2fs", "/system/xbin/umount", "/system/xbin/uname",
+	        "/system/xbin/uncompress", "/system/xbin/unexpand", "/system/xbin/uniq",
+	        "/system/xbin/unix2dos", "/system/xbin/unlzma", "/system/xbin/unlzop",
+	        "/system/xbin/unxz", "/system/xbin/unzip", "/system/xbin/uptime",
+	        "/system/xbin/usleep", "/system/xbin/uudecode", "/system/xbin/uuencode",
+	        "/system/xbin/vi", "/system/xbin/watch", "/system/xbin/wc",
+	        "/system/xbin/wget", "/system/xbin/which", "/system/xbin/whoami",
+	        "/system/xbin/xargs", "/system/xbin/xz", "/system/xbin/xzcat",
+	        "/system/xbin/yes",
+	        "/system/xbin/zcat");
+	symlink("iwmulticall", "/system/xbin/iwconfig", "/system/xbin/iwgetid",
+	        "/system/xbin/iwlist", "/system/xbin/iwpriv",
+	        "/system/xbin/iwspy");
+	symlink("mksh", "/system/bin/sh");
+	symlink("toolbox", "/system/bin/cat", "/system/bin/chmod",
+	        "/system/bin/chown", "/system/bin/cmp", "/system/bin/date",
+	        "/system/bin/dd", "/system/bin/df", "/system/bin/dmesg",
+	        "/system/bin/getevent", "/system/bin/getprop", "/system/bin/hd",
+	        "/system/bin/id", "/system/bin/ifconfig", "/system/bin/iftop",
+	        "/system/bin/insmod", "/system/bin/ioctl", "/system/bin/ionice",
+	        "/system/bin/kill", "/system/bin/ln", "/system/bin/log",
+	        "/system/bin/ls", "/system/bin/lsmod", "/system/bin/lsof",
+	        "/system/bin/mkdir", "/system/bin/mount", "/system/bin/mv",
+	        "/system/bin/nandread", "/system/bin/netstat",
+	        "/system/bin/newfs_msdos", "/system/bin/notify", "/system/bin/printenv",
+	        "/system/bin/ps", "/system/bin/r", "/system/bin/reboot",
+	        "/system/bin/renice", "/system/bin/rm", "/system/bin/rmdir",
+	        "/system/bin/rmmod", "/system/bin/route", "/system/bin/schedtop",
+	        "/system/bin/sendevent", "/system/bin/setconsole",
+	        "/system/bin/setprop", "/system/bin/sleep", "/system/bin/smd",
+	        "/system/bin/start", "/system/bin/stop", "/system/bin/sync",
+	        "/system/bin/top", "/system/bin/touch", "/system/bin/umount",
+	        "/system/bin/uptime", "/system/bin/vmstat", "/system/bin/watchprops",
+	        "/system/bin/wipe");
+	retouch_binaries("/system/lib/libusbhost.so", "097f5015205544cfc0abcabb90bfa0d9c30eef04", "/system/lib/libETC1.so", "528bfd8f909647720f43f2ec4d786aec9639986e", "/system/lib/libstagefright_yuv.so", "4dd5a6c6ab3b0da40c0d1fdfebfac1b2da317cee", "/system/lib/libmemalloc.so", "a7e4f15264820408e37408d8fd19731d54a60ccd", "/system/lib/libctest.so", "5ac2ab09c88d90d80d339a0216f1348fff06411d", "/system/lib/libpng.so", "a93b939ad5470db9655b8d5be75b078a24ae253a", "/system/lib/libfilterfw.so", "03b5e269fc4fc9453098ca9d7fc82e5e700e989f", "/system/lib/libext4_utils.so", "983ff6c4af9ca4a415336b75be77acf35b1f8f06", "/system/lib/egl/libq3dtools_adreno200.so", "d0e6b99b7d99a60256804b2a85251d5c16828dad", "/system/lib/egl/eglsubAndroid.so", "47b4cf1581cba589d27ce53919ffd40375c54e6b", "/system/lib/egl/libGLES_android.so", "cb99e190f12093aed2412a2a7072de1c43da69e4", "/system/lib/egl/libGLESv2_adreno200.so", "9201b588fad821d48b79f3fe60c8e54622ed6d50", "/system/lib/egl/egl.cfg", "7d7dc8662f8ea558ccc4f84899a8fe2d4b010535", "/system/lib/egl/libGLESv1_CM_adreno200.so", "d863cc49c51721cce15bac6913dfcadabddc0fab", "/system/lib/egl/libEGL_adreno200.so", "1c1b01af05a562ad2cf63c84cccace7d476e1101", "/system/lib/libext2_blkid.so", "66f5ba1e283004f2be0da63ab515f0afefec1b47", "/system/lib/liblzo.so", "49d7ba19ad75ec70db59aead199599e87122fe00", "/system/lib/libext2fs.so", "093e0122edb3cbeedf013c11de0581be1a5435e5", "/system/lib/bluez-plugin/network.so", "79a33e7ce9405b7d97b2e71507ff9dcab5a77bfc", "/system/lib/bluez-plugin/audio.so", "03a3ebc410c83cb3f2ff9807c8749fbe67bff91e", "/system/lib/bluez-plugin/bluetooth-health.so", "f7bf0548dfe39f866dce8d9f4c08c1b1561dd010", "/system/lib/bluez-plugin/input.so", "bc784ce4cde6398bd6e61e737d558c93065c2f8b", "/system/lib/libsonivox.so", "f9448229769aac1d9e9daa48563d01ef937db210", "/system/lib/libgabi++.so", "e73c0066f114788cb2807d8b267573f88affb9dc", "/system/lib/libandroid_servers.so", "cca42c8f9ec5834b1c6c607888c25e9e509850db", "/system/lib/libstagefright_soft_h264dec.so", "53b2d634d87056a9c0ba5a315364b299262e12e3", "/system/lib/libinput.so", "247ae6d4f2f25e1322a1099bc968255f99678585", "/system/lib/libtilerenderer.so", "9f45e9ec711ba346804be38b2f6ce208a0c906b7", "/system/lib/libsqlite.so", "e531bc65cd4407f7864b736de55f3ea389624b3b", "/system/lib/libaudioflinger.so", "616c2795728d0b3304885ce8d9336f3ac67641be", "/system/lib/libstagefright_soft_aacdec.so", "9cbfd041f662eae0cb87e88bd454af46bc4a5cef", "/system/lib/libnfc_ndef.so", "e192b84c00d474f9689cf91def01690a8c3edba0", "/system/lib/libdl.so", "b960bfc7c2ae303a09d135bebbcd2d84b8899e64", "/system/lib/libvariablespeed.so", "0f78eb23325bc5f52976790f9c72e3507e6f1732", "/system/lib/libOpenMAXAL.so", "54acd0b211d1eebaafcc2893d49fa228dcb8091b", "/system/lib/libjackpal-androidterm4.so", "f79cab69953a22a9e57ff6df719d1ad98369ce9c", "/system/lib/invoke_mock_media_player.so", "2e3646e206b73fab3bde1ab1daa8a73f9930c0fe", "/system/lib/liblog.so", "19a8eb602fdf829d022c62cabe6cd02a9e09a86a", "/system/lib/libwpa_client.so", "54708de001797c4b2316a1ca8d21ae07ea720717", "/system/lib/libhardware_legacy.so", "f6f60d82ad1c4dcaf0f3b81546da7e565f44df4b", "/system/lib/libpower.so", "d7135ee756eeed8cd972863fa9e9466227e14011", "/system/lib/libthread_db.so", "0edc221f90a62f42a194873b22169fb7c361456c", "/system/lib/libRS.so", "640c61791d47b3da8f6d09bdb3949376166345f6", "/system/lib/libOmxH264Dec.so", "21e5b9ee1463ba2b27d823dc51e31f6274e4c682", "/system/lib/libandroid.so", "5ec413f89bb451a1a8e562c146f3969eca2709d7", "/system/lib/libc_malloc_debug_leak.so", "d39d9b739e266b21cf9fae3fafff64e414a897da", "/system/lib/libext2_profile.so", "1a1b59c25386a1110272135709b91588fded0f7b", "/system/lib/libvorbisidec.so", "4c87ef6ffa20bc34569dbf29c3be1cb8e1ffe2da", "/system/lib/libstagefrighthw.so", "83cff257182cd57935066066eab9d169d9431bdc", "/system/lib/libstagefright_soft_amrdec.so", "cff3835586f3ee9c3130735f09af53fc5ec042e7", "/system/lib/libext2_com_err.so", "cccb7ea3b9913878491d018b03e484e760cad457", "/system/lib/libFFTEm.so", "b296c25cfb3838de506e0b779e7169881f454751", "/system/lib/libdrmframework_jni.so", "ca1955a0322fea1af4d219fefce764fac53f1bf5", "/system/lib/librtp_jni.so", "85460af26fb3c81cd0edb32df79fce50d4bec0fd", "/system/lib/libQcomUI.so", "0240a8b5cb0d9b66bc8ff1cd12e6312cb85aae27", "/system/lib/libstdc++.so", "bba732e274226f50fb01c2aaf333abfafd9028db", "/system/lib/libvideoeditorplayer.so", "77cbd9917a853a3aa5c41c74880ae175271a3939", "/system/lib/libGLESv2_dbg.so", "9a825ec720d375fe6e22f4c56e251f6929800fa3", "/system/lib/libdrmframework.so", "876c45cb9004490501317b82d201bc2c0aeba795", "/system/lib/modules/bcm4329.ko", "7600dece2ef22aacf596d6999a060f32d8a3d3c8", "/system/lib/libcamera.so", "e582a37ccce935261ff7f771033672a0e3d80031", "/system/lib/libnativehelper.so", "c1369acb363b07bba146df40d1d942edc730cd3b", "/system/lib/libssl.so", "c8e16edbee563f96de60782ae6418e01dfb6386e", "/system/lib/libttspico.so", "a6908bd2ca809e43d9f31911d89de45118bd13b1", "/system/lib/libsoundpool.so", "4d9de40bcb13cebbe41cd375a968ce54623116b7", "/system/lib/libstagefright.so", "9563f362159a3e32114a0f56bb1fb8c5d4fa0d9f", "/system/lib/libaudioeq.so", "017dd7e62fd14063c8ed31903eec47e56e53921e", "/system/lib/libbtio.so", "836c1a9e4a571e351491b452f4d4d596ff255337", "/system/lib/libeffects.so", "10e9f13977dc0a99a6274a441e3a66aa9047bb95", "/system/lib/libiprouteutil.so", "d305a308968c58baa3db8dab3db34ef6d3566a84", "/system/lib/libstagefright_soft_mp3dec.so", "7ee9db001b001a8f090e9874798cb8248c0a79ea", "/system/lib/libsqlite_jni.so", "a24fb0b109341a7d0f385060f28009b914b78e4b", "/system/lib/libEGL.so", "87094376a7406efcae159cd2ff1309f9713edad9", "/system/lib/librpc.so", "8a2baaaf8c0b948d6b589f41c32f5cab3dbadfc6", "/system/lib/libexif.so", "e5501c0a073e771d2a78d33513079caf8b7309e5", "/system/lib/libgenlock.so", "3dc66dba648ed7b76e0304958fb9cfbe684a656c", "/system/lib/libOmxMpeg4Dec.so", "2f93ca612e30e43f7672e3009551d5916b142660", "/system/lib/libtinyalsa.so", "532a3b987c369add2df1afb06a7fb267a98292c7", "/system/lib/libpowermanager.so", "628e6cd922bcef1d2b4af4400c38ddc78864751d", "/system/lib/libandroid_runtime.so", "199cf93d6fc83c9663edfb36eace825305ed95b9", "/system/lib/libsystem_server.so", "06f99db536a01b1f07adf642c91b21b5cc9da90e", "/system/lib/libhtc_acoustic.so", "02eb84ff51f2e383b2179f5735e49fb61601ddb1", "/system/lib/libc.so", "32f65bbc408a0d7dce26c6e76a16b0dfd4747d92", "/system/lib/libpixelflinger.so", "49208eb7357baefbb6db1bbe71247d2d3cb509e8", "/system/lib/libdbus.so", "f1b6c2a9008fb2985e6fc282439e4721a0a63e71", "/system/lib/libsysutils.so", "f4bc229a712fb84be642683f70b721ed4a85bda7", "/system/lib/libmedia_jni.so", "7b38728e108933cf16cb7adf2d9f6f36f1058718", "/system/lib/libsurfaceflinger.so", "6f67a4079f35a32a2db0272ed867e058b333443e", "/system/lib/libdrm1.so", "aa17a619e2507d0c157852006b4946bbfa634ea4", "/system/lib/libdrm1_jni.so", "95e5efe272c0f84a757d572f2398cc1080d7546c", "/system/lib/libreference-ril.so", "fd7b0dbf79c1fd847cc8f43faf47f7869bb8b45d", "/system/lib/libharfbuzz.so", "b7600b1c0cb9a73aae4a12bbfb9911eb9d434ecc", "/system/lib/libstagefright_soft_vpxdec.so", "495772ae6ec34d4b10cbaf5b9a2345d45512503f", "/system/lib/libvideoeditor_jni.so", "09e8d2e0a492115c92ddd5d239e00d1ed4b5db50", "/system/lib/libhwui.so", "ac1e779f02eb39e3468e151980fca6152070595b", "/system/lib/libcameraservice.so", "9c2813803a16dbc30cbfc9b04ba586f1cadba19d", "/system/lib/libcutils.so", "fe56fb152b2d40eb0fc92a76727b5b42226ef623", "/system/lib/libc_malloc_debug_qemu.so", "96bb4dcc09a08c3942153eb563cb46f2e87f7b51", "/system/lib/libstagefright_soft_vorbisdec.so", "ffe7645f3f8cacbd762a987f9b191efe82615f7e", "/system/lib/liboverlay.so", "0385ffbde1190e7adcfb6103e47bff8f0e1e2f1e", "/system/lib/libgsl.so", "2d28ac66f160faaf838013ec22071489fd7cf576", "/system/lib/libstagefright_avc_common.so", "5ef1af122c5b5c0c59e452fd5ae8ba3dcfd4413a", "/system/lib/soundfx/libaudiopreprocessing.so", "f34fcbcb2cb84f8c8f252290e5528e076c704722", "/system/lib/soundfx/libbundlewrapper.so", "1927d3c88449c2e03f4e848e503b8d84ab1e2c9a", "/system/lib/soundfx/libreverbwrapper.so", "aa8718e6b556224c1c046531a525cd22b42798f5", "/system/lib/soundfx/libcyanogen-dsp.so", "8bdca7209d60a851e5f0414699b79a8b9576d8e3", "/system/lib/soundfx/libvisualizer.so", "b7f4268967dbba3e8e3a0c62c42028d046e6d000", "/system/lib/libbluetoothd.so", "5559647f49271d5507209fd0af3a59c1ac70d695", "/system/lib/libaudioeffect_jni.so", "59dd5d1017a5f8eaaf248aa9ebc5132285eddeb8", "/system/lib/libicuuc.so", "1c41ae2eb66eea867b93258da53e0ee1c131b233", "/system/lib/libGLESv1_CM.so", "d04bea5a4e3976f0bf87e34a59160f0d0c65c797", "/system/lib/libext2_e2p.so", "dafecbeb5e1e21155b1fb08c5f6afd1b3b3424eb", "/system/lib/libOmxVidEnc.so", "57794e88feb603339a2530558b7fb1d9b2eb9437", "/system/lib/libncurses.so", "eb9d903f4cf9e68ea867e660ac91238c6642498e", "/system/lib/librs_jni.so", "5e3b8d7c9e7e18bf8a6f14015a316d30df3bf26d", "/system/lib/libbcinfo.so", "c299cbac80fe7bcfaea69c21b445c013f0110c96", "/system/lib/libdvm.so", "62256caa283fc7922827b94436a2ac63c5c5528b", "/system/lib/libspeexresampler.so", "819cbdb0aec042a2901647f67dcf613d4ee30ebe", "/system/lib/libdefcontainer_jni.so", "9545f3155400419facfa0395e9131a663c285e56", "/system/lib/libbcc.so.sha1", "bd4daebd53209ef20265eb13353eb901a92b621f", "/system/lib/libsrec_jni.so", "3fc649ae9bf1921b83340722db304cf14bff0f39", "/system/lib/hw/audio_policy.default.so", "b458ed582466b49d103156724e96b3d713c828e1", "/system/lib/hw/sensors.goldfish.so", "54e0fa9ee4d6db77827e71ebbfeb513123b9a112", "/system/lib/hw/hwcomposer.default.so", "821660a1a588cf9d514f91a909f673c3c1b1f05f", "/system/lib/hw/copybit.msm7x27.so", "740a78230ea3a92f2b2dc23b348f741ec86940fd", "/system/lib/hw/gralloc.msm7x27.so", "4832c704ea3483f8a5fc2f9d140c00b69762f33f", "/system/lib/hw/lights.marvel.so", "a145acb75343f1680a31f55bcc47ba1cc32062fe", "/system/lib/hw/audio.a2dp.default.so", "2470dc260dcc28efaf7b6a79363e777a21ff84b6", "/system/lib/hw/camera.marvel.so", "15efe708dccc21663be521616a9a6ac6ffef08f3", "/system/lib/hw/camera.goldfish.so", "7e8732d2de5ac4fceb4f25282a6242acadbe605e", "/system/lib/hw/gps.marvel.so", "2ed4ba8aa9b7ceea73886001bf159e6622b6de68", "/system/lib/hw/gps.goldfish.so", "e6ccb8465fc9f7c79dd486ae194c86417f190905", "/system/lib/hw/hwcomposer.msm7x27.so", "b17badfd5423ebc42d3f530d65e11f13582207f0", "/system/lib/hw/audio.primary.marvel.so", "68ffb134ce5fd151ed4de6c362ef4805dfdd96f1", "/system/lib/hw/audio.primary.default.so", "5bca466740f04f46c8467dfcb3da29ca55c981f0", "/system/lib/hw/lights.goldfish.so", "fbdc4bf1b99566653430530cab4de565f4b4c7a8", "/system/lib/hw/gralloc.default.so", "cf2162cd2aacec2061ad574535d80ec9cfa0869a", "/system/lib/hw/sensors.marvel.so", "30d7002ca4bb52bd483593295626230f6da7583b", "/system/lib/hw/audio_policy.marvel.so", "62e454c4bed8e78ddcd0eafedbc2f55ff2eb9e0e", "/system/lib/libjpeg.so", "600e5a3405bfe081229bdbede8293031cd5ca03f", "/system/lib/libjni_latinime.so", "9082ac8507095241514a224e3b44d65a08271aa0", "/system/lib/libwilhelm.so", "2797c82be56beb103731b2ab5e194d13ccde1b24", "/system/lib/libOpenVG.so", "c9fdd3248c40fa8797e9e89417027a681a5982ec", "/system/lib/libmedia.so", "ff13e923b2483534e040c72ad4a198a7bf9db4fa", "/system/lib/libOmxCore.so", "af6522c1ad3b777edc16e25a66b14c5195edba29", "/system/lib/libmediaplayerservice.so", "66f014b2884998ab5c0907f7f7012a5be007da9a", "/system/lib/libttscompat.so", "e13336aea7a57d6cd215357e16b9eedbc9477a6c", "/system/lib/libaudioutils.so", "30a2f918380c5aa2de4c02da69d1c628008b7be8", "/system/lib/libxml2.so", "b98bc79294e79cc73941dc722fd6de5fd0ec790a", "/system/lib/libutils.so", "e1d3eb1a7f97e4e0b6a0620d9ddf903b1967c0c9", "/system/lib/libsc-a2xx.so", "4ccfbd1bfaaadff2b33afc544fd70504265f6741", "/system/lib/libhtc_ril.so", "fe78faee9d53256b5cafcd52ee6cea49c2f36c98", "/system/lib/libril.so", "8374cf084732f4d4c1dbe7aec4202dba1ec6480a", "/system/lib/libstagefright_enc_common.so", "8c7cee573e90f5582cad4d8c4c8a55dd67b05163", "/system/lib/libm.so", "d5f7910685d787cf0ce7af3f66117e1cbd6e7253", "/system/lib/libwebrtc_audio_preprocessing.so", "31e652cafa6ba1cd4da6f987f456188d2985d76b", "/system/lib/libstagefright_foundation.so", "a55c73d3fe78195b733538edb30572ce9ea853ba", "/system/lib/libnetutils.so", "2ed45f658da144bcee0b629d75db33048c0c8d55", "/system/lib/libstagefright_soft_mpeg4dec.so", "5ab0741f047267b4756548d3be438e2ee1a20114", "/system/lib/libbluedroid.so", "74999bfbe8d6efcc06e3e4a6f8bb7a6927463393", "/system/lib/libstagefright_soft_g711dec.so", "e36a7b28e591d9b718061ce6de3099c21360e278", "/system/lib/libcamera_client.so", "6e8f4354329edbe0f64d177db7425df170ca69a7", "/system/lib/libbinder.so", "2f6294dab4b426e404bd0a52f5ee7c396916f202", "/system/lib/libpagemap.so", "d00f43448deb59b61b9cb44dab4b711100fc7e5d", "/system/lib/libcrypto.so", "6d4904074d19716313f3eb76af4534eb5549c105", "/system/lib/libSR_AudioIn.so", "33f76eda359c853f9b492efe091d58bf9e7a44ed", "/system/lib/libmm-adspsvc.so", "3773a79f604595f8e38f6ee5c407751629993b3e", "/system/lib/libC2D2.so", "8e964707cbd62c6141a9c7283237d4f3d2766cc5", "/system/lib/liboemcamera.so", "accd8279eab8b1c06244f16fc8b86ee9e026648b", "/system/lib/libjnigraphics.so", "e488135e1a02cf9bc93cd10e823c01b8e2dcf978", "/system/lib/libz.so", "da2552c2c180d9de2c82cb533d9a4a48a26c026e", "/system/lib/libemoji.so", "9ca65b7448183d353bfe380142be76335e4a0c70", "/system/lib/libstagefright_amrnb_common.so", "83056c83d751e516711a37185e720c95e55d27bc", "/system/lib/libsensorservice.so", "92bc0c7b50edb8c33fcab9025586b8758a80b826", "/system/lib/libext2_uuid.so", "08756835098ad14ab43ee47c8fa29777c73c2838", "/system/lib/libGLESv2.so", "e597097e47671e56f474f7dcde8207fe23611b3d", "/system/lib/libclcore.bc", "a1e2610fdc0c2ef151248092fa32be807d1b983d", "/system/lib/libexpat.so", "cfa6e411c852445c2f85ad7cb8dc8605dd735b84", "/system/lib/libchromium_net.so", "8821f4ed93cef3d89426ef308ec16da40907cc75", "/system/lib/libbluetooth.so", "b0c8d9cc28b8e8c5e58a18942633928cb6b1b6b5", "/system/lib/libmtp.so", "1edafdbeee5cc0541802dcd02e06665ed7babe56", "/system/lib/libui.so", "b205363dbe6014f45de851e2d82d08b3f7aec1b2", "/system/lib/libOpenSLES.so", "1510baaf765d3069c710378d2efa880b4a97053f", "/system/lib/libjni_mosaic.so", "b0527e66cb705b4de19c7869faf369f8f8dd0584", "/system/lib/libwebcore.so", "2ea69cd6558ec48d26e979365b5c1694ef9009db", "/system/lib/libdiskconfig.so", "94544df445e0fa4af8035e1e97a01a722e625b90", "/system/lib/libbcc.so", "7f8d5a21705679008eee4105c1588cdfaa8832d6", "/system/lib/libgui.so", "53fd740f496da63acb49c4f5d6431ef7156b1681", "/system/lib/libnetlink.so", "55068402a95a407d83a33eb40b86c646d9bb7a30", "/system/lib/libglib.so", "33f00ef68b203d38a3c5edc2e17eefa837a9c1c1", "/system/lib/libicui18n.so", "e90bd7c04c507405630c13aad6e76eb5978631d8", "/system/lib/drm/libfwdlockengine.so", "9d15c05bf5096d172f98ff253aee9ea3b9ec1d45", "/system/lib/libhardware.so", "cba374b7c8aa1324b03c86e9a7b7ec37a6d55f2a", "/system/lib/libfilterpack_imageproc.so", "8e54605527d13bccb587d5558697f1be95e0bf6b", "/system/lib/libstagefright_omx.so", "0d4d515555b7a924662e451ac5f8b10d5394465b", "/system/lib/libsurfaceflinger_client.so", "dab2c4afa92173ea5c154b38c3153f0b305ffc1d", "/system/lib/libskia.so", "dbeecfc2f2408e6622443edab40d272e51a94f1a", "/system/lib/libstlport.so", "988dd49c04205deff2754aa273481c0f046eaf07");
+	set_perm_recursive(0, 0, 0755, 0644, "/system");
+	set_perm_recursive(0, 0, 0755, 0755, "/system/addon.d");
+	set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
+	set_perm(0, 3003, 02750, "/system/bin/netcfg");
+	set_perm(0, 3004, 02755, "/system/bin/ping");
+	set_perm(0, 2000, 06750, "/system/bin/run-as");
+	set_perm(1001, 1005, 0444, "/system/etc/AudioPara4.csv");
+	set_perm_recursive(1002, 1002, 0755, 0440, "/system/etc/bluetooth");
+	set_perm(0, 0, 0755, "/system/etc/bluetooth");
+	set_perm(1000, 1000, 0640, "/system/etc/bluetooth/auto_pairing.conf");
+	set_perm(3002, 3002, 0444, "/system/etc/bluetooth/blacklist.conf");
+	set_perm(1002, 1002, 0440, "/system/etc/dbus.conf");
+	set_perm(1014, 2000, 0550, "/system/etc/dhcpcd/dhcpcd-run-hooks");
+	set_perm_recursive(0, 2000, 0755, 0755, "/system/etc/init.d");
+	set_perm(0, 0, 0755, "/system/etc/init.d");
+	set_perm(0, 2000, 0550, "/system/etc/init.goldfish.sh");
+	set_perm_recursive(0, 0, 0755, 0555, "/system/etc/ppp");
+	set_perm_recursive(0, 2000, 0755, 0644, "/system/vendor");
+	set_perm(0, 0, 0644, "/system/vendor/etc/audio_effects.conf");
+	set_perm_recursive(0, 0, 0755, 0644, "/system/vendor/firmware");
+	set_perm(0, 2000, 0755, "/system/vendor/firmware");
+	set_perm_recursive(0, 2000, 0755, 0755, "/system/xbin");
+	set_perm(0, 0, 06755, "/system/xbin/librank");
+	set_perm(0, 0, 06755, "/system/xbin/procmem");
+	set_perm(0, 0, 06755, "/system/xbin/procrank");
+	set_perm(0, 0, 06755, "/system/xbin/su");
+	set_perm(0, 0, 06755, "/system/xbin/tcpdump");
+	package_extract_file("system/bin/backuptool.sh", "/tmp/backuptool.sh");
+	package_extract_file("system/bin/backuptool.functions", "/tmp/backuptool.functions");
+	set_perm(0, 0, 0777, "/tmp/backuptool.sh");
+	set_perm(0, 0, 0644, "/tmp/backuptool.functions");
+	run_program("/tmp/backuptool.sh", "restore");
+	delete("/system/bin/backuptool.sh");
+	delete("/system/bin/backuptool.functions");
+	package_extract_file("system/bin/modelid_cfg.sh", "/tmp/modelid_cfg.sh");
+	set_perm(0, 0, 0777, "/tmp/modelid_cfg.sh");
+	run_program("/tmp/modelid_cfg.sh", "");
+    endif;
+
+#
+#
+
+#
+#
+#
+#
+
+    if
+      file_getprop("/tmp/aroma/core.prop","selected") == "2"
+    then
+      ui_print("Installing AOKP core");
+      package_extract_dir("aokp", "/system");
+    endif;
+
+set_progress(0.3);
+
+ui_print("@Kernel installation");
+
+# Install kernels and kernel modules
+
+    if
+      file_getprop("/tmp/aroma/kernel.prop","selected") == "1"
+    then
+      ui_print("Installing soulengine");
+      package_extract_dir("kernel/soulengine", "/tmp");
+       write_raw_image("/tmp/boot.img", "boot");
+       delete("/tmp/boot.img");
+      package_extract_dir("/tmp/modules", "/system/lib/modules");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/kernel.prop","selected") == "2"
+    then
+      ui_print("Installing default kernel...");
+      package_extract_dir("kernel/default", "/tmp");
+       write_raw_image("/tmp/boot.img", "boot");
+       delete("/tmp/boot.img");
+      package_extract_dir("/tmp/modules", "/system/lib/modules");
+    endif;
+
+set_progress(0.4);
+
+#-- Done
+
+
+#-- Custom Applications first
+ui_print("@Installing packages");
+#-- Intall the Roboto app
+ui_print("Installing Roboto app");
+package_extract_dir("packages/robotoapp", "/data/app");
+#-- Install other apps
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.1") == "1"
+    then
+      ui_print("Installing AndChat");
+      package_extract_dir("packages/UserApps/AndChat", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.2") == "1"
+    then
+      ui_print("Installing Facebook");
+      package_extract_dir("packages/UserApps/Facebook", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.3") == "1"
+    then
+      ui_print("Installing Link2SD");
+      package_extract_dir("packages/UserApps/Link2SD", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.4") == "1"
+    then
+      ui_print("Installing SDBooster");
+      package_extract_dir("packages/UserApps/SDBooster", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.5") == "1"
+    then
+      ui_print("Installing Tinyshark");
+      package_extract_dir("packages/UserApps/TinyShark", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.6") == "1"
+    then
+      ui_print("Installing Titanium Backup");
+      package_extract_dir("packages/UserApps/Titanium", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.7") == "1"
+    then
+      ui_print("Installing Twitter");
+      package_extract_dir("packages/UserApps/Twitter", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.8") == "1"
+    then
+      ui_print("Installing XDA");
+      package_extract_dir("packages/UserApps/XDA", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/Apps.prop","item.1.9") == "1"
+    then
+      ui_print("Installing Twitter");
+      package_extract_dir("packages/UserApps/Twitter", "/data/app");
+    endif;
+
+
+#-- Now for system Apps
+set_progress(0.5);
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.1") == "1"
+    then
+      ui_print("Installing Calculator");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Calculator", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Calculator", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.2") == "1"
+    then
+      ui_print("Installing Calendar");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Calendar", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Calendar", "/system/app");
+         endif;
+    endif;
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.3") == "1"
+    then
+      ui_print("Installing Camera");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Camera", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Camera", "/system/app");
+         endif;
+    endif;
+
+set_progress(0.6);
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.4") == "1"
+    then
+      ui_print("Installing Clock");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Clock", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.5") == "1"
+    then
+      ui_print("Installing Contacts");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Contacts", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Contacts", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.6") == "1"
+    then
+      ui_print("Installing Development");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Development", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Development", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.7") == "1"
+    then
+      ui_print("Installing Email");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Email", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Email", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.8") == "1"
+    then
+      ui_print("Installing HTML Viewer");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/HTMLViewer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/HTMLViewer", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.9") == "1"
+    then
+      ui_print("Installing Keyboard");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Keyboard", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Keyboard", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.10") == "1"
+    then
+      ui_print("Installing SMS");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/SMS", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/SMS", "/system/app");
+         endif;
+    endif;
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.11") == "1"
+    then
+      ui_print("Installing Theme Support");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/ThemeSupport", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.12") == "1"
+    then
+      ui_print("Installing Video Editor");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/VideoEditor", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/VideoEditor", "/system/app");
+         endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.13") == "1"
+    then
+      ui_print("Installing Voice Dialer");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/VoiceDialer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/VoiceDialer", "/system/app");
+         endif;
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/sApps.prop","item.2.1") == "1"
+    then
+      ui_print("Installing Galaxy");
+      package_extract_dir("packages/Apps/Universal/GalaxyLWP", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/sApps.prop","item.2.2") == "1"
+    then
+      ui_print("Installing Holo Spiral");
+      package_extract_dir("packages/Apps/Universal/HoloSpiralLWP", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/sApps.prop","item.2.3") == "1"
+    then
+      ui_print("Installing Magic Smoke");
+      package_extract_dir("packages/Apps/Universal/MagicSmokeLWP", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/sApps.prop","item.2.4") == "1"
+    then
+      ui_print("Installing Noise Field");
+      package_extract_dir("packages/Apps/Universal/NoiseFieldLWP", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/sApps.prop","item.2.5") == "1"
+    then
+      ui_print("Installing Phase Beam");
+      package_extract_dir("packages/Apps/Universal/PhaseBeamLWP", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/sApps.prop","item.2.6") == "1"
+    then
+      ui_print("Installing Unicorn Porn");
+      package_extract_dir("packages/Apps/Universal/UnicornPornLWP", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/sApps.prop","item.2.7") == "1"
+    then
+      ui_print("Installing Visualization");
+      package_extract_dir("packages/Apps/Universal/VisualizationLWP", "/system/app");
+    endif;
+
+set_progress(0.7);
+
+# Mods
+
+#- Music
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.1") == "1"
+    then
+      ui_print("Installing Apollo");
+      package_extract_dir("packages/Music/Apollo", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.1") == "2"
+    then
+      ui_print("Installing Music");
+      package_extract_dir("packages/Music/Default", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.1") == "3"
+    then
+      ui_print("Installing Google Music");
+      package_extract_dir("packages/Music/GoogleMusic", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.1") == "4"
+    then
+      ui_print("Installing modded Google Music");
+      package_extract_dir("packages/Music/GoogleMusicBeats", "/system/app");
+    endif;
+
+#- File Explorers
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.2") == "1"
+    then
+      ui_print("Installing MIUI File manager");
+      package_extract_dir("packages/FileManager/MIUI", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.2") == "2"
+    then
+      ui_print("Installing ES File Explorer");
+      package_extract_dir("packages/FileManager/ES", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.2") == "3"
+    then
+      ui_print("Installing H File Explorer");
+      package_extract_dir("packages/FileManager/HFile", "/data/app");
+    endif;
+
+#- Gallery App
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.3") == "1"
+    then
+      ui_print("Installing ICS Gallery");
+      package_extract_dir("packages/Gallery/ICS", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.3") == "2"
+    then
+      ui_print("Installing quickpic Gallery");
+      package_extract_dir("packages/Gallery/Quickpic", "/system/app");
+    endif;
+
+#- Browser
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.4") == "1"
+    then
+      ui_print("Installing AOKP browser");
+      package_extract_dir("packages/Browser/aokp", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.4") == "2"
+    then
+      ui_print("Installing CM9 browser");
+      package_extract_dir("packages/Browser/cm9", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.4") == "3"
+    then
+      ui_print("Installing Firefox");
+      package_extract_dir("packages/Browser/Firefox", "/system/app");
+    endif;
+
+#- Audio
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "1"
+    then
+      ui_print("Installing MusicFX");
+      package_extract_dir("packages/Audio/MusicFX", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "2"
+    then
+      ui_print("Installing DSP");
+      package_extract_dir("packages/Audio/DSP", "/system/app");
+    endif;
+
+#- Boot animations
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "1"
+    then
+      ui_print("Installing ICS Boot Animation");
+      package_extract_dir("packages/BootAnimation/ICSStyle", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "2"
+    then
+      ui_print("Installing Nexus One Boot Animation");
+      package_extract_dir("packages/BootAnimation/NexusOne", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "3"
+    then
+      ui_print("Installing AOKP Boot Animation");
+      package_extract_dir("packages/BootAnimation/AOKP", "/system/media");
+    endif;
+
+set_progress(0.8);
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "4"
+    then
+      ui_print("Installing old AOKP boot animation");
+      package_extract_dir("packages/BootAnimation/OldAOKP", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "5"
+    then
+      ui_print("Installing HTC Boot Animation");
+      package_extract_dir("packages/BootAnimation/HTCStyle", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "6"
+    then
+      ui_print("Installing default Android bootanimation");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "7"
+    then
+      ui_print("Installing Honeycomb Boot Animation");
+      package_extract_dir("packages/BootAnimation/Honeycomb", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "8"
+    then
+      ui_print("Installing MIUI bootanimation");
+      package_extract_dir("packages/BootAnimation/MIUI", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "9"
+    then
+      ui_print("Installing Beats Audio boot");
+      package_extract_dir("packages/BootAnimation/BeatsAudio", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "10"
+    then
+      ui_print("Installing Cid boot Animation");
+      package_extract_dir("packages/BootAnimation/Cid", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "11"
+    then
+      ui_print("Installing Interesting boot animation");
+      package_extract_dir("packages/BootAnimation/Interesting", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "12"
+    then
+      ui_print("Installing Sense 4 boot animation");
+      package_extract_dir("packages/BootAnimation/Sense4", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "13"
+    then
+      ui_print("Installing CM7 boot animation");
+      package_extract_dir("packages/BootAnimation/CM7", "/system/media");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "14"
+    then
+      ui_print("Installing CM9 boot animation");
+      package_extract_dir("packages/BootAnimation/CM9", "/system/media");
+    endif;
+
+set_progress(0.9);
+
+#- Root management
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "1"
+    then
+      ui_print("Installing Superuser...");
+      package_extract_dir("packages/Root/Superuser", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "2"
+    then
+      ui_print("Installing SuperSU...");
+      package_extract_dir("packages/Root/SuperSU", "/system/app");
+    endif;
+
+# Data2SD
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
+    then
+      ui_print("Installing Data2SD");
+      delete("/system/etc/init.d/40a2sd");
+      delete("/system/etc/init.d/03stuff2sd");
+      delete("/system/etc/init.d/10Apps2sd");
+      delete("/system/etc/init.d/04Apps2sd");
+      package_extract_dir("packages/Data2Whatever", "/system");
+      set_perm(0, 2000, 0755, "/system/etc/init.d/01data2whatever");
+      set_perm(0, 2000, 0755, "/system/etc/init.d/98zipalign");
+      set_perm(0, 2000, 0755, "/system/etc/init.d/991complete");
+      set_perm(0, 2000, 0755, "/system/xbin/e2fsck");
+      set_perm(0, 2000, 0755, "/system/xbin/tune2fs");
+      set_perm(0, 2000, 0755, "/system/xbin/mkfs.ext4");
+      set_perm(1000, 1000, 771, "/system/data_internal");
+      symlink("/system/xbin/e2fsck", "/system/bin/e2fsck");
+      symlink("/system/xbin/tune2fs", "/system/bin/tune2fs");
+      symlink("/system/xbin/mkfs.ext4", "/system/bin/mkfs.ext4");
+      symlink("/system/data_internal/mtab", "/system/etc/mtab");
+    endif;
+
+#- Beats Audio
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
+    then
+      ui_print("Installing Beats Audio...");
+      package_extract_dir("packages/BeatsAudio/Full", "/system");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.9") == "2"
+    then
+      ui_print("Installing Beats Audio W/O tweak...");
+      package_extract_dir("packages/BeatsAudio/Normal", "/system");
+    endif;
+
+#- LAUNCHERS
+ui_print("@Installing Launcher");
+
+    if
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "1"
+    then
+      ui_print("Installing Apex Launcher");
+      package_extract_dir("packages/Launchers/ApexLauncher", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "2"
+    then
+      ui_print("Installing MiHome");
+      package_extract_dir("packages/Launchers/MiHome", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "3"
+    then
+      ui_print("Installing Nova launcher");
+      package_extract_dir("packages/Launchers/Nova", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "4"
+    then
+      ui_print("Installing Stock ICS launcher");
+      package_extract_dir("packages/Launchers/StockLauncher", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "5"
+    then
+      ui_print("Installing Trebuchet");
+      package_extract_dir("packages/Launchers/Trebuchet", "/system/app");
+    endif;
+
+#- Gapps
+
+    if
+      file_getprop("/tmp/aroma/gapps.prop","selected") == "1"
+    then
+      ui_print("Installing Google Apps");
+      package_extract_dir("packages/gapps", "/system");
+    endif;
+
+#- HDIT
+
+    if
+      file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+    then
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
+	   then
+		ui_print("Installing HDIT");
+    		package_extract_dir("packages/hdit/wb", "/system");
+           else
+		ui_print("Installing HDIT");
+		package_extract_dir("packages/hdit/wob", "/system");
+           endif;
+    endif;
+
+set_progress(1.00);
+#-- Finish
+ui_print(" ");
+ui_print("@Finished");
+ui_print("Roboto is now installed on your phone");

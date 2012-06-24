@@ -1,0 +1,527 @@
+# aroma-config in Roboto
+
+# LICENSE:
+#
+# Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
+# Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ )
+#
+# Distributed with Roboto
+#
+# Based on .sense installation script using AROMA with "devpackage"
+#
+# Thanks to amarullz for the original AROMA installation manifest
+
+anisplash(
+  #-- Number of Loop
+    4,
+  #-- Files to display
+    "splash/a1", 500,
+    "splash/a2", 30,
+    "splash/a3", 30,
+    "splash/a4", 30,
+    "splash/a5", 30,
+    "splash/a6", 30
+);
+
+# [[Build information]] 
+
+calibrate("2.5717","26","1.7809","30");
+ini_set("rom_name",             "Roboto");
+ini_set("rom_version",          "1");
+ini_set("rom_author",           "benjamingwynn");
+ini_set("rom_device",           "HTC Wildfire S");
+ini_set("rom_date",             "not built");
+ini_set("dp",                   "2");
+loadlang("langs/en.lang");
+fontresload( "0", "ttf/DroidSans.ttf", "12" );
+fontresload( "1", "ttf/DroidSans.ttf", "18" );
+theme("ics");
+
+# [[End of build information]]
+
+# [[AROMA GUI Start]]
+
+
+
+viewbox(
+  #-- Title
+    "<~welcome.title>",
+  
+  #-- Text
+
+"Welcome to Roboto - this ROM is designed to be the ultimate ICS based ROM for the HTC Wildfire S. I hope you enjoy using my ROM! If you like it then please consior donating, the link is on the main thread/download page.\n\n"+
+
+"<~welcome.text1> <b>"+
+ini_get("rom_name")+
+"</b> for <b>"
++ini_get("rom_device")+"</b>.\n\n"+
+    
+"<~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+"<~welcome.author>\t: <b><#selectbg_g>"+ini_get("rom_author")+"</#></b>\n"+
+"<~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+
+    "<~welcome.next>",
+  
+  #-- Icon
+    "@welcome"
+);
+
+# [[WELCOME!]]
+
+agreebox(
+  #-- Title
+    "Welcome to Roboto",
+  
+  #-- Subtitle / Description
+    "A quick README for you to read",
+  
+  #-- Icon
+    "@license",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/*.txt )
+    resread("roboto.txt"),
+
+  #-- Checkbox Text
+    "I've read through all of the above",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+
+# [[LICENCE SCREEN]]
+
+agreebox(
+  #-- Title
+    "Roboto Licence",
+  
+  #-- Subtitle / Description
+    "Please read through this licence:",
+  
+  #-- Icon
+    "@license",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
+    resread("licence.txt"),
+
+  #-- Checkbox Text
+    "I agree to these terms",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+
+# [[KNOWN BUGS/CREDITS]]
+
+agreebox(
+  #-- Title
+    "Known bugs & Credits",
+  
+  #-- Subtitle / Description
+    "These are the known bugs and contributors to Roboto:",
+  
+  #-- Icon
+    "@update",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
+    resread("roboto-2.txt"),
+
+  #-- Checkbox Text
+    "I understand these bugs and will not report them",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+
+# [[Core]]
+
+theme("ics");
+menubox(
+    #-- Title
+      "Core",
+	  
+    #-- Sub Title
+      "Roboto can run on two different primary ROMS, AOKP and CM9 - please select one from bellow.",
+	  
+    #-- Icon:
+      "@default",
+	  
+    #-- Will be saved as
+      "core.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+          "CM9 Alpha 2",             "The all popular, stable Cyanognemod 9",                    "@install",
+          "AOKP Build 38",           "More features than CM9 but may have a few more bugs",      "@install"
+);
+
+# [[Changelog/bugs for that ROM]]
+
+#- CM9
+if prop("core.prop","selected")=="1" then
+theme("miui");
+agreebox(
+  #-- Title
+    "CM9",
+  
+  #-- Subtitle / Description
+    "Please read through the following notice:",
+  
+  #-- Icon
+    "@agreement",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
+    resread("cm9.txt"),
+
+  #-- Checkbox Text
+    "I understand, continue the installation",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+endif;
+
+#- AOKP
+if prop("core.prop","selected")=="2" then
+theme("miui4");
+agreebox(
+  #-- Title
+    "AOKP",
+  
+  #-- Subtitle / Description
+    "Please read through the following notice:",
+  
+  #-- Icon
+    "@agreement",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
+    resread("aokp.txt"),
+
+  #-- Checkbox Text
+    "I understand, continue the installation",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+endif;
+
+# [[KERNEL SELECTION]]
+
+menubox(
+    #-- Title
+      "Kernel",
+	  
+    #-- Sub Title
+      "Please select the kernel you want to use with your GSM Wildfire S",
+	  
+    #-- Icon: <AROMA Resource Dir>/icons/default.png or <ThemeDir>/icon.default.png
+      "@install",
+	  
+    #-- Will be saved in /tmp/aroma/mods.prop
+      "kernel.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+
+	"Soulengine i",        "A tweaked version of modpunks kernel - with added govenors, higher overclock value and more.",                    "@personalize",
+	"Default",                  "modpunks kernel - more stable and will always stay up to date",   "@personalize"
+
+);
+
+
+# [[Selection - Only pick one]]
+
+selectbox(
+    #-- Title
+      "It's your ROM...",
+	  
+    #-- Sub Title
+      "Please select the following things you would like to change throughout your ROM.",
+	  
+    #-- Icon
+      "@welcome",
+	  
+    #-- Will be saved as
+      "mods.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  "Music",                 "",                                                                  2,
+	    "Apollo",              "Open-source music application made by the Cyanogenmod team",        1,
+            "Default",             "The old Gingerbread CM music player - still found in AOKP",         0,
+	    "Google Music",        "Google's offical music player made for ICS",                        0,
+	    "GMusic + Beats",      "With Beats audio notification tweak",                               0,
+	    "MIUI Music app",      "MIUI Music app",                                                    0,
+
+	  "File Explorer",         "",                                                                  2,
+	    "MIUI File Manager",   "Ported MIUI file manager",                                          1,
+	    "ES File Explorer",    "Easysoft file explorer",                                            0,
+            "H File Manager",      "Simple, CM7 file manager",                                          0,
+
+	  "Gallery",               "",                                                                  2,
+	    "ICS",                 "The default ICS Gallery application",                               1,
+            "Quickpic",            "Quickpic gallery application",                                      0,
+
+	  "Browser",               "",                                                                  2,
+	    "AOKP",                "More like the default ICS browser",                                 0,
+	    "CM9",                 "Has a few more features, but not many",                             1,
+            "Firefox",             "Firefox nighly ported to ARMv6",                                    0,
+
+	  "Audio Enchatments",    "",                                                                   2,
+	    "MusicFX",            "AOKP's music equalizer",                                             1,
+            "DSP Equalizer",      "CM9's music equalizer - slightly more advanced",                     0,
+            "None",               "Don't install either",                                               0,
+
+          "Boot Animationn",      "",                                                                   2,
+	    "ICS Style",          "Default ICS boot animation",                                         1,
+            "Nexus One",          "Like the old Nexus One boot?",                                       0,
+            "AOKP",               "A nice, fancy, blue AOKP boot animation",                            0,
+            "Old AOKP",           "The older, pink AOKP boot animation",                                0,
+	    "HTC Style",          "Generic white HTC Quitely Briliant boot animation",                  0,
+            "Android",            "Old-style android text",                                             0,
+	    "Honeycomb",          "Android 3.x boot animation ripped for phones",                       0,
+	    "MIUI",               "Get the MIUI love on your ICS ROM.",                                 0,
+	    "Beats Audio",        "Ripped HTC Beats Audio boot animation",                              0,
+	    "Cid",                "A smooth, holo boot animation with Cid on it!",                      0,
+	    "Interesting",        "A converted GIF - thats... interesting...",                          0,
+	    "Sense 4",            "Taken from the HTC Golf port",                                       0,
+	    "CM7",                "CM7 boot animation - credit to dudeman1996 for ripping this",        0,
+	    "CM9",                "An ugly bootanimation with the old mascot on",                       0,
+      
+	  "Root management",           "",                                                              2,
+	    "Superuser",          "The classic, known Superuser application",                           1,
+	    "SuperSU",            "Only selct this if you have an EXT 2/3/4 partition",                 0,
+	    "None",               "This will stop all root permissions being acessed by apps",          0,
+
+	  "Data2SD",           "",                                                                      2,
+	    "Do not install",     "Select this if you don't know what your doing",                      1,
+	    "Install",            "Only selct this if you have an EXT 2/3/4 partition",                 0,
+
+	  "Beats Audio",           "",                                                                  2,
+	    "Full Install",       "Install and rename your phone to 'Wildfire S with Beats Audio'",     1,
+	    "Normal Install",     "Install without renaming the phone",                                 0,
+	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0
+);
+
+
+# [[Selection - add shit]]
+
+checkbox(
+    #-- Title
+      "Add stuff to Roboto",
+	  
+    #-- Sub Title
+      "You are now able to add stuff that's not normally in the ROM",
+	  
+    #-- Icon
+      "@customize",
+	  
+    #-- Will be saved as
+      "Apps.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+
+	  "Applications",         "",                                                                   2,
+	  "AndChat",              "A simple IRC client",                                                0,
+	  "Facebook",             "Connect to the popular social network",                              0,
+	  "Link2SD",              "Link applications to your SD card to save internal space",           0,
+	  "NoFrills",             "Advanced CPU management application",                                0,
+	  "SDBooster",            "Increase your SD card read/write speeds",                            0,
+	  "TinyShark",            "Listen to free, unlimited and legal music from grooveshark",         0,
+	  "Titanium Backup",      "Backup and restore your applications",                               0,
+	  "Twitter",              "Twitter verison 3.2.2",                                              0,
+	  "XDA Free",             "Use the popular XDA forum on your phone",                            0
+  );
+
+# [[Selection - remove shit]]
+
+checkbox(
+    #-- Title
+      "Default apps",
+	  
+    #-- Sub Title
+      "This is the list of all the default system apps - you are able to remove some here. However, please proceed with caution!",
+	  
+    #-- Icon
+      "@default",
+	  
+    #-- Will be saved as
+      "sApps.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+
+	  "Applications",         "",                                                                   2,
+	  "Calculator",           "Default calculator application",                                     1,
+	  "Clock",                "Default clock application",                                          1,
+	  "Camera",               "Default ICS camera",                                                 1,
+	  "Contacts",             "Default contacts application",                                       1,
+	  "Developement tools",   "Pointless dev tools app",                                            0, # <-- Disabled by default
+	  "Email",                "AOSP email app - this is not GMail",                                 1,
+	  "Goo Manager",          "Used to provide you with OTA updates",                               1,
+	  "HTML Viewer",          "Used for viewing basic HTML documents on your SD card",              1,
+	  "Keyboard",             "Default Latin ICS keyboard",                                         1,
+	  "SMS",                  "Default ICS SMS application",                                        1,
+	  "Video Editor",         "A very unused Video Editing suite that comes with ICS",              1,
+	  "Voice Dialer",         "Voice dialer for voice dialing",                                     1,
+
+	  "Live wallpapers",      "",                                                                   2,
+	  "Galaxy",               "A galaxy made up of slowly swerling stars",                          1,
+	  "Holo Spiral",          "Holo themed spiral wallpaper",                                       1,
+	  "Magic Smoke",          "Draws smoke, clouds, water and plasmas",                             1,
+	  "Noise Field",          "Default Android LWP",                                                1,
+	  "Phase Beam",           "Phase beam themed wallpaper",                                        1,
+	  "Unicorn Porn",         "Feel the Swagger",                                                   1,
+	  "Visualization",        "Default Android LWP",                                                1,
+
+	  "Other",         "",                                                                          2,
+	  "Theme Support",        "Support for CM9/AOKP themes",                                        1
+);
+
+# [[Launcher]]
+
+menubox(
+    #-- Title
+      "Launcher",
+	  
+    #-- Sub Title
+      "Please select what launcher you would like with Roboto",
+	  
+    #-- Icon:
+      "@apps",
+	  
+    #-- Will be saved as
+      "launcher.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+          "Apex Launcher",       "Helps you create a customized homescreen experience",           "@welcome",
+          "MiHome",              "Home app from MIUI - experimental",                             "@welcome",
+          "Nova",                "Nova Launcher used in AOKP",                                    "@welcome",
+          "Stock ICS launcher",  "Default ICS launcher from the Galaxy Nexus",                    "@welcome",
+          "Trebuchet",           "CM9's launcher, pronounced tre-bu-shay",                        "@welcome"
+);
+
+# [[Gapps]]
+
+menubox(
+    #-- Title
+      "Google Apps",
+	  
+    #-- Sub Title
+      "Do you wish to install Google Apps/gapps on top of your installation? This allows you to access the Google Play Store and unlock other features for your phone.",
+	  
+    #-- Icon:
+      "@apps",
+	  
+    #-- Will be saved as
+      "gapps.prop",
+	  
+          "Install",              "Install Google Apps for more features that are found in pure ICS",                        "@welcome",
+          "Don't install",                "Don't install anything Google",                                    "@welcome"
+);
+
+# [[HD image tweak]]
+
+menubox(
+    #-- Title
+      "HDIT",
+	  
+    #-- Sub Title
+      "HDIT is a build.prop tweak that can make your phones display look HD and makes images look smaller on the screen. Some other advantages of HDIT are the ability to apply HDPI themes in themechooser. HDIT is experimental and MAY cause some apps to disappear from Google Play.",
+	  
+    #-- Icon:
+      "@customize",
+	  
+    #-- Will be saved as
+      "hdit.prop",
+	  
+          "Install",              "Install High Definition Image Tweak",                        "@welcome",
+          "Don't install",                "Don't install this tweak",                                    "@welcome"
+);
+
+# [[Wipe data]]
+
+menubox(
+    #-- Title
+      "Wipe data?",
+	  
+    #-- Sub Title
+      "Wiping data can fix issues with your phone after installing Roboto. It is highly recommended you do this. Please note that if you do wipe data then you will lose all of your apps/app data but nothing on your SDCard will be lost.",
+	  
+    #-- Icon:
+      "@alert",
+	  
+    #-- Will be saved as
+      "wipedata.prop",
+	  
+          "Wipe",              "I understand, wipe all application data",                        "@welcome",
+          "Don't wipe",                "Don't wipe application data - may cause bugs",                                    "@welcome"
+);
+
+
+# [[Ready for Installation?]]
+
+ini_set("text_next", "Install Now");
+
+viewbox(
+  #-- Title
+    "Ready to Install",
+
+  #-- Text
+    "The wizard is ready to begin installation.\n\n"+
+	"Press <b>Install Now</b> to begin the installation.\n\n"+
+	"If you want to review or change any of your installation settings, press <b>Back</b>. Press Menu Key -> Quit Installation to exit the wizard.",
+
+  #-- Icon
+    "@install"
+);
+
+ini_set("text_next", "Next >");
+
+# [[Install]]
+
+setvar("retstatus",
+  install(
+	#-- Title
+      "Installing",
+	
+	#-- Installation Process message
+      "This could take a while",
+	
+	#-- Installation Icon
+      "@install",
+	
+	#-- Installation Finish Message
+      "Roboto installed!"
+  )
+);
+
+ini_set("text_next", "Finish");
+
+# [[Finish]]
+
+viewbox(
+  #-- Title
+    "Installation Completed",
+  
+  #-- Text
+    "<#selectbg_g><b>Congratulations...</b></#>\n\n"+
+    "Roboto has been installed."+
+    "Installer Status: "+getvar("retstatus"),
+
+  #-- Icon
+    "@info"
+
+);
+
+#---- FINISH
+

@@ -33,8 +33,8 @@ ini_set("rom_device",           "HTC Wildfire S");
 ini_set("rom_date",             "not built");
 ini_set("dp",                   "2");
 loadlang("langs/en.lang");
-fontresload( "0", "ttf/DroidSans.ttf", "12" );
-fontresload( "1", "ttf/DroidSans.ttf", "18" );
+fontresload( "0", "ttf/Roboto.ttf", "12" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
 theme("ics");
 
 # [[End of build information]]

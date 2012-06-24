@@ -28,7 +28,7 @@ anisplash(
 calibrate("2.5717","26","1.7809","30");
 ini_set("rom_name",             "RobotoMOD");
 ini_set("rom_version",          "1");
-ini_set("rom_author",           "benjamingwynn");
+ini_set("rom_author",           "benjamingwynn & dudeman1996");
 ini_set("rom_device",           "HTC Wildfire S");
 ini_set("rom_date",             "not built");
 ini_set("dp",                   "2");
@@ -466,6 +466,37 @@ menubox(
           "Wipe",              "I understand, wipe all application data",                        "@welcome",
           "Don't wipe",                "Don't wipe application data - may cause bugs",                                    "@welcome"
 );
+
+
+###################################################################################################################
+#
+# GPS Config
+#
+  menubox(
+    #-- Title
+      "GPS",
+	  
+    #-- Sub Title
+      "To make sure you get the best experience with GPS, please choose your nearest location",
+	  
+    #-- Icon: <AROMA Resource Dir>/icons/default.png or <ThemeDir>/icon.default.png
+      "@default",
+	  
+    #-- Will be saved in /tmp/aroma/gps.prop
+      "gps.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+	    "Africa",          "Choose this if your nearest location is Africa",            0,  #-- selected=1
+	    "Asia",            "Choose this if your nearest location is Asia",              0,  #-- selected=2
+	    "Europe",          "Choose this if your nearest location is Europe",            1,  #-- selected=3
+	    "North America",   "Choose this if your nearest location is North America",     0,  #-- selected=4
+	    "South America",   "Choose this if your nearest location is South America",     0,  #-- selected=5
+	    "Oceania",         "Choose this if your nearest location is Oceania",           0   #-- selected=6
+ 	   );
+
 
 
 # [[Ready for Installation?]]

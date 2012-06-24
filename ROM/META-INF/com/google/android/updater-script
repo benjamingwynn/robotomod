@@ -924,6 +924,48 @@ ui_print("@Installing Launcher");
            endif;
     endif;
 
+###########################################################################
+#-
+#- Installing GPS tweaks
+#-
+	ui_print("@GPS Tweaks");
+	if
+	  file_getprop("/tmp/aroma/gps.prop","selected") == "1"
+	then
+	  ui_print("Installing GPS tweaks for Africa");
+	  package_extract_dir("packages/gps/africa","/system/etc");
+	endif;
+	if
+	  file_getprop("/tmp/aroma/gps.prop","selected") == "2"
+	then
+	  ui_print("Installing GPS tweaks for Asia");
+	  package_extract_dir("packages/gps/asia","/system/etc");
+	endif;
+	if
+	  file_getprop("/tmp/aroma/gps.prop","selected") == "3"
+	then
+	  ui_print("Installing GPS tweaks for Europe");
+	  package_extract_dir("packages/gps/europe","/system/etc");
+	endif;
+	if
+	  file_getprop("/tmp/aroma/gps.prop","selected") == "4"
+	then
+	  ui_print("Installing GPS tweaks for North America");
+	  package_extract_dir("packages/gps/northamerica","/system/etc");
+	endif;
+	if
+	  file_getprop("/tmp/aroma/gps.prop","selected") == "5"
+	then
+	  ui_print("Installing GPS tweaks for South America");
+	  package_extract_dir("packages/gps/southamerica","/system/etc");
+	endif;
+	if
+	  file_getprop("/tmp/aroma/gps.prop","selected") == "6"
+	then
+	  ui_print("Installing GPS tweaks for Oceania");
+	  package_extract_dir("packages/gps/oceania","/system/etc");
+	endif;
+
 set_progress(1.00);
 #-- Finish
 ui_print(" ");

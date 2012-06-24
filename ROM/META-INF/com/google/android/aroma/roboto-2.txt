@@ -1,0 +1,27 @@
+Known bugs with Roboto:
+
+- No none bugs at this point in time
+
+Credits:
+
+Thanks to the following people for helping with parts of Roboto:
+
+- alquez (original msm7k kernel and marvel device tree)
+- rezo609 (MiHome app)
+- modpunk (CM9 device tree)
+- apherio (Google Music with Beats Audio mod)
+- BigBearEvo (many application packages)
+- Ravencz (creating the Cid boot animation)
+- Snipa (GooManager)
+- einstain.frat (coverting one image into a boot animation)
+- HTC (bootanimations and some libs)
+- TeslaCoil Software (nova launcher)
+- Android Does (apex launcher)
+- the goo.im team (hosting)
+- the cyanogenmod team (cm9 core)
+- the aokp team (aokp core)
+
+Thanks to these other people too:
+
+- dudeman1996
+- simonsimons34

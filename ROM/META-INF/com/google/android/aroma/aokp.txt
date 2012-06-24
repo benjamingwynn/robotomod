@@ -1,0 +1,30 @@
+Thank you for selecting AOKP as your core for Roboto.
+
+AOKP has more features over CM9 including:
+
+- Nav Bar Transparency
+- Transparent status bar
+- Weather in notication bar
+- Center clock in status bar
+- Improved toggles
+- More at www.aokp.co
+
+AOKP is a stable and working ROM however, the following DOES NOT WORK on AOKP:
+
+- Camera
+- Video streaming
+
+There can also be strange bugs on times such as:
+
+- Rarely, some users will be prompted with a "sim card changed" error and are forced to reboot
+- YouTube can force close
+
+Credit to the following people:
+
+- modpunk
+- dudeman1996
+- eoghan2t7
+- alquez
+- the AOKP team
+
+If you don't wish to install AOKP and install CM9 instead then just click the back button on your device or via the button bellow.

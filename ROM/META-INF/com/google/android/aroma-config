@@ -561,7 +561,7 @@ if (prop("type.prop","selected")=="1") then
 	  "gapps.prop",
 	
 	#-- Default Values
-	  "selected=1\n"    #-- Default Launcher = Trebuchet
+	  "selected=1\n"    #-- Default = Install GApps
   );
 endif;
 
@@ -595,7 +595,7 @@ if (prop("type.prop","selected")=="1") then
 	  "hdit.prop",
 	
 	#-- Default Values
-	  "selected=2\n"    #-- Default Launcher = Trebuchet
+	  "selected=2\n"    #-- Default = Don't install HD tweak
   );
 endif;
 
@@ -629,7 +629,7 @@ if (prop("type.prop","selected")=="1") then
 	  "wipedata.prop",
 	
 	#-- Default Values
-	  "selected=1\n"    #-- Default Launcher = Trebuchet
+	  "selected=1\n"    #-- Default = Wipe data
   );
 endif;
 

@@ -3,7 +3,7 @@
 # LICENSE:
 #
 # Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
-# Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ )
+# Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ ) & Ivan Brazza
 #
 # Distributed with RobotoMOD
 #
@@ -16,11 +16,11 @@ anisplash(
     4,
   #-- Files to display
     "splash/a1", 500,
-    "splash/a2", 30,
+    "splash/a2", 20,
     "splash/a3", 30,
-    "splash/a4", 30,
+    "splash/a4", 20,
     "splash/a5", 30,
-    "splash/a6", 30
+    "splash/a6", 20
 );
 
 # [[Build information]] 

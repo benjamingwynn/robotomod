@@ -367,7 +367,7 @@ if (prop("type.prop","selected")=="2") then
 	  "Beats Audio",           "",                                                                  2,
 	    "Full Install",       "Install and rename your phone to 'Wildfire S with Beats Audio'",     1,
 	    "Normal Install",     "Install without renaming the phone",                                 0,
-	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in"                  0
+	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0
 );
 endif;
 ##############################################################################################################

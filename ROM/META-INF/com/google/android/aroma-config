@@ -132,15 +132,42 @@ agreebox(
     "Please check the checkbox to continue!"
 );
 
-# [[Core]]
 
+###################################################################################################################
+#
+# INSTALLATION TYPE
+#
+menubox(
+  #-- Title
+    "Installation Type",
+  
+  #-- Sub Title
+    "Each option uses the standard CM9 base, with performance/battery tweaks by dudeman1996."+
+    "Choose the installation type that best suits your needs.",
+  
+  #-- Icon
+    "@install",
+    
+  #-- Will be saved in /tmp/aroma/type.prop
+    "type.prop",
+    
+  #-------------------------+-----------------[ Menubox Items ]-------------------------+---------------#
+  # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
+  #-------------------------+-----------------------------------------------------------+---------------#
+	
+    "Recommended",            "Will install recommended features and configurations",      "@install",      #-- selected = 1
+    "Custom",                 "Take control and fully customize your RobotoMOD experience","@apps",         #-- selected = 2
+);
+###################################################################################################################
+# [[Core]]
+#
 theme("ics");
 menubox(
     #-- Title
       "Core",
 	  
     #-- Sub Title
-      "RobotoMOD can run on two different primary ROMS, AOKP and CM9 - please select one from bellow.",
+      "RobotoMOD can run on two different primary ROMS, AOKP and CM9 - please select one from below",
 	  
     #-- Icon:
       "@default",
@@ -205,10 +232,25 @@ agreebox(
     "Please check the checkbox to continue!"
 );
 endif;
-
+######################################################################################################
 # [[KERNEL SELECTION]]
+#
 
-menubox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write default kernel.prop
+  #-- NOTE: mods.prop should exists, or updater-script will error
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/kernel.prop
+	  "kernel.prop",
+	
+	#-- Default Values
+	  "selected=1\n"    #-- Default Kernel = Stock CM9 
+  );
+endif;
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write kernel.prop
+   menubox(
     #-- Title
       "Kernel",
 	  
@@ -229,11 +271,33 @@ menubox(
 	"Default",                  "modpunks kernel - more stable and will always stay up to date",   "@personalize"
 
 );
-
-
+endif;
+#################################################################################################################
 # [[Selection - Only pick one]]
+#
 
-selectbox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write default mods.prop
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/mods.prop
+	  "mods.prop",
+	
+	#-- Default Values
+	  "selected.1=1\n"+    #-- Default Music = Apollo
+	  "selected.2=1\n"+    #-- Default File Explorer = MIUI
+	  "selected.3=1\n"+    #-- Default Gallery = ICS
+	  "selected.4=2\n"+    #-- Default Browser = CM9
+	  "selected.5=1\n"+    #-- Default Audio Enhancement = MusicFX
+	  "selected.6=1\n"+    #-- Default Boot Animation = ICS
+	  "selected.7=1\n"+    #-- Default Root Management = SuperUser
+	  "selected.8=1\n"+    #-- Default Data2SD = None
+	  "selected.9=1\n"     #-- Default Beats Audio = Full
+  );
+endif;
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write mods.prop
+   selectbox(
     #-- Title
       "It's your ROM...",
 	  
@@ -303,13 +367,35 @@ selectbox(
 	  "Beats Audio",           "",                                                                  2,
 	    "Full Install",       "Install and rename your phone to 'Wildfire S with Beats Audio'",     1,
 	    "Normal Install",     "Install without renaming the phone",                                 0,
-	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0
+	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in"                  0
 );
-
-
+endif;
+##############################################################################################################
 # [[Selection - add shit]]
+#
 
-checkbox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write Apps.prop
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/customize.prop
+	  "Apps.prop",
+	
+	#-- Default Values ( item.x.x = value. value=1 selected, value=0 un-selected )
+	  "item.1.1=0\n"+    #-- AndChat
+	  "item.1.2=0\n"+    #-- Facebook
+	  "item.1.3=0\n"+    #-- Link2SD
+	  "item.1.4=0\n"+    #-- NoFrills
+	  "iten.1.5=0\n"+    #-- SDBooster
+	  "item.1.6=0\n"+    #-- TinyShark
+	  "item.1.7=0\n"+    #-- Titanium Backup
+	  "item.1.8=0\n"+    #-- Twitter
+	  "item.1.9=0\n"     #-- XDA Free
+  );
+endif; 
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write Apps.prop
+   checkbox(
     #-- Title
       "Add stuff to RobotoMOD",
 	  
@@ -338,9 +424,48 @@ checkbox(
 	  "XDA Free",             "Use the popular XDA forum on your phone",                            0
   );
 
+#################################################################################################################
 # [[Selection - remove shit]]
+#
 
-checkbox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write sApps.prop
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/customize.prop
+	  "sApps.prop",
+	
+	#-- Default Values ( item.x.x = value. value=1 selected, value=0 un-selected )
+	  #-- Applications
+	  "item.1.1=1\n"+    #-- Calculator
+	  "item.1.2=1\n"+    #-- Clock
+	  "item.1.3=1\n"+    #-- Camera
+	  "item.1.4=1\n"+    #-- Contacts
+	  "iten.1.5=1\n"+    #-- Dev Tools
+	  "item.1.6=1\n"+    #-- EMail
+	  "item.1.7=1\n"+    #-- Goo Manager
+	  "item.1.8=1\n"+    #-- HTML Viewer
+	  "item.1.9=1\n"+    #-- Keyboard
+	  "item.1.10=1\n"+   #-- SMS
+	  "item.1.11=1\n"+   #-- Video Editor
+	  "item.1.12=1\n"+   #-- Voice Dialler
+
+	  #-- Live Wallpapers
+	  "item.2.1=1\n"+    #-- Galaxy
+	  "item.2.2=1\n"+    #-- Holo Spiral
+	  "item.2.3=1\n"+    #-- Magic Smoke
+	  "item.2.4=1\n"+    #-- Noise Field
+	  "item.2.5=1\n"+    #-- Phase Beam
+	  "item.2.6=1\n"+    #-- Unicorn Porn
+	  "item.2.7=1\n"+    #-- Visualization
+
+	  #-- Other
+	  "item.3.1=1\n"     #-- Theme Support
+  );
+endif; 
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write sApps.prop
+   checkbox(
     #-- Title
       "Default apps",
 	  
@@ -383,10 +508,25 @@ checkbox(
 	  "Other",         "",                                                                          2,
 	  "Theme Support",        "Support for CM9/AOKP themes",                                        1
 );
-
+endif;
+##################################################################################################################
 # [[Launcher]]
+#
 
-menubox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write default launcher.prop
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/launcher.prop
+	  "launcher.prop",
+	
+	#-- Default Values
+	  "selected=5\n"    #-- Default Launcher = Trebuchet
+  );
+endif;
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write launcher.prop
+   menubox(
     #-- Title
       "Launcher",
 	  
@@ -409,10 +549,25 @@ menubox(
           "Stock ICS launcher",  "Default ICS launcher from the Galaxy Nexus",                    "@welcome",
           "Trebuchet",           "CM9's launcher, pronounced tre-bu-shay",                        "@welcome"
 );
-
+endif;
+#####################################################################################################################
 # [[Gapps]]
+#
 
-menubox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write default gapps.prop
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/gapps.prop
+	  "gapps.prop",
+	
+	#-- Default Values
+	  "selected=1\n"    #-- Default Launcher = Trebuchet
+  );
+endif;
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write gapps.prop
+   menubox(
     #-- Title
       "Google Apps",
 	  
@@ -425,13 +580,28 @@ menubox(
     #-- Will be saved as
       "gapps.prop",
 	  
-          "Install",              "Install Google Apps for more features that are found in pure ICS",                        "@welcome",
-          "Don't install",                "Don't install anything Google",                                    "@welcome"
+          "Install",              "Install Google Apps for more features that are found in pure ICS",      "@welcome",
+          "Don't install",        "Don't install anything Google",                                         "@welcome"
 );
-
+endif;
+##################################################################################################################
 # [[HD image tweak]]
+#
 
-menubox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write default hdit.prop
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/hdit.prop
+	  "hdit.prop",
+	
+	#-- Default Values
+	  "selected=2\n"    #-- Default Launcher = Trebuchet
+  );
+endif;
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write hdit.prop
+   menubox(
     #-- Title
       "HDIT",
 	  
@@ -445,12 +615,27 @@ menubox(
       "hdit.prop",
 	  
           "Install",              "Install High Definition Image Tweak",                        "@welcome",
-          "Don't install",                "Don't install this tweak",                                    "@welcome"
+          "Don't install",        "Don't install this tweak",                                    "@welcome"
 );
-
+endif;
+#############################################################################################################
 # [[Wipe data]]
+#
 
-menubox(
+if (prop("type.prop","selected")=="1") then
+  #-- IF "Recommended" Installation, don't show configuration, then write default wipedata.prop
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/wipedata.prop
+	  "wipedata.prop",
+	
+	#-- Default Values
+	  "selected=1\n"    #-- Default Launcher = Trebuchet
+  );
+endif;
+
+if (prop("type.prop","selected")=="2") then
+  #-- IF "Custom" Installation, show configuration, then write wipedata.prop
+   menubox(
     #-- Title
       "Wipe data?",
 	  
@@ -464,10 +649,9 @@ menubox(
       "wipedata.prop",
 	  
           "Wipe",              "I understand, wipe all application data",                        "@welcome",
-          "Don't wipe",                "Don't wipe application data - may cause bugs",                                    "@welcome"
+          "Don't wipe",        "Don't wipe application data - may cause bugs",                   "@welcome"
 );
-
-
+endif;
 ###################################################################################################################
 #
 # GPS Config

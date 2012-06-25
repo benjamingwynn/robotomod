@@ -161,7 +161,7 @@ debug.camcorder.disablemeta = 1
 settings.display.brightness=143
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse = 1
+# ro.ril.disable.power.collapse = 1
 
 # For PDP overlap problem
 ro.ril.avoid.pdp.overlap = 1
@@ -256,3 +256,16 @@ ro.goo.rom=RobotoMOD
 ro.goo.version=1
 ##
 
+##############################################
+# Additional tweaks
+#
+windowsmgr.max_events_per_sec=150
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+debug.performance.tuning=1
+video.accelerate.hw=1
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960

@@ -19,10 +19,13 @@ ui_print("@Preparing for installation...");
 
 # Format SYSTEM
 ui_print("Erasing system...");
-format("MTD", "system");
+format("yaffs2", "MTD", "system", "0");
 #- Mount SYSTEM
 ui_print("Mounting system...");
-mount("MTD", "system", "/system");
+mount("yaffs2", "MTD", "system", "/system");
+#- Mount DATA
+ui_print("Mounting data...");
+mount("yaffs2", "MTD", "userdata", "/data");
 set_progress(0.1);
 # "DEVPACKAGE" SCRIPTING ENGINE and folder layout
 

@@ -25,7 +25,7 @@ anisplash(
 
 # [[Build information]] 
 
-calibrate("2.5717","26","1.7809","30");
+calibrate("2.7825","25","1.8833","14","yes");
 ini_set("rom_name",             "RobotoMOD");
 ini_set("rom_version",          "1");
 ini_set("rom_author",           "benjamingwynn & dudeman1996");

@@ -57,6 +57,7 @@ welcome.text1=You are about to install
 welcome.version=VERSION
 welcome.codename=CODENAME
 welcome.updated=UPDATED
+welcome.author=AUTHOR
 welcome.next=Press Next to Continue the Installation...
 
 terms.title=Terms and Conditions

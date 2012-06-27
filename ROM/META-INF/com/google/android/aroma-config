@@ -489,7 +489,7 @@ if prop("type.prop","selected")=="3" then
 	  "item.1.9=0\n"+    #-- None selected
 	  "item.1.10=0\n"+   #-- None selected
 	  "item.1.11=0\n"+   #-- None selected
-	  "item.1.12=0\n"+   #-- None selected
+	  "item.1.12=0\n"    #-- None selected
   );
 endif;
 #################################################################################################################
@@ -603,7 +603,7 @@ if prop("type.prop","selected")=="3" then
 	  "item.2.6=0\n"+   #-- None selected
 	  "item.2.7=0\n"+   #-- None selected
 
-	  "item.3.8=0\n"+   #-- None selected
+	  "item.3.8=0\n"    #-- None selected
   );
 endif;
 ##################################################################################################################
@@ -686,7 +686,7 @@ if prop("type.prop","selected")=="3" then
   writetmpfile(
 	  "gapps.prop",
 
-	  "selected=0\n"+    #-- None selected
+	  "selected=0\n"     #-- None selected
   );
 endif;
 ##################################################################################################################
@@ -719,7 +719,7 @@ if prop("type.prop","selected")=="2" then
       "hdit.prop",
 	  
           "Install",              "Install High Definition Image Tweak",                        "@welcome",
-          "Don't install",        "Don't install this tweak",                                    "@welcome"
+          "Don't install",        "Don't install this tweak",                                   "@welcome"
 );
 endif;
 
@@ -728,7 +728,7 @@ if prop("type.prop","selected")=="3" then
   writetmpfile(
 	  "hdit.prop",
 
-	  "selected=0\n"+    #-- None selected
+	  "selected=0\n"     #-- None selected
   );
 endif;
 #############################################################################################################
@@ -770,7 +770,7 @@ if prop("type.prop","selected")=="3" then
   writetmpfile(
 	  "wipedata.prop",
 
-	  "selected=0\n"+    #-- Dont wipe data
+	  "selected=0\n"     #-- Dont wipe data
   );
 endif;
 ###################################################################################################################
@@ -806,7 +806,7 @@ if prop("type.prop","selected")=="3" then
   writetmpfile(
 	  "gps.prop",
 
-	  "selected=0\n"+    #-- Not selected
+	  "selected=0\n"     #-- Not selected
   );
 endif;
 ##########################################################################################################

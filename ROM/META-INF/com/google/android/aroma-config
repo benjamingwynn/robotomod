@@ -186,7 +186,6 @@ agreebox(
 ###################################################################################################################
 # [[Core]]
 #
-theme("ics");
 menubox(
     #-- Title
       "Core",
@@ -213,7 +212,6 @@ menubox(
 #
 #- CM9
 if prop("core.prop","selected")=="1" then
-theme("miui");
 agreebox(
   #-- Title
     "CM9",
@@ -237,7 +235,6 @@ endif;
 
 #- AOKP
 if prop("core.prop","selected")=="2" then
-theme("miui4");
 agreebox(
   #-- Title
     "AOKP",

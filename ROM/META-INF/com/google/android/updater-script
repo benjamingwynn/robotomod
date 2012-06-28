@@ -40,9 +40,6 @@ set_progress(0.1);
 
 # Main system files.
 
-ui_print("Mounting data...");
-mount("MTD", "userdata", "/data");
-
 # First extract the APK's and stuff. If you have a GSM Wildfire S then that is all you need so far
 ui_print("@Installing system files");
 ui_print("Extraction of main started");

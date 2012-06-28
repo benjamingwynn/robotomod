@@ -15,12 +15,12 @@ anisplash(
   #-- Number of Loop
     8,
   #-- Files to display
-    "splash/a1", 20,
-    "splash/a2", 20,
-    "splash/a3", 20,
-    "splash/a4", 20,
-    "splash/a5", 20,
-    "splash/a6", 20
+    "splash/a1", 300,
+    "splash/a2", 300,
+    "splash/a3", 300,
+    "splash/a4", 300,
+    "splash/a5", 300,
+    "splash/a6", 300
 );
 
 # [[Build information]] 

@@ -49,7 +49,7 @@ viewbox(
   
   #-- Text
 
-"Welcome to RobotoMOD - this ROM is designed to be the ultimate ICS based ROM for the HTC Wildfire S. I hope you enjoy using the ROM! If you like it then please consior donating, the link is on the main thread/download page.\n\n"+
+"Welcome to RobotoMOD - this ROM is designed to be the ultimate ICS based ROM for the HTC Wildfire S. We hope you enjoy using the ROM! If you like it then please consider donating, the link is on the main thread/download page.\n\n"+
 
 "<~welcome.text1> <b>"+
 ini_get("rom_name")+
@@ -79,7 +79,7 @@ agreebox(
     "@license",
   
   #-- Text Content ( Read from <AROMA Resource Dir>/*.txt )
-    resread("RobotoMOD.txt"),
+    resread("robotomod.txt"),
 
   #-- Checkbox Text
     "I've read through all of the above",
@@ -123,7 +123,7 @@ agreebox(
     "@update",
   
   #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
-    resread("RobotoMOD-2.txt"),
+    resread("robotomod-2.txt"),
 
   #-- Checkbox Text
     "I understand these bugs and will not report them",

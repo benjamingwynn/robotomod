@@ -35,7 +35,7 @@ set_progress(0.1);
       file_getprop("/tmp/aroma/wipedata.prop","selected") == "1"
     then
       ui_print("Wiping data...");
-      format("MTD", "userdata");
+      format("yaffs2", "MTD", "userdata", "0");
     endif;
 
 # Main system files.

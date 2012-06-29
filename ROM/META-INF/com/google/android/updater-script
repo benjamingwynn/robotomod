@@ -41,11 +41,31 @@ set_progress(0.1);
 # Main system files.
 
 # First extract the APK's and stuff. If you have a GSM Wildfire S then that is all you need so far
-ui_print("@Installing system files");
-ui_print("Extraction of main started");
-package_extract_dir("system", "/system");
-ui_print("Extraction of main finished");
 
+	if
+	  file_getprop("/system/build.prop","ro.build.id") == "RobotoMOD_CM9_CORE"
+	then
+	  ui_print("@Updating system files");
+  	  ui_print("Extraction of main started");
+	  package_extract_dir("system","/system");
+	  package_extract_dir("packages/core/cm9","/system");
+	  ui_print("Extraction of main finished");
+	else
+	  if
+	    file_getprop("/system/build.prop","ro.build.id") == "RobotoMOD_AOKP_CORE"
+	  then
+	    ui_print("@Updating system files");
+  	    ui_print("Extraction of main started");
+	    package_extract_dir("system","/system");
+	    package_extract_dir("packages/core/aokp","/system");
+	    ui_print("Extraction of main finished");
+	  endif;
+	else
+	  ui_print("@Installing system files");
+	  ui_print("Extraction of main started");
+	  package_extract_dir("system","/system");
+	  ui_print("Extractiong of main finsihed");
+	endif;
 #
 #
 #

@@ -267,7 +267,7 @@ if prop("type.prop","selected")=="1" then
 	  "kernel.prop",
 	
 	#-- Default Values
-	  "selected=1\n"    #-- Default Kernel = Stock CM9 
+	  "selected=2\n"    #-- Default Kernel = Stock CM9 
   );
 endif;
 
@@ -290,8 +290,8 @@ if prop("type.prop","selected")=="2" then
 	  # TITLE            |  SUBTITLE                                                        | Initial Value #
 	  #------------------+------------------------------------------------------------------+---------------#
 
-	"Soulengine i",        "A tweaked version of modpunks kernel - with added govenors,"+
-			       " higher overclock value and more",                                "@personalize",
+	"Soulengine i",        "**Coming soon!** A tweaked version of modpunks kernel - with"+
+			       " added govenors, higher overclock value and more",                "@personalize",
 	"Default",             "modpunks kernel - more stable and will always stay up to date",   "@personalize"
 
 );
@@ -791,12 +791,12 @@ endif;
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
-	    "Africa",          "Choose this if your nearest location is Africa",            0,  #-- selected=1
-	    "Asia",            "Choose this if your nearest location is Asia",              0,  #-- selected=2
-	    "Europe",          "Choose this if your nearest location is Europe",            1,  #-- selected=3
-	    "North America",   "Choose this if your nearest location is North America",     0,  #-- selected=4
-	    "South America",   "Choose this if your nearest location is South America",     0,  #-- selected=5
-	    "Oceania",         "Choose this if your nearest location is Oceania",           0   #-- selected=6
+	    "Africa",          "Choose this if your nearest location is Africa",            "@welcome",  #-- selected=1
+	    "Asia",            "Choose this if your nearest location is Asia",              "@welcome",  #-- selected=2
+	    "Europe",          "Choose this if your nearest location is Europe",            "@welcome",  #-- selected=3
+	    "North America",   "Choose this if your nearest location is North America",     "@welcome",  #-- selected=4
+	    "South America",   "Choose this if your nearest location is South America",     "@welcome",  #-- selected=5
+	    "Oceania",         "Choose this if your nearest location is Oceania",           "@welcome"   #-- selected=6
  	   );
 
 if prop("type.prop","selected")=="3" then

@@ -11,6 +11,17 @@
 #
 # Thanks to amarullz for the original AROMA installation manifest
 
+##########################################################################################
+# [[Splash screen]]
+#
+splash(
+  #-- Duration 2000ms / 2 seconds
+    3000,
+  
+  #-- <AROMA Resource Dir>/sample.png
+    "sample"
+);
+
 anisplash(
   #-- Number of Loop
     8,
@@ -22,9 +33,9 @@ anisplash(
     "splash/a5", 300,
     "splash/a6", 300
 );
-
+##########################################################################################
 # [[Build information]] 
-
+#
 calibrate("2.7825","25","1.8833","14","yes");
 ini_set("rom_name",             "RobotoMOD");
 ini_set("rom_version",          "1");

@@ -1,4 +1,4 @@
-Thank you for selecting AOKP as your core for Roboto.
+Thank you for selecting AOKP as your core for RobotoMOD.
 
 AOKP has more features over CM9 including:
 
@@ -27,4 +27,4 @@ Credit to the following people:
 - alquez
 - the AOKP team
 
-If you don't wish to install AOKP and install CM9 instead then just click the back button on your device or via the button bellow.
+If you don't wish to install AOKP and install CM9 instead then just click the back button on your device or via the button below.

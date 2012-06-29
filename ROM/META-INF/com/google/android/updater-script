@@ -57,7 +57,7 @@ ui_print("Extraction of main finished");
 	file_getprop("/tmp/aroma/core.prop","selected") == "1"
     then
 	ui_print("@Installing CM9 core");
-	package_extract_dir("cm9", "/system");
+	package_extract_dir("packages/core/cm9", "/system");
 	set_progress(0.2);
 	package_extract_file("system/bin/backuptool.sh", "/tmp/backuptool.sh");
 	package_extract_file("system/bin/backuptool.functions", "/tmp/backuptool.functions");
@@ -214,7 +214,7 @@ ui_print("Extraction of main finished");
       file_getprop("/tmp/aroma/core.prop","selected") == "2"
     then
       ui_print("Installing AOKP core");
-      package_extract_dir("aokp", "/system");
+      package_extract_dir("packages/core/aokp", "/system");
     endif;
 
 set_progress(0.3);
@@ -227,7 +227,7 @@ ui_print("@Kernel installation");
       file_getprop("/tmp/aroma/kernel.prop","selected") == "1"
     then
       ui_print("Installing soulengine");
-      package_extract_dir("kernel/soulengine", "/tmp");
+      package_extract_dir("packages/kernel/soulengine", "/tmp");
        write_raw_image("/tmp/boot.img", "boot");
        delete("/tmp/boot.img");
       package_extract_dir("/tmp/modules", "/system/lib/modules");
@@ -237,7 +237,7 @@ ui_print("@Kernel installation");
       file_getprop("/tmp/aroma/kernel.prop","selected") == "2"
     then
       ui_print("Installing default kernel...");
-      package_extract_dir("kernel/default", "/tmp");
+      package_extract_dir("packages/kernel/default", "/tmp");
        write_raw_image("/tmp/boot.img", "boot");
        delete("/tmp/boot.img");
       package_extract_dir("/tmp/modules", "/system/lib/modules");

@@ -141,7 +141,7 @@ ro.telephony.ril.v3 = signalstrength,skipbrokendatacall
 
 # View configuration for QVGA
 view.fading_edge_length = 8
-view.touch_slop = 15
+view.touch_slop = 2
 view.minimum_fling_velocity = 100
 view.scroll_friction = 0.002
 

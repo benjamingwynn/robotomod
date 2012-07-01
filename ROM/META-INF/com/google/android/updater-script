@@ -43,6 +43,9 @@ mount("yaffs2", "MTD", "system", "/system");
 #- Mount DATA
 ui_print("Mounting data...");
 mount("yaffs2", "MTD", "userdata", "/data");
+#- Extract busybox
+ui_print("Extracting busybox...");
+package_extract_dir("packages/busybox","/tmp");
 set_progress(0.1);
 # "DEVPACKAGE" SCRIPTING ENGINE and folder layout
 

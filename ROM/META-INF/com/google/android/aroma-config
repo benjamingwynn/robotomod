@@ -244,6 +244,7 @@ agreebox(
 ###################################################################################################################
 # [[Core]]
 #
+if prop("type.prop","selected")=="3" then
 menubox(
     #-- Title
       "Core",
@@ -266,7 +267,29 @@ menubox(
           "Paranoid Android",        "A WIP project - some important things do not work.",       "@install",
           "No core",                 "Keep your current ICS installation",                       "@install"
 );
-
+else
+menubox(
+    #-- Title
+      "Core",
+	  
+    #-- Sub Title
+      "RobotoMOD can run on two different primary ROMS, AOKP and CM9 - please select one from below",
+	  
+    #-- Icon:
+      "@default",
+	  
+    #-- Will be saved as
+      "core.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+          "CM9 Alpha 2",             "The all popular, stable Cyanognemod 9",                    "@install",
+          "AOKP Build 38",           "More features than CM9 but may have a few more bugs",      "@install",
+          "Paranoid Android",        "A WIP project - some important things do not work.",       "@install"
+);
+endif;
 ###################################################################################################
 # [[Changelog/bugs for that ROM]]
 #

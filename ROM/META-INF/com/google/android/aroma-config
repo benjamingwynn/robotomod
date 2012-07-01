@@ -3,7 +3,8 @@
 # LICENSE:
 #
 # Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
-# Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ ) & Ivan Brazza
+# Copyright (C) 2012 Wildfire S Developers Team (WFSDEVTeam/WFSDEV)
+# Copyright (C) 2012 Benjamin Gwynn & Ivan Brazza
 #
 # Distributed with RobotoMOD
 #
@@ -266,8 +267,7 @@ menubox(
 	  
           "CM9 Alpha 2",             "The all popular, stable Cyanognemod 9",                    "@install",
           "AOKP Build 38",           "More features than CM9 but may have a few more bugs",      "@install",
-          "Paranoid Android",        "A WIP project - some important things do not work.",       "@install",
-          "No core",                 "Keep your current ICS installation",                       "@install"
+          "Paranoid Android",        "A WIP project - some important things do not work.",       "@install"
 );
 else
 menubox(

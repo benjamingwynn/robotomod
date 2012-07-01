@@ -480,7 +480,7 @@ if prop("type.prop","selected")=="1" then
 	  "selected.6=1\n"+    #-- Default Boot Animation = ICS
 	  "selected.7=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.8=1\n"+    #-- Default Data2SD = None
-	  "selected.9=1\n"     #-- Default Beats Audio = Full
+	  "selected.9=1\n"+     #-- Default Beats Audio = Full
 	  "selected.10=1\n"     #-- Default Soundset = Sense 4
   );
 endif;

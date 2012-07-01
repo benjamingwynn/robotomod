@@ -814,6 +814,45 @@ if prop("type.prop","selected")=="1" then
 	  "selected=5\n"    #-- Default Launcher = Trebuchet
   );
 endif;
+###################################################################################################################
+# [[Ringtone selection]]
+#
+#- For updating installation
+if prop("type.prop","selected")=="1" then
+  writetmpfile(
+    #-- Prop file
+	  "toneset.prop",
+	
+	#-- Default Values
+	  "selected=1\n"    #-- Default toneset = All
+  );
+endif;
+menubox(
+    #-- Title
+      "Ringtone/Notification sound selection",
+	  
+    #-- Sub Title - change this if you want, I wanted to have a lol
+      "from ring ring to bzzzzzzzzzzzzzzbzzzzzz to lalalalala - Select your ringtone set bellow",
+	  
+    #-- Icon:
+      "@confirm",
+	  
+    #-- Will be saved as
+      "toneset.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+          "All",                    "Install all notification sounds and ringtones",       "@agreement",
+          "Sense 4",                "HTC's toneset from the Desire C",                     "@agreement",
+          "benjamingwynn's .sense", "The toneset from the .sense ROM by Benjamin Gwynn",   "@agreement",
+          "AOKP",                   "The ICS toneset with a few additions",                "@agreement",
+          "Sense 2.1",              "The toneset from the .sense ROM",                     "@agreement",
+          "None",                   "The toneset from the .sense ROM",                     "@agreement"
+
+);
+
 #####################################################################################################################
 # [[Gapps]]
 #
@@ -944,7 +983,7 @@ endif;
 ##################################################################################################################
 # [[Cookiejar]]
 #
-   menubox(
+menubox(
     #-- Title
       "Cookiejar",
 	  

@@ -77,6 +77,7 @@ theme("ics");
 	    "Oceania",         "Choose this if your nearest location is Oceania",           "@welcome"   #-- selected=6
  	   );
 
+theme("ics-welcome");
 viewbox(
   #-- Title
     "<~welcome.title>",
@@ -99,6 +100,7 @@ ini_get("rom_name")+
   #-- Icon
     "@welcome"
 );
+theme("ics");
 
 # [[WELCOME!]]
 

@@ -480,6 +480,7 @@ if prop("type.prop","selected")=="1" then
 	  "selected.7=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.8=1\n"+    #-- Default Data2SD = None
 	  "selected.9=1\n"     #-- Default Beats Audio = Full
+	  "selected.10=1\n"     #-- Default Soundset = Sense 4
   );
 endif;
 
@@ -555,7 +556,11 @@ if prop("type.prop","selected")=="2" then
 	  "Beats Audio",           "",                                                                  2,
 	    "Full Install",       "Install and rename your phone to 'Wildfire S with Beats Audio'",     1,
 	    "Normal Install",     "Install without renaming the phone",                                 0,
-	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0
+	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0,
+
+	  "Sound set",           "",                                                                    2,
+	    "Sense 4",       "Install the Sense 4 UI sounds",                                           1,
+	    "ICS",           "Keep the default ICS sounds",                                             0
 );
 endif;
 

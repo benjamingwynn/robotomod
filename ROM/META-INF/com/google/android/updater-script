@@ -1062,7 +1062,22 @@ set_progress(0.9);
       package_extract_dir("packages/BeatsAudio/Normal", "/system");
     endif;
 
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.10") == "1"
+    then
+      ui_print("Installing Sense 4 soundset");
+      package_extract_dir("packages/uisounds/sense4", "/system/media/sounds/ui");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.10") == "2"
+    then
+      ui_print("Installing ICS soundset");
+      package_extract_dir("packages/uisounds/ics", "/system/media/sounds/ui");
+    endif;
+#
 #- LAUNCHERS
+#
 ui_print("@Installing Launcher");
 
     if

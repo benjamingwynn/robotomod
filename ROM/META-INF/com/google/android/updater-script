@@ -1,12 +1,12 @@
-# TODO - Do AOKP installation script
-# TODO - Do pandroid installation script
-# TODO - Do pandroid system package installation script
-# TODO - Do pandroid system packages
-# TODO - Add pandroid to /pandroid
-# TODO - Add pandroid build.prop
-# TODO - Add pandroid HDIT build.prop
-# TODO - Add pandroid beats build.prop
-# TODO - Add more pandroid stuff
+# TODO - Do AOKP installation script			[DONE - benjamingwynn]
+# TODO - Do pandroid installation script		[TODO]
+# TODO - Do pandroid system package installation script	[TODO]
+# TODO - Do pandroid system packages			[TODO]
+# TODO - Add pandroid to /pandroid			[TODO]
+# TODO - Add pandroid build.prop			[TODO]
+# TODO - Add pandroid HDIT build.prop			[TODO]
+# TODO - Add pandroid beats build.prop			[TODO]
+# TODO - Add more pandroid stuff			[TODO]
 
 
 # Updater-script in RobotoMOD

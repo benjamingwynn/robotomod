@@ -176,10 +176,10 @@ agreebox(
       if prop("/sdcard/robotomod/cookiejar/previnstall.prop","previousinstall")=="yes" then
        menubox(
           #-- Title
-            "Cookiejar found a previous installation!",
+            "Cookiejar",
        
           #-- Sub Title
-            "It appears that you've installed RobotoMOD before! Would you like to restore your custom preferences"+
+            "It appears that you've installed RobotoMOD before. Would you like to restore your custom preferences"+
 	    " from your last install?",
   
           #-- Icon
@@ -192,9 +192,9 @@ agreebox(
           # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
           #-------------------------+-----------------------------------------------------------+---------------#
 	
-            "Yes",                   "Yes! Use the options that you selected from your previous"+
-				     " install of RobotoMOD",                                      "@install",      #-- selected = 1
-            "No",                    "No! I want to choose my custom preferences again",           "@apps",         #-- selected = 2
+            "Yes",                   "Yes - Use the options that you selected from your previous "+
+				     "install of RobotoMOD",                                       "@install",      #-- selected = 1
+            "No",                    "No - I want to choose my installation options again",        "@apps",         #-- selected = 2
         );  
       else
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
@@ -943,8 +943,8 @@ endif;
     #-- Title
       "Cookiejar",
 	  
-    #-- Sub Title - Feel free to edit this if you can make it have more sense. Got a headache atm, but I wanna get this done :P
-      "Would you like to save your custom preferences to your SD card? This would allow for easy upgrading and remembering of your RobotoMOD setup if you ever need to reinstall the ROM",
+    #-- Sub Title
+      "Cookiejar is a system that will work with your SDCard to save what you install, so if you ever decide to reinstall RobotoMOD you can have the exact options as last time.",
 	  
     #-- Icon:
       "@confirm",
@@ -956,8 +956,8 @@ endif;
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
-          "Yes",              "Recommended - save your install preferences to the SD card", "@agreement",
-          "No",               "Please don't fill  my SD card with more junk!",              "@agreement",
+          "Active Cookiejar",                "Recommended - save what I installed in text files under \sdcard\robotomod\cookiejar",  "@agreement",
+          "Disable Cookiejar",               "Do not use this feature at all",                                                       "@agreement"
 
 );
 

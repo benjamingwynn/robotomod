@@ -1062,6 +1062,8 @@ set_progress(0.9);
       package_extract_dir("packages/BeatsAudio/Normal", "/system");
     endif;
 
+#- Soundset
+
     if
       file_getprop("/tmp/aroma/mods.prop","selected.10") == "1"
     then
@@ -1114,6 +1116,49 @@ ui_print("@Installing Launcher");
       ui_print("Installing Trebuchet");
       package_extract_dir("packages/Launchers/Trebuchet", "/system/app");
     endif;
+
+#- Toneset
+ui_print("@Installing tonesets...");
+
+    if
+      file_getprop("/tmp/aroma/toneset.prop","selected") == "1"
+    then
+      ui_print("Installing all tonesets");
+      package_extract_dir("packages/soundset/Sense4", "/system/media/sounds");
+      package_extract_dir("packages/toneset/dotsense", "/system/media/sounds");
+      package_extract_dir("packages/toneset/aokp", "/system/media/sounds");
+      package_extract_dir("packages/toneset/oldsense", "/system/media/sounds");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/toneset.prop","selected") == "2"
+    then
+      ui_print("Installing Sense 4 toneset");
+      package_extract_dir("packages/soundset/Sense4", "/system/media/sounds");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/toneset.prop","selected") == "3"
+    then
+      ui_print("Installing .sense toneset");
+      package_extract_dir("packages/toneset/dotsense", "/system/media/sounds");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/toneset.prop","selected") == "4"
+    then
+      ui_print("Installing AOKP toneset");
+      package_extract_dir("packages/toneset/aokp", "/system/media/sounds");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/toneset.prop","selected") == "5"
+    then
+      ui_print("Installing Sense 2.1 toneset");
+      package_extract_dir("packages/toneset/oldsense", "/system/media/sounds");
+    endif;
+
+
 
 #- Fonts
 ui_print("@Installing fonts...");

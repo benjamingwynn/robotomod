@@ -195,7 +195,7 @@ agreebox(
 	
             "Yes",                   "Yes - Use the options that you selected from your previous "+
 				     "install of RobotoMOD",                                       "@install",      #-- selected = 1
-            "No",                    "No - I want to choose my installation options again",        "@apps",         #-- selected = 2
+            "No",                    "No - I want to choose my installation options again",        "@apps"          #-- selected = 2
         );  
       else
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
@@ -267,7 +267,8 @@ menubox(
 	  
           "CM9 Alpha 2",             "The all popular, stable Cyanognemod 9",                    "@install",
           "AOKP Build 38",           "More features than CM9 but may have a few more bugs",      "@install",
-          "Paranoid Android",        "A WIP project - some important things do not work.",       "@install"
+          "Paranoid Android",        "A WIP project - some important things do not work.",       "@install",
+          "No core",                 "Keep your current ICS installation",                       "@install"
 );
 else
 menubox(

@@ -171,6 +171,30 @@ agreebox(
 #
 # INSTALLATION TYPE
 #
+      if prop("/sdcard/robotomod/cookiejar/previnstall.prop","previousinstall")=="yes" then
+       menubox(
+          #-- Title
+            "Cookiejar found a previous installation!",
+       
+          #-- Sub Title
+            "It appears that you've installed RobotoMOD before! Would you like to restore your custom preferences"+
+	    " from your last install?",
+  
+          #-- Icon
+            "@install",
+    
+          #-- Will be saved in /tmp/aroma/usecustomprefs.prop
+            "usecustomprefs.prop",
+    
+          #-------------------------+-----------------[ Menubox Items ]-------------------------+---------------#
+          # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
+          #-------------------------+-----------------------------------------------------------+---------------#
+	
+            "Yes",                   "Yes! Use the options that you selected from your previous"+
+				     " install of RobotoMOD",                                      "@install",      #-- selected = 1
+            "No",                    "No! I want to choose my custom preferences again",           "@apps",         #-- selected = 2
+        );  
+      else
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
        menubox(
           #-- Title
@@ -885,6 +909,36 @@ if prop("type.prop","selected")=="3" then
 
 	  "selected=0\n"     #-- Dont wipe data
   );
+endif;
+
+##################################################################################################################
+# [[Cookiejar]]
+#
+   menubox(
+    #-- Title
+      "Cookiejar",
+	  
+    #-- Sub Title - Feel free to edit this if you can make it have more sense. Got a headache atm, but I wanna get this done :P
+      "Would you like to save your custom preferences to your SD card? This would allow for easy upgrading and remembering of your RobotoMOD setup if you ever need to reinstall the ROM",
+	  
+    #-- Icon:
+      "@confirm",
+	  
+    #-- Will be saved as
+      "cookiejar.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+          "Yes",              "Recommended - save your install preferences to the SD card", "@agreement",
+          "No",               "Please don't fill  my SD card with more junk!",              "@agreement",
+
+);
+
+if prop("cookiejar.prop","selected")=="1" then
+  writetmpfile("previnstall.prop","previousinstall=yes\n");
+endif;
 endif;
 ##########################################################################################################
 # [[Ready for Installation?]]

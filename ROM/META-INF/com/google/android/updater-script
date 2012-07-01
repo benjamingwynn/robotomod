@@ -32,7 +32,7 @@ ui_print("@Preparing for installation...");
     if
       file_getprop("/tmp/aroma/core.prop","selected") == "4"
     then
-      ui_print("Not removing system files - installation option 4");
+      ui_print("@Not removing system files - update option chosen");
     else
       ui_print("Erasing system...");
       format("yaffs2", "MTD", "system", "0");
@@ -45,6 +45,16 @@ ui_print("Mounting data...");
 mount("yaffs2", "MTD", "userdata", "/data");
 set_progress(0.1);
 # "DEVPACKAGE" SCRIPTING ENGINE and folder layout
+
+#- Cookiejar
+
+    if
+      file_getprop("/tmp/usecustomprefs.prop","selected") == "1"
+    then
+      ui_print("@Cookiejar");
+      ui_print("Using your preferences from your last RobotoMOD install");
+      run_program("/tmp/busybox","cp","/sdcard/robotomod/cookiejar","/tmp/aroma");
+    endif;
 
 #- Data Wipe?
 
@@ -1099,6 +1109,19 @@ ui_print("@Installing HDIT");
 	  ui_print("Installing GPS tweaks for Oceania");
 	  package_extract_dir("packages/gps/oceania","/system/etc");
 	endif;
+###########################################################################
+#-
+#- Cookiejar
+#-
+if
+  file_getprop("/tmp/aroma/cookiejar.prop","selected") == "1"
+then
+  ui_print("@Cookiejar");
+  ui_print("Saving your custom install preferences to your SD card");
+  run_program("/tmp/busybox","cp","/tmp/aroma","/sdcard/robotomod/cookiejar");
+endif;
+
+
 
 set_progress(1.00);
 #-- Finish

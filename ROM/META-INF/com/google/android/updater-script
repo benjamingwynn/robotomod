@@ -1,3 +1,14 @@
+# TODO - Do AOKP installation script
+# TODO - Do pandroid installation script
+# TODO - Do pandroid system package installation script
+# TODO - Do pandroid system packages
+# TODO - Add pandroid to /pandroid
+# TODO - Add pandroid build.prop
+# TODO - Add pandroid HDIT build.prop
+# TODO - Add pandroid beats build.prop
+# TODO - Add more pandroid stuff
+
+
 # Updater-script in RobotoMOD
 
 # LICENSE:
@@ -18,8 +29,14 @@ ui_print(" ");
 ui_print("@Preparing for installation...");
 
 # Format SYSTEM
-ui_print("Erasing system...");
-format("yaffs2", "MTD", "system", "0");
+    if
+      file_getprop("/tmp/aroma/core.prop","selected") == "4"
+    then
+      ui_print("Not removing system files - installation option 4");
+    else
+      ui_print("Erasing system...");
+      format("yaffs2", "MTD", "system", "0");
+    endif;
 #- Mount SYSTEM
 ui_print("Mounting system...");
 mount("yaffs2", "MTD", "system", "/system");
@@ -233,8 +250,13 @@ set_progress(0.1);
     if
       file_getprop("/tmp/aroma/core.prop","selected") == "2"
     then
-      ui_print("Installing AOKP core");
-      package_extract_dir("packages/core/aokp", "/system");
+      ui_print("AOKP ------ TODO!!");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/core.prop","selected") == "3"
+    then
+      ui_print("PANDROID ------ TODO!!");
     endif;
 
 set_progress(0.3);

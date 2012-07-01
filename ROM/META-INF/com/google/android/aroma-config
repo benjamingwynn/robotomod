@@ -15,7 +15,7 @@
 # [[Splash screen]]
 #
 splash(
-  #-- Duration 2000ms / 2 seconds
+  #-- Duration 2000ms / 2 secondssplash(
     3000,
   
   #-- <AROMA Resource Dir>/sample.png
@@ -314,6 +314,63 @@ agreebox(
     "Please check the checkbox to continue!"
 );
 endif;
+##
+# Font selection - BETA
+#
+# Please fix
+#
+# - Automatic/Upgrade mode
+# - Font installation in update script
+
+   selectbox(
+    #-- Title
+      "It's your ROM...",
+	  
+    #-- Sub Title
+      "Please select the following things you would like to change throughout your ROM.",
+	  
+    #-- Icon
+      "@welcome",
+	  
+    #-- Will be saved as
+      "font.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  "Lockscreen font",      "",                                                                   2,
+	    "Default",            "The default ICS lockscreen fontface",                                1,
+	    "Clockopia",          "A cool gingerbread font",                                            0,
+	    "Roboto",             "Use the default UI font for a more plain look",                      0,
+	    "DroidSerif",         "Same font as bellow, posh and good looking",                         0,
+
+	  "UI font",              "",                                                                   2,
+	    "Roboto",             "The default ICS font",                                               1,
+	    "DroidSerif",         "A posh, Times New Roman style font",                                 0
+);
+
+menubox(
+    #-- Title
+      "Font",
+	  
+    #-- Sub Title
+      "Please select the primary font you wish to use with your ICS ROM",
+	  
+    #-- Icon: <AROMA Resource Dir>/icons/default.png or <ThemeDir>/icon.default.png
+      "@install",
+	  
+    #-- Will be saved in /tmp/aroma/mods.prop
+      "font.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]-----------------------------------------#
+	  # TITLE            |  SUBTITLE                                                        | Initial Value #
+	  #------------------+------------------------------------------------------------------+---------------#
+
+	"Roboto",              "The default ICS font face",                                       "@personalize",
+	"DroidSerif",          "A nice posh font :)",                                             "@personalize"
+);
+
+
 ######################################################################################################
 # [[KERNEL SELECTION]]
 #

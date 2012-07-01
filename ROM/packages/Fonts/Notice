@@ -1,0 +1,1 @@
+All fonts are called Roboto-Regular.ttf - but are not the Roboto font. This is to make sure ICS selects this one and to avoid any symlink problems.

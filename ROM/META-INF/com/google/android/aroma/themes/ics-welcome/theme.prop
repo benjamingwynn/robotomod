@@ -22,6 +22,7 @@ img.radio.push=radio_press
 img.radio.on=radio_on
 img.radio.on.focus=radio_on_focus
 img.radio.on.push=radio_on_press
+img.blank=blank
 
 
 color.winbg           = #000
@@ -62,6 +63,6 @@ font.small                   = font.roboto.small
 font.big                     = font.roboto.big
 
 
-info.themename        = ICS
+info.themename        = ICS with welcome text
 info.description      = ICS Theme for AROMA Installer
 info.author           = DemonWav & amarullz

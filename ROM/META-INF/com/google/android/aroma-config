@@ -81,25 +81,14 @@ theme("ics");
 theme("ics-welcome");
 viewbox(
   #-- Title
-    "<~welcome.title>",
+    "Welcome",
   
   #-- Text
 
-"Welcome to RobotoMOD - this ROM is designed to be the ultimate ICS based ROM for the HTC Wildfire S. We hope you enjoy using the ROM! If you like it then please consider donating, the link is on the main thread/download page.\n\n"+
-
-"<~welcome.text1> <b>"+
-ini_get("rom_name")+
-"</b> for <b>"
-+ini_get("rom_device")+"</b>.\n\n"+
-    
-"<~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
-"<~welcome.author>\t: <b><#selectbg_g>"+ini_get("rom_author")+"</#></b>\n"+
-"<~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
-
-    "<~welcome.next>",
+     "\n",
   
   #-- Icon
-    "@welcome"
+    "@blank"
 );
 theme("ics");
 

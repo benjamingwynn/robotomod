@@ -433,7 +433,7 @@ if prop("type.prop","selected")=="2" then
 );
 endif;
 
-if prop("type.prop","selected")=="1" then
+if prop("type.prop","selected")=="3" then
   #-- IF "Minimal" Installation, don't show configuration, then write default kernel.prop
   #-- NOTE: mods.prop should exist, or updater-script will error
   writetmpfile(
@@ -556,11 +556,11 @@ if prop("type.prop","selected")=="3" then
 	
 	#-- Default Values
 	  "selected.1=1\n"+    #-- Default Music = Apollo
-	  "selected.2=3\n"+    #-- Default File Explorer = H
-	  "selected.3=2\n"+    #-- Default Gallery = Quickpick
+	  "selected.2=\n"+     #-- Default File Explorer = None
+	  "selected.3=1\n"+    #-- Default Gallery = Stock
 	  "selected.4=2\n"+    #-- Default Browser = CM9
-	  "selected.5=1\n"+    #-- Default Audio Enhancement = MusicFX
-	  "selected.6=6\n"+    #-- Default Boot Animation = Android
+	  "selected.5=3\n"+    #-- Default Audio Enhancement = None
+	  "selected.6=1\n"+    #-- Default Boot Animation = Stock
 	  "selected.7=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.8=1\n"+    #-- Default Data2SD = None
 	  "selected.9=3\n"+     #-- Default Beats Audio = None
@@ -774,28 +774,28 @@ if prop("core.prop","selected")=="3" then
   writetmpfile(
 	  "sApps.prop",
 
-	  "item.1.1=0\n"+    #-- None selected
-	  "item.1.2=0\n"+    #-- None selected
+	  "item.1.1=1\n"+    #-- None selected
+	  "item.1.2=1\n"+    #-- None selected
 	  "item.1.3=1\n"+    #-- None selected
-	  "item.1.4=0\n"+    #-- None selected
+	  "item.1.4=1\n"+    #-- None selected
 	  "item.1.5=0\n"+    #-- None selected
 	  "item.1.6=1\n"+    #-- None selected
 	  "item.1.7=0\n"+    #-- None selected
 	  "item.1.8=0\n"+    #-- None selected
 	  "item.1.9=1\n"+    #-- None selected
 	  "item.1.10=1\n"+   #-- None selected
-	  "item.1.11=0\n"+   #-- None selected
-	  "item.1.12=0\n"+   #-- None selected
+	  "item.1.11=1\n"+   #-- None selected
+	  "item.1.12=1\n"+   #-- None selected
 
-	  "item.2.1=0\n"+   #-- None selected
-	  "item.2.2=0\n"+   #-- None selected
-	  "item.2.3=0\n"+   #-- None selected
-	  "item.2.4=0\n"+   #-- None selected
-	  "item.2.5=0\n"+   #-- None selected
-	  "item.2.6=0\n"+   #-- None selected
-	  "item.2.7=0\n"+   #-- None selected
+	  "item.2.1=1\n"+   #-- None selected
+	  "item.2.2=1\n"+   #-- None selected
+	  "item.2.3=1\n"+   #-- None selected
+	  "item.2.4=1\n"+   #-- None selected
+	  "item.2.5=1\n"+   #-- None selected
+	  "item.2.6=1\n"+   #-- None selected
+	  "item.2.7=1\n"+   #-- None selected
 
-	  "item.3.8=0\n"    #-- None selected
+	  "item.3.8=1\n"    #-- None selected
   );
 endif;
 
@@ -876,7 +876,7 @@ if prop("type.prop","selected")=="3" then
 	  "launcher.prop",
 	
 	#-- Default Values
-	  "selected=4\n"    #-- Default Launcher = Stock ICS
+	  "selected=5\n"    #-- Default Launcher = Stock ICS
   );
 endif;
 
@@ -887,7 +887,7 @@ if prop("type.prop","selected")=="4" then
 	  "launcher.prop",
 	
 	#-- Default Values
-	  "selected=nothing_really_needs_to_go_here_but_to_avoid_errors_this_file_must_be_created\n"    #-- Default Launcher = None
+	  "selected=nothing_really_needs_to_go_here_but_to_avoid_errors_this_file_must_be_created-you-coulda-just-put-zero-yano\n"    #-- Default Launcher = None
   );
 endif;
 
@@ -1095,7 +1095,7 @@ if prop("core.prop","selected")=="3" then
   writetmpfile(
 	  "wipedata.prop",
 
-	  "selected=1\n"     #-- Wipe data
+	  "selected=0\n"     #-- Don't wipe data - stock cm9 doesn't do this
   );
 endif;
 

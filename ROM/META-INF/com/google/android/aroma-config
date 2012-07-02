@@ -850,7 +850,7 @@ menubox(
           "benjamingwynn's .sense", "The toneset from the .sense ROM by Benjamin Gwynn",   "@agreement",
           "AOKP",                   "The ICS toneset with a few additions",                "@agreement",
           "Sense 2.1",              "The toneset from the .sense ROM",                     "@agreement",
-          "None",                   "The toneset from the .sense ROM",                     "@agreement"
+          "None",                   "Don't install any ringtones",                         "@agreement"
 
 );
 

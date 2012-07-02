@@ -49,11 +49,9 @@ fontresload( "0", "ttf/Roboto.ttf", "12" );
 fontresload( "1", "ttf/Roboto.ttf", "18" );
 theme("ics");
 
-# [[End of build information]]
+######################## -> LOCATE
 
-# [[AROMA GUI Start]]
-
-  menubox(
+menubox(
     #-- Title
       "Welcome",
 	  
@@ -78,6 +76,8 @@ theme("ics");
 	    "Oceania",         "Choose this if your nearest location is Oceania",           "@welcome"   #-- selected=6
  	   );
 
+######################## -> WELCOME
+
 theme("ics-welcome");
 viewbox(
   #-- Title
@@ -90,9 +90,31 @@ viewbox(
   #-- Icon
     "@blank"
 );
-theme("ics");
 
-# [[WELCOME!]]
+######################## -> LICENCE
+
+theme("ics");
+agreebox(
+  #-- Title
+    "RobotoMOD Licence",
+  
+  #-- Subtitle / Description
+    "Please read through this licence:",
+  
+  #-- Icon
+    "@license",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
+    resread("licence.txt"),
+
+  #-- Checkbox Text
+    "I agree to these terms",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+
+######################## -> README
 
 agreebox(
   #-- Title
@@ -114,29 +136,7 @@ agreebox(
     "Please check the checkbox to continue!"
 );
 
-# [[LICENCE SCREEN]]
-
-agreebox(
-  #-- Title
-    "RobotoMOD Licence",
-  
-  #-- Subtitle / Description
-    "Please read through this licence:",
-  
-  #-- Icon
-    "@license",
-  
-  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
-    resread("licence.txt"),
-
-  #-- Checkbox Text
-    "I agree to these terms",
-  
-  #-- Unchecked Alert Message
-    "Please check the checkbox to continue!"
-);
-
-# [[KNOWN BUGS/CREDITS]]
+######################## -> README 2
 
 agreebox(
   #-- Title
@@ -1057,3 +1057,11 @@ viewbox(
 
 #---- FINISH
 
+###
+##
+# Notice: If you encounter an error on a line that is past the end of the file then do not panic, this is a missing ");" or a missing "endif;" - read through the script looking for these and replace them if you find some missing.
+#
+# Thanks
+# - Benjamin
+##
+###

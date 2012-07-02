@@ -1223,40 +1223,20 @@ ui_print("Installing UI font");
 
 ui_print("@Installing HDIT");
 
-    if
-      file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
-    then
 	if
-	  file_getprop("/tmp/aroma/core.prop","selected") == "1"
+		file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+
 	then
-    	   if
-             file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
-	   then
-	     ui_print("Installing HDIT");
-    	     package_extract_dir("packages/hdit/cm9/wb", "/system");
-           else
-	     ui_print("Installing HDIT");
-	     package_extract_dir("packages/hdit/cm9/wob", "/system");
-           endif;
+		ui_print("Installing HDIT");
+
+ 		if
+			file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
+		then
+    	    		package_extract_dir("packages/hdit/cm9/wb", "/system");
+          	else
+	     		package_extract_dir("packages/hdit/cm9/wob", "/system");
+		endif;
 	endif;
-    endif;
-    if
-      file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
-    then
-	if
-	  file_getprop("/tmp/aroma/core.prop","selected") == "2"
-	then
-    	   if
-             file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
-	   then
-	     ui_print("Installing HDIT");
-    	     package_extract_dir("packages/hdit/aokp/wb", "/system");
-           else
-	     ui_print("Installing HDIT");
-	     package_extract_dir("packages/hdit/aokp/wob", "/system");
-           endif;
-	endif;
-    endif;
 
 ###########################################################################
 #-

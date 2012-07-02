@@ -208,7 +208,8 @@ agreebox(
 	
             "Recommended",            "Will install recommended features and configurations",       "@install",      #-- selected = 1
             "Custom",                 "Take control and fully customize your RobotoMOD experience", "@apps",         #-- selected = 2
-            "Update",                 "Update all RobotoMod system files",                          "@apps"          #-- selected = 3
+            "Placeholder",            "-----------------------",                                    "@apps",         #-- selected = 3
+            "Update",                 "Update all RobotoMod system files",                          "@apps"          #-- selected = 4
         );  
     else
        menubox(
@@ -230,13 +231,14 @@ agreebox(
           #-------------------------+-----------------------------------------------------------+---------------#
 	
             "Recommended",            "Will install recommended features and configurations",       "@install",      #-- selected = 1
-            "Custom",                 "Take control and fully customize your RobotoMOD experience", "@apps"          #-- selected = 2
+            "Custom",                 "Take control and fully customize your RobotoMOD experience", "@apps",         #-- selected = 2
+            "Placeholder",            "-----------------------",                                    "@apps"          #-- selected = 3
         );
     endif;
 ###################################################################################################################
 # [[Core]]
 #
-if prop("type.prop","selected")=="3" then
+if prop("core.prop","selected")=="4" then
 menubox(
     #-- Title
       "Core",
@@ -388,27 +390,6 @@ endif;
 	    "DroidSerif",         "A posh, Times New Roman style font",                                 0
 );
 
-menubox(
-    #-- Title
-      "Font",
-	  
-    #-- Sub Title
-      "Please select the primary font you wish to use with your ICS ROM",
-	  
-    #-- Icon: <AROMA Resource Dir>/icons/default.png or <ThemeDir>/icon.default.png
-      "@install",
-	  
-    #-- Will be saved in /tmp/aroma/mods.prop
-      "font.prop",
-	  
-	  #-----------------------------------[ Selectbox With Groups ]-----------------------------------------#
-	  # TITLE            |  SUBTITLE                                                        | Initial Value #
-	  #------------------+------------------------------------------------------------------+---------------#
-
-	"Roboto",              "The default ICS font face",                                       "@personalize",
-	"DroidSerif",          "A nice posh font :)",                                             "@personalize"
-);
-
 
 ######################################################################################################
 # [[KERNEL SELECTION]]
@@ -555,7 +536,7 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 #- For updating installation
-if prop("type.prop","selected")=="3" then
+if prop("type.prop","selected")=="4" then
   writetmpfile(
 	  "mods.prop",
 
@@ -631,7 +612,7 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 #- For updating installation
-if prop("type.prop","selected")=="3" then
+if prop("core.prop","selected")=="4" then
   writetmpfile(
 	  "Apps.prop",
 
@@ -735,7 +716,7 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 #- For updating installation
-if prop("type.prop","selected")=="3" then
+if prop("core.prop","selected")=="4" then
   writetmpfile(
 	  "sApps.prop",
 
@@ -878,7 +859,7 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 #- For updating installation
-if prop("type.prop","selected")=="3" then
+if prop("core.prop","selected")=="4" then
   writetmpfile(
 	  "gapps.prop",
 
@@ -920,7 +901,7 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 #- For updating installation
-if prop("type.prop","selected")=="3" then
+if prop("core.prop","selected")=="4" then
   writetmpfile(
 	  "hdit.prop",
 
@@ -962,7 +943,7 @@ if prop("type.prop","selected")=="2" then
 );
 endif;
 
-if prop("type.prop","selected")=="3" then
+if prop("core.prop","selected")=="4" then
   writetmpfile(
 	  "wipedata.prop",
 

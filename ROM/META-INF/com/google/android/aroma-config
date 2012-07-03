@@ -187,6 +187,11 @@ agreebox(
             "No",                    "No - I want to choose my installation options again",        "@apps"          #-- selected = 2
         );  
       else
+#- Fix a bug that stops the script from saving a prop.
+  writetmpfile(
+	  "kernel.prop",
+		  "selected=2\n"  );
+#- Done.
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
        menubox(
           #-- Title

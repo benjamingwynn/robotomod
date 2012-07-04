@@ -1072,26 +1072,33 @@ ui_print("@Installing Launcher");
     if
       file_getprop("/tmp/aroma/launcher.prop","selected") == "2"
     then
+      ui_print("Installing LGHome");
+      package_extract_dir("packages/Launchers/LGHome", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "3"
+    then
       ui_print("Installing MiHome");
       package_extract_dir("packages/Launchers/MiHome", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/launcher.prop","selected") == "3"
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "4"
     then
       ui_print("Installing Nova launcher");
       package_extract_dir("packages/Launchers/Nova", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/launcher.prop","selected") == "4"
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "5"
     then
       ui_print("Installing Stock ICS launcher");
       package_extract_dir("packages/Launchers/StockLauncher", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/launcher.prop","selected") == "5"
+      file_getprop("/tmp/aroma/launcher.prop","selected") == "6"
     then
       ui_print("Installing Trebuchet");
       package_extract_dir("packages/Launchers/Trebuchet", "/system/app");

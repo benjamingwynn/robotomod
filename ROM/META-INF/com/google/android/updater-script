@@ -1202,6 +1202,23 @@ ui_print("Installing UI font");
     then
       ui_print("@Installing Google Apps");
       package_extract_dir("packages/gapps", "/system");
+      ui_print("@Installing extra Google packages");
+    endif;
+
+#- Gapps extra
+
+    if
+      file_getprop("/tmp/aroma/gapps.prop","selected.1") == "1"
+    then
+      ui_print("Installing Google Now");
+      package_extract_dir("packages/gappsextra/googlenow", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/gapps.prop","selected.1") == "2"
+    then
+      ui_print("Installing JB Google Play");
+      package_extract_dir("packages/gappsextra/jbmarket", "/system/app");
     endif;
 
 #- HDIT

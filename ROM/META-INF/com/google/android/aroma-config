@@ -187,6 +187,11 @@ agreebox(
             "No",                    "No - I want to choose my installation options again",        "@apps"          #-- selected = 2
         );  
       else
+#- Fix a bug that stops the script from saving a prop.
+  writetmpfile(
+	  "kernel.prop",
+		  "selected=2\n"  );
+#- Done.
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
        menubox(
           #-- Title
@@ -851,6 +856,7 @@ if prop("type.prop","selected")=="2" then
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
           "Apex Launcher",       "Helps you create a customized homescreen experience",           "@welcome",
+          "LGHome",              "App from LG ICS devices.",                                      "@welcome",
           "MiHome",              "Home app from MIUI - experimental",                             "@welcome",
           "Nova",                "Nova Launcher used in AOKP",                                    "@welcome",
           "Stock ICS launcher",  "Default ICS launcher from the Galaxy Nexus",                    "@welcome",
@@ -956,21 +962,39 @@ endif;
 
 #####################################################################################################################
 # [[Gapps]]
+
 #
-if prop("type.prop","selected")=="1" then
-  #-- IF "Recommended" Installation, don't show configuration, then write default gapps.prop
-  writetmpfile(
-    #-- Prop file will write to /tmp/aroma/gapps.prop
-	  "gapps.prop",
-	
-	#-- Default Values
-	  "selected=1\n"    #-- Default = Install GApps
-  );
-endif;
+# First, lets set all 3 automatic options to 0
+#
+
+if prop("type.prop","selected")=="1" then writetmpfile("gapps.prop","selected=0\n"); endif;
+#- We do not ask for 2, this is a manual install
+if prop("type.prop","selected")=="3" then writetmpfile("gapps.prop","selected=0\n"); endif;
+if prop("type.prop","selected")=="4" then writetmpfile("gapps.prop","selected=0\n"); endif;
+
+#
+# Now, lets show the gapps section only if you have installed CM9
+#
+
+if prop("core.prop","selected")=="1" then
+
+#
+# Enable gapps for install type 1 now that we know the user has installed CM9
+#
+
+if prop("type.prop","selected")=="1" then writetmpfile("gapps.prop","selected=1\n"); endif;
+
+#
+# Display the next screens only if we are using a custom installation
+#
 
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write gapps.prop
-   menubox(
+
+#
+# Ask if the user wants gapps or not.
+#
+
+menubox(
     #-- Title
       "Google Apps",
 	  
@@ -986,26 +1010,66 @@ if prop("type.prop","selected")=="2" then
           "Install",              "Install Google Apps for more features that are found in pure ICS",      "@welcome",
           "Don't install",        "Don't install anything Google",                                         "@welcome"
 );
+
+#
+# If the user wants gapps
+#
+
+if prop("gapps.prop","selected")=="1" then
+
+#
+# Show a menu asking if you want customizable 
+#
+
+checkbox(
+    #-- Title
+      "Extra Google Packages",
+	  
+    #-- Sub Title
+      "Do you wish to install extra Google packages?",
+	  
+    #-- Icon:
+      "@apps",
+	  
+    #-- Will be saved as
+      "gappsextra.prop",
+	  
+	  "Extra GApps packages", "",                                                                   2,
+	  "Google Now",           "Default calculator application",                                     1,
+	  "4.1 market app",       "Jellybean's Market app",                                             1
+);
+
+#
+# End the customizable gapps installation 'if'
+#
+
 endif;
 
-#- For minimal installation
-if prop("core.prop","selected")=="3" then
-  writetmpfile(
-	  "gapps.prop",
+#
+# End the custom installation screen
+#
 
-	  "selected=0\n"     #-- None selected
-  );
 endif;
 
-#- For updating installation
-if prop("core.prop","selected")=="4" then
-  writetmpfile(
-	  "gapps.prop",
+#
+# If the core selected 
+#
 
-	  "selected=0\n"     #-- None selected
-  );
+else
+
+#
+# TODO: Notice that for AOKP/Paranoid Android gapps must be installed after reboot via downloading a package at goo.im/gapps  
+#
+
+#-> todo
+
+#
+# End the if file that asks if we have CM9
+#
+
 endif;
-##################################################################################################################
+
+#####################################################################################################################
 # [[HD image tweak]]
 #
 if prop("type.prop","selected")=="1" then

@@ -513,10 +513,10 @@ if prop("type.prop","selected")=="2" then
 	    "ICS",                 "The default ICS Gallery application",                               1,
             "Quickpic",            "Quickpic gallery application",                                      0,
 
-	  "Browser",               "",                                                                  2,
-	    "AOKP",                "More like the default ICS browser",                                 0,
-	    "CM9",                 "Has a few more features, but not many",                             1,
-            "Firefox",             "Firefox nighly ported to ARMv6",                                    0,
+	  "Browser",               "",                                                                  4, #- disabled
+	    "AOKP",                "More like the default ICS browser",                                 4, #- disabled
+	    "CM9",                 "Has a few more features, but not many",                             4, #- disabled
+            "Firefox",             "Firefox nighly ported to ARMv6",                                    4, #- disabled
 
 	  "Audio Enchatments",    "",                                                                   2,
 	    "MusicFX",            "AOKP's music equalizer",                                             1,
@@ -705,18 +705,19 @@ if prop("type.prop","selected")=="1" then
 	
 	#-- Default Values ( item.x.x = value. value=1 selected, value=0 un-selected )
 	  #-- Applications
-	  "item.1.1=1\n"+    #-- Calculator
-	  "item.1.2=1\n"+    #-- Clock
-	  "item.1.3=1\n"+    #-- Camera
-	  "item.1.4=1\n"+    #-- Contacts
-	  "iten.1.5=0\n"+    #-- Dev Tools
-	  "item.1.6=1\n"+    #-- EMail
-	  "item.1.7=1\n"+    #-- Goo Manager
-	  "item.1.8=1\n"+    #-- HTML Viewer
-	  "item.1.9=1\n"+    #-- Keyboard
-	  "item.1.10=1\n"+   #-- SMS
-	  "item.1.11=1\n"+   #-- Video Editor
-	  "item.1.12=1\n"+   #-- Voice Dialler
+	  "item.1.1=1\n"+   #- Somebody should re-add these labels. 
+	  "item.1.2=1\n"+
+	  "item.1.3=1\n"+
+	  "item.1.4=1\n"+
+	  "iten.1.5=0\n"+
+	  "item.1.6=1\n"+
+	  "item.1.7=1\n"+
+	  "item.1.8=1\n"+
+	  "item.1.9=1\n"+
+	  "item.1.10=1\n"+
+	  "item.1.11=1\n"+
+	  "item.1.12=1\n"+
+	  "item.1.13=1\n"+
 
 	  #-- Live Wallpapers
 	  "item.2.1=1\n"+    #-- Galaxy
@@ -752,6 +753,7 @@ if prop("type.prop","selected")=="2" then
 	  #------------------+-----------------------------------------------------------+---------------#
 
 	  "Applications",         "",                                                                   2,
+	  "Browser",              "Default ICS browser",                                                1,
 	  "Calculator",           "Default calculator application",                                     1,
 	  "Clock",                "Default clock application",                                          1,
 	  "Camera",               "Default ICS camera",                                                 1,

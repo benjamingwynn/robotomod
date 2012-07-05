@@ -28,16 +28,6 @@ set_progress(0.0);
 ui_print(" ");
 ui_print("@Preparing for installation...");
 
-#- Data Wipe?
-
-    if
-      file_getprop("/tmp/aroma/wipedata.prop","selected") == "1"
-    then
-      ui_print("Wiping data...");
-      format("yaffs2", "MTD", "userdata", "0");
-    endif;
-
-
 # Format SYSTEM?
     if
       file_getprop("/tmp/aroma/core.prop","selected") == "4"

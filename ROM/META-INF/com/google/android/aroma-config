@@ -1130,57 +1130,6 @@ if prop("core.prop","selected")=="4" then
 	  "selected=0\n"     #-- None selected
   );
 endif;
-#############################################################################################################
-# [[Wipe data]]
-#
-#-- IF "Recommended" Installation, don't show configuration, then write default wipedata.prop
-if prop("type.prop","selected")=="1" then
-  writetmpfile(
-    #-- Prop file will write to /tmp/aroma/wipedata.prop
-	  "wipedata.prop",
-	
-	#-- Default Values
-	  "selected=1\n"    #-- Default = Wipe data
-  );
-endif;
-
-#-- IF "Custom" Installation, show configuration, then write wipedata.prop
-if prop("type.prop","selected")=="2" then
-  menubox(
-    #-- Title
-      "Wipe data?",
-	  
-    #-- Sub Title
-      "Wiping data can fix issues with your phone after installing RobotoMOD. It is highly recommended you do this. Please note that if you do wipe data then you will lose all of your apps/app data but nothing on your SDCard will be lost.",
-	  
-    #-- Icon:
-      "@alert",
-	  
-    #-- Will be saved as
-      "wipedata.prop",
-	  
-          "Wipe",              "I understand, wipe all application data",                        "@welcome",
-          "Don't wipe",        "Don't wipe application data - may cause bugs",                   "@welcome"
-);
-endif;
-
-#-- IF "Minimalist" Installation, don't show configuration, then write default wipedata.prop
-if prop("core.prop","selected")=="3" then
-  writetmpfile(
-	  "wipedata.prop",
-
-	  "selected=0\n"     #-- Don't wipe data - stock cm9 doesn't do this
-  );
-endif;
-
-#-- IF "Update" Installation, don't show configuration, then write default wipedata.prop
-if prop("core.prop","selected")=="4" then
-  writetmpfile(
-	  "wipedata.prop",
-
-	  "selected=0\n"     #-- Dont wipe data
-  );
-endif;
 
 ##################################################################################################################
 # [[Cookiejar]]

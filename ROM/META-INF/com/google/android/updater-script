@@ -654,6 +654,11 @@ set_progress(0.5);
          then
             package_extract_dir("packages/Apps/AOKP/Browser", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Browser", "/system/app");
+	 endif;
     endif;
 
    if
@@ -670,6 +675,11 @@ set_progress(0.5);
          then
             package_extract_dir("packages/Apps/AOKP/Calculator", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Calculator", "/system/app");
+	 endif;
     endif;
 
 
@@ -687,6 +697,11 @@ set_progress(0.5);
          then
             package_extract_dir("packages/Apps/AOKP/Calendar", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Calendar", "/system/app");
+	 endif;
     endif;
 
    if
@@ -703,6 +718,11 @@ set_progress(0.5);
          then
             package_extract_dir("packages/Apps/AOKP/Camera", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Camera", "/system/app");
+	 endif;
     endif;
 
 set_progress(0.6);
@@ -722,6 +742,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/Clock", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
+	 endif;
     endif;
 
 
@@ -739,6 +764,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/Contacts", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Contacts", "/system/app");
+	 endif;
     endif;
 
 
@@ -756,6 +786,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/Development", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Development", "/system/app");
+	 endif;
     endif;
 
 
@@ -773,6 +808,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/Email", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Email", "/system/app");
+	 endif;
     endif;
 
 
@@ -790,6 +830,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/HTMLViewer", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/HTMLViewer", "/system/app");
+	 endif;
     endif;
 
 
@@ -807,6 +852,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/Keyboard", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Keyboard", "/system/app");
+	 endif;
     endif;
 
 
@@ -824,6 +874,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/SMS", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/SMS", "/system/app");
+	 endif;
     endif;
 
    if
@@ -840,6 +895,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/ThemeSupport", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
+	 endif;
     endif;
 
 
@@ -857,6 +917,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/VideoEditor", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/VideoEditor", "/system/app");
+	 endif;
     endif;
 
 
@@ -874,6 +939,11 @@ set_progress(0.6);
          then
             package_extract_dir("packages/Apps/AOKP/VoiceDialer", "/system/app");
          endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/VoiceDialer", "/system/app");
+	 endif;
     endif;
 
     if

@@ -49,8 +49,9 @@ fontresload( "0", "ttf/Roboto.ttf", "12" );
 fontresload( "1", "ttf/Roboto.ttf", "18" );
 theme("ics");
 
-######################## -> LOCATE
-
+##########################################################################################
+# [[Location information]] 
+#
 menubox(
     #-- Title
       "Welcome",
@@ -76,8 +77,9 @@ menubox(
 	    "Oceania",         "Choose this if your nearest location is Oceania",           "@welcome"   #-- selected=6
  	   );
 
-######################## -> WELCOME
-
+##########################################################################################
+# [[Welcome Page]] 
+#
 theme("ics-welcome");
 viewbox(
   #-- Title
@@ -91,12 +93,13 @@ viewbox(
     "@blank"
 );
 
-######################## -> LICENCE
-
+##########################################################################################
+# [[License]] 
+#
 theme("ics");
 agreebox(
   #-- Title
-    "RobotoMOD Licence",
+    "RobotoMOD License",
   
   #-- Subtitle / Description
     "Please read through this licence:",
@@ -114,8 +117,9 @@ agreebox(
     "Please check the checkbox to continue!"
 );
 
-######################## -> README
-
+##########################################################################################
+# [[RobotoMOD Readme]] 
+#
 agreebox(
   #-- Title
     "Welcome to RobotoMOD",
@@ -136,8 +140,9 @@ agreebox(
     "Please check the checkbox to continue!"
 );
 
-######################## -> README 2
-
+##########################################################################################
+# [[RobotoMOD's Bugs & Credits]] 
+#
 agreebox(
   #-- Title
     "Known bugs & Credits",
@@ -163,6 +168,7 @@ agreebox(
 #
 # INSTALLATION TYPE
 #
+#- This uses Cookiejar to check if custom prefs exist on the SD card and asks the user if they want to use them
       if prop("/sdcard/robotomod/cookiejar/previnstall.prop","previousinstall")=="yes" then
        menubox(
           #-- Title
@@ -191,7 +197,8 @@ agreebox(
   writetmpfile(
 	  "kernel.prop",
 		  "selected=2\n"  );
-#- Done.
+#- This checks to see if RobotoMOD is currently installed by looking at build.prop, then giving the option to update their current installation
+#- If build.prop says that RobotoMOD isn't installed, then it won't show the update option
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
        menubox(
           #-- Title
@@ -243,7 +250,9 @@ agreebox(
 ###################################################################################################################
 # [[Core]]
 #
-if prop("core.prop","selected")=="4" then
+#- Checks to see if RobotoMOD is currently installed, then asks if the user wants to keep the same core
+#- If RobotoMOD isn't currently installed, the user will be asked which core they want to use
+if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
 menubox(
     #-- Title
       "Core",
@@ -292,7 +301,7 @@ endif;
 ###################################################################################################
 # [[Changelog/bugs for that ROM]]
 #
-#- CM9
+#- CM9 Changelog/bugs
 if prop("core.prop","selected")=="1" then
 agreebox(
   #-- Title
@@ -315,7 +324,7 @@ agreebox(
 );
 endif;
 
-#- AOKP
+#- AOKP Changelog/bugs
 if prop("core.prop","selected")=="2" then
 agreebox(
   #-- Title
@@ -338,7 +347,7 @@ agreebox(
 );
 endif;
 
-#- ParanoidAndroid
+#- ParanoidAndroid Changelog/bugs
 if prop("core.prop","selected")=="3" then
 agreebox(
   #-- Title
@@ -360,8 +369,8 @@ agreebox(
     "Please check the checkbox to continue!"
 );
 endif;
-##
-# Font selection - BETA
+###################################################################################################
+# [[Font selection - BETA]]
 #
 # Please fix
 #
@@ -399,10 +408,8 @@ endif;
 ######################################################################################################
 # [[KERNEL SELECTION]]
 #
-
+#-- IF "Recommended" Installation, don't show configuration, then write default kernel.prop
 if prop("type.prop","selected")=="1" then
-  #-- IF "Recommended" Installation, don't show configuration, then write default kernel.prop
-  #-- NOTE: mods.prop should exist, or updater-script will error
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/kernel.prop
 	  "kernel.prop",
@@ -412,8 +419,8 @@ if prop("type.prop","selected")=="1" then
   );
 endif;
 
+#-- IF "Custom" Installation, show configuration, then write kernel.prop
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write kernel.prop
    menubox(
     #-- Title
       "Kernel",
@@ -438,9 +445,8 @@ if prop("type.prop","selected")=="2" then
 );
 endif;
 
+#-- IF "Minimal" Installation, don't show configuration, then write default kernel.prop
 if prop("type.prop","selected")=="3" then
-  #-- IF "Minimal" Installation, don't show configuration, then write default kernel.prop
-  #-- NOTE: mods.prop should exist, or updater-script will error
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/kernel.prop
 	  "kernel.prop",
@@ -453,8 +459,8 @@ endif;
 #################################################################################################################
 # [[Selection - Only pick one]]
 #
+#-- IF "Recommended" Installation, don't show configuration, then write default mods.prop
 if prop("type.prop","selected")=="1" then
-  #-- IF "Recommended" Installation, don't show configuration, then write default mods.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/mods.prop
 	  "mods.prop",
@@ -465,16 +471,16 @@ if prop("type.prop","selected")=="1" then
 	  "selected.3=1\n"+    #-- Default Gallery = ICS
 	  "selected.4=2\n"+    #-- Default Browser = CM9
 	  "selected.5=1\n"+    #-- Default Audio Enhancement = MusicFX
-	  "selected.6=\n"+    #-- Default Boot Animation = ICS
+	  "selected.6=\n"+     #-- Default Boot Animation = ICS
 	  "selected.7=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.8=1\n"+    #-- Default Data2SD = None
-	  "selected.9=1\n"+     #-- Default Beats Audio = Full
-	  "selected.10=1\n"     #-- Default Soundset = Sense 4
+	  "selected.9=1\n"+    #-- Default Beats Audio = Full
+	  "selected.10=1\n"    #-- Default Soundset = Sense 4
   );
 endif;
 
+#-- IF "Custom" Installation, show configuration, then write mods.prop
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write mods.prop
    selectbox(
     #-- Title
       "It's your ROM...",
@@ -553,8 +559,8 @@ if prop("type.prop","selected")=="2" then
 );
 endif;
 
+#-- IF "Minimal" Installation, don't show configuration, then write default mods.prop
 if prop("type.prop","selected")=="3" then
-  #-- IF "Minimal" Installation, don't show configuration, then write default mods.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/mods.prop
 	  "mods.prop",
@@ -592,8 +598,8 @@ endif;
 ##############################################################################################################
 # [[Selection - add shit]]
 #
+#-- IF "Recommended" Installation, don't show configuration, then write Apps.prop
 if prop("type.prop","selected"=="1") then
-  #-- IF "Recommended" Installation, don't show configuration, then write Apps.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/customize.prop
 	  "Apps.prop",
@@ -614,9 +620,9 @@ if prop("type.prop","selected"=="1") then
   );
 endif; 
 
+#-- IF "Custom" Installation, show configuration, then write Apps.prop
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write Apps.prop
-   checkbox(
+  checkbox(
     #-- Title
       "Add stuff to RobotoMOD",
 	  
@@ -650,7 +656,6 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 #- For minimal installation
-
 if prop("core.prop","selected")=="3" then
   writetmpfile(
 	  "Apps.prop",
@@ -692,8 +697,8 @@ endif;
 #################################################################################################################
 # [[Selection - remove shit]]
 #
+#-- IF "Recommended" Installation, don't show configuration, then write sApps.prop
 if prop("type.prop","selected")=="1" then
-  #-- IF "Recommended" Installation, don't show configuration, then write sApps.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/customize.prop
 	  "sApps.prop",
@@ -727,8 +732,8 @@ if prop("type.prop","selected")=="1" then
   );
 endif; 
 
+#-- IF "Custom" Installation, show configuration, then write sApps.prop
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write sApps.prop
    checkbox(
     #-- Title
       "Default apps",
@@ -836,9 +841,20 @@ endif;
 ##################################################################################################################
 # [[Launcher]]
 #
+#-- IF "Recommended" Installation, don't show configuration, then write default launcher.prop
+if prop("type.prop","selected")=="1" then
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/launcher.prop
+	  "launcher.prop",
+	
+	#-- Default Values
+	  "selected=5\n"    #-- Default Launcher = Trebuchet
+  );
+endif;
+
+#-- IF "Custom" Installation, show configuration, then write launcher.prop
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write launcher.prop
-   menubox(
+  menubox(
     #-- Title
       "Launcher",
 	  
@@ -864,19 +880,8 @@ if prop("type.prop","selected")=="2" then
 );
 endif;
 
-if prop("type.prop","selected")=="1" then
-  #-- IF "Recommended" Installation, don't show configuration, then write default launcher.prop
-  writetmpfile(
-    #-- Prop file will write to /tmp/aroma/launcher.prop
-	  "launcher.prop",
-	
-	#-- Default Values
-	  "selected=5\n"    #-- Default Launcher = Trebuchet
-  );
-endif;
-
+#-- IF "Minimalist" Installation, don't show configuration, then write default launcher.prop
 if prop("type.prop","selected")=="3" then
-  #-- IF "Minimalist" Installation, don't show configuration, then write default launcher.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/launcher.prop
 	  "launcher.prop",
@@ -886,8 +891,8 @@ if prop("type.prop","selected")=="3" then
   );
 endif;
 
+#-- IF "Update" Installation, don't show configuration, then write default launcher.prop
 if prop("type.prop","selected")=="4" then
-  #-- IF "Update" Installation, don't show configuration, then write default launcher.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/launcher.prop
 	  "launcher.prop",
@@ -911,6 +916,7 @@ if prop("type.prop","selected")=="1" then
 	  "selected=1\n"    #-- Default toneset = All
   );
 endif;
+
 #- For normal installation
 if prop("type.prop","selected")=="2" then
 menubox(
@@ -939,6 +945,7 @@ menubox(
 
 );
 endif;
+
 #- For minimal installation
 if prop("type.prop","selected")=="3" then
   writetmpfile(
@@ -949,6 +956,7 @@ if prop("type.prop","selected")=="3" then
 	  "selected=6\n"    #-- Default toneset = none
   );
 endif;
+
 #- For update installation
 if prop("type.prop","selected")=="4" then
   writetmpfile(
@@ -1072,8 +1080,8 @@ endif;
 #####################################################################################################################
 # [[HD image tweak]]
 #
+#-- IF "Recommended" Installation, don't show configuration, then write default hdit.prop
 if prop("type.prop","selected")=="1" then
-  #-- IF "Recommended" Installation, don't show configuration, then write default hdit.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/hdit.prop
 	  "hdit.prop",
@@ -1083,9 +1091,9 @@ if prop("type.prop","selected")=="1" then
   );
 endif;
 
+#-- IF "Custom" Installation, show configuration, then write hdit.prop
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write hdit.prop
-   menubox(
+  menubox(
     #-- Title
       "HDIT",
 	  
@@ -1123,9 +1131,8 @@ endif;
 #############################################################################################################
 # [[Wipe data]]
 #
-#- For updating installation
+#-- IF "Recommended" Installation, don't show configuration, then write default wipedata.prop
 if prop("type.prop","selected")=="1" then
-  #-- IF "Recommended" Installation, don't show configuration, then write default wipedata.prop
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/wipedata.prop
 	  "wipedata.prop",
@@ -1135,9 +1142,9 @@ if prop("type.prop","selected")=="1" then
   );
 endif;
 
+#-- IF "Custom" Installation, show configuration, then write wipedata.prop
 if prop("type.prop","selected")=="2" then
-  #-- IF "Custom" Installation, show configuration, then write wipedata.prop
-   menubox(
+  menubox(
     #-- Title
       "Wipe data?",
 	  
@@ -1155,6 +1162,7 @@ if prop("type.prop","selected")=="2" then
 );
 endif;
 
+#-- IF "Minimalist" Installation, don't show configuration, then write default wipedata.prop
 if prop("core.prop","selected")=="3" then
   writetmpfile(
 	  "wipedata.prop",
@@ -1163,6 +1171,7 @@ if prop("core.prop","selected")=="3" then
   );
 endif;
 
+#-- IF "Update" Installation, don't show configuration, then write default wipedata.prop
 if prop("core.prop","selected")=="4" then
   writetmpfile(
 	  "wipedata.prop",

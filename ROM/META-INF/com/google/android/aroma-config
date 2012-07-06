@@ -27,12 +27,12 @@ anisplash(
   #-- Number of Loop
     8,
   #-- Files to display
-    "splash/a1", 500,
-    "splash/a2", 30,
-    "splash/a3", 30,
-    "splash/a4", 30,
-    "splash/a5", 30,
-    "splash/a6", 30
+    "splash/a1", 150,
+    "splash/a2", 150,
+    "splash/a3", 150,
+    "splash/a4", 150,
+    "splash/a5", 150,
+    "splash/a6", 150
 );
 
 ##########################################################################################

@@ -39,11 +39,71 @@ anisplash(
 # [[MarvelC/CT warning]]
 #
 
-#- TODO
+#
+# Get device information
+#
+
+  setvar(
+    #-- Variable Name
+      "device",
+    
+    #-- Variable Value
+      "device="+sysprop("ro.product.model")
+  );
+
+#
+# If the device is a marvel
+#
+
+if prop("device.prop","device")=="marvel" then
+
+#
+# Do nothing
+#
+
+#
+# If device is not a marvel
+#
+
+else
+
+#
+# Show a message to inform the user of this
+#
+
+viewbox(
+  #-- Title
+    "Sorry",
+  
+  #-- Text
+     "RobotoMOD is not yet designed for your phone. Please click 'Restart' to cancel the installation and return to your current ROM.",
+  
+  #-- Icon
+    "@alert"
+);
+
+#
+# Change the next button to a restart button
+#
+
+ini_set("text_next", "Restart");
+
+#
+# Restart the device
+#
+
+reboot("now");
+
+#
+# End the if command
+#
+
+endif;
 
 ##########################################################################################
 # [[Build information]] 
 #
+
 calibrate("2.7825","25","1.8833","14","yes");
 ini_set("rom_name",             "RobotoMOD");
 ini_set("rom_version",          "1");
@@ -59,6 +119,7 @@ theme("ics");
 ##########################################################################################
 # [[Location information]] 
 #
+
 menubox(
     #-- Title
       "Welcome",

@@ -1068,10 +1068,10 @@ endif;
 else
 
 #
-# TODO: Notice that for AOKP/Paranoid Android gapps must be installed after reboot via downloading a package at goo.im/gapps  
+# Notice that for AOKP/Paranoid Android gapps must be installed after reboot via downloading a package at goo.im/gapps  
 #
 
-#-> todo
+alert("Google Apps","Only CM9 supports intergrated gapps installation. Please download and flash a package from goo.im/gapps after you reboot.", "@icon");
 
 #
 # End the if file that asks if we have CM9

@@ -845,6 +845,7 @@ if prop("type.prop","selected")=="2" then
 	  "AndChat",              "A simple IRC client",                                                0,
 	  "Facebook",             "Connect to the popular social network",                              0,
 	  "Flash",                "Get the true flash experience on your phone",                        0,
+	  "Firefox",              "BETA. Please take caution using this program.",                      0,
 	  "Gmail",                "Gmail on your phone, email from Google",                             0,
 	  "Link2SD",              "Link applications to your SD card to save internal space",           0,
 	  "NoFrills",             "Advanced CPU management application",                                0,

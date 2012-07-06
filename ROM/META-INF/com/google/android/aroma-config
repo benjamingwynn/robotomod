@@ -442,15 +442,18 @@ endif;
 #
 # Please fix
 #
-# - Automatic/Upgrade mode
-# - Font installation in update script
+# - Automatic/Upgrade mode <--- STILL NEEDS FIXING!
+
+#
+# Font selection
+#
 
    selectbox(
     #-- Title
-      "It's your ROM...",
+      "Change Fonts",
 	  
     #-- Sub Title
-      "Please select the following things you would like to change throughout your ROM.",
+      "What fonts would you like to change?",
 	  
     #-- Icon
       "@welcome",
@@ -471,6 +474,106 @@ endif;
 	    "Roboto",             "The default ICS font",                                               1,
 	    "DroidSerif",         "A posh, Times New Roman style font",                                 0
 );
+
+###
+#### -[Lockscreen fonts]-
+###
+
+#
+# Lock font 1
+#
+
+if prop("font.prop","selected.1")=="1" then
+fontresload( "0", "lockfont/1.ttf", "18" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
+endif;
+
+#
+# Lock font 2
+#
+
+if prop("font.prop","selected.1")=="2" then
+fontresload( "0", "lockfont/2.ttf", "18" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
+endif;
+
+
+#
+# Lock font 3
+#
+
+if prop("font.prop","selected.1")=="3" then
+fontresload( "0", "lockfont/3.ttf", "18" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
+endif;
+
+
+#
+# Lock font 4
+#
+
+if prop("font.prop","selected.1")=="4" then
+fontresload( "0", "lockfont/4.ttf", "18" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
+endif;
+
+#
+# Display font test (lock)
+#
+
+viewbox(
+  #-- Title
+    "Lock font preview",
+  
+  #-- Text
+    "0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM",
+  
+  #-- Icon
+    "@blank"
+);
+
+###
+#### - UI fonts
+###
+
+#
+# UI font 1
+#
+
+if prop("font.prop","selected.2")=="1" then
+fontresload( "0", "ttf/Roboto.ttf", "12" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
+endif;
+
+#
+# UI font 2
+#
+
+if prop("font.prop","selected.2")=="2" then
+fontresload( "0", "ttf/DroidSerif.ttf", "12" );
+fontresload( "1", "ttf/DroidSerif.ttf", "18" );
+endif;
+
+#
+# Actual font preview
+#
+
+viewbox(
+  #-- Title
+    "UI font preview",
+  
+  #-- Text
+    "The quick brown fox jumps over the lazy dog. The dog then got leg surgery because it could not walk because of its obese weight. The fox was then shot by the dog's owner for trespassing. - RobotoMOD - !"£€$%^&*()/\,.`¬ - @łe←↓ø→↓þł`¬ĸjħŋđðßæ«µn”“¢»",
+  
+  #-- Icon
+    "@blank"
+);
+
+#
+# Set font back to Roboto (normal)
+#
+fontresload( "0", "ttf/Roboto.ttf", "12" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
 
 
 ######################################################################################################

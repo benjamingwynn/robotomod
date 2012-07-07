@@ -1124,10 +1124,10 @@ endif;
 if prop("type.prop","selected")=="2" then
 menubox(
     #-- Title
-      "Ringtone/Notification sound selection",
+      "Ringtone/Notification sounds",
 	  
-    #-- Sub Title - change this if you want, I wanted to have a lol
-      "from ring ring to bzzzzzzzzzzzzzzbzzzzzz to lalalalala - Select your ringtone set bellow",
+    #-- Sub Title
+      "Select the Ringtone/Alarm/Notification set you wish to have installed for you to use.",
 	  
     #-- Icon:
       "@confirm",

@@ -4,11 +4,11 @@ Known bugs with RobotoMOD:
 
 Credits:
 
-The following people mainly contributed to Roboto:
+The following people mainly contributed to RobotoMOD's code:
 
 - benjamingwynn & dudeman1996
 
-Thanks to the following people for helping with parts of Roboto:
+Thanks to the following people for helping with parts of RobotoMOD:
 
 - *se-nsei (graphics)
 - alquez (original msm7k kernel and marvel device tree)

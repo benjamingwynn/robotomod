@@ -41,7 +41,7 @@ set_progress(0.1);
 #- Cookiejar
 
     if
-      file_getprop("/tmp/usecustomprefs.prop","selected") == "1"
+      file_getprop("/tmp/aroma/usecustomprefs.prop","selected") == "1"
     then
       ui_print("@Cookiejar");
       ui_print("Using your preferences from your last RobotoMOD install");
@@ -1054,40 +1054,17 @@ set_progress(0.7);
       package_extract_dir("packages/Gallery/Quickpic", "/system/app");
     endif;
 
-#- Browser
-
-    if
-      file_getprop("/tmp/aroma/mods.prop","selected.4") == "1"
-    then
-      ui_print("Installing AOKP browser");
-      package_extract_dir("packages/Browser/aokp", "/system/app");
-    endif;
-
-    if
-      file_getprop("/tmp/aroma/mods.prop","selected.4") == "2"
-    then
-      ui_print("Installing CM9 browser");
-      package_extract_dir("packages/Browser/cm9", "/system/app");
-    endif;
-
-    if
-      file_getprop("/tmp/aroma/mods.prop","selected.4") == "3"
-    then
-      ui_print("Installing Firefox");
-      package_extract_dir("packages/Browser/Firefox", "/system/app");
-    endif;
-
 #- Audio
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.5") == "1"
+      file_getprop("/tmp/aroma/mods.prop","selected.4") == "1"
     then
       ui_print("Installing MusicFX");
       package_extract_dir("packages/Audio/MusicFX", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.5") == "2"
+      file_getprop("/tmp/aroma/mods.prop","selected.4") == "2"
     then
       ui_print("Installing DSP");
       package_extract_dir("packages/Audio/DSP", "/system/app");
@@ -1096,21 +1073,21 @@ set_progress(0.7);
 #- Boot animations
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "1"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "1"
     then
       ui_print("Installing ICS Boot Animation");
       package_extract_dir("packages/BootAnimation/ICSStyle", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "2"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "2"
     then
       ui_print("Installing Nexus One Boot Animation");
       package_extract_dir("packages/BootAnimation/NexusOne", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "3"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "3"
     then
       ui_print("Installing AOKP Boot Animation");
       package_extract_dir("packages/BootAnimation/AOKP", "/system/media");
@@ -1119,76 +1096,76 @@ set_progress(0.7);
 set_progress(0.8);
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "4"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "4"
     then
       ui_print("Installing old AOKP boot animation");
       package_extract_dir("packages/BootAnimation/OldAOKP", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "5"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "5"
     then
       ui_print("Installing HTC Boot Animation");
       package_extract_dir("packages/BootAnimation/HTCStyle", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "6"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "6"
     then
       ui_print("Installing default Android bootanimation");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "7"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "7"
     then
       ui_print("Installing Honeycomb Boot Animation");
       package_extract_dir("packages/BootAnimation/Honeycomb", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "8"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "8"
     then
       ui_print("Installing MIUI bootanimation");
       package_extract_dir("packages/BootAnimation/MIUI", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "9"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "9"
     then
       ui_print("Installing Beats Audio boot");
       package_extract_dir("packages/BootAnimation/BeatsAudio", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "10"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "10"
     then
       ui_print("Installing Cid boot Animation");
       package_extract_dir("packages/BootAnimation/Cid", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "11"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "11"
     then
       ui_print("Installing Interesting boot animation");
       package_extract_dir("packages/BootAnimation/Interesting", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "12"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "12"
     then
       ui_print("Installing Sense 4 boot animation");
       package_extract_dir("packages/BootAnimation/Sense4", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "13"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "13"
     then
       ui_print("Installing CM7 boot animation");
       package_extract_dir("packages/BootAnimation/CM7", "/system/media");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.6") == "14"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "14"
     then
       ui_print("Installing CM9 boot animation");
       package_extract_dir("packages/BootAnimation/CM9", "/system/media");
@@ -1199,14 +1176,14 @@ set_progress(0.9);
 #- Root management
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.7") == "1"
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "1"
     then
       ui_print("Installing Superuser...");
       package_extract_dir("packages/Root/Superuser", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.7") == "2"
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "2"
     then
       ui_print("Installing SuperSU...");
       package_extract_dir("packages/Root/SuperSU", "/system/app");
@@ -1215,7 +1192,7 @@ set_progress(0.9);
 # Data2SD
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "2"
     then
       ui_print("Installing Data2SD");
       delete("/system/etc/init.d/40a2sd");
@@ -1238,14 +1215,14 @@ set_progress(0.9);
 
 #- Beats Audio
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
+      file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
     then
       ui_print("Installing Beats Audio...");
       package_extract_dir("packages/BeatsAudio/Full", "/system");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.9") == "2"
+      file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
     then
       ui_print("Installing Beats Audio W/O tweak...");
       package_extract_dir("packages/BeatsAudio/Normal", "/system");
@@ -1254,14 +1231,14 @@ set_progress(0.9);
 #- Soundset
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.10") == "1"
+      file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
     then
       ui_print("Installing Sense 4 soundset");
       package_extract_dir("packages/uisounds/sense4", "/system/media/sounds/ui");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.10") == "2"
+      file_getprop("/tmp/aroma/mods.prop","selected.9") == "2"
     then
       ui_print("Installing ICS soundset");
       package_extract_dir("packages/uisounds/ics", "/system/media/sounds/ui");

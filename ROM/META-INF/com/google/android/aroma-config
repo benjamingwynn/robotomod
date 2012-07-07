@@ -1377,6 +1377,8 @@ menubox(
 
 if prop("cookiejar.prop","selected")=="1" then
   writetmpfile("previnstall.prop","previousinstall=yes\n");
+else
+  writetmpfile("previnstall.prop","previousinstall=no\n");
 endif;
 endif;
 ##########################################################################################################

@@ -12,6 +12,23 @@
 #
 # Thanks to amarullz for the original AROMA installation manifest
 
+
+##########################################################################################
+# [[Build information]] 
+#
+
+calibrate("2.7825","25","1.8833","14","yes");
+ini_set("rom_name",             "RobotoMOD");
+ini_set("rom_version",          "1");
+ini_set("rom_author",           "benjamingwynn & dudeman1996");
+ini_set("rom_device",           "HTC Wildfire S");
+ini_set("rom_date",             "09/07/2012");
+ini_set("dp",                   "2");
+loadlang("langs/en.lang");
+fontresload( "0", "ttf/Roboto.ttf", "12" );
+fontresload( "1", "ttf/Roboto.ttf", "18" );
+theme("ics");
+
 ##########################################################################################
 # [[Splash screen]]
 #
@@ -58,8 +75,10 @@ anisplash(
 if prop("device.prop","device")=="marvel" then
 
 #
-# Do nothing
+# Do pratically nothing
 #
+
+theme("ics");
 
 #
 # If device is not a marvel
@@ -99,22 +118,6 @@ reboot("now");
 #
 
 endif;
-
-##########################################################################################
-# [[Build information]] 
-#
-
-calibrate("2.7825","25","1.8833","14","yes");
-ini_set("rom_name",             "RobotoMOD");
-ini_set("rom_version",          "1");
-ini_set("rom_author",           "benjamingwynn & dudeman1996");
-ini_set("rom_device",           "HTC Wildfire S");
-ini_set("rom_date",             "09/07/2012");
-ini_set("dp",                   "2");
-loadlang("langs/en.lang");
-fontresload( "0", "ttf/Roboto.ttf", "12" );
-fontresload( "1", "ttf/Roboto.ttf", "18" );
-theme("ics");
 
 ##########################################################################################
 # [[Location information]] 

@@ -1287,6 +1287,12 @@ else
 alert("Google Apps","Only CM9 supports intergrated gapps installation. Please download and flash a package from goo.im/gapps after you reboot.", "@icon");
 
 #
+# Now set gapps to 0 for sure.
+#
+
+writetmpfile("gapps.prop","selected=0\n");
+
+#
 # End the if file that asks if we have CM9
 #
 

@@ -20,12 +20,12 @@
 calibrate("2.7825","25","1.8833","14","yes");
 ini_set("rom_name",             "RobotoMOD");
 ini_set("rom_version",          "1");
-ini_set("rom_author",           "WFSDEV);
+ini_set("rom_author",           "WFSDEV");
 ini_set("rom_device",           "HTC Wildfire S");
 ini_set("rom_date",             "09/07/2012");
 ini_set("dp",                   "2");
-loadlang("langs/en.lang");
 fontresload( "0", "ttf/Roboto.ttf", "12" );
+loadlang("langs/en.lang");
 fontresload( "1", "ttf/Roboto.ttf", "18" );
 theme("ics");
 
@@ -653,15 +653,12 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 if prop("type.prop","selected")=="2" then
-alertbox(
-  #-- Title
-    "Sorry",
-  
-  #-- Text
-     "Soulengine is still in development",
-  
-  #-- Icon
-    "@alert"
+alert(
+"Soulengine isn't ready yet, installing the default kernel...",
+);
+writetmpfile(
+"kernel.prop",
+"selected=2\n" 
 );
 endif;
 

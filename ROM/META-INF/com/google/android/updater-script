@@ -488,9 +488,6 @@ endif;
       set_perm(0, 0, 0777, "/tmp/backuptool.sh");
       run_program("/tmp/backuptool.sh", "restore");
       ui_print("Flashing kernel....");
-      assert(package_extract_file("boot.img", "/tmp/boot.img"),
-      write_raw_image("/tmp/boot.img", "boot"),
-      delete("/tmp/boot.img"));
     endif;
 
 set_progress(0.3);

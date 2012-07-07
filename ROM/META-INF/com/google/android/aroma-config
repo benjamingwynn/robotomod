@@ -55,69 +55,71 @@ anisplash(
 ##########################################################################################
 # [[MarvelC/CT warning]]
 #
-
+# Disabled until we have a more reliable source of getting device info
 #
-# Get device information
+##
+## Get device information
+##
 #
-
-  setvar(
-    #-- Variable Name
-      "device",
-    
-    #-- Variable Value
-      "device="+sysprop("ro.product.model")
-  );
-
+#  setvar(
+#    #-- Variable Name
+#     "device",
+#    
+#    #-- Variable Value
+#      "device="+sysprop("ro.product.model")
+#  );
 #
-# If the device is a marvel
+##
+## If the device is a marvel
+##
 #
-
-if prop("device.prop","device")=="marvel" then
-
+#if prop("device.prop","device")=="marvel" then
 #
-# Do pratically nothing
+##
+## Do pratically nothing
+##
 #
-
-theme("ics");
-
+#theme("ics");
 #
-# If device is not a marvel
+##
+## If device is not a marvel
+##
 #
-
-else
-
+#else
 #
-# Show a message to inform the user of this
+##
+## Show a message to inform the user of this
+##
 #
-
-viewbox(
-  #-- Title
-    "Sorry",
-  
-  #-- Text
-     "RobotoMOD is not yet designed for your phone. Please click 'Restart' to cancel the installation and return to your current ROM.",
-  
-  #-- Icon
-    "@alert"
-);
-
+#viewbox(
+#  #-- Title
+#    "Sorry",
+#  
+#  #-- Text
+#     "RobotoMOD is not yet designed for your phone. Please click 'Restart' to cancel the installation and return to your current ROM.",
+#  
+#  #-- Icon
+#    "@alert"
+#);
 #
-# Change the next button to a restart button
+##
+## Change the next button to a restart button
+##
 #
-
-ini_set("text_next", "Restart");
-
+#ini_set("text_next", "Restart");
 #
-# Restart the device
+##
+## Restart the device
+##
 #
-
-reboot("now");
-
+#reboot("now");
 #
-# End the if command
+##
+## End the if command
+##
 #
-
-endif;
+#endif;
+#
 
 ##########################################################################################
 # [[Location information]] 

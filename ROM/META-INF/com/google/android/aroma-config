@@ -676,13 +676,12 @@ if prop("type.prop","selected")=="1" then
 	  "selected.1=1\n"+    #-- Default Music = Apollo
 	  "selected.2=1\n"+    #-- Default File Explorer = MIUI
 	  "selected.3=1\n"+    #-- Default Gallery = ICS
-	  "selected.4=2\n"+    #-- Default Browser = CM9
-	  "selected.5=1\n"+    #-- Default Audio Enhancement = MusicFX
-	  "selected.6=\n"+     #-- Default Boot Animation = ICS
-	  "selected.7=1\n"+    #-- Default Root Management = SuperUser
-	  "selected.8=1\n"+    #-- Default Data2SD = None
-	  "selected.9=1\n"+    #-- Default Beats Audio = Full
-	  "selected.10=1\n"    #-- Default Soundset = Sense 4
+	  "selected.4=1\n"+    #-- Default Audio Enhancement = MusicFX
+	  "selected.5=\n"+     #-- Default Boot Animation = ICS
+	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
+	  "selected.7=1\n"+    #-- Default Data2SD = None
+	  "selected.8=1\n"+    #-- Default Beats Audio = Full
+	  "selected.9=1\n"    #-- Default Soundset = Sense 4
   );
 endif;
 
@@ -719,11 +718,6 @@ if prop("type.prop","selected")=="2" then
 	  "Gallery",               "",                                                                  2,
 	    "ICS",                 "The default ICS Gallery application",                               1,
             "Quickpic",            "Quickpic gallery application",                                      0,
-
-	  "Browser",               "",                                                                  4, #- disabled
-	    "AOKP",                "More like the default ICS browser",                                 4, #- disabled
-	    "CM9",                 "Has a few more features, but not many",                             4, #- disabled
-            "Firefox",             "Firefox nighly ported to ARMv6",                                    4, #- disabled
 
 	  "Audio Enchatments",    "",                                                                   2,
 	    "MusicFX",            "AOKP's music equalizer",                                             1,
@@ -776,13 +770,12 @@ if prop("type.prop","selected")=="3" then
 	  "selected.1=1\n"+    #-- Default Music = Apollo
 	  "selected.2=\n"+     #-- Default File Explorer = None
 	  "selected.3=1\n"+    #-- Default Gallery = Stock
-	  "selected.4=2\n"+    #-- Default Browser = CM9
-	  "selected.5=3\n"+    #-- Default Audio Enhancement = None
-	  "selected.6=1\n"+    #-- Default Boot Animation = Stock
-	  "selected.7=1\n"+    #-- Default Root Management = SuperUser
-	  "selected.8=1\n"+    #-- Default Data2SD = None
-	  "selected.9=3\n"+     #-- Default Beats Audio = None
-	  "selected.10=2\n"     #-- Default Soundset = ICS
+	  "selected.4=3\n"+    #-- Default Audio Enhancement = None
+	  "selected.5=1\n"+    #-- Default Boot Animation = Stock
+	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
+	  "selected.7=1\n"+    #-- Default Data2SD = None
+	  "selected.8=3\n"+     #-- Default Beats Audio = None
+	  "selected.9=2\n"     #-- Default Soundset = ICS
   );
 endif;
 

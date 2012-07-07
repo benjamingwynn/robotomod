@@ -268,8 +268,8 @@ agreebox(
       else
 #- Fix a bug that stops the script from saving a prop.
   writetmpfile(
-	  "kernel.prop",
-		  "selected=2\n"  );
+	"usecustomprefs.prop",
+	"selected=2\n"  );
 #- This checks to see if RobotoMOD is currently installed by looking at build.prop, then giving the option to update their current installation
 #- If build.prop says that RobotoMOD isn't installed, then it won't show the update option
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then

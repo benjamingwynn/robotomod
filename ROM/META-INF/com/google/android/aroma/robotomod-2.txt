@@ -13,6 +13,7 @@ Thanks to the following people for helping with parts of Roboto:
 - *se-nsei (graphics)
 - alquez (original msm7k kernel and marvel device tree)
 - rezo609 (MiHome app)
+- bikedude880 (fixing red border bug)
 - mediocrehippie (hosts file)
 - modpunk (CM9 device tree)
 - apherio (Google Music with Beats Audio mod)

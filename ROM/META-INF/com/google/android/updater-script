@@ -41,7 +41,7 @@ set_progress(0.1);
 #- Cookiejar
 
     if
-      file_getprop("/tmp/usecustomprefs.prop","selected") == "1"
+      file_getprop("/tmp/aroma/usecustomprefs.prop","selected") == "1"
     then
       ui_print("@Cookiejar");
       ui_print("Using your preferences from your last RobotoMOD install");

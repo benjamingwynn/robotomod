@@ -462,7 +462,25 @@ if prop("type.prop","selected")=="1" then
   );
 endif;
 
-#-- IF "Custom" Installation, show configuration, then write font.prop
+#-- IF "Minimal" Installation, don't show configuration, then write default font.prop
+if prop("type.prop","selected")=="1" then
+  writetmpfile(
+    #-- Prop file will write to /tmp/aroma/font.prop
+	  "font.prop",
+	
+	#-- Default Values
+	  "item.1.1=1\n"+    
+	  "item.1.2=0\n"+    
+	  "item.1.3=0\n"+    
+	  "item.1.4=0\n"+    
+
+	  "item.2.1=1\n"+    
+	  "item.2.2=0\n"
+  );
+endif;
+
+#-- IF "Custom" Installation, don't configuration, then write to font.prop
+
 if prop("type.prop","selected")=="2" then
 selectbox(
     #-- Title
@@ -1287,6 +1305,12 @@ else
 alert("Google Apps","Only CM9 supports intergrated gapps installation. Please download and flash a package from goo.im/gapps after you reboot.", "@icon");
 
 #
+# Now set gapps to 0 for sure.
+#
+
+writetmpfile("gapps.prop","selected=0\n");
+
+#
 # End the if file that asks if we have CM9
 #
 
@@ -1371,6 +1395,8 @@ menubox(
 
 if prop("cookiejar.prop","selected")=="1" then
   writetmpfile("previnstall.prop","previousinstall=yes\n");
+else
+  writetmpfile("previnstall.prop","previousinstall=no\n");
 endif;
 endif;
 ##########################################################################################################

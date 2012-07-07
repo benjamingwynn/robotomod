@@ -495,8 +495,8 @@ ui_print("@Kernel installation");
       ui_print("Installing soulengine");
       package_extract_dir("packages/kernel/soulengine", "/tmp");
        write_raw_image("/tmp/boot.img", "boot");
-       delete("/tmp/boot.img");
-      package_extract_dir("/tmp/modules", "/system/lib/modules");
+      ui_print("Installing kernel modules...");
+      package_extract_dir("packages/kernel/soulengine/modules", "/system/lib/modules");
     endif;
 
     if
@@ -504,9 +504,9 @@ ui_print("@Kernel installation");
     then
       ui_print("Installing default kernel...");
       package_extract_dir("packages/kernel/default", "/tmp");
-       write_raw_image("/tmp/boot.img", "boot");
-       delete("/tmp/boot.img");
-      package_extract_dir("/tmp/modules", "/system/lib/modules");
+      write_raw_image("/tmp/boot.img", "boot");
+      ui_print("Installing kernel modules...");
+      package_extract_dir("packages/kernel/default/modules", "/system/lib/modules");
     endif;
 
 set_progress(0.4);

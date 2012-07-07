@@ -291,7 +291,7 @@ agreebox(
           # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
           #-------------------------+-----------------------------------------------------------+---------------#
 	
-            "Recommended",            "Will install recommended features and configurations",       "@install",      #-- selected = 1
+            "Recommended",            "Will install recommended features and configurations",       "@apps",      #-- selected = 1
             "Custom",                 "Take control and fully customize your RobotoMOD experience", "@apps",         #-- selected = 2
             "Minimal",                "The most compact installation possible",                     "@apps",         #-- selected = 3
             "Update",                 "Update all RobotoMod system files",                          "@apps"          #-- selected = 4
@@ -315,7 +315,7 @@ agreebox(
           # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
           #-------------------------+-----------------------------------------------------------+---------------#
 	
-            "Recommended",            "Will install recommended features and configurations",       "@install",      #-- selected = 1
+            "Recommended",            "Will install recommended features and configurations",       "@apps",      #-- selected = 1
             "Custom",                 "Take control and fully customize your RobotoMOD experience", "@apps",         #-- selected = 2
             "Minimal",                "The most compact installation possible",                     "@apps"         #-- selected = 3
         );

@@ -366,9 +366,9 @@ menubox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
-          "CM9 Alpha 2",             "The all popular, stable Cyanognemod 9",                    "@install",
-          "AOKP Build 38",           "More features than CM9 but may have a few more bugs",      "@install",
-          "Paranoid Android",        "A WIP project - some important things do not work.",       "@install"
+          "Cyanogenmod 9",           "Alpha 5",                                                  "@install",
+          "AOKP Build 38",           "Build 38",                                                 "@install",
+          "Paranoid Android",        "Alpha 0",                                                  "@install"
 );
 endif;
 ###################################################################################################

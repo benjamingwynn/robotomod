@@ -652,6 +652,19 @@ if prop("type.prop","selected")=="2" then
 );
 endif;
 
+if prop("type.prop","selected")=="2" then
+alertbox(
+  #-- Title
+    "Sorry",
+  
+  #-- Text
+     "Soulengine is still in development",
+  
+  #-- Icon
+    "@alert"
+);
+endif;
+
 #-- IF "Minimal" Installation, don't show configuration, then write default kernel.prop
 if prop("type.prop","selected")=="3" then
   writetmpfile(

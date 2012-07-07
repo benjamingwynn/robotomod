@@ -654,8 +654,9 @@ endif;
 
 if prop("type.prop","selected")=="2" then
 alert(
-"Soulengine isn't ready yet, installing the default kernel...",
+"Soulengine isn't ready yet, installing the default kernel..."
 );
+
 writetmpfile(
 "kernel.prop",
 "selected=2\n" 

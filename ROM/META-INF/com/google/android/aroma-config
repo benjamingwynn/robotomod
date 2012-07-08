@@ -707,7 +707,7 @@ if prop("type.prop","selected")=="1" then
 	  "selected.2=1\n"+    #-- Default File Explorer = MIUI
 	  "selected.3=1\n"+    #-- Default Gallery = ICS
 	  "selected.4=1\n"+    #-- Default Audio Enhancement = MusicFX
-	  "selected.5=\n"+     #-- Default Boot Animation = ICS
+	  "selected.5=1\n"+     #-- Default Boot Animation = ICS
 	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.7=1\n"+    #-- Default Data2SD = None
 	  "selected.8=1\n"+    #-- Default Beats Audio = Full

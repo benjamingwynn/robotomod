@@ -1328,6 +1328,18 @@ if prop("type.prop","selected")=="1" then
   );
 endif;
 
+#-- If you are running paranoid android then
+if prop("core.prop","selected")=="3" then
+alert("HDIT","Paranoid android doesn't work with HDIT, skipping.", "@icon");
+writetmpfile(
+    #-- Prop file will write to /tmp/aroma/hdit.prop
+	  "hdit.prop",
+	
+	#-- Default Values
+	  "selected=2\n"    #-- Default = Don't install HD tweak
+  );
+else
+
 #-- IF "Custom" Installation, show configuration, then write hdit.prop
 if prop("type.prop","selected")=="2" then
   menubox(
@@ -1346,6 +1358,8 @@ if prop("type.prop","selected")=="2" then
           "Install",              "Install High Definition Image Tweak",                        "@welcome",
           "Don't install",        "Don't install this tweak",                                   "@welcome"
 );
+endif;
+
 endif;
 
 #- For minimal installation

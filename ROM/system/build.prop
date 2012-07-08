@@ -262,7 +262,7 @@ ro.goo.version=1
 #
 windowsmgr.max_events_per_sec=150
 pm.sleep_mode=1
-ro.ril.disable.power.collapse=0
+ro.ril.disable.power.collapse=1
 debug.performance.tuning=1
 video.accelerate.hw=1
 net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960

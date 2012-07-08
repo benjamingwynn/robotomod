@@ -767,7 +767,7 @@ if prop("type.prop","selected")=="2" then
 	    "Cid",                "A smooth, holo boot animation with Cid on it!",                      0,
 	    "Interesting",        "A converted GIF - thats... interesting...",                          0,
 	    "Sense 4",            "Taken from the HTC Golf port",                                       0,
-	    "CM7",                "CM7 boot animation - credit to dudeman1996 for ripping this",        0,
+	    "CM7",                "CM7 boot animation",                                                 0,
 	    "CM9",                "An ugly bootanimation with the old mascot on",                       0,
       
 	  "Root management",      "",                                                                   2,
@@ -775,9 +775,11 @@ if prop("type.prop","selected")=="2" then
 	    "SuperSU",            "Only selct this if you have an EXT 2/3/4 partition",                 0,
 	    "None",               "This will stop all root permissions being acessed by apps",          0,
 
-	  "Data2SD",              "",                                                                   2,
-	    "Do not install",     "Select this if you don't know what your doing",                      1,
-	    "Install",            "Only selct this if you have an EXT 2/3/4 partition",                 0,
+	  "SD2Ext tweaks",        "",                                                                   2,
+	    "Data2Whatever",      "Data2Whatever, install and have 1GB+ internal space.",               0,
+	    "Link2SD",            "Link apps to your SD Card",                                          0,
+	    "S2E",                "Set and forget.",                                                    0,
+	    "None",               "Select this if you don't have an EXT partition",                     1,
 
 	  "Beats Audio",           "",                                                                  2,
 	    "Full Install",       "Install and rename your phone to 'Wildfire S with Beats Audio'",     1,

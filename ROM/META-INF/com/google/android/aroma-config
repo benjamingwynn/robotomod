@@ -772,7 +772,7 @@ if prop("type.prop","selected")=="2" then
       
 	  "Root management",      "",                                                                   2,
 	    "Superuser",          "The classic, known Superuser application",                           1,
-	    "SuperSU",            "Only selct this if you have an EXT 2/3/4 partition",                 0,
+	    "SuperSU",            "More advanced, secure SU management",                                0,
 	    "None",               "This will stop all root permissions being acessed by apps",          0,
 
 	  "SD2Ext tweaks",        "",                                                                   2,

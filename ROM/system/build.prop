@@ -125,7 +125,7 @@ rild.libargs=-d /dev/smd0
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.
-wifi.supplicant_scan_interval = 15
+wifi.supplicant_scan_interval = 150
 
 ro.com.google.locationfeatures=1
 
@@ -260,6 +260,7 @@ ro.goo.version=1
 ##############################################
 # Additional tweaks
 #
+ro.telephony.call_ring.delay=1000
 windowsmgr.max_events_per_sec=150
 pm.sleep_mode=1
 ro.ril.disable.power.collapse=1

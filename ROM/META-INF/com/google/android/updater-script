@@ -1501,6 +1501,12 @@ ui_print("@Installing HDIT...");
 		endif;
 	endif;
 
+	if
+		file_getprop("/tmp/aroma/hdit.prop","selected") == "3"
+	then
+		ui_print("ParanoidAndroid core selected, skipping HDIT installation");
+	endif;
+
 ###########################################################################
 #-
 #- Installing GPS tweaks

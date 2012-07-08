@@ -1318,8 +1318,18 @@ endif;
 #####################################################################################################################
 # [[HD image tweak]]
 #
-#-- IF "Recommended" Installation, don't show configuration, then write default hdit.prop
+#-- IF "Recommended" Installation, don't show configuration, check if PA core is selected, then write default hdit.prop
 if prop("type.prop","selected")=="1" then
+  if prop("core.prop","selected")=="3" then
+    alert("HDIT","Paranoid android doesn't work with HDIT, skipping.", "@icon");
+    writetmpfile(
+      #-- Prop file will write to /tmp/aroma/hdit.prop
+  	  "hdit.prop",
+	
+	  #-- Default Values
+	    "selected=3\n"    #-- Default = Don't install HD tweak
+    );
+  else
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/hdit.prop
 	  "hdit.prop",
@@ -1337,7 +1347,7 @@ writetmpfile(
 	  "hdit.prop",
 	
 	#-- Default Values
-	  "selected=2\n"    #-- Default = Don't install HD tweak
+	  "selected=3\n"    #-- Default = Don't install HD tweak
   );
 else
 
@@ -1365,20 +1375,42 @@ endif;
 
 #- For minimal installation
 if prop("core.prop","selected")=="3" then
+alert("HDIT","Paranoid android doesn't work with HDIT, skipping.", "@icon");
+writetmpfile(
+    #-- Prop file will write to /tmp/aroma/hdit.prop
+	  "hdit.prop",
+	
+	#-- Default Values
+	  "selected=3\n"    #-- Default = Don't install HD tweak
+  );
+else
+if prop("type.prop","selected")=="3" then
   writetmpfile(
 	  "hdit.prop",
 
 	  "selected=0\n"     #-- None selected
   );
 endif;
+endif;
 
 #- For updating installation
-if prop("core.prop","selected")=="4" then
+if prop("core.prop","selected")=="3" then
+alert("HDIT","Paranoid android doesn't work with HDIT, skipping.", "@icon");
+writetmpfile(
+    #-- Prop file will write to /tmp/aroma/hdit.prop
+	  "hdit.prop",
+	
+	#-- Default Values
+	  "selected=3\n"    #-- Default = Don't install HD tweak
+  );
+else
+if prop("type.prop","selected")=="4" then
   writetmpfile(
 	  "hdit.prop",
 
 	  "selected=0\n"     #-- None selected
   );
+endif;
 endif;
 
 ##################################################################################################################

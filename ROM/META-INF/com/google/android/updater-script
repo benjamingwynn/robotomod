@@ -1003,7 +1003,7 @@ set_progress(0.7);
       file_getprop("/tmp/aroma/mods.prop","selected.1") == "4"
     then
       ui_print("Installing modded Google Music");
-      package_extract_dir("packages/Music/GoogleMusicBeats", "/system/app");
+      package_extract_dir("packages/Music/GoogleBeats", "/system/app");
     endif;
 
     if

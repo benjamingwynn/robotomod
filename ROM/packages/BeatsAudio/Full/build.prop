@@ -255,3 +255,16 @@ ro.goo.rom=RobotoMOD
 ro.goo.version=1
 ##
 
+##############################################
+# Additional tweaks
+#
+windowsmgr.max_events_per_sec=150
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+debug.performance.tuning=1
+video.accelerate.hw=1
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960

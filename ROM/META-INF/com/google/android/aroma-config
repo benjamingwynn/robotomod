@@ -1274,7 +1274,8 @@ checkbox(
 	  
 	  "Extra GApps packages", "",                                                                   2,
 	  "Google Now",           "Experimental siri-like app - voice activation doesn't work",         1,
-	  "4.1 market app",       "Jellybean's Market app",                                             1
+	  "4.1 market app",       "Jellybean's Market app",                                             1,
+	  "GMail",                "Get the popular GMail app",                                          1
 );
 
 #

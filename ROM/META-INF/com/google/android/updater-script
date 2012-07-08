@@ -1048,7 +1048,7 @@ set_progress(0.7);
     if
       file_getprop("/tmp/aroma/mods.prop","selected.3") == "2"
     then
-      ui_print("Installing quickpic Gallery");
+      ui_print("Installing Quickpic Gallery");
       package_extract_dir("packages/Gallery/Quickpic", "/system/app");
     endif;
 

@@ -240,6 +240,7 @@ persist.service.mount.playsnd=0
 ro.setupwizard.enable_bypass=1
 ro.media.dec.aud.wma.enabled=1
 ro.media.dec.vid.wmv.enabled=1
+dalvik.vm.execution-mode=int:fast
 dalvik.vm.dexopt-flags=m=y
 net.bt.name=Android
 ro.config.sync=yes

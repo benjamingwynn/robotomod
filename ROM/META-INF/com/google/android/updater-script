@@ -1006,6 +1006,13 @@ set_progress(0.7);
       package_extract_dir("packages/Music/GoogleMusicBeats", "/system/app");
     endif;
 
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.1") == "5"
+    then
+      ui_print("Installing modded Google Music");
+      package_extract_dir("packages/Music/MIUI", "/system/app");
+    endif;
+
 #- File Explorers
 
     if

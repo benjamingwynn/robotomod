@@ -553,61 +553,47 @@ package_extract_dir("packages/RobotoMODapp", "/data/app");
     if
       file_getprop("/tmp/aroma/Apps.prop","item.1.5") == "1"
     then
-      ui_print("Installing Gmail");
-      package_extract_dir("packages/UserApps/Gmail", "/data/app");
-    endif;
-
-    if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.6") == "1"
-    then
-      ui_print("Installing Link2SD");
-      package_extract_dir("packages/UserApps/Link2SD", "/data/app");
-    endif;
-
-    if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.7") == "1"
-    then
       ui_print("Installing ROM Toolbox");
       package_extract_dir("packages/UserApps/RomToolbox", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.8") == "1"
+      file_getprop("/tmp/aroma/Apps.prop","item.1.6") == "1"
     then
       ui_print("Installing SDBooster");
       package_extract_dir("packages/UserApps/SDBooster", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.9") == "1"
+      file_getprop("/tmp/aroma/Apps.prop","item.1.7") == "1"
     then
       ui_print("Installing Tinyshark");
       package_extract_dir("packages/UserApps/TinyShark", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.10") == "1"
+      file_getprop("/tmp/aroma/Apps.prop","item.1.8") == "1"
     then
       ui_print("Installing Titanium Backup");
       package_extract_dir("packages/UserApps/Titanium", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.11") == "1"
+      file_getprop("/tmp/aroma/Apps.prop","item.1.9") == "1"
     then
       ui_print("Installing Twitter");
       package_extract_dir("packages/UserApps/Twitter", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.12") == "1"
+      file_getprop("/tmp/aroma/Apps.prop","item.1.10") == "1"
     then
       ui_print("Installing XDA");
       package_extract_dir("packages/UserApps/XDA", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/Apps.prop","item.1.13") == "1"
+      file_getprop("/tmp/aroma/Apps.prop","item.1.11") == "1"
     then
       ui_print("Installing Twitter");
       package_extract_dir("packages/UserApps/Twitter", "/data/app");

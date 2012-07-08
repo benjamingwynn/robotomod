@@ -769,6 +769,7 @@ if prop("type.prop","selected")=="2" then
 	    "Sense 4",            "Taken from the HTC Golf port",                                       0,
 	    "CM7",                "CM7 boot animation",                                                 0,
 	    "CM9",                "An ugly bootanimation with the old mascot on",                       0,
+	    "ParanoidAndroid",    "The stock ParanoidAndroid bootanimation",                            0,
       
 	  "Root management",      "",                                                                   2,
 	    "Superuser",          "The classic, known Superuser application",                           1,

@@ -235,6 +235,7 @@ ro.htc.camerahack=msm7k
 ro.telephony.default_network=0
 ro.phone_storage=0
 mot.proximity.delay=150
+ro.mot.buttonlight.timeout=1
 settings.display.autobacklight=1
 settings.display.brightness=143
 persist.service.mount.playsnd=0

@@ -1172,6 +1172,7 @@ set_progress(0.8);
 set_progress(0.9);
 
 #- Root management
+ui_print("Installing Root management");
 
     if
       file_getprop("/tmp/aroma/mods.prop","selected.6") == "1"
@@ -1187,17 +1188,25 @@ set_progress(0.9);
       package_extract_dir("packages/Root/SuperSU", "/system/app");
     endif;
 
-# Data2SD
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.6") == "3"
+    then
+      ui_print("Skipping...");
+    endif;
+
+# EXT tweaks
+
+ui_print("@Installing EXT tweaks");
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.7") == "2"
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "1"
     then
       ui_print("Installing Data2SD");
       delete("/system/etc/init.d/40a2sd");
       delete("/system/etc/init.d/03stuff2sd");
       delete("/system/etc/init.d/10Apps2sd");
       delete("/system/etc/init.d/04Apps2sd");
-      package_extract_dir("packages/Data2Whatever", "/system");
+      package_extract_dir("packages/sdtweak/Data2Whatever", "/system");
       set_perm(0, 2000, 0755, "/system/etc/init.d/01data2whatever");
       set_perm(0, 2000, 0755, "/system/etc/init.d/98zipalign");
       set_perm(0, 2000, 0755, "/system/etc/init.d/991complete");
@@ -1211,22 +1220,45 @@ set_progress(0.9);
       symlink("/system/data_internal/mtab", "/system/etc/mtab");
     endif;
 
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "2"
+    then
+      ui_print("Installing Link2SD");
+      package_extract_dir("packages/sdtweak/link2sd", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "3"
+    then
+      ui_print("Installing S2E");
+      package_extract_dir("packages/sdtweak/s2e", "/system/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "4"
+    then
+      ui_print("Using stock app2sd");
+    endif;
+
 #- Beats Audio
+ui_print("@Installing Beats Audio...");
+
     if
       file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
     then
-      ui_print("Installing Beats Audio...");
+      ui_print("Installing Full Beats");
       package_extract_dir("packages/BeatsAudio/Full", "/system");
     endif;
 
     if
       file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
     then
-      ui_print("Installing Beats Audio W/O tweak...");
+      ui_print("Installing Normal Beats");
       package_extract_dir("packages/BeatsAudio/Normal", "/system");
     endif;
 
 #- Soundset
+ui_print("@Soundset");
 
     if
       file_getprop("/tmp/aroma/mods.prop","selected.9") == "1"
@@ -1244,7 +1276,7 @@ set_progress(0.9);
 #
 #- LAUNCHERS
 #
-ui_print("@Installing Launcher");
+ui_print("@Installing Launcher...");
 
     if
       file_getprop("/tmp/aroma/launcher.prop","selected") == "1"
@@ -1384,9 +1416,9 @@ ui_print("Installing UI font");
     if
       file_getprop("/tmp/aroma/gapps.prop","selected") == "1"
     then
-      ui_print("@Installing Google Apps");
+      ui_print("@Installing Google Apps...");
       package_extract_dir("packages/gapps", "/system");
-      ui_print("@Installing extra Google packages");
+      ui_print("@Installing extra Google packages...");
     endif;
 
 #- Gapps extra
@@ -1407,7 +1439,7 @@ ui_print("Installing UI font");
 
 #- HDIT
 
-ui_print("@Installing HDIT");
+ui_print("@Installing HDIT...");
 
 	if
 		file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
@@ -1428,7 +1460,7 @@ ui_print("@Installing HDIT");
 #-
 #- Installing GPS tweaks
 #-
-	ui_print("@GPS Tweaks");
+	ui_print("@Installing GPS Tweaks...");
 	if
 	  file_getprop("/tmp/aroma/gps.prop","selected") == "1"
 	then

@@ -1237,18 +1237,63 @@ ui_print("@Installing EXT tweaks");
 ui_print("@Installing Beats Audio...");
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
+      file_getprop("/tmp/aroma/core.prop","selected") == "1"
     then
-      ui_print("Installing Full Beats");
-      package_extract_dir("packages/BeatsAudio/Full", "/system");
+      if
+        file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
+      then
+        ui_print("Installing Full Beats");
+        package_extract_dir("packages/BeatsAudio/cm9aokp/Full", "/system");
+      endif;
+      if
+        file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
+      then
+        ui_print("Installing Normal Beats");
+        package_extract_dir("packages/BeatsAudio/cm9aokp/Normal", "/system");
+      endif;
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
+      file_getprop("/tmp/aroma/core.prop","selected") == "2"
     then
-      ui_print("Installing Normal Beats");
-      package_extract_dir("packages/BeatsAudio/Normal", "/system");
+      if
+        file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
+      then
+        ui_print("Installing Full Beats");
+        package_extract_dir("packages/BeatsAudio/cm9aokp/Full", "/system");
+      endif;
+      if
+        file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
+      then
+        ui_print("Installing Normal Beats");
+        package_extract_dir("packages/BeatsAudio/cm9aokp/Normal", "/system");
+      endif;
     endif;
+
+    if
+      file_getprop("/tmp/aroma/core.prop","selected") == "3"
+    then
+      if
+        file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
+      then
+        ui_print("Installing Full Beats");
+        package_extract_dir("packages/BeatsAudio/pandroid/Full", "/system");
+      endif;
+      if
+        file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
+      then
+        ui_print("Installing Normal Beats");
+        package_extract_dir("packages/BeatsAudio/pandroid/Normal", "/system");
+      endif;
+      if
+        file_getprop("/tmp/aroma/mods.prop","selected.8") == "3"
+      then
+        ui_print("Skipping Beats Audio installation");
+        package_extract_dir("packages/BeatsAudio/pandroid/none", "/system");
+      endif;
+    endif;
+
+
 
 #- Soundset
 ui_print("@Soundset");

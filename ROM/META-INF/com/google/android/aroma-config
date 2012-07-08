@@ -1103,7 +1103,7 @@ if prop("type.prop","selected")=="2" then
 	  
           "Apex Launcher",       "Helps you create a customized homescreen experience",           "@welcome",
           "LGHome",              "App from LG ICS devices.",                                      "@welcome",
-          "MiHome",              "Home app from MIUI - experimental",                             "@welcome",
+          "MiHome",              "Home app from MIUI - contains lockscreen",                      "@welcome",
           "Nova",                "Nova Launcher used in AOKP",                                    "@welcome",
           "Stock ICS launcher",  "Default ICS launcher from the Galaxy Nexus",                    "@welcome",
           "Trebuchet",           "CM9's launcher, pronounced tre-bu-shay",                        "@welcome"

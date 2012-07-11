@@ -32,17 +32,10 @@ theme("ics");
 ##########################################################################################
 # [[Splash screen]]
 #
-splash(
-  #-- Duration 2000ms / 2 secondssplash(
-    3000,
-  
-  #-- <AROMA Resource Dir>/sample.png
-    "sample"
-);
 
 anisplash(
   #-- Number of Loop
-    8,
+    5,
   #-- Files to display
     "splash/a1", 150,
     "splash/a2", 150,
@@ -270,6 +263,7 @@ agreebox(
   writetmpfile(
 	"usecustomprefs.prop",
 	"selected=2\n"  );
+endif;
 #- This checks to see if RobotoMOD is currently installed by looking at build.prop, then giving the option to update their current installation
 #- If build.prop says that RobotoMOD isn't installed, then it won't show the update option
       if prop("/system/build.prop","ro.goo.rom")=="RobotoMOD" then
@@ -574,18 +568,18 @@ endif;
 #
 # Display font test (lock)
 #
-
-viewbox(
-  #-- Title
-    "Lock font preview",
+if prop("type.prop","selected")=="2" then
+  viewbox(
+    #-- Title
+      "Lock font preview",
+    
+    #-- Text
+      "0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM",
   
-  #-- Text
-    "0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM",
-  
-  #-- Icon
-    "@blank"
-);
-
+    #-- Icon
+      "@blank"
+  );
+endif;
 ###
 #### - UI fonts
 ###
@@ -611,18 +605,18 @@ endif;
 #
 # Actual font preview
 #
-
-viewbox(
-  #-- Title
-    "UI font preview",
+if prop("type.prop","selected")=="2" then
+  viewbox(
+    #-- Title
+      "UI font preview",
   
-  #-- Text
-    "The quick brown fox jumps over the lazy dog. The dog then got leg surgery because it could not walk because of its obese weight. The fox was then shot by the dog's owner for trespassing. - RobotoMOD - 1234567890",
+    #-- Text
+      "The quick brown fox jumps over the lazy dog. The dog then got leg surgery because it could not walk because of its obese weight. The fox was then shot by the dog's owner for trespassing. - RobotoMOD - 1234567890",
   
-  #-- Icon
-    "@blank"
-);
-
+    #-- Icon
+      "@blank"
+  );
+endif;
 #
 # Set font back to Roboto (normal)
 #

@@ -1156,7 +1156,7 @@ set_progress(0.8);
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.5)" == "15"
+      file_getprop("/tmp/aroma/mods.prop","selected.5") == "15"
     then
       ui_print("Installing ParanoidAndroid boot animation");
       package_extract_dir("packages/BootAnimation/pandroid", "/system/media");

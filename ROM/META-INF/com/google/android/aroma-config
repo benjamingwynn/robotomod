@@ -1343,10 +1343,11 @@ writetmpfile(
 	#-- Default Values
 	  "selected=3\n"    #-- Default = Don't install HD tweak
   );
-else
+endif;
 
 #-- IF "Custom" Installation, show configuration, then write hdit.prop
 if prop("type.prop","selected")=="2" then
+ if prop("core.prop","selected")=="1" then
   menubox(
     #-- Title
       "HDIT",
@@ -1363,9 +1364,9 @@ if prop("type.prop","selected")=="2" then
           "Install",              "Install High Definition Image Tweak",                        "@welcome",
           "Don't install",        "Don't install this tweak",                                   "@welcome"
 );
+ endif;
 endif;
 
-endif;
 
 #- For minimal installation
 if prop("core.prop","selected")=="3" then

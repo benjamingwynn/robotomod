@@ -1455,7 +1455,10 @@ ui_print("Installing UI font");
       file_getprop("/tmp/aroma/gapps.prop","selected") == "1"
     then
       ui_print("@Installing Google Apps...");
+      ui_print("Installing normal packages...");
       package_extract_dir("packages/gapps", "/system");
+      ui_print("Installing voice search...");
+      package_extract_dir("packages/gappsextra/voice", "/data/app");
       ui_print("@Installing extra Google packages...");
     endif;
 
@@ -1465,7 +1468,9 @@ ui_print("Installing UI font");
       file_getprop("/tmp/aroma/gapps.prop","selected.1") == "1"
     then
       ui_print("Installing Google Now");
-      package_extract_dir("packages/gappsextra/googlenow", "/system/app");
+      package_extract_dir("packages/gappsextra/googlenow", "/data/app");
+     else
+      package_extract_dir("packages/gappsextra/search","/system/app");
     endif;
 
     if

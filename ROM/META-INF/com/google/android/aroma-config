@@ -825,11 +825,11 @@ endif;
 ##############################################################################################################
 # [[Selection - add shit]]
 #
-#-- IF "Recommended" Installation, don't show configuration, then write Apps.prop
+#-- IF "Recommended" Installation, don't show configuration, then write apps.prop
 if prop("type.prop","selected"=="1") then
   writetmpfile(
     #-- Prop file will write to /tmp/aroma/customize.prop
-	  "Apps.prop",
+	  "apps.prop",
 	
 	#-- Default Values ( item.x.x = value. value=1 selected, value=0 un-selected )
 	  "item.1.1=1\n"+    #-- AndChat
@@ -840,13 +840,13 @@ if prop("type.prop","selected"=="1") then
 	  "item.1.6=1\n"+    #-- RomToolbox
 	  "iten.1.7=1\n"+    #-- SDBooster
 	  "item.1.8=1\n"+    #-- TinyShark
-	  "item.1.9=1\n"+   #-- Titanium Backup
+	  "item.1.9=1\n"+    #-- Titanium Backup
 	  "item.1.10=1\n"+   #-- Twitter
 	  "item.1.11=1\n"    #-- XDA Free
   );
 endif; 
 
-#-- IF "Custom" Installation, show configuration, then write Apps.prop
+#-- IF "Custom" Installation, show configuration, then write apps.prop
 if prop("type.prop","selected")=="2" then
   checkbox(
     #-- Title
@@ -859,7 +859,7 @@ if prop("type.prop","selected")=="2" then
       "@customize",
 	  
     #-- Will be saved as
-      "Apps.prop",
+      "apps.prop",
 	  
 	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
@@ -883,7 +883,7 @@ endif;
 #- For minimal installation
 if prop("core.prop","selected")=="3" then
   writetmpfile(
-	  "Apps.prop",
+	  "apps.prop",
 
 	  "item.1.1=0\n"+    #-- None selected
 	  "item.1.2=0\n"+    #-- None selected
@@ -902,7 +902,7 @@ endif;
 #- For updating installation
 if prop("core.prop","selected")=="4" then
   writetmpfile(
-	  "Apps.prop",
+	  "apps.prop",
 
 	  "item.1.1=0\n"+    #-- None selected
 	  "item.1.2=0\n"+    #-- None selected

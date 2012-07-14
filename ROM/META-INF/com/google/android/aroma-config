@@ -463,12 +463,12 @@ if prop("type.prop","selected")=="1" then
 	  "font.prop",
 	
 	#-- Default Values
-	  "item.1.1=1\n"+    
-	  "item.1.2=0\n"+    
-	  "item.1.3=0\n"+    
-	  "item.1.4=0\n"+    
+	  "item.1.1=1\n"+
+	  "item.1.2=0\n"+
+	  "item.1.3=0\n"+
+	  "item.1.4=0\n"+
 
-	  "item.2.1=1\n"+    
+	  "item.2.1=1\n"+
 	  "item.2.2=0\n"
   );
 endif;
@@ -520,8 +520,6 @@ if prop("type.prop","selected")=="3" then
 	  "item.2.2=0\n"
   );
 endif;
-
-#-- IF "Update" Installation, don't do anything since fonts are already installed and don't need to be updated
 
 ###
 #### -[Lockscreen fonts]-

@@ -6,6 +6,7 @@ benjamingwynn & dudeman1996 from WFSdev made RobotoMOD, however, we couldn't hav
 - rezo609 (MiHome app)
 - bikedude880 (fixing red border bug)
 - mediocrehippie (ad-free hosts file)
+- molesarecoming (writing part of pandroid.txt)
 - modpunk (porting CM9)
 - apherio (Google Music with Beats Audio mod)
 - BigBearEvo (many application packages)

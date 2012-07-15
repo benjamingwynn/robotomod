@@ -358,7 +358,7 @@ endif;
       package_extract_file("system/bin/backuptool.sh", "/tmp/backuptool.sh");
       set_perm(0, 0, 0777, "/tmp/backuptool.sh");
       run_program("/tmp/backuptool.sh", "backup");
-      package_extract_dir("packages/core/pandroid","/system");
+      package_extract_dir("packages/core/paranoid","/system");
       set_progress(0.2);
       symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
       symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
@@ -1165,7 +1165,7 @@ set_progress(0.8);
       file_getprop("/tmp/aroma/mods.prop","selected.5") == "15"
     then
       ui_print("Installing ParanoidAndroid boot animation");
-      package_extract_dir("packages/BootAnimation/pandroid", "/system/media");
+      package_extract_dir("packages/BootAnimation/paranoid", "/system/media");
     endif;
 
 set_progress(0.9);
@@ -1283,19 +1283,19 @@ ui_print("@Installing Beats Audio...");
         file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
       then
         ui_print("Installing Full Beats");
-        package_extract_dir("packages/BeatsAudio/pandroid/Full", "/system");
+        package_extract_dir("packages/BeatsAudio/paranoid/Full", "/system");
       endif;
       if
         file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
       then
         ui_print("Installing Normal Beats");
-        package_extract_dir("packages/BeatsAudio/pandroid/Normal", "/system");
+        package_extract_dir("packages/BeatsAudio/paranoid/Normal", "/system");
       endif;
       if
         file_getprop("/tmp/aroma/mods.prop","selected.8") == "3"
       then
         ui_print("Skipping Beats Audio installation");
-        package_extract_dir("packages/BeatsAudio/pandroid/none", "/system");
+        package_extract_dir("packages/BeatsAudio/paranoid/none", "/system");
       endif;
     endif;
 

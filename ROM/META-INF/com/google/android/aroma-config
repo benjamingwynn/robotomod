@@ -235,7 +235,7 @@ agreebox(
 # INSTALLATION TYPE
 #
 #- This uses Cookiejar to check if custom prefs exist on the SD card and asks the user if they want to use them
-      if prop("/sdcard/robotomod/cookiejar/previnstall.prop","previousinstall")=="yes" then
+      if prop("/sdcard/robotomod/cookiejar/aroma/previnstall.prop","previousinstall")=="yes" then
        menubox(
           #-- Title
             "Cookiejar",

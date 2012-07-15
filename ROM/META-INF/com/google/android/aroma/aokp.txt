@@ -1,15 +1,56 @@
-Thank you for selecting AOKP as your core for RobotoMOD.
+In the Android world, there are numerous custom ROMs available for every handset. Every ROM is different from each other in one-way or the other. However, one ROM that stands out in the Android world is CyanogenMod ak.a CM. The first ever CM ROM was released by Steve Kondik, the founder of CyanogenMod, when he got the T-Mobile G1. Since then, CM has grown leaps and bounds and now supports over 70 devices.
 
-AOKP has more features over CM9 including:
 
-- Nav Bar Transparency
-- Transparent status bar
-- Weather in notication bar
-- Center clock in status bar
-- Improved toggles
-- More at www.aokp.co
+The ROM is so popular that everyone, right from Android handset manufacturers to a novice Android user, knows about it. In fact, Android device makers actually take that extra step of communicating with the CM team and provide them with all the required resources so as to get CyanogenMod up and running on their devices. Trust me on this, CM support for a device can actually make or break a device and its makers future! (Hint: HTC)
 
-AOKP is a stable and working ROM however, the following DOES NOT WORK on AOKP:
+What sets CM apart from other custom ROMs is that it is based on AOSP (Android Open Source Project), and contains some extra tweaks and features for improving the overall Android experience. Since the ROM is based on AOSP, it means users get to taste the stock Android experience on their Android device, and not the OEM skin which an Android device usually comes pre-loaded with.
+
+
+
+What is AOKP ROM?
+
+Recently, a new ROM – AOKP (Android Open Kang Project) – has become very popular, and is gaining more users with every passing day. Like CM9, AOKP also provides its users with stock Ice Cream Sandwich experience with some tweaks added by the developers to enhance the overall usability experience of the ROM. The lead developer, and founder of AOKP ROM, is Roman Birg who is also a full-time college student.
+
+
+If readers are interested in knowing more about Roman, and the weird Pink Unicorn boot animation of the AOKP ROM, I will recommend them to read this awesome interview of him done by the Droid-Life folks.
+
+While AOKP and CM9 are both based on stock Ice Cream Sandwich, they are still very much different from one another.
+
+Differences between AOKP And CM9 ROM:
+
+In CM7, most of the advanced settings added by the CM team were tucked under the ‘CyanogenMod Settings’ sub-menu in the Settings menu. However, with CM9, the CM team has done away with CyanogenMod Settings sub-menu, and has instead tucked away all the options in their respective categories, which makes more sense. For example, now all the advanced options related to your handset’s display are present under the Display sub-menu in Settings.
+
+In AOKP ROM though, all the advanced settings are generally present under the ‘ROM Control’ sub-menu in the Settings menu.
+
+
+
+As things stand right now, AOKP ROM has more features than CM9. Sure some of them might be useless, or just a gimmick, but that does not mean that same feature will not be useful for someone else. In AOKP ROM, users can set an option to display the weather information of their specified location right on their notification bar and on the lock screen. No such option is present in CM9, and chances are it will not be added as well, because there are thousands of weather apps available in the Play Market. Other features in AOKP ROM include the ability to set custom apps shortcuts in the lock screen, the ability to increase or decrease the auto-rotation time, and much more.
+
+According to me, one of the best features present in AOKP ROM is the Power Saver option. Using this feature, users can turn off the data connection on their handset when the screen on their handset turns off. They can even specify a time after which the data connection should again resume so as to check for your emails, and sync your social network notifications.
+
+
+
+Another cool feature available in AOKP ROM is the Fast Torch feature. Users can use the LED flash on their phone by simply long-pressing the Power key on their phone. The option can be enabled from Settings-> ROM Control -> Lockscreen.
+
+Some features present in both the ROMs include custom auto-brightness levels, the ability to change music tracks by long pressing the volume button when the phone is locked, volume rocker wake, AMOLED screen calibration settings, CPU overclocking support, and much more.
+
+The notification toggles in AOKP ROM also looks better, in my opinion, compared to the one in CM9. Let’s just say the notification toggle style in CM9 is now old, since it was originally implemented in CM6 (or CM7?). In terms of usability though, both get the job done.
+
+
+
+The CM team supports much more handsets than the AOKP team does. The AOKP team, in total, currently supports around 16 Android devices, including some popular ones like the Galaxy S, Galaxy Nexus, Nexus S, EVO 4G and the Kindle Fire. However, unofficial ports of AOKP ROM are also available for many Android devices including the Samsung Galaxy S2.
+
+Performance and stability wise, both CM9 and AOKP ROMs are pretty similar to each other. If you do face any performance or stability issues, it can be a problem with that specific CM9 or AOKP build. It can also be just a bad flash, so never hesitate from re-installing the same ROM to see if the problem goes away or not.
+
+Conclusion:
+
+Currently, AOKP ROM has much more features than CM9, but this is only because the CM team has more work to do than the AOKP team. They have to first get a stable Ice Cream Sandwich base ready for devices that are capable of running Ice Cream Sandwich, and then work on adding new features to it.
+
+The CM team has already given us a glimpse of what all-new features they will be adding in CM9, and once the final version of CM9 is available, I am sure we will be blown away by all the features and customizability options it will have. Until then, AOKP ROM can have spotlight to itself!
+
+This however does not mean AOKP ROM is bad. The ROM is one of the best alternatives to CM9, if available for your handset, while still giving users stock Android experience.
+
+What doesn't work:
 
 - Camera
 - Video streaming
@@ -19,8 +60,9 @@ There can also be strange bugs on times such as:
 - Rarely, some users will be prompted with a "sim card changed" error and are forced to reboot
 - YouTube can force close
 
-Credit to the following people:
+Credit to the following people for making AOKP happen:
 
+- benjamingwynn (for porting it)
 - modpunk
 - dudeman1996
 - eoghan2t7

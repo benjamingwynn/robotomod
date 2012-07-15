@@ -626,65 +626,65 @@ fontresload( "1", "ttf/Roboto.ttf", "18" );
 # [[KERNEL SELECTION]]
 #
 #-- IF "Recommended" Installation, don't show configuration, then write default kernel.prop
-if prop("type.prop","selected")=="1" then
-  writetmpfile(
-    #-- Prop file will write to /tmp/aroma/kernel.prop
-	  "kernel.prop",
-	
-	#-- Default Values
-	  "selected=2\n"    #-- Default Kernel = Stock CM9 
-  );
-endif;
-
-#-- IF "Custom" Installation, show configuration, then write kernel.prop
-if prop("type.prop","selected")=="2" then
-   menubox(
-    #-- Title
-      "Kernel",
-	  
-    #-- Sub Title
-      "Please select the kernel you want to use with your GSM Wildfire S",
-	  
-    #-- Icon: <AROMA Resource Dir>/icons/default.png or <ThemeDir>/icon.default.png
-      "@install",
-	  
-    #-- Will be saved in /tmp/aroma/mods.prop
-      "kernel.prop",
-	  
-	  #-----------------------------------[ Selectbox With Groups ]-----------------------------------------#
-	  # TITLE            |  SUBTITLE                                                        | Initial Value #
-	  #------------------+------------------------------------------------------------------+---------------#
-
-	"Soulengine i",        "**Coming soon!** A tweaked version of modpunks kernel - with"+
-			       " added govenors, higher overclock value and more",                "@personalize",
-	"Default",             "modpunks kernel - more stable and will always stay up to date",   "@personalize"
-
-);
-endif;
-
-if prop("type.prop","selected")=="2" then
-alert(
-"Sorry",
-"Soulengine isn't ready yet, installing the default kernel..."
-);
-
-writetmpfile(
-"kernel.prop",
-"selected=2\n" 
-);
-endif;
-
-#-- IF "Minimal" Installation, don't show configuration, then write default kernel.prop
-if prop("type.prop","selected")=="3" then
-  writetmpfile(
-    #-- Prop file will write to /tmp/aroma/kernel.prop
-	  "kernel.prop",
-	
-	#-- Default Values
-	  "selected=2\n"    #-- Default Kernel = Stock CM9 
-  );
-endif;
-
+#if prop("type.prop","selected")=="1" then
+#  writetmpfile(
+#   #-- Prop file will write to /tmp/aroma/kernel.prop
+#	  "kernel.prop",
+#	
+	##-- Default Values
+#	  "selected=2\n"    #-- Default Kernel = Stock CM9 
+#  );
+#endif;
+#
+##-- IF "Custom" Installation, show configuration, then write kernel.prop
+#if prop("type.prop","selected")=="2" then
+#   menubox(
+#    #-- Title
+#      "Kernel",
+	  #
+#    #-- Sub Title
+#      "Please select the kernel you want to use with your GSM Wildfire S",
+	  #
+#    #-- Icon: <AROMA Resource Dir>/icons/default.png or <ThemeDir>/icon.default.png
+#      "@install",
+	  #
+#    #-- Will be saved in /tmp/aroma/mods.prop
+#      "kernel.prop",
+	  #
+#	  #-----------------------------------[ Selectbox With Groups ]-----------------------------------------#
+	  ## TITLE            |  SUBTITLE                                                        | Initial Value #
+#	  #------------------+------------------------------------------------------------------+---------------#
+#
+	#"Soulengine i",        "**Coming soon!** A tweaked version of modpunks kernel - with"+
+#			       " added govenors, higher overclock value and more",                "@personalize",
+	#"Default",             "modpunks kernel - more stable and will always stay up to date",   "@personalize"
+#
+#);
+#endif;
+#
+#if prop("type.prop","selected")=="2" then
+#alert(
+#"Sorry",
+#"Soulengine isn't ready yet, installing the default kernel..."
+#);
+#
+#writetmpfile(
+#"kernel.prop",
+#"selected=2\n" 
+#);
+#endif;
+#
+##-- IF "Minimal" Installation, don't show configuration, then write default kernel.prop
+#if prop("type.prop","selected")=="3" then
+#  writetmpfile(
+#    #-- Prop file will write to /tmp/aroma/kernel.prop
+	  #"kernel.prop",
+#	
+	##-- Default Values
+#	  "selected=2\n"    #-- Default Kernel = Stock CM9 
+#  );
+#endif;
+#
 #################################################################################################################
 # [[Selection - Only pick one]]
 #

@@ -490,25 +490,31 @@ ui_print("@Kernel installation");
 
 # Install kernels and kernel modules
 
-    if
-      file_getprop("/tmp/aroma/kernel.prop","selected") == "1"
-    then
-      ui_print("Installing soulengine");
-      package_extract_dir("packages/kernel/soulengine", "/tmp");
-       write_raw_image("/tmp/boot.img", "boot");
-      ui_print("Installing kernel modules...");
-      package_extract_dir("packages/kernel/soulengine/modules", "/system/lib/modules");
-    endif;
+ui_print("Installing Kernel");
+package_extract_dir("packages/kernel/default","/tmp");
+write_raw_image("/tmp/boot.img","boot");
+ui_print("Installing kernel modules");
+package_extract_dir("packages/kernel/default/modules","/system/lib/modules");
 
-    if
-      file_getprop("/tmp/aroma/kernel.prop","selected") == "2"
-    then
-      ui_print("Installing default kernel...");
-      package_extract_dir("packages/kernel/default", "/tmp");
-      write_raw_image("/tmp/boot.img", "boot");
-      ui_print("Installing kernel modules...");
-      package_extract_dir("packages/kernel/default/modules", "/system/lib/modules");
-    endif;
+#    if
+#      file_getprop("/tmp/aroma/kernel.prop","selected") == "1"
+#    then
+#      ui_print("Installing soulengine");
+#      package_extract_dir("packages/kernel/soulengine", "/tmp");
+#       write_raw_image("/tmp/boot.img", "boot");
+#      ui_print("Installing kernel modules...");
+#      package_extract_dir("packages/kernel/soulengine/modules", "/system/lib/modules");
+#    endif;
+
+#    if
+#      file_getprop("/tmp/aroma/kernel.prop","selected") == "2"
+#    then
+#      ui_print("Installing default kernel...");
+#      package_extract_dir("packages/kernel/default", "/tmp");
+#      write_raw_image("/tmp/boot.img", "boot");
+#      ui_print("Installing kernel modules...");
+#      package_extract_dir("packages/kernel/default/modules", "/system/lib/modules");
+#    endif;
 
 set_progress(0.4);
 

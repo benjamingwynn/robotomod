@@ -353,7 +353,7 @@ endif;
     if
       file_getprop("/tmp/aroma/core.prop","selected") == "3"
     then
-      ui_print("@Installing ParanoidAndroid Core");wait
+      ui_print("@Installing ParanoidAndroid Core");
       package_extract_file("packages/core/paranoid/bin/backuptool.sh", "/tmp/backuptool.sh");
       set_perm(0, 0, 0777, "/tmp/backuptool.sh");
       run_program("/tmp/backuptool.sh", "backup");

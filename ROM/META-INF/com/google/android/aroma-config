@@ -207,23 +207,23 @@ agreebox(
 );
 
 ##########################################################################################
-# [[RobotoMOD's Bugs & Credits]] 
+# [[Credits]] 
 #
 agreebox(
   #-- Title
-    "Known bugs & Credits",
+    "Credits",
   
   #-- Subtitle / Description
-    "These are the known bugs and contributors to RobotoMOD:",
+    "Credits for RobotoMOD",
   
   #-- Icon
     "@update",
   
   #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
-    resread("robotomod-2.txt"),
+    resread("credits.txt"),
 
   #-- Checkbox Text
-    "I understand these bugs and will not report them",
+    "Cool, thanks for this ROM",
   
   #-- Unchecked Alert Message
     "Please check the checkbox to continue!"

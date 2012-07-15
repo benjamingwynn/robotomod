@@ -738,7 +738,7 @@ if prop("type.prop","selected")=="2" then
             "H File Manager",      "Simple, CM7 file manager",                                          0,
 
 	  "Gallery",               "",                                                                  2,
-	    "ICS",                 "The default ICS Gallery application",                               1,
+	    "ICS",                 "The default ICS gallery application",                               1,
             "Quickpic",            "Quickpic gallery application",                                      0,
 
 	  "Audio Enchatments",    "",                                                                   2,

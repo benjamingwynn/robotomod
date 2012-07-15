@@ -1,25 +1,18 @@
-Known bugs with RobotoMOD:
+benjamingwynn & dudeman1996 from WFSdev made RobotoMOD, however, we couldn't have done it without the following people (in no particular order)...
 
-- When using HDIT with CM9, the circle in the notification bar pull down is not centered.
-
-Credits:
-
-The following people mainly contributed to RobotoMOD's code:
-
-- benjamingwynn & dudeman1996
-
-Thanks to the following people for helping with parts of RobotoMOD:
-
+- amarullz (AROMA installer)
 - *se-nsei (graphics)
 - alquez (original msm7k kernel and marvel device tree)
 - rezo609 (MiHome app)
 - bikedude880 (fixing red border bug)
-- mediocrehippie (hosts file)
-- modpunk (CM9 device tree)
+- mediocrehippie (ad-free hosts file)
+- molesarecoming (writing part of pandroid.txt)
+- modpunk (porting CM9)
 - apherio (Google Music with Beats Audio mod)
 - BigBearEvo (many application packages)
 - Ravencz (creating the Cid boot animation)
 - asdfzz (LGHome)
+- Super-Android (The detailed explanation about what AOKP is)
 - SilentStormer (Google Now)
 - intel007 (Google JB market app)
 - Snipa (GooManager)
@@ -31,7 +24,3 @@ Thanks to the following people for helping with parts of RobotoMOD:
 - the cyanogenmod team (cm9 core)
 - the aokp team (aokp core)
 - xda (for housing our wonderful roms thread)
-
-Thanks to these other people too:
-
-- simonsimons34

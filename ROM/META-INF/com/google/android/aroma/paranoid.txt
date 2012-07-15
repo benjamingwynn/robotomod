@@ -1,0 +1,24 @@
+Thanks for selecting ParanoidAndroid as your core for RobotoMOD :)
+
+If you do not know what ParanoidAndroid is then here is a quick run by:
+
+ParanoidAndroid is a ROM that lets YOU define in which UI your apps display – be it tablet mode, or normal phone mode. There's also a bunch of extra goodies in settings for customisation like transparent status bar etc. To be honest, this is not tablet mode at all, it has nothing to do with silly build.prop hacks. This is the first and only Android rom to feature true Hybrid mode. This rom lets you scale and project every app, every widget, even systemcomponents individually. Remember, android is modular, everything is an app: Lockscreen, navigationbar, dialogs, popups, keyboards, widgets, and your regular apps of course. Apps have the capability to switch into various designs or layouts according to the device they run on. This can result in a complete new experience as many apps will transform to the better.
+Now for every element that you like chose a mode (PhoneUI, Phablet/Nexus-7UI, TabletUI) and/or a size. You are 100% independent of the system DPI which runs nicely in whatever value it has been assigned to. You do not need to boot your phone into a certain DPI. Neither will most of the changes you apply require a reboot. You will not suffer from the myriads of troubles which normally haunt you under build.prop tablet mode. Your market, phone, etc. will all work, apps won’t shrink on you unless you shrink them yourself. This project will entirely transform your device, but retain the aesthetics and the feel of your phone.
+
+Because you are selecting this core as your base, it means you will suffer the following bugs in RobotoMOD that are in ParanoidAndroid.
+
+- The ROM is not as stable as AOKP or CM9
+- HQ videos don't work
+- Sometimes a pop up will appear saying a new SIM card has been inserted and wants you to restart the phone. Just press back when this message appears
+- Tablet mode doesn't work
+
+Credit to the following people:
+
+- dudeman1996
+- nims11
+- molesarecoming/ParanoidAndroid Team
+- davidang
+- modpunk
+- alquez
+- droste
+- The CM9 team

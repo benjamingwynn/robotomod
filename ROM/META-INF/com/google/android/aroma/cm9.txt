@@ -1,4 +1,4 @@
-Thank you for selecting CM9 as your core for RobotoMOD.
+What is CM9? CM9 is an ICS based ROM with a few more features to make it better than stock ICS found on the Nexus devices. CM9 is open-source. The reason we use CM9 and not AOSP (android open source project) is because CM9 (Cyanogenmod 9) has the right support for many differnet devices.
 
 Your choice as CM9 for your core means that RobotoMOD will have the same bugs as those in modpunk's CM9 ROM.
 For clarification, those bugs are:

@@ -793,13 +793,13 @@ if prop("type.prop","selected")=="3" then
 	
 	#-- Default Values
 	  "selected.1=1\n"+    #-- Default Music = Apollo
-	  "selected.2=\n"+     #-- Default File Explorer = None
+	  "selected.2=0\n"+    #-- Default File Explorer = None
 	  "selected.3=1\n"+    #-- Default Gallery = Stock
 	  "selected.4=3\n"+    #-- Default Audio Enhancement = None
 	  "selected.5=1\n"+    #-- Default Boot Animation = Stock
 	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.7=1\n"+    #-- Default Data2SD = None
-	  "selected.8=3\n"+     #-- Default Beats Audio = None
+	  "selected.8=3\n"+    #-- Default Beats Audio = None
 	  "selected.9=2\n"     #-- Default Soundset = ICS
   );
 endif;

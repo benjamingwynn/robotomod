@@ -184,9 +184,9 @@ ro.setupwizard.mode=OPTIONAL
 ##############################
 ## RobotoMOD version information
 ro.cm.device=marvel
-ro.cm.version=RobotoMOD - Testing Version
-ro.modversion=RobotoMOD - Testing Version
-ro.aokp.version=RobotoMOD - Testing Version
+ro.cm.version=RobotoMOD 1
+ro.modversion=RobotoMOD 1
+ro.aokp.version=RobotoMOD 1
 ro.goo.developerid=benjamingwynn
 ro.goo.rom=RobotoMOD
 ro.goo.version=1

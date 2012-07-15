@@ -774,14 +774,14 @@ if prop("type.prop","selected")=="2" then
 	    "S2E",                "Set and forget - this needs an ext4 partition",                      0,
 	    "None",               "Select this if you don't have an EXT partition",                     1,
 
-	  "Beats Audio",           "",                                                                  2,
+	  "Beats Audio",          "",                                                                   2,
 	    "Full Install",       "Install and rename your phone to 'Wildfire S with Beats Audio'",     1,
 	    "Normal Install",     "Install without renaming the phone",                                 0,
 	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0,
 
-	  "Sound set",           "",                                                                    2,
-	    "Sense 4",       "Install the Sense 4 UI sounds",                                           1,
-	    "ICS",           "Keep the default ICS sounds",                                             0
+	  "Sound set",            "",                                                                   2,
+	    "Sense 4",            "Install the Sense 4 UI sounds",                                      1,
+	    "ICS",                "Keep the default ICS sounds",                                        0
 );
 endif;
 

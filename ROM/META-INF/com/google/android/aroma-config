@@ -207,20 +207,20 @@ agreebox(
 );
 
 ##########################################################################################
-# [[RobotoMOD's Credits]] 
+# [[RobotoMOD's Bugs & Credits]] 
 #
 agreebox(
   #-- Title
-    "Credits",
+    "Known bugs & Credits",
   
   #-- Subtitle / Description
-    "The following people contributed to RobotoMOD",
+    "These are the known bugs and contributors to RobotoMOD:",
   
   #-- Icon
     "@update",
   
   #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
-    resread("credits.txt"),
+    resread("robotomod-2.txt"),
 
   #-- Checkbox Text
     "I understand these bugs and will not report them",
@@ -427,7 +427,7 @@ agreebox(
     "@agreement",
   
   #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
-    resread("paranoid.txt"),
+    resread("pandroid.txt"),
 
   #-- Checkbox Text
     "I understand, continue the installation",
@@ -738,7 +738,7 @@ if prop("type.prop","selected")=="2" then
             "H File Manager",      "Simple, CM7 file manager",                                          0,
 
 	  "Gallery",               "",                                                                  2,
-	    "ICS",                 "The default ICS gallery application",                               1,
+	    "ICS",                 "The default ICS Gallery application",                               1,
             "Quickpic",            "Quickpic gallery application",                                      0,
 
 	  "Audio Enchatments",    "",                                                                   2,
@@ -771,17 +771,17 @@ if prop("type.prop","selected")=="2" then
 	  "SD2Ext tweaks",        "",                                                                   2,
 	    "Data2Whatever",      "Data2Whatever, install and have 1GB+ internal space.",               0,
 	    "Link2SD",            "Link apps to your SD Card",                                          0,
-	    "S2E",                "Set and forget - this needs an ext4 partition",                      0,
+	    "S2E",                "Set and forget.",                                                    0,
 	    "None",               "Select this if you don't have an EXT partition",                     1,
 
-	  "Beats Audio",          "",                                                                   2,
+	  "Beats Audio",           "",                                                                  2,
 	    "Full Install",       "Install and rename your phone to 'Wildfire S with Beats Audio'",     1,
 	    "Normal Install",     "Install without renaming the phone",                                 0,
 	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0,
 
-	  "Sound set",            "",                                                                   2,
-	    "Sense 4",            "Install the Sense 4 UI sounds",                                      1,
-	    "ICS",                "Keep the default ICS sounds",                                        0
+	  "Sound set",           "",                                                                    2,
+	    "Sense 4",       "Install the Sense 4 UI sounds",                                           1,
+	    "ICS",           "Keep the default ICS sounds",                                             0
 );
 endif;
 
@@ -793,13 +793,13 @@ if prop("type.prop","selected")=="3" then
 	
 	#-- Default Values
 	  "selected.1=1\n"+    #-- Default Music = Apollo
-	  "selected.2=0\n"+    #-- Default File Explorer = None
+	  "selected.2=\n"+     #-- Default File Explorer = None
 	  "selected.3=1\n"+    #-- Default Gallery = Stock
 	  "selected.4=3\n"+    #-- Default Audio Enhancement = None
 	  "selected.5=1\n"+    #-- Default Boot Animation = Stock
 	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.7=1\n"+    #-- Default Data2SD = None
-	  "selected.8=3\n"+    #-- Default Beats Audio = None
+	  "selected.8=3\n"+     #-- Default Beats Audio = None
 	  "selected.9=2\n"     #-- Default Soundset = ICS
   );
 endif;
@@ -823,28 +823,6 @@ endif;
 ##############################################################################################################
 # [[Selection - add shit]]
 #
-<<<<<<< HEAD
-=======
-#-- IF "Recommended" Installation, don't show configuration, then write apps.prop
-if prop("type.prop","selected"=="1") then
-  writetmpfile(
-	  "apps.prop",
-
-	  "item.1.1=1\n"+    #-- AndChat
-	  "item.1.2=1\n"+    #-- Facebook
-	  "item.1.3=1\n"+    #-- Flash
-	  "item.1.4=1\n"+    #-- Firefox
-	  "item.1.5=1\n"+    #-- NoFrills
-	  "item.1.6=1\n"+    #-- RomToolbox
-	  "iten.1.7=1\n"+    #-- SDBooster
-	  "item.1.8=1\n"+    #-- TinyShark
-	  "item.1.9=1\n"+    #-- Titanium Backup
-	  "item.1.10=1\n"+   #-- Twitter
-	  "item.1.11=1\n"    #-- XDA Free
-  );
-endif; 
-
->>>>>>> 6dd8f1ba0f1eedfb7e302614193b4dd7abfb3fb9
 #-- IF "Custom" Installation, show configuration, then write apps.prop
 if prop("type.prop","selected")=="2" then
   checkbox(
@@ -879,50 +857,6 @@ if prop("type.prop","selected")=="2" then
   );
 endif;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6dd8f1ba0f1eedfb7e302614193b4dd7abfb3fb9
-#- Minimal
-
-if prop("type.prop","selected"=="3") then
-  writetmpfile(
-	  "apps.prop",
-
-	  "item.1.1=0\n"+    #-- AndChat
-	  "item.1.2=0\n"+    #-- Facebook
-	  "item.1.3=0\n"+    #-- Flash
-	  "item.1.4=0\n"+    #-- Firefox
-	  "item.1.5=0\n"+    #-- NoFrills
-	  "item.1.6=0\n"+    #-- RomToolbox
-	  "iten.1.7=0\n"+    #-- SDBooster
-	  "item.1.8=0\n"+    #-- TinyShark
-	  "item.1.9=0\n"+    #-- Titanium Backup
-	  "item.1.10=0\n"+   #-- Twitter
-	  "item.1.11=0\n"    #-- XDA Free
-  );
-endif; 
-
-#- For updating installation
-if prop("core.prop","selected")=="4" then
-  writetmpfile(
-	  "apps.prop",
-
-	  "item.1.1=0\n"+    #-- None selected
-	  "item.1.2=0\n"+    #-- None selected
-	  "item.1.3=0\n"+    #-- None selected
-	  "item.1.4=0\n"+    #-- None selected
-	  "item.1.5=0\n"+    #-- None selected
-	  "item.1.6=0\n"+    #-- None selected
-	  "item.1.7=0\n"+    #-- None selected
-	  "item.1.8=0\n"+    #-- None selected
-	  "item.1.9=0\n"+    #-- None selected
-	  "item.1.10=0\n"+   #-- None selected
-	  "item.1.11=0\n"    #-- None selected
-  );
-endif;
->>>>>>> 6dd8f1ba0f1eedfb7e302614193b4dd7abfb3fb9
 #################################################################################################################
 # [[Selection - remove shit]]
 #

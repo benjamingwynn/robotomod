@@ -826,10 +826,8 @@ endif;
 #-- IF "Recommended" Installation, don't show configuration, then write apps.prop
 if prop("type.prop","selected"=="1") then
   writetmpfile(
-    #-- Prop file will write to /tmp/aroma/customize.prop
 	  "apps.prop",
-	
-	#-- Default Values ( item.x.x = value. value=1 selected, value=0 un-selected )
+
 	  "item.1.1=1\n"+    #-- AndChat
 	  "item.1.2=1\n"+    #-- Facebook
 	  "item.1.3=1\n"+    #-- Flash
@@ -878,24 +876,25 @@ if prop("type.prop","selected")=="2" then
   );
 endif;
 
-#- For minimal installation
-if prop("core.prop","selected")=="3" then
+#- Minimal
+
+if prop("type.prop","selected"=="3") then
   writetmpfile(
 	  "apps.prop",
 
-	  "item.1.1=0\n"+    #-- None selected
-	  "item.1.2=0\n"+    #-- None selected
-	  "item.1.3=0\n"+    #-- None selected
-	  "item.1.4=0\n"+    #-- None selected
-	  "item.1.5=0\n"+    #-- None selected
-	  "item.1.6=0\n"+    #-- None selected
-	  "item.1.7=0\n"+    #-- None selected
-	  "item.1.8=0\n"+    #-- None selected
-	  "item.1.9=0\n"+    #-- None selected
-	  "item.1.10=0\n"+   #-- None selected
-	  "item.1.11=0\n"    #-- None selected
+	  "item.1.1=0\n"+    #-- AndChat
+	  "item.1.2=0\n"+    #-- Facebook
+	  "item.1.3=0\n"+    #-- Flash
+	  "item.1.4=0\n"+    #-- Firefox
+	  "item.1.5=0\n"+    #-- NoFrills
+	  "item.1.6=0\n"+    #-- RomToolbox
+	  "iten.1.7=0\n"+    #-- SDBooster
+	  "item.1.8=0\n"+    #-- TinyShark
+	  "item.1.9=0\n"+    #-- Titanium Backup
+	  "item.1.10=0\n"+   #-- Twitter
+	  "item.1.11=0\n"    #-- XDA Free
   );
-endif;
+endif; 
 
 #- For updating installation
 if prop("core.prop","selected")=="4" then

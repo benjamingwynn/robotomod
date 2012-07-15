@@ -490,8 +490,7 @@ ui_print("@Kernel installation");
 # Install kernels and kernel modules
 
 ui_print("Installing Kernel");
-package_extract_dir("packages/kernel/default","/tmp");
-write_raw_image("/tmp/boot.img","boot");
+write_raw_image("packages/kernel/default/boot.img","boot");
 ui_print("Installing kernel modules");
 package_extract_dir("packages/kernel/default/modules","/system/lib/modules");
 

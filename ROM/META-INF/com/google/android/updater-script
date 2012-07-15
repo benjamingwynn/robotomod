@@ -521,10 +521,6 @@ set_progress(0.4);
 
 #-- Custom Applications first
 ui_print("@Installing packages");
-#-- Install the RobotoMOD app
-ui_print("Installing RobotoMOD app");
-package_extract_dir("packages/RobotoMODapp", "/data/app");
-#-- Install other apps
 
 if
   file_getprop("/tmp/aroma/type.prop","selected") == "1"

@@ -528,6 +528,34 @@ ui_print("Installing RobotoMOD app");
 package_extract_dir("packages/RobotoMODapp", "/data/app");
 #-- Install other apps
 
+if
+  file_getprop("/tmp/aroma/type.prop","selected") == "1"
+then
+  ui_print("Installing AndChat");
+  package_extract_dir("packages/UserApps/AndChat", "/data/app");
+  ui_print("Installing Facebook");
+  package_extract_dir("packages/UserApps/Facebook", "/data/app");
+  ui_print("Installing Flash");
+  package_extract_dir("packages/UserApps/Flash", "/data/app");
+  ui_print("Installing Firefox");
+  package_extract_dir("packages/UserApps/Firefox", "/data/app");
+  ui_print("Installing NoFrills");
+  package_extract_dir("packages/UserApps/NoFrills", "/data/app");
+  ui_print("Installing ROM Toolbox");
+  package_extract_dir("packages/UserApps/RomToolbox", "/data/app");
+  ui_print("Installing SDBooster");
+  package_extract_dir("packages/UserApps/SDBooster", "/data/app");
+  ui_print("Installing Tinyshark");
+  package_extract_dir("packages/UserApps/TinyShark", "/data/app");
+  ui_print("Installing Titanium Backup");
+  package_extract_dir("packages/UserApps/Titanium", "/data/app");
+  ui_print("Installing Twitter");
+  package_extract_dir("packages/UserApps/Twitter", "/data/app");
+endif;
+
+if
+  file_getprop("/tmp/aroma/type.prop","selected") == "2"
+then
     if
       file_getprop("/tmp/aroma/apps.prop","item.1.1") == "1"
     then
@@ -559,56 +587,487 @@ package_extract_dir("packages/RobotoMODapp", "/data/app");
     if
       file_getprop("/tmp/aroma/apps.prop","item.1.5") == "1"
     then
+      ui_print("Installing NoFrills");
+      package_extract_dir("packages/UserApps/NoFrills", "/data/app");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/apps.prop","item.1.6") == "1"
+    then
       ui_print("Installing ROM Toolbox");
       package_extract_dir("packages/UserApps/RomToolbox", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.6") == "1"
+      file_getprop("/tmp/aroma/apps.prop","item.1.7") == "1"
     then
       ui_print("Installing SDBooster");
       package_extract_dir("packages/UserApps/SDBooster", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.7") == "1"
+      file_getprop("/tmp/aroma/apps.prop","item.1.8") == "1"
     then
       ui_print("Installing Tinyshark");
       package_extract_dir("packages/UserApps/TinyShark", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.8") == "1"
+      file_getprop("/tmp/aroma/apps.prop","item.1.9") == "1"
     then
       ui_print("Installing Titanium Backup");
       package_extract_dir("packages/UserApps/Titanium", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.9") == "1"
+      file_getprop("/tmp/aroma/apps.prop","item.1.10") == "1"
     then
       ui_print("Installing Twitter");
       package_extract_dir("packages/UserApps/Twitter", "/data/app");
-    endif;
-
-    if
-      file_getprop("/tmp/aroma/apps.prop","item.1.10") == "1"
-    then
-      ui_print("Installing XDA");
-      package_extract_dir("packages/UserApps/XDA", "/data/app");
     endif;
 
     if
       file_getprop("/tmp/aroma/apps.prop","item.1.11") == "1"
     then
-      ui_print("Installing Twitter");
-      package_extract_dir("packages/UserApps/Twitter", "/data/app");
+      ui_print("Installing XDA");
+      package_extract_dir("packages/UserApps/XDA", "/data/app");
     endif;
+endif;
 
+if
+  file_getprop("/tmp/aroma/type.prop","selected") == "3"
+then
+  ui_print("Minimal install selected, skipping installation of custom apps");
+endif;
 
 #-- Now for system Apps
 set_progress(0.5);
 
+if
+  file_getprop("/tmp/aroma/type.prop","selected") == "1"
+then
+      ui_print("Installing Browser");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Browser", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Browser", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Browser", "/system/app");
+	 endif;
+      ui_print("Installing Calculator");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Calculator", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Calculator", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Calculator", "/system/app");
+	 endif;
+      ui_print("Installing Clock");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Clock", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
+	 endif;
+      ui_print("Installing Camera");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Camera", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Camera", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Camera", "/system/app");
+	 endif;
+      ui_print("Installing Contacts");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Contacts", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Contacts", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Contacts", "/system/app");
+	 endif;
+      ui_print("Installing Email");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Email", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Email", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Email", "/system/app");
+	 endif;
+      ui_print("Installing GooManager");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/Universal/GooManager", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/Universal/GooManager", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/Universal/GooManager", "/system/app");
+	 endif;
+      ui_print("Installing HTML Viewer");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/HTMLViewer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/HTMLViewer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/HTMLViewer", "/system/app");
+	 endif;
+      ui_print("Installing Keyboard");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Keyboard", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Keyboard", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Keyboard", "/system/app");
+	 endif;
+      ui_print("Installing SMS");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/SMS", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/SMS", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/SMS", "/system/app");
+	 endif;
+      ui_print("Installing Theme Support");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/ThemeSupport", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
+	 endif;
+      ui_print("Installing Video Editor");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/VideoEditor", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/VideoEditor", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/VideoEditor", "/system/app");
+	 endif;
+      ui_print("Installing Voice Dialler");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/VoiceDialer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/VoiceDialer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/VoiceDialer", "/system/app");
+	 endif;
+      ui_print("Installing Galaxy");
+      package_extract_dir("packages/Apps/Universal/GalaxyLWP", "/system/app");
+      ui_print("Installing Holo Spiral");
+      package_extract_dir("packages/Apps/Universal/HoloSpiralLWP", "/system/app");
+      ui_print("Installing Magic Smoke");
+      package_extract_dir("packages/Apps/Universal/MagicSmokeLWP", "/system/app");
+      ui_print("Installing Noise Field");
+      package_extract_dir("packages/Apps/Universal/NoiseFieldLWP", "/system/app");
+      ui_print("Installing Phase Beam");
+      package_extract_dir("packages/Apps/Universal/PhaseBeamLWP", "/system/app");
+      ui_print("Installing Unicorn Porn");
+      package_extract_dir("packages/Apps/Universal/UnicornPornLWP", "/system/app");
+      ui_print("Installing Visualization");
+      package_extract_dir("packages/Apps/Universal/VisualizationLWP", "/system/app");
+endif;
+
+if
+  file_getprop("/tmp/aroma/type.prop","selected") == "3"
+then
+      ui_print("Installing Browser");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Browser", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Browser", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Browser", "/system/app");
+	 endif;
+      ui_print("Installing Calculator");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Calculator", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Calculator", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Calculator", "/system/app");
+	 endif;
+      ui_print("Installing Clock");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Clock", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
+	 endif;
+      ui_print("Installing Camera");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Camera", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Camera", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Camera", "/system/app");
+	 endif;
+      ui_print("Installing Contacts");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Contacts", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Contacts", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Contacts", "/system/app");
+	 endif;
+      ui_print("Installing Email");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Email", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Email", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Email", "/system/app");
+	 endif;
+      ui_print("Installing Keyboard");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/Keyboard", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/Keyboard", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/Keyboard", "/system/app");
+	 endif;
+      ui_print("Installing SMS");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/SMS", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/SMS", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/SMS", "/system/app");
+	 endif;
+      ui_print("Installing Theme Support");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/ThemeSupport", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
+	 endif;
+      ui_print("Installing Video Editor");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/VideoEditor", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/VideoEditor", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/VideoEditor", "/system/app");
+	 endif;
+      ui_print("Installing Voice Dialler");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/CM9/VoiceDialer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/AOKP/VoiceDialer", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/CM9/VoiceDialer", "/system/app");
+	 endif;
+      ui_print("Installing Galaxy");
+      package_extract_dir("packages/Apps/Universal/GalaxyLWP", "/system/app");
+      ui_print("Installing Holo Spiral");
+      package_extract_dir("packages/Apps/Universal/HoloSpiralLWP", "/system/app");
+      ui_print("Installing Magic Smoke");
+      package_extract_dir("packages/Apps/Universal/MagicSmokeLWP", "/system/app");
+      ui_print("Installing Noise Field");
+      package_extract_dir("packages/Apps/Universal/NoiseFieldLWP", "/system/app");
+      ui_print("Installing Phase Beam");
+      package_extract_dir("packages/Apps/Universal/PhaseBeamLWP", "/system/app");
+      ui_print("Installing Unicorn Porn");
+      package_extract_dir("packages/Apps/Universal/UnicornPornLWP", "/system/app");
+      ui_print("Installing Visualization");
+      package_extract_dir("packages/Apps/Universal/VisualizationLWP", "/system/app");
+endif;
+
+if
+  file_getprop("/tmp/aroma/type.prop","selected") == "2"
+then
    if
       file_getprop("/tmp/aroma/sApps.prop","item.1.1") == "1"
     then
@@ -655,21 +1114,21 @@ set_progress(0.5);
    if
       file_getprop("/tmp/aroma/sApps.prop","item.1.3") == "1"
     then
-      ui_print("Installing Calendar");
+      ui_print("Installing Clock");
          if
             file_getprop("/tmp/aroma/core.prop","selected") == "1"
          then
-            package_extract_dir("packages/Apps/CM9/Calendar", "/system/app");
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
          endif;
          if
             file_getprop("/tmp/aroma/core.prop","selected") == "2"
          then
-            package_extract_dir("packages/Apps/AOKP/Calendar", "/system/app");
+            package_extract_dir("packages/Apps/AOKP/Clock", "/system/app");
          endif;
          if
             file_getprop("/tmp/aroma/core.prop","selected") == "3"
          then
-            package_extract_dir("packages/Apps/CM9/Calendar", "/system/app");
+            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
 	 endif;
     endif;
 
@@ -696,31 +1155,8 @@ set_progress(0.5);
 
 set_progress(0.6);
 
-
    if
       file_getprop("/tmp/aroma/sApps.prop","item.1.5") == "1"
-    then
-      ui_print("Installing Clock");
-         if
-            file_getprop("/tmp/aroma/core.prop","selected") == "1"
-         then
-            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
-         endif;
-         if
-            file_getprop("/tmp/aroma/core.prop","selected") == "2"
-         then
-            package_extract_dir("packages/Apps/AOKP/Clock", "/system/app");
-         endif;
-         if
-            file_getprop("/tmp/aroma/core.prop","selected") == "3"
-         then
-            package_extract_dir("packages/Apps/CM9/Clock", "/system/app");
-	 endif;
-    endif;
-
-
-   if
-      file_getprop("/tmp/aroma/sApps.prop","item.1.6") == "1"
     then
       ui_print("Installing Contacts");
          if
@@ -742,7 +1178,7 @@ set_progress(0.6);
 
 
    if
-      file_getprop("/tmp/aroma/sApps.prop","item.1.7") == "1"
+      file_getprop("/tmp/aroma/sApps.prop","item.1.6") == "1"
     then
       ui_print("Installing Development");
          if
@@ -764,7 +1200,7 @@ set_progress(0.6);
 
 
    if
-      file_getprop("/tmp/aroma/sApps.prop","item.1.8") == "1"
+      file_getprop("/tmp/aroma/sApps.prop","item.1.7") == "1"
     then
       ui_print("Installing Email");
          if
@@ -781,6 +1217,28 @@ set_progress(0.6);
             file_getprop("/tmp/aroma/core.prop","selected") == "3"
          then
             package_extract_dir("packages/Apps/CM9/Email", "/system/app");
+	 endif;
+    endif;
+
+
+   if
+      file_getprop("/tmp/aroma/sApps.prop","item.1.8") == "1"
+    then
+      ui_print("Installing Goo Manager");
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "1"
+         then
+            package_extract_dir("packages/Apps/Universal/GooManager", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "2"
+         then
+            package_extract_dir("packages/Apps/Universal/GooManager", "/system/app");
+         endif;
+         if
+            file_getprop("/tmp/aroma/core.prop","selected") == "3"
+         then
+            package_extract_dir("packages/Apps/Universal/GooManager", "/system/app");
 	 endif;
     endif;
 
@@ -853,28 +1311,6 @@ set_progress(0.6);
    if
       file_getprop("/tmp/aroma/sApps.prop","item.1.12") == "1"
     then
-      ui_print("Installing Theme Support");
-         if
-            file_getprop("/tmp/aroma/core.prop","selected") == "1"
-         then
-            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
-         endif;
-         if
-            file_getprop("/tmp/aroma/core.prop","selected") == "2"
-         then
-            package_extract_dir("packages/Apps/AOKP/ThemeSupport", "/system/app");
-         endif;
-         if
-            file_getprop("/tmp/aroma/core.prop","selected") == "3"
-         then
-            package_extract_dir("packages/Apps/CM9/ThemeSupport", "/system/app");
-	 endif;
-    endif;
-
-
-   if
-      file_getprop("/tmp/aroma/sApps.prop","item.1.13") == "1"
-    then
       ui_print("Installing Video Editor");
          if
             file_getprop("/tmp/aroma/core.prop","selected") == "1"
@@ -895,9 +1331,9 @@ set_progress(0.6);
 
 
    if
-      file_getprop("/tmp/aroma/sApps.prop","item.1.14") == "1"
+      file_getprop("/tmp/aroma/sApps.prop","item.1.13") == "1"
     then
-      ui_print("Installing Voice Dialer");
+      ui_print("Installing Voice Dialler");
          if
             file_getprop("/tmp/aroma/core.prop","selected") == "1"
          then
@@ -963,6 +1399,7 @@ set_progress(0.6);
       ui_print("Installing Visualization");
       package_extract_dir("packages/Apps/Universal/VisualizationLWP", "/system/app");
     endif;
+endif;
 
 set_progress(0.7);
 

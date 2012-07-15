@@ -8,6 +8,7 @@ benjamingwynn & dudeman1996 from WFSdev made RobotoMOD, however, we couldn't hav
 - mediocrehippie (ad-free hosts file)
 - molesarecoming (writing part of pandroid.txt)
 - modpunk (porting CM9)
+- d33ps1x (GPS fixes)
 - apherio (Google Music with Beats Audio mod)
 - BigBearEvo (many application packages)
 - Ravencz (creating the Cid boot animation)

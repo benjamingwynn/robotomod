@@ -880,7 +880,10 @@ if prop("type.prop","selected")=="2" then
 endif;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6dd8f1ba0f1eedfb7e302614193b4dd7abfb3fb9
 #- Minimal
 
 if prop("type.prop","selected"=="3") then

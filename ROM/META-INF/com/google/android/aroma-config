@@ -1183,7 +1183,7 @@ if prop("cookiejar.prop","selected")=="1" then
 else
   writetmpfile("previnstall.prop","previousinstall=no\n");
 endif;
-endif;
+
 ##########################################################################################################
 # [[Ready for Installation?]]
 #

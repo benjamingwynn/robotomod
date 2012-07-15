@@ -771,7 +771,7 @@ if prop("type.prop","selected")=="2" then
 	  "SD2Ext tweaks",        "",                                                                   2,
 	    "Data2Whatever",      "Data2Whatever, install and have 1GB+ internal space.",               0,
 	    "Link2SD",            "Link apps to your SD Card",                                          0,
-	    "S2E",                "Set and forget.",                                                    0,
+	    "S2E",                "Set and forget - this needs an ext4 partition",                      0,
 	    "None",               "Select this if you don't have an EXT partition",                     1,
 
 	  "Beats Audio",           "",                                                                  2,

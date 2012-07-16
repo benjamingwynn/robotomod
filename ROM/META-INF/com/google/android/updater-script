@@ -1574,7 +1574,64 @@ mount("yaffs2", "MTD", "system", "/system");
 	file_getprop("/tmp/aroma/core.prop","selected") == "1"
     then
 	ui_print("@Installing CM9 core");
-	package_extract_dir("packages/core/cm9", "/system");
+#
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting addon.d...");
+      package_extract_dir("packages/core/cm9/addon.d","/system/addon.d");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting app...");
+      package_extract_dir("packages/core/cm9/app","/system/app");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting bin...");
+      package_extract_dir("packages/core/cm9/bin","/system/bin");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting etc...");
+      package_extract_dir("packages/core/cm9/etc","/system/etc");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting lib...");
+      package_extract_dir("packages/core/cm9/lib","/system/lib");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting vendor...");
+      package_extract_dir("packages/core/cm9/vendor","/system"/vendor);
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting xbin...");
+      package_extract_dir("packages/core/cm9/xbin","/system/xbin");
+#
 	package_extract_file("packages/core/cm9/bin/backuptool.sh", "/tmp/backuptool.sh");
 	package_extract_file("packages/core/cm9/bin/backuptool.functions", "/tmp/backuptool.functions");
 	set_perm(0, 0, 0777, "/tmp/backuptool.sh");
@@ -1727,7 +1784,56 @@ symlink("iwmulticall", "/system/xbin/iwconfig", "/system/xbin/iwgetid",
 	file_getprop("/tmp/aroma/core.prop","selected") == "2"
     then
 	ui_print("@Installing AOKP core");
-	package_extract_dir("packages/core/aokp", "/system");
+#
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting app...");
+      package_extract_dir("packages/core/aokp/app","/system/app");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting bin...");
+      package_extract_dir("packages/core/aokp/bin","/system/bin");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting etc...");
+      package_extract_dir("packages/core/aokp/etc","/system/etc");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting lib...");
+      package_extract_dir("packages/core/aokp/lib","/system/lib");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting vendor...");
+      package_extract_dir("packages/core/aokp/vendor","/system"/vendor);
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting xbin...");
+      package_extract_dir("packages/core/aokp/xbin","/system/xbin");
+#
 package_extract_file("packages/core/aokp/bin/backuptool.sh", "/tmp/backuptool.sh");
 set_perm(0, 0, 0777, "/tmp/backuptool.sh");
 symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
@@ -1865,7 +1971,56 @@ endif;
       package_extract_file("packages/core/paranoid/bin/backuptool.sh", "/tmp/backuptool.sh");
       set_perm(0, 0, 0777, "/tmp/backuptool.sh");
       run_program("/tmp/backuptool.sh", "backup");
-      package_extract_dir("packages/core/paranoid","/system");
+#
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting app...");
+      package_extract_dir("packages/core/paranoid/app","/system/app");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting bin...");
+      package_extract_dir("packages/core/paranoid/bin","/system/bin");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting etc...");
+      package_extract_dir("packages/core/paranoid/etc","/system/etc");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting lib...");
+      package_extract_dir("packages/core/paranoid/lib","/system/lib");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting vendor...");
+      package_extract_dir("packages/core/paranoid/vendor","/system"/vendor);
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting xbin...");
+      package_extract_dir("packages/core/paranoid/xbin","/system/xbin");
+#
       symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
       symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
 symlink("busybox", "/system/xbin/[", "/system/xbin/[[",

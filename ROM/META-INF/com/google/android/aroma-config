@@ -28,6 +28,7 @@ fontresload( "0", "ttf/Roboto.ttf", "12" );
 loadlang("langs/en.lang");
 fontresload( "1", "ttf/Roboto.ttf", "18" );
 theme("ics");
+restotmp("exec/sleep","sleep");
 
 ##########################################################################################
 # [[Splash screen]]

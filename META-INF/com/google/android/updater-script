@@ -1795,7 +1795,7 @@ mount("yaffs2", "MTD", "system", "/system");
       ui_print("Extracting framework...");
       package_extract_dir("packages/core/paranoid/framework","/system/framework");
 #- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");");
+run_program("/tmp/aroma/sleep","500");
 unmount ("/system");
 run_program("/tmp/aroma/sleep","500");
 mount("yaffs2", "MTD", "system", "/system");

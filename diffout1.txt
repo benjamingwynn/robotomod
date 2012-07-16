@@ -1,0 +1,313 @@
+Only in packages/core/cm9: addon.d
+Only in packages/core/paranoid/app: Apollo.apk
+Binary files packages/core/cm9/app/ApplicationsProvider.apk and packages/core/paranoid/app/ApplicationsProvider.apk differ
+Binary files packages/core/cm9/app/BackupRestoreConfirmation.apk and packages/core/paranoid/app/BackupRestoreConfirmation.apk differ
+Binary files packages/core/cm9/app/Bluetooth.apk and packages/core/paranoid/app/Bluetooth.apk differ
+Binary files packages/core/cm9/app/CalendarProvider.apk and packages/core/paranoid/app/CalendarProvider.apk differ
+Only in packages/core/paranoid/app: CarHomeGoogle.apk
+Binary files packages/core/cm9/app/CertInstaller.apk and packages/core/paranoid/app/CertInstaller.apk differ
+Only in packages/core/cm9/app: CMWallpapers.apk
+Only in packages/core/cm9/app: Contacts.apk
+Binary files packages/core/cm9/app/ContactsProvider.apk and packages/core/paranoid/app/ContactsProvider.apk differ
+Only in packages/core/paranoid/app: CrespoParts.apk
+Binary files packages/core/cm9/app/DefaultContainerService.apk and packages/core/paranoid/app/DefaultContainerService.apk differ
+Binary files packages/core/cm9/app/DownloadProvider.apk and packages/core/paranoid/app/DownloadProvider.apk differ
+Binary files packages/core/cm9/app/DownloadProviderUi.apk and packages/core/paranoid/app/DownloadProviderUi.apk differ
+Binary files packages/core/cm9/app/DrmProvider.apk and packages/core/paranoid/app/DrmProvider.apk differ
+Binary files packages/core/cm9/app/Exchange.apk and packages/core/paranoid/app/Exchange.apk differ
+Binary files packages/core/cm9/app/KeyChain.apk and packages/core/paranoid/app/KeyChain.apk differ
+Only in packages/core/cm9/app: LiveWallpapers.apk
+Binary files packages/core/cm9/app/LiveWallpapersPicker.apk and packages/core/paranoid/app/LiveWallpapersPicker.apk differ
+Binary files packages/core/cm9/app/MediaProvider.apk and packages/core/paranoid/app/MediaProvider.apk differ
+Only in packages/core/paranoid/app: MediaUploader.apk
+Only in packages/core/paranoid/app: Mms.apk
+Binary files packages/core/cm9/app/PackageInstaller.apk and packages/core/paranoid/app/PackageInstaller.apk differ
+Only in packages/core/paranoid/app: ParanoidBackup.apk
+Only in packages/core/paranoid/app: ParanoidOTA.apk
+Binary files packages/core/cm9/app/Phone.apk and packages/core/paranoid/app/Phone.apk differ
+Binary files packages/core/cm9/app/PicoTts.apk and packages/core/paranoid/app/PicoTts.apk differ
+Only in packages/core/cm9/app: Provision.apk
+Only in packages/core/cm9/app: QuickSearchBox.apk
+Only in packages/core/cm9/app: RomManager.apk
+Binary files packages/core/cm9/app/Settings.apk and packages/core/paranoid/app/Settings.apk differ
+Binary files packages/core/cm9/app/SettingsProvider.apk and packages/core/paranoid/app/SettingsProvider.apk differ
+Binary files packages/core/cm9/app/SharedStorageBackup.apk and packages/core/paranoid/app/SharedStorageBackup.apk differ
+Binary files packages/core/cm9/app/SoundRecorder.apk and packages/core/paranoid/app/SoundRecorder.apk differ
+Only in packages/core/cm9/app: SpareParts.apk
+Binary files packages/core/cm9/app/SpeechRecorder.apk and packages/core/paranoid/app/SpeechRecorder.apk differ
+Binary files packages/core/cm9/app/Stk.apk and packages/core/paranoid/app/Stk.apk differ
+Binary files packages/core/cm9/app/SystemUI.apk and packages/core/paranoid/app/SystemUI.apk differ
+Binary files packages/core/cm9/app/TelephonyProvider.apk and packages/core/paranoid/app/TelephonyProvider.apk differ
+Binary files packages/core/cm9/app/Term.apk and packages/core/paranoid/app/Term.apk differ
+Binary files packages/core/cm9/app/Torch.apk and packages/core/paranoid/app/Torch.apk differ
+Binary files packages/core/cm9/app/UserDictionaryProvider.apk and packages/core/paranoid/app/UserDictionaryProvider.apk differ
+Binary files packages/core/cm9/app/VpnDialogs.apk and packages/core/paranoid/app/VpnDialogs.apk differ
+Binary files packages/core/cm9/app/WAPPushManager.apk and packages/core/paranoid/app/WAPPushManager.apk differ
+Only in packages/core/paranoid/bin: applypatch
+Only in packages/core/paranoid/bin: BCM2049C0_003.001.031.0088.0094.hcd
+Only in packages/core/paranoid/bin: bdaddr_read
+Only in packages/core/paranoid/bin: chmod
+Only in packages/core/paranoid/bin: get_macaddrs
+Only in packages/core/paranoid/bin: gpsd
+Only in packages/core/paranoid/bin: hostapd
+Only in packages/core/paranoid/bin: memsicd
+Only in packages/core/paranoid/bin: mount
+Only in packages/core/paranoid/bin: qmuxd
+Only in packages/core/paranoid/bin: recovery
+Only in packages/core/paranoid/bin: run_drm
+Only in packages/core/paranoid/bin: run_usb
+Only in packages/core/paranoid/bin: su
+Only in packages/core/paranoid/bin: wlan_mac
+Only in packages/core/paranoid/bin: wlan_tool
+Only in packages/core/paranoid/bin: wmiconfig
+diff -r packages/core/cm9/etc/apns-conf.xml packages/core/paranoid/etc/apns-conf.xml
+1322,1323c1322,1323
+<   <apn carrier="Claro AR" mcc="722" mnc="310" apn="igprs.claro.com.ar" user="ctigprs" password="ctigpr999" authenticationtype="PAP" type="default,supl" />
+<   <apn carrier="Claro AR MMS" mcc="722" mnc="310" apn="mms.ctimovil.com.ar" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.ar" mmsproxy="170.051.255.240" mmsport="8080" authenticationtype="PAP" type="mms" />
+---
+>   <apn carrier="Claro AR" mcc="722" mnc="310" apn="igprs.claro.com.ar" user="ctigprs" password="ctigpr999" type="default,supl" />
+>   <apn carrier="Claro AR MMS" mcc="722" mnc="310" apn="mms.ctimovil.com.ar" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.ar" mmsproxy="170.051.255.240" mmsport="8080" type="mms" />
+Only in packages/core/paranoid/etc: ecclist_for_mcc.conf
+Only in packages/core/cm9/etc/firmware: a225p5_pm4.fw
+Only in packages/core/cm9/etc/firmware: a225_pfp.fw
+Only in packages/core/cm9/etc/firmware: a225_pm4.fw
+Only in packages/core/cm9/etc/firmware: a300_pfp.fw
+Only in packages/core/cm9/etc/firmware: a300_pm4.fw
+Only in packages/core/cm9/etc/firmware: leia_pfp_470.fw
+Only in packages/core/cm9/etc/firmware: leia_pm4_470.fw
+Binary files packages/core/cm9/etc/NOTICE.html.gz and packages/core/paranoid/etc/NOTICE.html.gz differ
+Only in packages/core/paranoid/etc/permissions: android.hardware.camera.autofocus.xml
+diff -r packages/core/cm9/etc/permissions/android.hardware.camera.flash-autofocus.xml packages/core/paranoid/etc/permissions/android.hardware.camera.flash-autofocus.xml
+17,18c17
+< <!-- This is the standard set of features for a camera with a flash.  Note
+<      that this currently requires having auto-focus as well. -->
+---
+> <!-- This is the standard set of features for an auto-focus camera. -->
+22d20
+<     <feature name="android.hardware.camera.flash" />
+Only in packages/core/paranoid/etc/permissions: android.hardware.camera.xml
+Only in packages/core/paranoid/etc/permissions: android.hardware.location.xml
+Only in packages/core/cm9/etc/permissions: android.hardware.sensor.gyroscope.xml
+Only in packages/core/paranoid/etc/permissions: android.hardware.telephony.cdma.xml
+Only in packages/core/cm9/etc/permissions: android.hardware.usb.host.xml
+Only in packages/core/paranoid/etc/permissions: android.hardware.wifi.direct.xml
+Only in packages/core/paranoid/etc/permissions: android.software.sip.xml
+Only in packages/core/paranoid/etc/permissions: com.google.android.maps.xml
+Only in packages/core/paranoid/etc/permissions: com.google.android.media.effects.xml
+Only in packages/core/paranoid/etc/permissions: com.google.widevine.software.drm.xml
+Only in packages/core/paranoid/etc/permissions: features.xml
+Binary files packages/core/cm9/etc/security/otacerts.zip and packages/core/paranoid/etc/security/otacerts.zip differ
+Binary files packages/core/cm9/framework/am.jar and packages/core/paranoid/framework/am.jar differ
+Binary files packages/core/cm9/framework/android.policy.jar and packages/core/paranoid/framework/android.policy.jar differ
+Binary files packages/core/cm9/framework/android.test.runner.jar and packages/core/paranoid/framework/android.test.runner.jar differ
+Binary files packages/core/cm9/framework/apache-xml.jar and packages/core/paranoid/framework/apache-xml.jar differ
+Binary files packages/core/cm9/framework/bmgr.jar and packages/core/paranoid/framework/bmgr.jar differ
+Binary files packages/core/cm9/framework/bouncycastle.jar and packages/core/paranoid/framework/bouncycastle.jar differ
+Binary files packages/core/cm9/framework/bu.jar and packages/core/paranoid/framework/bu.jar differ
+Binary files packages/core/cm9/framework/com.android.future.usb.accessory.jar and packages/core/paranoid/framework/com.android.future.usb.accessory.jar differ
+Binary files packages/core/cm9/framework/com.android.location.provider.jar and packages/core/paranoid/framework/com.android.location.provider.jar differ
+Only in packages/core/paranoid/framework: com.android.nfc_extras.jar
+Binary files packages/core/cm9/framework/core.jar and packages/core/paranoid/framework/core.jar differ
+Binary files packages/core/cm9/framework/core-junit.jar and packages/core/paranoid/framework/core-junit.jar differ
+Binary files packages/core/cm9/framework/ext.jar and packages/core/paranoid/framework/ext.jar differ
+Binary files packages/core/cm9/framework/filterfw.jar and packages/core/paranoid/framework/filterfw.jar differ
+Binary files packages/core/cm9/framework/framework.jar and packages/core/paranoid/framework/framework.jar differ
+Binary files packages/core/cm9/framework/framework-res.apk and packages/core/paranoid/framework/framework-res.apk differ
+Binary files packages/core/cm9/framework/ime.jar and packages/core/paranoid/framework/ime.jar differ
+Binary files packages/core/cm9/framework/input.jar and packages/core/paranoid/framework/input.jar differ
+Binary files packages/core/cm9/framework/javax.obex.jar and packages/core/paranoid/framework/javax.obex.jar differ
+Binary files packages/core/cm9/framework/monkey.jar and packages/core/paranoid/framework/monkey.jar differ
+Binary files packages/core/cm9/framework/pm.jar and packages/core/paranoid/framework/pm.jar differ
+Only in packages/core/paranoid/framework: send_bug.jar
+Binary files packages/core/cm9/framework/services.jar and packages/core/paranoid/framework/services.jar differ
+Binary files packages/core/cm9/framework/svc.jar and packages/core/paranoid/framework/svc.jar differ
+Binary files packages/core/cm9/lib/drm/libfwdlockengine.so and packages/core/paranoid/lib/drm/libfwdlockengine.so differ
+diff -r packages/core/cm9/lib/egl/egl.cfg packages/core/paranoid/lib/egl/egl.cfg
+0a1,31
+> #
+> # Copyright (C) 2009 Google Inc.
+> #
+> # Licensed under the Apache License, Version 2.0 (the "License");
+> # you may not use this file except in compliance with the License.
+> # You may obtain a copy of the License at
+> #
+> #      http://www.apache.org/licenses/LICENSE-2.0
+> #
+> # Unless required by applicable law or agreed to in writing, software
+> # distributed under the License is distributed on an "AS IS" BASIS,
+> # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+> # See the License for the specific language governing permissions and
+> # limitations under the License.
+> 
+> #
+> # One line per configuration, of the form:
+> #
+> # D I TAG
+> #
+> # D: display (0: default)
+> # I: implementation (0: software, 1: hardware)
+> # TAG: a unique tag
+> #
+> # The library name loaded by EGL is constructed as (in that order):
+> #
+> # /system/lib/egl/libGLES_$TAG.so
+> # /system/lib/egl/lib{EGL|GLESv1_CM|GLESv2}_$TAG.so
+> #
+> 
+> 
+Binary files packages/core/cm9/lib/hw/audio.a2dp.default.so and packages/core/paranoid/lib/hw/audio.a2dp.default.so differ
+Only in packages/core/paranoid/lib/hw: audio_policy.cooper.so
+Binary files packages/core/cm9/lib/hw/audio_policy.default.so and packages/core/paranoid/lib/hw/audio_policy.default.so differ
+Only in packages/core/paranoid/lib/hw: audio_policy.gio.so
+Binary files packages/core/cm9/lib/hw/audio_policy.marvel.so and packages/core/paranoid/lib/hw/audio_policy.marvel.so differ
+Only in packages/core/paranoid/lib/hw: audio_policy.stub.so
+Only in packages/core/paranoid/lib/hw: audio.primary.cooper.so
+Binary files packages/core/cm9/lib/hw/audio.primary.default.so and packages/core/paranoid/lib/hw/audio.primary.default.so differ
+Only in packages/core/paranoid/lib/hw: audio.primary.gio.so
+Only in packages/core/paranoid/lib/hw: audio.primary.goldfish.so
+Binary files packages/core/cm9/lib/hw/audio.primary.marvel.so and packages/core/paranoid/lib/hw/audio.primary.marvel.so differ
+Only in packages/core/paranoid/lib/hw: audio.primary.tuna.so
+Only in packages/core/paranoid/lib/hw: camera.cooper.so
+Only in packages/core/paranoid/lib/hw: camera.gio.so
+Binary files packages/core/cm9/lib/hw/camera.goldfish.so and packages/core/paranoid/lib/hw/camera.goldfish.so differ
+Only in packages/core/paranoid/lib/hw: camera.marvel.so
+Only in packages/core/cm9/lib/hw: camera.msm7x27.so
+Binary files packages/core/cm9/lib/hw/copybit.msm7x27.so and packages/core/paranoid/lib/hw/copybit.msm7x27.so differ
+Only in packages/core/paranoid/lib/hw: gps.cooper.so
+Only in packages/core/paranoid/lib/hw: gps.gio.so
+Only in packages/core/paranoid/lib/hw: gps.marvel.so
+Only in packages/core/paranoid/lib/hw: gps.msm7x27.so
+Binary files packages/core/cm9/lib/hw/gralloc.msm7x27.so and packages/core/paranoid/lib/hw/gralloc.msm7x27.so differ
+Only in packages/core/paranoid/lib/hw: hwcomposer.default.so
+Binary files packages/core/cm9/lib/hw/hwcomposer.msm7x27.so and packages/core/paranoid/lib/hw/hwcomposer.msm7x27.so differ
+Only in packages/core/paranoid/lib/hw: lights.default.so
+Binary files packages/core/cm9/lib/hw/lights.marvel.so and packages/core/paranoid/lib/hw/lights.marvel.so differ
+Only in packages/core/cm9/lib/hw: lights.msm7x27.so
+Only in packages/core/paranoid/lib/hw: sensors.default.so
+Only in packages/core/paranoid/lib/hw: sensors.gio.so
+Only in packages/core/paranoid/lib/hw: sensors.marvel.so
+Only in packages/core/cm9/lib/hw: sensors.msm7x27.so
+Binary files packages/core/cm9/lib/invoke_mock_media_player.so and packages/core/paranoid/lib/invoke_mock_media_player.so differ
+Binary files packages/core/cm9/lib/libandroid_runtime.so and packages/core/paranoid/lib/libandroid_runtime.so differ
+Binary files packages/core/cm9/lib/libandroid_servers.so and packages/core/paranoid/lib/libandroid_servers.so differ
+Binary files packages/core/cm9/lib/libandroid.so and packages/core/paranoid/lib/libandroid.so differ
+Only in packages/core/paranoid/lib: libarccamera.so
+Binary files packages/core/cm9/lib/libaudioeffect_jni.so and packages/core/paranoid/lib/libaudioeffect_jni.so differ
+Binary files packages/core/cm9/lib/libaudioflinger.so and packages/core/paranoid/lib/libaudioflinger.so differ
+Binary files packages/core/cm9/lib/libbcc.so and packages/core/paranoid/lib/libbcc.so differ
+Binary files packages/core/cm9/lib/libbcc.so.sha1 and packages/core/paranoid/lib/libbcc.so.sha1 differ
+Binary files packages/core/cm9/lib/libbcinfo.so and packages/core/paranoid/lib/libbcinfo.so differ
+Binary files packages/core/cm9/lib/libbinder.so and packages/core/paranoid/lib/libbinder.so differ
+Binary files packages/core/cm9/lib/libcamera_client.so and packages/core/paranoid/lib/libcamera_client.so differ
+Binary files packages/core/cm9/lib/libcameraservice.so and packages/core/paranoid/lib/libcameraservice.so differ
+Binary files packages/core/cm9/lib/libchromium_net.so and packages/core/paranoid/lib/libchromium_net.so differ
+Binary files packages/core/cm9/lib/libc_malloc_debug_leak.so and packages/core/paranoid/lib/libc_malloc_debug_leak.so differ
+Binary files packages/core/cm9/lib/libc_malloc_debug_qemu.so and packages/core/paranoid/lib/libc_malloc_debug_qemu.so differ
+Binary files packages/core/cm9/lib/libcrypto.so and packages/core/paranoid/lib/libcrypto.so differ
+Binary files packages/core/cm9/lib/libc.so and packages/core/paranoid/lib/libc.so differ
+Only in packages/core/paranoid/lib: libdiag.so
+Binary files packages/core/cm9/lib/libdrmframework_jni.so and packages/core/paranoid/lib/libdrmframework_jni.so differ
+Binary files packages/core/cm9/lib/libdrmframework.so and packages/core/paranoid/lib/libdrmframework.so differ
+Binary files packages/core/cm9/lib/libdvm.so and packages/core/paranoid/lib/libdvm.so differ
+Binary files packages/core/cm9/lib/libEGL.so and packages/core/paranoid/lib/libEGL.so differ
+Binary files packages/core/cm9/lib/libemoji.so and packages/core/paranoid/lib/libemoji.so differ
+Binary files packages/core/cm9/lib/libFFTEm.so and packages/core/paranoid/lib/libFFTEm.so differ
+Binary files packages/core/cm9/lib/libfilterfw.so and packages/core/paranoid/lib/libfilterfw.so differ
+Only in packages/core/paranoid/lib: libfilterpack_facedetect.so
+Only in packages/core/paranoid/lib: libflint_engine_jni_api.so
+Only in packages/core/paranoid/lib: libfrsdk.so
+Binary files packages/core/cm9/lib/libgabi++.so and packages/core/paranoid/lib/libgabi++.so differ
+Only in packages/core/paranoid/lib: libgcomm_jni.so
+Binary files packages/core/cm9/lib/libgenlock.so and packages/core/paranoid/lib/libgenlock.so differ
+Binary files packages/core/cm9/lib/libGLESv2_dbg.so and packages/core/paranoid/lib/libGLESv2_dbg.so differ
+Binary files packages/core/cm9/lib/libgui.so and packages/core/paranoid/lib/libgui.so differ
+Binary files packages/core/cm9/lib/libhardware_legacy.so and packages/core/paranoid/lib/libhardware_legacy.so differ
+Binary files packages/core/cm9/lib/libhwui.so and packages/core/paranoid/lib/libhwui.so differ
+Binary files packages/core/cm9/lib/libinput.so and packages/core/paranoid/lib/libinput.so differ
+Binary files packages/core/cm9/lib/libmedia_jni.so and packages/core/paranoid/lib/libmedia_jni.so differ
+Binary files packages/core/cm9/lib/libmediaplayerservice.so and packages/core/paranoid/lib/libmediaplayerservice.so differ
+Binary files packages/core/cm9/lib/libmedia.so and packages/core/paranoid/lib/libmedia.so differ
+Binary files packages/core/cm9/lib/libmemalloc.so and packages/core/paranoid/lib/libmemalloc.so differ
+Only in packages/core/paranoid/lib: libmmgsdilib.so
+Only in packages/core/paranoid/lib: libmmipl.so
+Only in packages/core/paranoid/lib: libmmjpeg.so
+Binary files packages/core/cm9/lib/libmm-omxcore.so and packages/core/paranoid/lib/libmm-omxcore.so differ
+Binary files packages/core/cm9/lib/libmtp.so and packages/core/paranoid/lib/libmtp.so differ
+Binary files packages/core/cm9/lib/libnativehelper.so and packages/core/paranoid/lib/libnativehelper.so differ
+Binary files packages/core/cm9/lib/liboverlay.so and packages/core/paranoid/lib/liboverlay.so differ
+Only in packages/core/paranoid/lib: libpicowrapper.so
+Binary files packages/core/cm9/lib/libpixelflinger.so and packages/core/paranoid/lib/libpixelflinger.so differ
+Binary files packages/core/cm9/lib/libpowermanager.so and packages/core/paranoid/lib/libpowermanager.so differ
+Binary files packages/core/cm9/lib/libQcomUI.so and packages/core/paranoid/lib/libQcomUI.so differ
+Binary files packages/core/cm9/lib/libril.so and packages/core/paranoid/lib/libril.so differ
+Binary files packages/core/cm9/lib/librs_jni.so and packages/core/paranoid/lib/librs_jni.so differ
+Binary files packages/core/cm9/lib/libRS.so and packages/core/paranoid/lib/libRS.so differ
+Binary files packages/core/cm9/lib/librtp_jni.so and packages/core/paranoid/lib/librtp_jni.so differ
+Only in packages/core/paranoid/lib: libs3cjpeg.so
+Only in packages/core/paranoid/lib: libsecril-client.so
+Only in packages/core/paranoid/lib: libsec-ril.so
+Binary files packages/core/cm9/lib/libsensorservice.so and packages/core/paranoid/lib/libsensorservice.so differ
+Binary files packages/core/cm9/lib/libskia.so and packages/core/paranoid/lib/libskia.so differ
+Binary files packages/core/cm9/lib/libsoundpool.so and packages/core/paranoid/lib/libsoundpool.so differ
+Only in packages/core/paranoid/lib: libspeexwrapper.so
+Binary files packages/core/cm9/lib/libSR_AudioIn.so and packages/core/paranoid/lib/libSR_AudioIn.so differ
+Binary files packages/core/cm9/lib/libsrec_jni.so and packages/core/paranoid/lib/libsrec_jni.so differ
+Binary files packages/core/cm9/lib/libstagefright_foundation.so and packages/core/paranoid/lib/libstagefright_foundation.so differ
+Binary files packages/core/cm9/lib/libstagefrighthw.so and packages/core/paranoid/lib/libstagefrighthw.so differ
+Binary files packages/core/cm9/lib/libstagefright_omx.so and packages/core/paranoid/lib/libstagefright_omx.so differ
+Binary files packages/core/cm9/lib/libstagefright.so and packages/core/paranoid/lib/libstagefright.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_aacdec.so and packages/core/paranoid/lib/libstagefright_soft_aacdec.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_amrdec.so and packages/core/paranoid/lib/libstagefright_soft_amrdec.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_g711dec.so and packages/core/paranoid/lib/libstagefright_soft_g711dec.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_h264dec.so and packages/core/paranoid/lib/libstagefright_soft_h264dec.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_mp3dec.so and packages/core/paranoid/lib/libstagefright_soft_mp3dec.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_mpeg4dec.so and packages/core/paranoid/lib/libstagefright_soft_mpeg4dec.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_vorbisdec.so and packages/core/paranoid/lib/libstagefright_soft_vorbisdec.so differ
+Binary files packages/core/cm9/lib/libstagefright_soft_vpxdec.so and packages/core/paranoid/lib/libstagefright_soft_vpxdec.so differ
+Binary files packages/core/cm9/lib/libstagefright_yuv.so and packages/core/paranoid/lib/libstagefright_yuv.so differ
+Binary files packages/core/cm9/lib/libstdc++.so and packages/core/paranoid/lib/libstdc++.so differ
+Binary files packages/core/cm9/lib/libstlport.so and packages/core/paranoid/lib/libstlport.so differ
+Binary files packages/core/cm9/lib/libsurfaceflinger.so and packages/core/paranoid/lib/libsurfaceflinger.so differ
+Binary files packages/core/cm9/lib/libsystem_server.so and packages/core/paranoid/lib/libsystem_server.so differ
+Binary files packages/core/cm9/lib/libtilerenderer.so and packages/core/paranoid/lib/libtilerenderer.so differ
+Binary files packages/core/cm9/lib/libttscompat.so and packages/core/paranoid/lib/libttscompat.so differ
+Binary files packages/core/cm9/lib/libttspico.so and packages/core/paranoid/lib/libttspico.so differ
+Binary files packages/core/cm9/lib/libui.so and packages/core/paranoid/lib/libui.so differ
+Binary files packages/core/cm9/lib/libutils.so and packages/core/paranoid/lib/libutils.so differ
+Binary files packages/core/cm9/lib/libvariablespeed.so and packages/core/paranoid/lib/libvariablespeed.so differ
+Only in packages/core/paranoid/lib: libvideochat_jni.so
+Only in packages/core/paranoid/lib: libvideochat_stabilize.so
+Binary files packages/core/cm9/lib/libvideoeditor_jni.so and packages/core/paranoid/lib/libvideoeditor_jni.so differ
+Binary files packages/core/cm9/lib/libvideoeditorplayer.so and packages/core/paranoid/lib/libvideoeditorplayer.so differ
+Only in packages/core/paranoid/lib: libvoicesearch.so
+Binary files packages/core/cm9/lib/libwebcore.so and packages/core/paranoid/lib/libwebcore.so differ
+Binary files packages/core/cm9/lib/libwebrtc_audio_preprocessing.so and packages/core/paranoid/lib/libwebrtc_audio_preprocessing.so differ
+Binary files packages/core/cm9/lib/modules/bcm4329.ko and packages/core/paranoid/lib/modules/bcm4329.ko differ
+Only in packages/core/paranoid/lib/modules: cifs.ko
+Only in packages/core/paranoid/lib/modules: tun.ko
+Only in packages/core/paranoid/lib/modules: zram.ko
+Binary files packages/core/cm9/lib/soundfx/libaudiopreprocessing.so and packages/core/paranoid/lib/soundfx/libaudiopreprocessing.so differ
+Binary files packages/core/cm9/lib/soundfx/libbundlewrapper.so and packages/core/paranoid/lib/soundfx/libbundlewrapper.so differ
+Binary files packages/core/cm9/lib/soundfx/libcyanogen-dsp.so and packages/core/paranoid/lib/soundfx/libcyanogen-dsp.so differ
+Binary files packages/core/cm9/lib/soundfx/libreverbwrapper.so and packages/core/paranoid/lib/soundfx/libreverbwrapper.so differ
+Binary files packages/core/cm9/lib/soundfx/libvisualizer.so and packages/core/paranoid/lib/soundfx/libvisualizer.so differ
+Only in packages/core/paranoid: pad.prop
+Only in packages/core/paranoid/vendor: bin
+Only in packages/core/cm9/vendor: firmware
+Only in packages/core/paranoid/vendor: lib
+Binary files packages/core/cm9/xbin/add-property-tag and packages/core/paranoid/xbin/add-property-tag differ
+Binary files packages/core/cm9/xbin/bash and packages/core/paranoid/xbin/bash differ
+Binary files packages/core/cm9/xbin/btool and packages/core/paranoid/xbin/btool differ
+Binary files packages/core/cm9/xbin/busybox and packages/core/paranoid/xbin/busybox differ
+Binary files packages/core/cm9/xbin/check-lost+found and packages/core/paranoid/xbin/check-lost+found differ
+Binary files packages/core/cm9/xbin/dhdutil and packages/core/paranoid/xbin/dhdutil differ
+Binary files packages/core/cm9/xbin/directiotest and packages/core/paranoid/xbin/directiotest differ
+Binary files packages/core/cm9/xbin/dropbearkey and packages/core/paranoid/xbin/dropbearkey differ
+Binary files packages/core/cm9/xbin/iwmulticall and packages/core/paranoid/xbin/iwmulticall differ
+Binary files packages/core/cm9/xbin/openvpn and packages/core/paranoid/xbin/openvpn differ
+Binary files packages/core/cm9/xbin/rsync and packages/core/paranoid/xbin/rsync differ
+Binary files packages/core/cm9/xbin/scp and packages/core/paranoid/xbin/scp differ
+Binary files packages/core/cm9/xbin/sftp-server and packages/core/paranoid/xbin/sftp-server differ
+Binary files packages/core/cm9/xbin/ssh and packages/core/paranoid/xbin/ssh differ
+Binary files packages/core/cm9/xbin/strace and packages/core/paranoid/xbin/strace differ
+Binary files packages/core/cm9/xbin/su and packages/core/paranoid/xbin/su differ

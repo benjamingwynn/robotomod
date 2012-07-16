@@ -1613,6 +1613,14 @@ unmount ("/system");
 run_program("/tmp/aroma/sleep","500");
 mount("yaffs2", "MTD", "system", "/system");
 #- End 'enderblock'
+      ui_print("Extracting framework...");
+      package_extract_dir("packages/core/cm9/framework","/system/framework");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
       ui_print("Extracting lib...");
       package_extract_dir("packages/core/cm9/lib","/system/lib");
 #- Start 'enderblock'
@@ -1910,6 +1918,14 @@ unmount ("/system");
 run_program("/tmp/aroma/sleep","500");
 mount("yaffs2", "MTD", "system", "/system");
 #- End 'enderblock'
+      ui_print("Extracting framework...");
+      package_extract_dir("packages/core/aokp/framework","/system/framework");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
       ui_print("Extracting lib...");
       package_extract_dir("packages/core/aokp/lib","/system/lib");
 #- Start 'enderblock'
@@ -2091,6 +2107,14 @@ mount("yaffs2", "MTD", "system", "/system");
 #- End 'enderblock'
       ui_print("Extracting etc...");
       package_extract_dir("packages/core/paranoid/etc","/system/etc");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting framework...");
+      package_extract_dir("packages/core/paranoid/framework","/system/framework");
 #- Start 'enderblock'
 run_program("/tmp/aroma/sleep","500");
 unmount ("/system");

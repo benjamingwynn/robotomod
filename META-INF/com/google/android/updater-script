@@ -1797,7 +1797,6 @@ mount("yaffs2", "MTD", "system", "/system");
 #- Start 'enderblock'
 run_program("/tmp/aroma/sleep","500");");
 unmount ("/system");
-unmount ("/system");
 run_program("/tmp/aroma/sleep","500");
 mount("yaffs2", "MTD", "system", "/system");
 #- End 'enderblock'

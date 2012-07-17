@@ -1,4 +1,8 @@
-robotomod
+RobotoMOD
 =========
 
-I don't even want to talk about the shear awesomeness that's coming out of this ROM.
+VERSION:	1
+CODENAME:	Xena
+ANDROID VER:	4.0.4 (ICE CREAM SANDWICH)
+AUTHOR:		WFSDEV
+

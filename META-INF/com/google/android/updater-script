@@ -1216,41 +1216,19 @@ ui_print("@Installing EXT tweaks");
     if
       file_getprop("/tmp/aroma/mods.prop","selected.7") == "1"
     then
-      ui_print("Installing Data2SD");
-      delete("/system/etc/init.d/40a2sd");
-      delete("/system/etc/init.d/03stuff2sd");
-      delete("/system/etc/init.d/10Apps2sd");
-      delete("/system/etc/init.d/04Apps2sd");
-      package_extract_dir("packages/sdtweak/Data2Whatever", "/system");
-      set_perm(0, 2000, 0755, "/system/etc/init.d/01data2whatever");
-      set_perm(0, 2000, 0755, "/system/etc/init.d/98zipalign");
-      set_perm(0, 2000, 0755, "/system/etc/init.d/991complete");
-      set_perm(0, 2000, 0755, "/system/xbin/e2fsck");
-      set_perm(0, 2000, 0755, "/system/xbin/tune2fs");
-      set_perm(0, 2000, 0755, "/system/xbin/mkfs.ext4");
-      set_perm(1000, 1000, 771, "/system/data_internal");
-      symlink("/system/xbin/e2fsck", "/system/bin/e2fsck");
-      symlink("/system/xbin/tune2fs", "/system/bin/tune2fs");
-      symlink("/system/xbin/mkfs.ext4", "/system/bin/mkfs.ext4");
-      symlink("/system/data_internal/mtab", "/system/etc/mtab");
-    endif;
-
-    if
-      file_getprop("/tmp/aroma/mods.prop","selected.7") == "2"
-    then
       ui_print("Installing Link2SD");
       package_extract_dir("packages/sdtweak/link2sd", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.7") == "3"
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "2"
     then
       ui_print("Installing S2E");
       package_extract_dir("packages/sdtweak/s2e", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/mods.prop","selected.7") == "4"
+      file_getprop("/tmp/aroma/mods.prop","selected.7") == "3"
     then
       ui_print("Using stock app2sd");
     endif;

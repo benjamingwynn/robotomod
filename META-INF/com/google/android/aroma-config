@@ -700,11 +700,11 @@ if prop("type.prop","selected")=="1" then
 	  "selected.2=1\n"+    #-- Default File Explorer = MIUI
 	  "selected.3=1\n"+    #-- Default Gallery = ICS
 	  "selected.4=1\n"+    #-- Default Audio Enhancement = MusicFX
-	  "selected.5=1\n"+     #-- Default Boot Animation = ICS
+	  "selected.5=1\n"+    #-- Default Boot Animation = ICS
 	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
-	  "selected.7=1\n"+    #-- Default Data2SD = None
+	  "selected.7=3\n"+    #-- Default EXT = none
 	  "selected.8=1\n"+    #-- Default Beats Audio = Full
-	  "selected.9=1\n"    #-- Default Soundset = Sense 4
+	  "selected.9=1\n"     #-- Default Soundset = Sense 4
   );
 endif;
 
@@ -770,7 +770,6 @@ if prop("type.prop","selected")=="2" then
 	    "None",               "This will stop all root permissions being acessed by apps",          0,
 
 	  "SD2Ext tweaks",        "",                                                                   2,
-	    "Data2Whatever",      "Data2Whatever, install and have 1GB+ internal space.",               0,
 	    "Link2SD",            "Link apps to your SD Card",                                          0,
 	    "S2E",                "Set and forget.",                                                    0,
 	    "None",               "Select this if you don't have an EXT partition",                     1,
@@ -799,8 +798,8 @@ if prop("type.prop","selected")=="3" then
 	  "selected.4=3\n"+    #-- Default Audio Enhancement = None
 	  "selected.5=1\n"+    #-- Default Boot Animation = Stock
 	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
-	  "selected.7=1\n"+    #-- Default Data2SD = None
-	  "selected.8=3\n"+     #-- Default Beats Audio = None
+	  "selected.7=3\n"+    #-- Default EXT = none
+	  "selected.8=3\n"+    #-- Default Beats Audio = None
 	  "selected.9=2\n"     #-- Default Soundset = ICS
   );
 endif;

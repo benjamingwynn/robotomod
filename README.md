@@ -1,8 +1,8 @@
-RobotoMOD
+RobotoMOD development branch
 =========
 
-VERSION:	1
-CODENAME:	Xena
+VERSION:	X
+CODENAME:	XXXXXX
 ANDROID VER:	4.0.4 (ICE CREAM SANDWICH)
 AUTHOR:		WFSDEV
-BRANCH:		Xena
+BRANCH:		dev

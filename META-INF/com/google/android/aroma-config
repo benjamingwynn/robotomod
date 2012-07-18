@@ -360,7 +360,7 @@ menubox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
-          "Cyanogenmod 9",           "Alpha 5",                                                  "@install",
+          "Cyanogenmod 9",           "Alpha 6",                                                  "@install",
           "AOKP Build 38",           "Build 38",                                                 "@install"
 );
 endif;

@@ -361,8 +361,7 @@ menubox(
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
           "Cyanogenmod 9",           "Alpha 5",                                                  "@install",
-          "AOKP Build 38",           "Build 38",                                                 "@install",
-          "Paranoid Android",        "Alpha 0",                                                  "@install"
+          "AOKP Build 38",           "Build 38",                                                 "@install"
 );
 endif;
 ###################################################################################################
@@ -572,7 +571,7 @@ if prop("type.prop","selected")=="2" then
       "Lock font preview",
     
     #-- Text
-      "0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM : : 0123456789 AM PM",
+      "0123456789 AM PM 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789 AM PM",
   
     #-- Icon
       "@blank"
@@ -609,7 +608,7 @@ if prop("type.prop","selected")=="2" then
       "UI font preview",
   
     #-- Text
-      "The quick brown fox jumps over the lazy dog. The dog then got leg surgery because it could not walk because of its obese weight. The fox was then shot by the dog's owner for trespassing. - RobotoMOD - 1234567890",
+      "Bacon ipsum dolor sit amet salami boudin rump tenderloin. T-bone boudin capicola prosciutto biltong venison, swine turducken short loin shoulder shank hamburger flank chicken ground round. Chuck salami shank, pig tri-tip ball tip chicken. Beef pork spare ribs, tri-tip pancetta sirloin sausage brisket shankle meatloaf ball tip. T-bone short ribs chuck beef, brisket swine shank pig. Cow sausage filet mignon andouille, corned beef tri-tip bacon tongue turkey short loin brisket pork fatback. Venison turkey chuck rump, prosciutto jerky beef ribeye ground round. - RobotoMOD - 1234567890",
   
     #-- Icon
       "@blank"

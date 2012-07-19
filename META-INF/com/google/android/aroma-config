@@ -855,56 +855,6 @@ if prop("type.prop","selected")=="2" then
   );
 endif;
 
-#################################################################################################################
-# [[Selection - remove shit]]
-#
-#-- IF "Custom" Installation, show configuration, then write sApps.prop
-if prop("type.prop","selected")=="2" then
-   checkbox(
-    #-- Title
-      "Default apps",
-	  
-    #-- Sub Title
-      "This is the list of all the default system apps - you are able to remove some here. However, please proceed with caution!",
-	  
-    #-- Icon
-      "@default",
-	  
-    #-- Will be saved as
-      "sApps.prop",
-	  
-	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#
-
-	  "Applications",         "",                                                                   2,
-	  "Browser",              "Default ICS browser",                                                1,
-	  "Calculator",           "Default calculator application",                                     1,
-	  "Clock",                "Default clock application",                                          1,
-	  "Camera",               "Default ICS camera",                                                 1,
-	  "Contacts",             "Default contacts application",                                       1,
-	  "Developement tools",   "Pointless dev tools app",                                            0, # <-- Disabled by default
-	  "Email",                "AOSP email app - this is not GMail",                                 1,
-	  "Goo Manager",          "Used to provide you with OTA updates",                               1,
-	  "HTML Viewer",          "Used for viewing basic HTML documents on your SD card",              1,
-	  "Keyboard",             "Default Latin ICS keyboard",                                         1,
-	  "SMS",                  "Default ICS SMS application",                                        1,
-	  "Video Editor",         "A very unused Video Editing suite that comes with ICS",              1,
-	  "Voice Dialer",         "Voice dialer for voice dialing",                                     1,
-
-	  "Live wallpapers",      "",                                                                   2,
-	  "Galaxy",               "A galaxy made up of slowly swerling stars",                          1,
-	  "Holo Spiral",          "Holo themed spiral wallpaper",                                       1,
-	  "Magic Smoke",          "Draws smoke, clouds, water and plasmas",                             1,
-	  "Noise Field",          "Default Android LWP",                                                1,
-	  "Phase Beam",           "Phase beam themed wallpaper",                                        1,
-	  "Unicorn Porn",         "Feel the Swagger",                                                   1,
-	  "Visualization",        "Default Android LWP",                                                1,
-
-	  "Other",         "",                                                                          2,
-	  "Theme Support",        "Support for CM9/AOKP themes",                                        1
-);
-endif;
 ##################################################################################################################
 # [[Launcher]]
 #

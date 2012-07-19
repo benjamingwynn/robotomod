@@ -7,10 +7,10 @@ Now for every element that you like chose a mode (PhoneUI, Phablet/Nexus-7UI, Ta
 
 Because you are selecting this core as your base, it means you will suffer the following bugs in RobotoMOD that are in ParanoidAndroid.
 
-- The ROM is not as stable as AOKP or CM9
 - HQ videos don't work
 - Sometimes a pop up will appear saying a new SIM card has been inserted and wants you to restart the phone. Just press back when this message appears
 - Tablet mode doesn't work
+- Gyroscope/accelerometer doesn't work
 
 Credit to the following people:
 

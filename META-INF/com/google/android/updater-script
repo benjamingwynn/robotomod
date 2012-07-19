@@ -1027,6 +1027,15 @@ mount("yaffs2", "MTD", "system", "/system");
 #- End 'enderblock'
       ui_print("Extracting vendor...");
       package_extract_dir("packages/core/paranoid/vendor","/system/vendor");
+#- Start 'enderblock'
+run_program("/tmp/aroma/sleep","500");
+unmount ("/system");
+run_program("/tmp/aroma/sleep","500");
+mount("yaffs2", "MTD", "system", "/system");
+#- End 'enderblock'
+      ui_print("Extracting props...");
+      package_extract_file("packages/core/paranoid/build.prop","/system");
+      package_extract_file("packages/core/paranoid/pad.prop","/system");
 
       symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
       symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");

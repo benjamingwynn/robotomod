@@ -340,6 +340,7 @@ menubox(
 	  
           "Cyanogenmod 9",           "Alpha 6",                                                  "@install",
           "AOKP Build 38",           "Build 38",                                                 "@install",
+	  "ParanoidAndroid",         "Alpha 2",                                                  "@install",
           "No core",                 "Keep your current ICS installation",                       "@install"
 );
 else
@@ -361,7 +362,8 @@ menubox(
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
           "Cyanogenmod 9",           "Alpha 6",                                                  "@install",
-          "AOKP Build 38",           "Build 38",                                                 "@install"
+          "AOKP Build 38",           "Build 38",                                                 "@install",
+	  "ParanoidAndroid",         "Alpha 2 - now with working Wi-Fi!",                        "@install"
 );
 endif;
 ###################################################################################################
@@ -414,27 +416,27 @@ agreebox(
 endif;
 
 #- ParanoidAndroid Changelog/bugs
-#if prop("core.prop","selected")=="3" then
-#agreebox(
-#  #-- Title
-#    "Paranoid Android",
-#  
-#  #-- Subtitle / Description
-#    "Please read through the following notice:",
-#  
-#  #-- Icon
-#    "@agreement",
-#  
-#  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
-#    resread("paranoid.txt"),
-#
-#  #-- Checkbox Text
-#    "I understand, continue the installation",
-#  
-#  #-- Unchecked Alert Message
-#    "Please check the checkbox to continue!"
-#);
-#endif;
+if prop("core.prop","selected")=="3" then
+agreebox(
+  #-- Title
+    "Paranoid Android",
+  
+  #-- Subtitle / Description
+    "Please read through the following notice:",
+  
+  #-- Icon
+    "@agreement",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
+    resread("paranoid.txt"),
+
+  #-- Checkbox Text
+    "I understand, continue the installation",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+endif;
 ###################################################################################################
 # [[Font selection - BETA]]
 #

@@ -1103,6 +1103,29 @@ writetmpfile("gapps.prop","selected=0\n");
 
 endif;
 
+###################################################################################################################
+# [[OTA Updates]]
+#
+menubox(
+    #-- Title
+      "OTA Updates",
+	  
+    #-- Sub Title
+      "Would you like OTA updates to be enabled in RobotoMOD? This installs the GooManager app which we use to provide you with easy-to-use OTA updates",
+	  
+    #-- Icon:
+      "@default",
+	  
+    #-- Will be saved as
+      "ota.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+          "Yes",              "Yes, enable the OTA updates feature and install GooManager",  "@install",
+          "No",               "No, don't enable OTA updates and don't install GooManager",   "@install"
+);
 ##################################################################################################################
 # [[Cookiejar]]
 #

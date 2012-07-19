@@ -735,7 +735,19 @@ ui_print("Installing UI font");
       ui_print("Installing GMail");
       package_extract_dir("packages/gappsextra/gmail", "/system/app");
     endif;
-
+###########################################################################
+#-
+#- Enabling/Disabling OTA Updates
+#-
+ui_print("@OTA Updates");
+if
+  file_getprop("/tmp/aroma/ota.prop","selected") == "1"
+then
+  ui_print("Enabling OTA updates");
+  package_extract_dir("packages/UserApps/GooManager","/system/app");
+else
+  ui_print("Disabling OTA updates");
+endif;
 ###########################################################################
 #-
 #- Installing GPS tweaks

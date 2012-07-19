@@ -1106,6 +1106,8 @@ endif;
 ###################################################################################################################
 # [[OTA Updates]]
 #
+if prop("type.prop","selected")=="1" then writetmpfile("ota.prop","selected=1\n"); endif;
+if prop("type.prop","selected")=="2" then
 menubox(
     #-- Title
       "OTA Updates",
@@ -1126,6 +1128,8 @@ menubox(
           "Yes",              "Yes, enable the OTA updates feature and install GooManager",  "@install",
           "No",               "No, don't enable OTA updates and don't install GooManager",   "@install"
 );
+endif;
+if prop("type.prop","selected")=="3" then writetmpfile("ota.prop","selected=0\n"); endif;
 ##################################################################################################################
 # [[Cookiejar]]
 #

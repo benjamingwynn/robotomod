@@ -713,7 +713,7 @@ ui_print("Installing UI font");
       file_getprop("/tmp/aroma/gapps.prop","selected.1") == "1"
     then
       if
-        file_gerprop("/tmp/aroma/gappsextra.prop","selected.1") == "1"
+        file_getprop("/tmp/aroma/gappsextra.prop","item.1.1") == "1"
       then
         ui_print("Installing Google Now");
         package_extract_dir("packages/gappsextra/googlenow", "/data/app");
@@ -723,14 +723,14 @@ ui_print("Installing UI font");
     endif;
 
     if
-      file_getprop("/tmp/aroma/gappsextra.prop","selected.2") == "1"
+      file_getprop("/tmp/aroma/gappsextra.prop","item.1.2") == "1"
     then
       ui_print("Installing JB Google Play");
       package_extract_dir("packages/gappsextra/jbmarket", "/system/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/gappsextra.prop","selected.3") == "1"
+      file_getprop("/tmp/aroma/gappsextra.prop","item.1.3") == "1"
     then
       ui_print("Installing GMail");
       package_extract_dir("packages/gappsextra/gmail", "/system/app");

@@ -15,6 +15,7 @@ benjamingwynn & dudeman1996 from WFSdev made RobotoMOD, however, we couldn't hav
 - asdfzz (LGHome)
 - Super-Android (The detailed explanation about what AOKP is)
 - SilentStormer (Google Now)
+- dsixda (we use his kitchen to build the ROM)
 - intel007 (Google JB market app)
 - Snipa (GooManager)
 - jikintaru (coverting one image into a boot animation)

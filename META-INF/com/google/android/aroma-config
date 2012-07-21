@@ -1161,6 +1161,27 @@ else
   writetmpfile("previnstall.prop","previousinstall=no\n");
 endif;
 
+menubox(
+    #-- Title
+      "One last question",
+	  
+    #-- Sub Title
+      "What type of phone do you have?",
+	  
+    #-- Icon:
+      "@default",
+	  
+    #-- Will be saved as
+      "phonetype.prop",
+	  
+	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+	  
+          "GSM",              "I have a SIM card slot in my phone.",                          "@install",
+          "CDMA",             "I don't have a SIM card slot in my phone.",                    "@install"
+);
+
 ##########################################################################################################
 # [[Ready for Installation?]]
 #

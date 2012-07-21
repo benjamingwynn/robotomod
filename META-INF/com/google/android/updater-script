@@ -1214,6 +1214,24 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/chmod",
         "/system/bin/uptime", "/system/bin/vmstat", "/system/bin/watchprops",
         "/system/bin/wipe");
 
+#
+# CDMA/GSM SUPPORT
+#
+
+    if
+      file_getprop("/tmp/aroma/phonetype.prop","selected") == "1"
+    then
+      ui_print("Support for the marvel....");
+      package_extract_dir("device/marvel","/system");
+    endif;
+
+    if
+      file_getprop("/tmp/aroma/phonetype.prop","selected") == "2"
+    then
+      ui_print("Support for the marvelc....");
+      package_extract_dir("device/marvelc","/system");
+    endif;
+
 set_progress(1.00);
 #-- Finish
 ui_print(" ");

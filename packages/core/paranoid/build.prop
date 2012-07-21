@@ -12,7 +12,6 @@ ro.build.type=user
 ro.build.user=nims
 ro.build.host=tc
 ro.build.tags=test-keys
-ro.product.model=Wildfire S A510e
 ro.product.brand=htc_europe
 ro.product.name=htc_marvel
 ro.product.device=marvel

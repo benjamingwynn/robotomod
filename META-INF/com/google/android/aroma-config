@@ -959,6 +959,49 @@ if prop("type.prop","selected")=="4" then
 endif;
 
 #####################################################################################################################
+# [[HD image tweak]]
+#
+#-- IF "Recommended" Installation, don't show configuration, check if PA core is selected, then write default hdit.prop
+if prop("type.prop","selected")=="1" && prop("core.prop","selected")=="1" || prop("core.prop","selected")=="2" then
+  writetmpfile(
+      #-- Prop file will write to /tmp/aroma/hdit.prop
+  	  "hdit.prop",
+	
+	  #-- Default Values
+	    "selected=3\n"    #-- Default = Don't install HD tweak
+    );
+endif;
+
+if prop("type.prop","selected")=="3" && prop("core.prop","selected")=="1" || prop("core.prop","selected")=="2" then
+  writetmpfile(
+      #-- Prop file will write to /tmp/aroma/hdit.prop
+  	  "hdit.prop",
+	
+	  #-- Default Values
+	    "selected=3\n"    #-- Default = Don't install HD tweak
+    );
+endif;
+
+if prop("type.prop","selected")=="2" && prop("core.prop","selected")=="1" || prop("core.prop","selected")=="2" then
+  menubox(
+    #-- Title
+      "HDIT",
+	  
+    #-- Sub Title
+      "HDIT is a build.prop tweak that can make your phones display look HD and makes images look smaller on the screen. Some other advantages of HDIT are the ability to apply HDPI themes in themechooser. HDIT is experimental and MAY cause some apps to disappear from Google Play.",
+	  
+    #-- Icon:
+      "@customize",
+	  
+    #-- Will be saved as
+      "hdit.prop",
+	  
+          "Install",              "Install High Definition Image Tweak",                        "@welcome",
+          "Don't install",        "Don't install this tweak",                                   "@welcome"
+);
+endif;
+
+#####################################################################################################################
 # [[Gapps]]
 
 #

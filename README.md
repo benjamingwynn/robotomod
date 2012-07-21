@@ -1,11 +1,11 @@
 RobotoMOD development branch
 =========
 
-VERSION:	X
-CODENAME:	XXXXXX
-ANDROID VER:	4.0.4 (ICE CREAM SANDWICH)
-AUTHOR:		WFSDEV
-BRANCH:		dev
+VERSION:        X
+CODENAME:       XXXXXX
+ANDROID VER:    4.0.4 (ICE CREAM SANDWICH)
+AUTHOR:         WFSDEV
+BRANCH:         dev
 
 Porting RobotoMOD?
 =========

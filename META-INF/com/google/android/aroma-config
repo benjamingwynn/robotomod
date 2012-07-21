@@ -704,7 +704,7 @@ if prop("type.prop","selected")=="1" then
 	  "selected.6=1\n"+    #-- Default Root Management = SuperUser
 	  "selected.7=3\n"+    #-- Default EXT = none
 	  "selected.8=1\n"+    #-- Default Beats Audio = Full
-	  "selected.9=1\n"     #-- Default Soundset = Sense 4
+	  "selected.9=2\n"     #-- Default Soundset = ICS
   );
 endif;
 
@@ -779,9 +779,10 @@ if prop("type.prop","selected")=="2" then
 	    "Normal Install",     "Install without renaming the phone",                                 0,
 	    "Do not install",     "Doesn't install the Beats by Dr. Dre audio plug-in",                 0,
 
-	  "Sound set",           "",                                                                    2,
-	    "Sense 4",       "Install the Sense 4 UI sounds",                                           1,
-	    "ICS",           "Keep the default ICS sounds",                                             0
+	  "Sound set",            "",                                                                   2,
+	    "Sense 4",            "Install the Sense 4 UI sounds",                                      1,
+	    "ICS",                "Keep the default ICS sounds",                                        0,
+	    "MIUI",               "UI sounds from the MIUIv4 ROM",                                      0
 );
 endif;
 

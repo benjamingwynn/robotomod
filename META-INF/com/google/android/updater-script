@@ -549,6 +549,13 @@ ui_print("@Soundset");
       package_extract_dir("packages/uisounds/ics", "/system/media/sounds/ui");
     endif;
 
+    if
+      file_getprop("/tmp/aroma/mods.prop","selected.9") == "3"
+    then
+      ui_print("Installing MIUI soundset");
+      package_extract_dir("packages/uisounds/miui", "/system/media/sounds/ui");
+    endif;
+
 #- Start 'enderblock'
 run_program("/tmp/aroma/sleep","500");
 unmount ("/system");

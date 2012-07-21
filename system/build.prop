@@ -14,7 +14,6 @@ ro.build.type=userdebug
 ro.build.user=root
 ro.build.host=RobotoMOD
 ro.build.tags=release-keys
-ro.product.model=HTC Wildfire S
 ro.product.brand=htc_europe
 ro.product.name=htc_marvel
 ro.product.device=marvel
@@ -75,7 +74,6 @@ debug.sf.hw=1
 # The density in DPI of the LCD of this board. This is used to scale the UI.
 #
 # 160 (default)
-ro.sf.lcd_density=160
 
 #debug.enabletr=true
 debug.qctwa.statusbar=1
@@ -125,7 +123,7 @@ rild.libargs=-d /dev/smd0
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.
-wifi.supplicant_scan_interval = 150
+wifi.supplicant_scan_interval = 180
 
 ro.com.google.locationfeatures=1
 
@@ -256,8 +254,6 @@ ro.cm.version=RobotoMOD 2 - devbranch
 ro.modversion=RobotoMOD 2 - devbranch
 ro.aokp.version=RobotoMOD 2 - devbranch
 ro.goo.developerid=benjamingwynn
-ro.goo.rom=RobotoMOD
-ro.goo.version=2
 ##
 
 ##############################################
@@ -275,4 +271,4 @@ net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
 # Disable USB debugging notification
-persist.adb.notify=0
+

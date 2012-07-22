@@ -27,7 +27,7 @@ ini_set("dp",                   "2");
 fontresload( "0", "ttf/Roboto.ttf", "12" );
 loadlang("langs/en.lang");
 fontresload( "1", "ttf/Roboto.ttf", "18" );
-theme("ics");
+theme("robotomod");
 restotmp("exec/sleep","sleep");
 
 ##########################################################################################
@@ -117,7 +117,7 @@ menubox(
 ##########################################################################################
 # [[Welcome Page]] 
 #
-theme("ics-welcome");
+theme("robotomod-welcome");
 viewbox(
   #-- Title
     "Welcome",
@@ -133,7 +133,7 @@ viewbox(
 ##########################################################################################
 # [[License]] 
 #
-theme("ics");
+theme("robotomod");
 agreebox(
   #-- Title
     "RobotoMOD License",

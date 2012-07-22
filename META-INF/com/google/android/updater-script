@@ -482,13 +482,13 @@ ui_print("@Installing Beats Audio...");
         file_getprop("/tmp/aroma/mods.prop","selected.8") == "1"
       then
         ui_print("Installing Full Beats");
-        package_extract_dir("packages/BeatsAudio/cm9aokp/Full", "/system");
+        package_extract_dir("packages/BeatsAudio", "/system");
       endif;
       if
         file_getprop("/tmp/aroma/mods.prop","selected.8") == "2"
       then
         ui_print("Installing Normal Beats");
-        package_extract_dir("packages/BeatsAudio/cm9aokp/Normal", "/system");
+        package_extract_dir("packages/BeatsAudio", "/system");
       endif;
     endif;
 

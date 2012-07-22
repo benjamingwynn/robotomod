@@ -46,6 +46,23 @@ anisplash(
     "splash/a6", 150
 );
 
+#########################################################################################
+# [[Welcome Page]] 
+#
+theme("robotomod-welcome");
+viewbox(
+  #-- Title
+    "Welcome",
+  
+  #-- Text
+
+     "\n",
+  
+  #-- Icon
+    "@blank"
+);
+
+
 ##########################################################################################
 # [[Device other than marvel(c/ct) warning - you never know if the ROM makes it's way to a device other than the WFS]]
 #
@@ -85,6 +102,7 @@ reboot("now");
 
 endif;
 
+
 ##########################################################################################
 # [[Location information]] 
 #
@@ -106,29 +124,13 @@ menubox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
-	    "Africa",          "Choose this if your nearest location is Africa",            "@welcome",  #-- selected=1
-	    "Asia",            "Choose this if your nearest location is Asia",              "@welcome",  #-- selected=2
-	    "Europe",          "Choose this if your nearest location is Europe",            "@welcome",  #-- selected=3
-	    "North America",   "Choose this if your nearest location is North America",     "@welcome",  #-- selected=4
-	    "South America",   "Choose this if your nearest location is South America",     "@welcome",  #-- selected=5
-	    "Oceania",         "Choose this if your nearest location is Oceania",           "@welcome"   #-- selected=6
+	    "Africa",          "Cameroon, Rwanda, South Africa, etc.",                    "@welcome",  #-- selected=1
+	    "Asia",            "China, India, Pakistan, etc.",                            "@welcome",  #-- selected=2
+	    "Europe",          "Germany, France, UK, etc.",                               "@welcome",  #-- selected=3
+	    "North America",   "Canada, Mexico, United States, etc.",                     "@welcome",  #-- selected=4
+	    "South America",   "Argentina, Brazil, Peru, etc.",                           "@welcome",  #-- selected=5
+	    "Oceania",         "Australia, Fiji, New Zealand,  etc.",                     "@welcome"   #-- selected=6
  	   );
-
-##########################################################################################
-# [[Welcome Page]] 
-#
-theme("robotomod-welcome");
-viewbox(
-  #-- Title
-    "Welcome",
-  
-  #-- Text
-
-     "\n",
-  
-  #-- Icon
-    "@blank"
-);
 
 ##########################################################################################
 # [[License]] 

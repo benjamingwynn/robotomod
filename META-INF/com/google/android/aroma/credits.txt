@@ -1,29 +1,100 @@
-benjamingwynn & dudeman1996 from WFSdev made RobotoMOD, however, we couldn't have done it without the following people (in no particular order)...
+abcdefghijklmnopqrstuvwxyz
 
-- amarullz (AROMA installer)
-- *se-nsei (graphics)
-- alquez (original msm7k kernel and marvel device tree)
-- rezo609 (MiHome app)
-- bikedude880 (fixing red border bug)
-- mediocrehippie (ad-free hosts file)
-- molesarecoming (writing part of pandroid.txt)
-- modpunk (porting CM9)
-- d33ps1x (GPS fixes)
-- apherio (Google Music with Beats Audio mod)
-- BigBearEvo (many application packages)
-- Ravencz (creating the Cid boot animation)
-- asdfzz (LGHome)
-- DemonWav (AROMA theme base)
-- Super-Android (The detailed explanation about what AOKP is)
-- SilentStormer (Google Now)
-- dsixda (we use his kitchen to build the ROM)
-- intel007 (Google JB market app)
-- Snipa (GooManager)
-- jikintaru (coverting one image into a boot animation)
-- HTC (bootanimations and some libs)
-- TeslaCoil Software (nova launcher)
-- Android Does (apex launcher)
-- the goo.im team (hosting)
-- the cyanogenmod team (cm9 core)
-- the aokp team (aokp core)
-- xda (for housing our wonderful roms thread)
+-> *se-nsei @ xda
+---> GRAPHICS
+
+-> alquez @ xda
+---> ORIGINAL HACKED MSM7K KERNEL
+---> CM7 PORT, SOURCE USED IN CM9
+---> ALL AROUND HELP TO BENJAMINGWYNN
+
+-> amarullz @ xda
+---> AD2SDX
+---> AROMA INSTALLER
+
+-> Android Does
+---> APEX LAUCHER APK
+---> APEX LAUNCHER DEVELOPMENT
+
+-> AOKP team @ aokp.co
+---> CREATING THE AOKP ROM
+
+-> apherio @ xda
+---> BEATS AUDIO GOOGLE MUSIC MOD
+
+-> asdfzz @ xda
+---> LG HOME PORT
+
+-> BigBearEvo @ xda
+---> APPLICATION PACAKGES
+
+-> bikedude880 @ irc.freenode.net
+---> HELP OVER IRC
+---> POINTED OUT HOW TO FIX A CERTAIN BUG
+
+-> CyanogenMod team @ cyanogenmod.com
+---> CYANOGENMOD 9 ROM
+---> ORIGINAL/EXAMPLE CM KERNEL
+---> ORIGINAL/EXAMPLE CM DEVICE TREE
+
+-> d33ps1x @ xda
+---> LOCAL GPS HACKS
+
+-> DemonWav @ xda
+---> AROMA THEME BASE (ICS THEME)
+
+-> DevHost @ d-h.st
+---> ROBOTOMOD MIRROR
+
+-> dsixda @ xda
+---> ANDROID ROM KITCHEN
+
+-> Freenode Staff @ irc.freenode.net
+---> IRC HELP
+---> IRC ROOM HOSTING
+
+-> Goo.im team @ goo-inside.me
+---> HOSTING ROBOTOMOD
+
+-> HTC @ htc.com
+---> SOME LIBS
+---> BOOT ANIMATIONS
+---> DESIGNING AND MAKING THE DEVICE
+
+-> intel007 @ xda
+---> JELLY BEAN MARKET
+
+-> jikintaru @ xda
+---> INTERESTING BOOT ANIMATION CONVERSION
+
+-> mediocrehippie @ xda
+---> AD-FREE HOSTS FILE
+
+-> modpunk @ cryptomilk.org
+---> MARVEL CM9 KERNEL
+---> MARVEL CM9 DEVICE TREE
+
+-> molesarecoming @ xda
+---> WRITING 90% OF PARANOID.TXT
+
+-> Ravencz @ xda
+---> CREATING THE HOLO CID BOOT ANIMATION
+
+-> rezo609 @ xda
+---> PORTING MIHOME
+
+-> Snipa @ snipanet.com
+---> GOOMANAGER.APK
+---> OTA UPDATE SUPPORT
+
+-> SilentStormer @ xda
+---> GOOGLE NOW PORT
+
+-> Super-Android @ xda
+---> WRITING 80% OF AOKP.TXT
+
+-> TeslaCoil Software @ teslacoilsw.com
+---> NOVA LAUNCHER
+
+-> xda @ xda
+---> HOUSING OUR ROMS THREAD

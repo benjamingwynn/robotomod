@@ -13,6 +13,7 @@ benjamingwynn & dudeman1996 from WFSdev made RobotoMOD, however, we couldn't hav
 - BigBearEvo (many application packages)
 - Ravencz (creating the Cid boot animation)
 - asdfzz (LGHome)
+- DemonWav (AROMA theme base)
 - Super-Android (The detailed explanation about what AOKP is)
 - SilentStormer (Google Now)
 - dsixda (we use his kitchen to build the ROM)

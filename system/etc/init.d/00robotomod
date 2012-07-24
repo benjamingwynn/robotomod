@@ -1,0 +1,40 @@
+#!/system/bin/sh
+#
+# Print startup info for the RobotoMOD ROM, this is useful for diagnostic reasons.
+#
+
+#- Set the RMLOG flag to do this command
+RMLOG="log -p i -t RobotoMOD"
+
+#- Print a cool banner
+$RMLOG "__________      ___.           __            _____   ________  ________    ";
+$RMLOG "\______   \ ____\_ )__   _____/  (_  ____   /     \  \_____  \ \______ \   ";
+$RMLOG " (       _//  _ \) __ \ /  _ \   __\/  _ \ /       \  /  ()   \ )    )  \  ";
+$RMLOG " (    )   (  <_> ) \_\ (  <_> )  ( (  <_> )    Y    \/   ()    \)   _'   \ ";
+$RMLOG " (____)_  /\____/)___  /\____/(__(  \____/\___/ \__  /\_______  /_______  / ";
+$RMLOG "        \/           \/                           \/         \/        \/  ";
+
+#- Welcome :)
+$RMLOG "Welcome to Android `getprop ro.build.version.release` / RobotoMOD-`getprop ro.goo.version`";
+
+#- Print info
+
+$RMLOG "---------------------------------------------------------------------------";
+$RMLOG "RobotoMOD diagnosic information, please provide this information with the";
+$RMLOG "rest of the logcat, thanks :)";
+
+#- Print system info
+$RMLOG "";
+$RMLOG "LCD DENSITY - `getprop ro.sf.lcd_density`";
+$RMLOG "DEVICE - `getprop ro.product.model` (`ro.product.board`)";
+$RMLOG "ROM - `getprop ro.build.version.release`";
+$RMLOG "";
+
+#- Print msg
+$RMLOG "";
+$RMLOG "If you encounter any other problems when using RobotoMOD, please enclose":
+$RMLOG "this document and the contents of /sdcard/robotomod/cookiejar.";
+$RMLOG "";
+$RMLOG "";
+$RMLOG "";
+$RMLOG "";

@@ -809,7 +809,7 @@ if prop("type.prop","selected")=="2" then
       "@customize",
 	  
     #-- Will be saved as
-      "apps.prop",
+      "userapps.prop",
 	  
 	  #-----------------------------------[ Selectbox With Groups ]----------------------------------#
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #

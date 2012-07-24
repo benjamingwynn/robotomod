@@ -129,77 +129,77 @@ if
   file_getprop("/tmp/aroma/type.prop","selected") == "2"
 then
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.1") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.1") == "1"
     then
       ui_print("Installing AndChat");
       package_extract_dir("packages/UserApps/AndChat", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.2") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.2") == "1"
     then
       ui_print("Installing Facebook");
       package_extract_dir("packages/UserApps/Facebook", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.3") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.3") == "1"
     then
       ui_print("Installing Flash");
       package_extract_dir("packages/UserApps/Flash", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.4") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.4") == "1"
     then
       ui_print("Installing Firefox");
       package_extract_dir("packages/UserApps/Firefox", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.5") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.5") == "1"
     then
       ui_print("Installing NoFrills");
       package_extract_dir("packages/UserApps/NoFrills", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.6") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.6") == "1"
     then
       ui_print("Installing ROM Toolbox");
       package_extract_dir("packages/UserApps/RomToolbox", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.7") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.7") == "1"
     then
       ui_print("Installing SDBooster");
       package_extract_dir("packages/UserApps/SDBooster", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.8") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.8") == "1"
     then
       ui_print("Installing Tinyshark");
       package_extract_dir("packages/UserApps/TinyShark", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.9") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.9") == "1"
     then
       ui_print("Installing Titanium Backup");
       package_extract_dir("packages/UserApps/Titanium", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.10") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.10") == "1"
     then
       ui_print("Installing Twitter");
       package_extract_dir("packages/UserApps/Twitter", "/data/app");
     endif;
 
     if
-      file_getprop("/tmp/aroma/apps.prop","item.1.11") == "1"
+      file_getprop("/tmp/aroma/userapps.prop","item.1.11") == "1"
     then
       ui_print("Installing XDA");
       package_extract_dir("packages/UserApps/XDA", "/data/app");

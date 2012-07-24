@@ -1,4 +1,5 @@
-<@center><b><#selectbg_g>Welcome</#></b>
+<@center><b><#selectbg_g>Welcome to RobotoMOD 2</#></b>
+(updated 24 July 2012)
 
 Welcome to RobotoMOD, let's run you past some basics...
 
@@ -6,11 +7,11 @@ RobotoMOD is a free, open ROM. Anybody can take the source used in any part of R
 
 Updates
 
-When RobotoMOD is updated you will be notified on the main thread, at the date of the writing of this document (20/06/12 - DD/MM/YY) the thread has not been created. Upon the next update this text document will be updated. It is recommended you re-read through this document when it is done so. You will also be able to download updates aprox. 72 hours after they are published to the main hosting server, goo.im thanks to an update notification system installed called Goo Manager. There is an option to not install this software during the installation, if you wish for it to be disabled.
+When RobotoMOD is updated you will be notified on the main thread, at the date of the writing of this document (20/06/12 - DD/MM/YY) the thread has not been created. It is recommended you re-read through this document when it is done so. You will also be able to download updates aprox. 72 hours after they are published to the main hosting server, goo.im thanks to an update notification system installed called Goo Manager. There is an option to not install this software during the installation, if you wish for it to be disabled.
 
 Your information
 
-We will NEVER collect, store or use your information in anyway when you're using this ROM. However, thrid party packages (such as software you download from the internet) may be able to do. People who look over your shoulder when you are typing in credit card information may also be able to see some information, but this is not my doing. Please note that both ROM 'cores' (CM9 and AOKP) have statistic monitoring applications - I recommend you read their privicy policies.
+We will NEVER collect, store or use your information in anyway when you're using this ROM. However, thrid party packages (such as software you download from the internet) may be able to do. People who look over your shoulder when you are typing  in credit card information may also be able to see some information, we are not responsible for any damage or leakage of information. Please note that two of the ROM 'cores' (CM9 and AOKP) have statistic monitoring applications - we recommend you read their privicy policies.
 
 This document
 
@@ -18,12 +19,12 @@ We don't if anybody reads this document anyway, but any updates to it will be st
 
 Packages
 
-We are totally NOT responsible if a package doesn't work, blame the developer of that package. Please do not report that something does not work when somebody has already pointed out that it doesn't work. I will remove broken packages in updates to come.
+We are totally NOT responsible if a package doesn't work, blame the developer of that package. Please do not report that something does not work when somebody has already pointed out that it doesn't work. We will remove broken packages in updates to come.
 
 Bugs
 
-RobotoMOD has been tested quite well and should never give you any problems when using any packages, however - sometimes bad things happen and there may be one line of code that is incorrect and may cause a package to install or even the wrong package to install. When something bad does happen please take a log of the problem - we highly recommend using the Android SDK 'adb logcat' command to report a problem.
+RobotoMOD has been tested quite well and should never give you any problems when using any packages, however - sometimes bad things happen and there may be one line of code that is incorrect and may cause a package to install or even the wrong package to install. When something bad does happen please take a log of the problem - we highly recommend using the Android SDK 'adb logcat' command to report a problem. Please also send us your cookiejar preferences, you can find these at /sdcard/robotomod/cookiejar.
 
 CDMA support
 
-RobotoMOD 1 does not YET provide full CDMA support.
+RobotoMOD 2 has experimental CDMA support, please read through the supplied CDMA document for more information.

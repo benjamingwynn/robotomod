@@ -1199,6 +1199,32 @@ menubox(
 );
 
 ##########################################################################################################
+# [[CDMA INSTALLATION WARNING]]
+#
+
+if prop("phonetype.prop","selected")=="2" then
+agreebox(
+  #-- Title
+    "Important - CDMA support",
+  
+  #-- Subtitle / Description
+    "Please read the document carefully...",
+  
+  #-- Icon
+    "@license",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/*.txt )
+    resread("cdma.txt"),
+
+  #-- Checkbox Text
+    "I understand the risks.",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+endif;
+
+##########################################################################################################
 # [[Ready for Installation?]]
 #
 ini_set("text_next", "Install Now");

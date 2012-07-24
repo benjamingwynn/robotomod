@@ -12,7 +12,7 @@
 # Thanks to amarullz for the original AROMA installation manifest
 
 unmount ("/system");
-ui_print("@RobotoMOD Xena");
+ui_print("@RobotoMOD development branch build");
 ui_print("@Installing - please wait");
 set_progress(0.0);
 ui_print(" ");

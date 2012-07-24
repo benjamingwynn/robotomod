@@ -1254,7 +1254,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1273,7 +1273,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1291,7 +1291,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1310,7 +1310,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1330,7 +1330,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1349,7 +1349,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1367,7 +1367,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1386,7 +1386,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1405,7 +1405,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+  #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
 
 #- If beats audio full = no
@@ -1416,7 +1416,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
 endif;
 
@@ -1431,7 +1431,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1450,7 +1450,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1468,7 +1468,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1487,7 +1487,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1507,7 +1507,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1526,7 +1526,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1544,7 +1544,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1563,7 +1563,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1582,7 +1582,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
 
 #- If beats audio full = no
@@ -1593,7 +1593,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+ #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
 endif;
 

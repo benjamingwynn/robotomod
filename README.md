@@ -1,11 +1,7 @@
 RobotoMOD development branch
 =========
 
-VERSION:        X
-CODENAME:       XXXXXX
-ANDROID VER:    4.0.4 (ICE CREAM SANDWICH)
-AUTHOR:         WFSDEV
-BRANCH:         dev
+Version: 2 (may change overtime) ..... Codename: Devlopment Branch ..... Android Version: 4.0.4 .... Author: WFSDEV .... Branch: dev
 
 Porting RobotoMOD?
 =========

@@ -1,1 +1,7 @@
-todo
+##### Not too sure on what to put here, feel free to correct/add/remove anything here
+
+We understand that you are using a CDMA device with RobotoMOD. Please understand that CDMA support is very difficult, and does not work with all cores, but we are trying our best to get CDMA devices fully supported!
+
+Currently, CM9 would be the best core to use if you are a CDMA user, since it has the best support and functionality for CDMA users.
+
+By agreeing to this, you accept that not all features of your device will be utilized and that bugs will only be reported in the XDA thread if they contain logcats. Bug reports that contain "THIS IS BROKEN FIX IT NOW!" will be explicitly ignored. You also agree that neither benjamingwynn nor dudeman1996 are responsible for any damage/bricking that occurs to your device (even though it is HIGHLY unlikely).

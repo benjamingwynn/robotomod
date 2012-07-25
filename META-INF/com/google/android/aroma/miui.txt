@@ -1,1 +1,24 @@
-todo
+Thanks for selecting MIUI as your core for RobotoMOD :)
+
+MIUI is a ROM completely different to the traditional Android experience. It's been called an Android/iOS hybrid - it has the customizability of an Android ROM, and the beauty of iOS. Just a few features of this ROM include:
+
+- Privacy protection - Precise interception of harassing calls and junk messages,dDesktop folders encryption, hiding important programs, unique guest mode, hiding all messages and call logs
+- T9 smart dialer, easier and faster calls, group sending short messages for festivals, SMS, contacts, call logs backup
+- Notifications - all important controls (such as Wi-Fi, Bluetooth and Brightness) are acessible from within the notifications bar. Just drag it down, tap the 'Toggles' tab and you have access to twelve of the most commonly used settings. Of course these are fully customizable to your preferences.
+
+
+Since this is your core for RobotoMOD, RobotoMOD will suffer from the same bugs that MIUI has. Those are:
+
+- The lockscreen is laggy - can be fixed by changing the theme
+- Themes don't apply properly using the theme chooser - you have to use a root explorer to give full permissions to /data/system/theme (all checked)
+- Notification LED doesn't work for calls or texts - can be fixed by downloading "Light Flow Lite - LED Control" from the Play Store
+- USB tethering doesn't work
+
+
+Credits to the following people:
+
+- Henry_01
+- modpunk
+- alquez
+- droste
+- The MIUI team

@@ -3,7 +3,7 @@
 # LICENSE:
 #
 # Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
-# Copyright (C) 2012 Benjamin Gwynn ( http://benjaminprofile.moonfruit.com/ )
+# Copyright (C) 2012 Benjamin Gwynn and Ivan Brazza
 #
 # Distributed with RobotoMOD
 #
@@ -13,6 +13,7 @@
 
 unmount ("/system");
 ui_print("@RobotoMOD development branch build");
+ui_print("Please change that on release");
 ui_print("@Installing - please wait");
 set_progress(0.0);
 ui_print(" ");
@@ -20,7 +21,7 @@ ui_print("@Preparing for installation...");
 
 # Format SYSTEM?
     if
-      file_getprop("/tmp/aroma/core.prop","selected") == "4"
+      file_getprop("/tmp/aroma/core.prop","selected") == "5"
     then
       ui_print("@Not removing system files - update option chosen");
     else
@@ -34,6 +35,67 @@ mount("yaffs2", "MTD", "system", "/system");
 #- Mount DATA
 ui_print("Mounting data...");
 mount("yaffs2", "MTD", "userdata", "/data");
+
+### -> NATIVE BINARY EXTRACT
+
+ui_print("@Native binary extraction");
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "1"
+  then
+    ui_print("Extracting for CM9...");
+    package_extract_dir("packages/native-bins/cm9", "/system");
+  endif;
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "2"
+  then
+    ui_print("Extracting for AOKP...");
+    package_extract_dir("packages/native-bins/aokp", "/system");
+  endif;
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "3"
+  then
+    ui_print("Extracting for Paranoid Android...");
+    package_extract_dir("packages/native-bins/paranoid", "/system");
+  endif;
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "4"
+  then
+    ui_print("Extracting for MIUI...");
+    package_extract_dir("packages/native-bins/miui", "/system");
+  endif;
+
+### -> NATIVE BINARY SETUP
+
+ui_print("@Native binary setup");
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "1"
+  then
+    ui_print("Setting up for CM9");
+  endif;
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "2"
+  then
+    ui_print("Setting up for AOKP");
+  endif;
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "3"
+  then
+    ui_print("Setting up for Paranoid Android");
+  endif;
+
+  if
+    file_getprop("/tmp/aroma/core.prop","selected") == "4"
+  then
+    ui_print("Setting up for MIUI");
+  endif;
+
 #- Extract busybox
 ui_print("Extracting busybox...");
 package_extract_dir("packages/busybox","/tmp");
@@ -55,21 +117,9 @@ set_progress(0.1);
 ui_print("@Installing main system files");
 package_extract_dir("system","/system");
 ui_print("Finished extracting main system files");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
 
 set_progress(0.3);
 
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
 
 
 #    if
@@ -212,12 +262,6 @@ then
   ui_print("Minimal install selected, skipping installation of custom apps");
 endif;
 
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
 
 set_progress(0.7);
 
@@ -556,13 +600,6 @@ ui_print("@Soundset");
       package_extract_dir("packages/uisounds/miui", "/system/media/sounds/ui");
     endif;
 
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
-
 #
 #- LAUNCHERS
 #
@@ -803,67 +840,24 @@ endif;
 #
 ##
 
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
 
     if
 	file_getprop("/tmp/aroma/core.prop","selected") == "1"
     then
 	ui_print("@Installing CM9 core");
-#
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting addon.d...");
       package_extract_dir("packages/core/cm9/addon.d","/system/addon.d");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting app...");
       package_extract_dir("packages/core/cm9/app","/system/app");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting etc...");
       package_extract_dir("packages/core/cm9/etc","/system/etc");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting framework...");
       package_extract_dir("packages/core/cm9/framework","/system/framework");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting lib...");
       package_extract_dir("packages/core/cm9/lib","/system/lib");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting vendor...");
       package_extract_dir("packages/core/cm9/vendor","/system/vendor");
-#
+      ui_print("Setting up...");
 	package_extract_file("packages/core/cm9/bin/backuptool.sh", "/tmp/backuptool.sh");
 	package_extract_file("packages/core/cm9/bin/backuptool.functions", "/tmp/backuptool.functions");
 	set_perm(0, 0, 0777, "/tmp/backuptool.sh");
@@ -918,53 +912,17 @@ retouch_binaries("/system/lib/libusbhost.so", "097f5015205544cfc0abcabb90bfa0d9c
 	file_getprop("/tmp/aroma/core.prop","selected") == "2"
     then
 	ui_print("@Installing AOKP core");
-#
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting app...");
       package_extract_dir("packages/core/aokp/app","/system/app");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting etc...");
       package_extract_dir("packages/core/aokp/etc","/system/etc");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting framework...");
       package_extract_dir("packages/core/aokp/framework","/system/framework");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting lib...");
       package_extract_dir("packages/core/aokp/lib","/system/lib");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting vendor...");
       package_extract_dir("packages/core/aokp/vendor","/system/vendor");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-
+      ui_print("Setting up...");
 package_extract_file("packages/core/aokp/bin/backuptool.sh", "/tmp/backuptool.sh");
 set_perm(0, 0, 0777, "/tmp/backuptool.sh");
 symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
@@ -1009,57 +967,20 @@ endif;
       package_extract_file("packages/core/paranoid/bin/backuptool.sh", "/tmp/backuptool.sh");
       set_perm(0, 0, 0777, "/tmp/backuptool.sh");
       run_program("/tmp/backuptool.sh", "backup");
-#
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting app...");
       package_extract_dir("packages/core/paranoid/app","/system/app");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting etc...");
       package_extract_dir("packages/core/paranoid/etc","/system/etc");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting framework...");
       package_extract_dir("packages/core/paranoid/framework","/system/framework");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting lib...");
       package_extract_dir("packages/core/paranoid/lib","/system/lib");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting vendor...");
       package_extract_dir("packages/core/paranoid/vendor","/system/vendor");
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
       ui_print("Extracting props...");
       package_extract_file("packages/core/paranoid/build.prop","/system");
       package_extract_file("packages/core/paranoid/pad.prop","/system");
-
+      ui_print("Setting up...");
       symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
       symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
       set_perm_recursive(0, 0, 0755, 0644, "/system");
@@ -1092,12 +1013,20 @@ mount("yaffs2", "MTD", "system", "/system");
       run_program("/tmp/backuptool.sh", "restore");
     endif;
 
-#- Start 'enderblock'
-run_program("/tmp/aroma/sleep","500");
-unmount ("/system");
-run_program("/tmp/aroma/sleep","500");
-mount("yaffs2", "MTD", "system", "/system");
-#- End 'enderblock'
+    if
+      file_getprop("/tmp/aroma/core.prop","selected") == "4"
+    then
+      ui_print("@Installing MIUI Core");
+      ui_print("Extracting app...");
+      package_extract_dir("packages/core/miui/app","/system/app");
+      ui_print("Extracting etc...");
+      package_extract_dir("packages/core/miui/etc","/system/etc");
+      ui_print("Extracting framework...");
+      package_extract_dir("packages/core/miui/framework","/system/framework");
+      ui_print("Extracting lib...");
+      package_extract_dir("packages/core/miui/lib","/system/lib");
+      ui_print("Extracting vendor...");
+      package_extract_dir("packages/core/miui/vendor","/system/vendor");
 
 ###########################################################################
 #-
@@ -1124,102 +1053,6 @@ package_extract_dir("packages/kernel/default/modules","/system/lib/modules");
 
 # Link shiz
 
-ui_print("@Symlinks");
-ui_print("Linking busybox with xbin...");
-symlink("busybox", "/system/xbin/[", "/system/xbin/[[",
-        "/system/xbin/adjtimex", "/system/xbin/arp", "/system/xbin/ash",
-        "/system/xbin/awk", "/system/xbin/base64", "/system/xbin/basename",
-        "/system/xbin/bbconfig", "/system/xbin/blkid", "/system/xbin/blockdev",
-        "/system/xbin/brctl", "/system/xbin/bunzip2", "/system/xbin/bzcat",
-        "/system/xbin/bzip2", "/system/xbin/cal", "/system/xbin/cat",
-        "/system/xbin/catv", "/system/xbin/chattr", "/system/xbin/chgrp",
-        "/system/xbin/chmod", "/system/xbin/chown", "/system/xbin/chroot",
-        "/system/xbin/clear", "/system/xbin/cmp", "/system/xbin/comm",
-        "/system/xbin/cp", "/system/xbin/cpio", "/system/xbin/crond",
-        "/system/xbin/crontab", "/system/xbin/cut", "/system/xbin/date",
-        "/system/xbin/dc", "/system/xbin/dd", "/system/xbin/depmod",
-        "/system/xbin/devmem", "/system/xbin/df", "/system/xbin/diff",
-        "/system/xbin/dirname", "/system/xbin/dmesg", "/system/xbin/dnsd",
-        "/system/xbin/dos2unix", "/system/xbin/du", "/system/xbin/echo",
-        "/system/xbin/ed", "/system/xbin/egrep", "/system/xbin/env",
-        "/system/xbin/expand", "/system/xbin/expr", "/system/xbin/false",
-        "/system/xbin/fdisk", "/system/xbin/fgrep", "/system/xbin/find",
-        "/system/xbin/flash_lock", "/system/xbin/flash_unlock",
-        "/system/xbin/flashcp", "/system/xbin/flock", "/system/xbin/fold",
-        "/system/xbin/free", "/system/xbin/freeramdisk", "/system/xbin/fsync",
-        "/system/xbin/ftpget", "/system/xbin/ftpput", "/system/xbin/fuser",
-        "/system/xbin/getopt", "/system/xbin/grep", "/system/xbin/groups",
-        "/system/xbin/gunzip", "/system/xbin/gzip", "/system/xbin/halt",
-        "/system/xbin/head", "/system/xbin/hexdump", "/system/xbin/id",
-        "/system/xbin/ifconfig", "/system/xbin/insmod", "/system/xbin/install",
-        "/system/xbin/iostat", "/system/xbin/ip", "/system/xbin/kill",
-        "/system/xbin/killall", "/system/xbin/killall5", "/system/xbin/length",
-        "/system/xbin/less", "/system/xbin/ln", "/system/xbin/losetup",
-        "/system/xbin/ls", "/system/xbin/lsattr", "/system/xbin/lsmod",
-        "/system/xbin/lsusb", "/system/xbin/lzcat", "/system/xbin/lzma",
-        "/system/xbin/lzop", "/system/xbin/lzopcat", "/system/xbin/man",
-        "/system/xbin/md5sum", "/system/xbin/mesg", "/system/xbin/mkdir",
-        "/system/xbin/mke2fs", "/system/xbin/mkfifo", "/system/xbin/mkfs.ext2",
-        "/system/xbin/mkfs.vfat", "/system/xbin/mknod", "/system/xbin/mkswap",
-        "/system/xbin/mktemp", "/system/xbin/modinfo", "/system/xbin/modprobe",
-        "/system/xbin/more", "/system/xbin/mount", "/system/xbin/mountpoint",
-        "/system/xbin/mpstat", "/system/xbin/mv", "/system/xbin/nanddump",
-        "/system/xbin/nandwrite", "/system/xbin/netstat", "/system/xbin/nice",
-        "/system/xbin/nohup", "/system/xbin/nslookup", "/system/xbin/ntpd",
-        "/system/xbin/od", "/system/xbin/patch", "/system/xbin/pgrep",
-        "/system/xbin/pidof", "/system/xbin/ping", "/system/xbin/pkill",
-        "/system/xbin/pmap", "/system/xbin/poweroff", "/system/xbin/printenv",
-        "/system/xbin/printf", "/system/xbin/ps", "/system/xbin/pstree",
-        "/system/xbin/pwd", "/system/xbin/pwdx", "/system/xbin/rdev",
-        "/system/xbin/readlink", "/system/xbin/realpath", "/system/xbin/renice",
-        "/system/xbin/reset", "/system/xbin/resize", "/system/xbin/rev",
-        "/system/xbin/rm", "/system/xbin/rmdir", "/system/xbin/rmmod",
-        "/system/xbin/route", "/system/xbin/run-parts", "/system/xbin/rx",
-        "/system/xbin/sed", "/system/xbin/seq", "/system/xbin/setconsole",
-        "/system/xbin/setserial", "/system/xbin/setsid", "/system/xbin/sh",
-        "/system/xbin/sha1sum", "/system/xbin/sha256sum",
-        "/system/xbin/sha512sum", "/system/xbin/sleep", "/system/xbin/sort",
-        "/system/xbin/split", "/system/xbin/stat", "/system/xbin/strings",
-        "/system/xbin/stty", "/system/xbin/sum", "/system/xbin/swapoff",
-        "/system/xbin/swapon", "/system/xbin/sync", "/system/xbin/sysctl",
-        "/system/xbin/tac", "/system/xbin/tail", "/system/xbin/tar",
-        "/system/xbin/taskset", "/system/xbin/tee", "/system/xbin/telnet",
-        "/system/xbin/telnetd", "/system/xbin/test", "/system/xbin/tftp",
-        "/system/xbin/tftpd", "/system/xbin/time", "/system/xbin/timeout",
-        "/system/xbin/top", "/system/xbin/touch", "/system/xbin/tr",
-        "/system/xbin/traceroute", "/system/xbin/true", "/system/xbin/ttysize",
-        "/system/xbin/tune2fs", "/system/xbin/umount", "/system/xbin/uname",
-        "/system/xbin/uncompress", "/system/xbin/unexpand", "/system/xbin/uniq",
-        "/system/xbin/unix2dos", "/system/xbin/unlzma", "/system/xbin/unlzop",
-        "/system/xbin/unxz", "/system/xbin/unzip", "/system/xbin/uptime",
-        "/system/xbin/usleep", "/system/xbin/uudecode", "/system/xbin/uuencode",
-        "/system/xbin/vi", "/system/xbin/watch", "/system/xbin/wc",
-        "/system/xbin/wget", "/system/xbin/which", "/system/xbin/whoami",
-        "/system/xbin/xargs", "/system/xbin/xz", "/system/xbin/xzcat",
-        "/system/xbin/yes",
-        "/system/xbin/zcat");
-ui_print("Linking toolbox with bin");
-symlink("mksh", "/system/bin/sh");
-symlink("toolbox", "/system/bin/cat", "/system/bin/chmod",
-        "/system/bin/chown", "/system/bin/cmp", "/system/bin/date",
-        "/system/bin/dd", "/system/bin/df", "/system/bin/dmesg",
-        "/system/bin/getevent", "/system/bin/getprop", "/system/bin/hd",
-        "/system/bin/id", "/system/bin/ifconfig", "/system/bin/iftop",
-        "/system/bin/insmod", "/system/bin/ioctl", "/system/bin/ionice",
-        "/system/bin/kill", "/system/bin/ln", "/system/bin/log",
-        "/system/bin/ls", "/system/bin/lsmod", "/system/bin/lsof",
-        "/system/bin/mkdir", "/system/bin/mount", "/system/bin/mv",
-        "/system/bin/nandread", "/system/bin/netstat",
-        "/system/bin/newfs_msdos", "/system/bin/notify", "/system/bin/printenv",
-        "/system/bin/ps", "/system/bin/r", "/system/bin/reboot",
-        "/system/bin/renice", "/system/bin/rm", "/system/bin/rmdir",
-        "/system/bin/rmmod", "/system/bin/route", "/system/bin/schedtop",
-        "/system/bin/sendevent", "/system/bin/setconsole",
-        "/system/bin/setprop", "/system/bin/sleep", "/system/bin/smd",
-        "/system/bin/start", "/system/bin/stop", "/system/bin/sync",
-        "/system/bin/top", "/system/bin/touch", "/system/bin/umount",
-        "/system/bin/uptime", "/system/bin/vmstat", "/system/bin/watchprops",
-        "/system/bin/wipe");
 
 #
 # CDMA/GSM SUPPORT
@@ -1238,6 +1071,13 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/chmod",
       ui_print("Support for the marvelc....");
       package_extract_dir("device/marvelc","/system");
     endif;
+
+
+#
+#
+## ALERT!!!
+#	MIUI NEEDS TO BE INTERGRATED INTO THE BELLOW STRUCTURE!
+#  
 
 #
 # build.prop setup

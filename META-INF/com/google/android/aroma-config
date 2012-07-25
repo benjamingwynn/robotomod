@@ -310,10 +310,11 @@ menubox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
-          "Cyanogenmod 9",           "Alpha 6",                                                  "@install",
-          "AOKP Build 38",           "Build 38",                                                 "@install",
-	  "ParanoidAndroid",         "Alpha 2",                                                  "@install",
-          "No core",                 "Keep your current ICS installation",                       "@install"
+          "Cyanogenmod 9",           "Alpha 6",                                                  "@install", #1
+          "AOKP Build 38",           "Build 38",                                                 "@install", #2
+	  "ParanoidAndroid",         "Alpha 2",                                                  "@install", #3
+	  "MIUI v4",                 "WIP!! DOENST CURRENTLY FLASH!",                            "@install", #4
+          "No core",                 "Keep your current ICS installation",                       "@install"  #5
 );
 else
 menubox(
@@ -333,9 +334,10 @@ menubox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#
 	  
-          "Cyanogenmod 9",           "Alpha 6",                                                  "@install",
-          "AOKP Build 38",           "Build 38",                                                 "@install",
-	  "ParanoidAndroid",         "Alpha 2 - now with working Wi-Fi!",                        "@install"
+          "Cyanogenmod 9",           "Alpha 6",                                                  "@install", #1
+          "AOKP Build 38",           "Build 38",                                                 "@install", #2
+	  "ParanoidAndroid",         "Alpha 2 - now with working Wi-Fi!",                        "@install", #3
+	  "MIUI v4",                 "WIP!! DOENST CURRENTLY FLASH!",                            "@install"  #4
 );
 endif;
 ###################################################################################################
@@ -401,6 +403,28 @@ agreebox(
   
   #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
     resread("paranoid.txt"),
+
+  #-- Checkbox Text
+    "I understand, continue the installation",
+  
+  #-- Unchecked Alert Message
+    "Please check the checkbox to continue!"
+);
+endif;
+
+if prop("core.prop","selected")=="4" then
+agreebox(
+  #-- Title
+    "MIUI v4",
+  
+  #-- Subtitle / Description
+    "Please read through the following notice:",
+  
+  #-- Icon
+    "@agreement",
+  
+  #-- Text Content ( Read from <AROMA Resource Dir>/license.txt )
+    resread("miui.txt"),
 
   #-- Checkbox Text
     "I understand, continue the installation",
@@ -1145,6 +1169,7 @@ menubox(
           "No",               "No, don't enable OTA updates and don't install GooManager",   "@install"
 );
 endif;
+
 if prop("type.prop","selected")=="3" then writetmpfile("ota.prop","selected=0\n"); endif;
 ##################################################################################################################
 # [[Cookiejar]]

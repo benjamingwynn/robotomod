@@ -969,6 +969,8 @@ lib/libwebcore.so", "bb94f9121186c3abdae8a05410d78c4c268103b1", "/system/lib/lib
       package_extract_dir("packages/core/miui/lib","/system/lib");
       ui_print("Extracting vendor...");
       package_extract_dir("packages/core/miui/vendor","/system/vendor");
+      ui_print("Extracting miui media...");
+      package_extract_dir("packages/core/miui/media","/system/media");
     endif;
 
 ###########################################################################

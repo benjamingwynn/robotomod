@@ -1094,7 +1094,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1113,7 +1113,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1131,7 +1131,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1150,7 +1150,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1170,7 +1170,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1189,7 +1189,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1207,7 +1207,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+   write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1226,7 +1226,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
-  #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+   write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvel");
   write("/system/build.prop","ro.product.brand=htc_europe");
@@ -1245,7 +1245,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
-  #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+   write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
 
 #- If beats audio full = no
@@ -1256,8 +1256,85 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+ write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
+
+##- For MIUI
+#- If beats audio full = yes & hdit = yes
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "1" && 
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=130");
+  write("/system/build.prop","ro.cm.device=marvel");
+  write("/system/build.prop","ro.product.brand=htc_europe");
+  write("/system/build.prop","ro.product.board=marvel");
+  write("/system/build.prop","ro.product.name=htc_marvel");
+  write("/system/build.prop","ro.product.device=marvel");
+  write("/system/build.prop","ro.telephony.default_network=1");
+endif;
+
+#- If beats audio full = no & hdit = yes
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "2" || 
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "3" &&
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=130");
+  write("/system/build.prop","ro.cm.device=marvel");
+  write("/system/build.prop","ro.product.brand=htc_europe");
+  write("/system/build.prop","ro.product.board=marvel");
+  write("/system/build.prop","ro.product.name=htc_marvel");
+  write("/system/build.prop","ro.product.device=marvel");
+  write("/system/build.prop","ro.telephony.default_network=1");
+endif;
+
+#- If beats audio full = yes & hdit = no
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "1" && 
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "0"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=160");
+  write("/system/build.prop","ro.cm.device=marvel");
+  write("/system/build.prop","ro.product.brand=htc_europe");
+  write("/system/build.prop","ro.product.board=marvel");
+  write("/system/build.prop","ro.product.name=htc_marvel");
+  write("/system/build.prop","ro.product.device=marvel");
+  write("/system/build.prop","ro.telephony.default_network=1");
+endif;
+
+#- If beats audio full = no & hdit = no
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "2" || 
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "3" &&
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=160");
+  write("/system/build.prop","ro.cm.device=marvel");
+  write("/system/build.prop","ro.product.brand=htc_europe");
+  write("/system/build.prop","ro.product.board=marvel");
+  write("/system/build.prop","ro.product.name=htc_marvel");
+  write("/system/build.prop","ro.product.device=marvel");
+  write("/system/build.prop","ro.telephony.default_network=1");
+endif;
+
+
 endif;
 
 ##- For marvelc
@@ -1271,7 +1348,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1290,7 +1367,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1308,7 +1385,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1327,7 +1404,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD CM9");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1347,7 +1424,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1366,7 +1443,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=130");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1384,7 +1461,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1403,7 +1480,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD AOKP");
   write("/system/build.prop","ro.sf.lcd_density=160");
   write("/system/build.prop","ro.cm.device=marvelc");
   write("/system/build.prop","ro.product.brand=htc_marvelc");
@@ -1422,7 +1499,7 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
 
 #- If beats audio full = no
@@ -1433,8 +1510,84 @@ if
 then
   write("/system/build.prop","ro.product.model=HTC Wildfire S");
   write("/system/build.prop","ro.goo.version=2");
- #write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD PA");
 endif;
+
+##- For MIUI
+#- If beats audio full = yes & hdit = yes
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "1" && 
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=130");
+  write("/system/build.prop","ro.cm.device=marvelc");
+  write("/system/build.prop","ro.product.brand=htc_marvelc");
+  write("/system/build.prop","ro.product.board=marvelc");
+  write("/system/build.prop","ro.product.name=htc_marvelc");
+  write("/system/build.prop","ro.product.device=marvelc");
+  write("/system/build.prop","ro.telephony.default_network=4");
+endif;
+
+#- If beats audio full = no & hdit = yes
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "2" || 
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "3" &&
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=130");
+  write("/system/build.prop","ro.cm.device=marvelc");
+  write("/system/build.prop","ro.product.brand=htc_marvelc");
+  write("/system/build.prop","ro.product.board=marvelc");
+  write("/system/build.prop","ro.product.name=htc_marvelc");
+  write("/system/build.prop","ro.product.device=marvelc");
+  write("/system/build.prop","ro.telephony.default_network=4");
+endif;
+
+#- If beats audio full = yes & hdit = no
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "1" && 
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "0"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S with Beats Audio");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=160");
+  write("/system/build.prop","ro.cm.device=marvelc");
+  write("/system/build.prop","ro.product.brand=htc_marvelc");
+  write("/system/build.prop","ro.product.board=marvelc");
+  write("/system/build.prop","ro.product.name=htc_marvelc");
+  write("/system/build.prop","ro.product.device=marvelc");
+  write("/system/build.prop","ro.telephony.default_network=4");
+endif;
+
+#- If beats audio full = no & hdit = no
+if
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "2" || 
+  file_getprop("/tmp/aroma/mods.prop","selected.8") == "3" &&
+  file_getprop("/tmp/aroma/core.prop","selected") == "4" && 
+  file_getprop("/tmp/aroma/hdit.prop","selected") == "1"
+then
+  write("/system/build.prop","ro.product.model=HTC Wildfire S");
+  write("/system/build.prop","ro.goo.version=2");
+  write("/system/build.prop","ro.goo.rom=RobotoMOD MIUI");
+  write("/system/build.prop","ro.sf.lcd_density=160");
+  write("/system/build.prop","ro.cm.device=marvelc");
+  write("/system/build.prop","ro.product.brand=htc_marvelc");
+  write("/system/build.prop","ro.product.board=marvelc");
+  write("/system/build.prop","ro.product.name=htc_marvelc");
+  write("/system/build.prop","ro.product.device=marvelc");
+  write("/system/build.prop","ro.telephony.default_network=4");
+endif;
+
 endif;
 
 set_progress(1.00);

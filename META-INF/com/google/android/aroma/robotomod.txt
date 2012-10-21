@@ -5,9 +5,15 @@ Welcome to RobotoMOD, let's run you past some basics...
 
 RobotoMOD is a free, open ROM. Anybody can take the source used in any part of RobotoMOD (where avalible) and use it. This is stated in the licence on the next page, that's the legal stuff. RobotoMOD is based on Android and always will be.
 
+<b>Changelog:</b>
+<u>RobotoMOD 2.0</u>
+* Updated ParanoidAndroid core to beta1
+* Fixed LOADS of bugs
+* Added MIUI and AOKP core
+
 Updates
 
-When RobotoMOD is updated you will be notified on the main thread, at the date of the writing of this document (20/06/12 - DD/MM/YY) the thread has not been created. It is recommended you re-read through this document when it is done so. You will also be able to download updates aprox. 72 hours after they are published to the main hosting server, goo.im thanks to an update notification system installed called Goo Manager. There is an option to not install this software during the installation, if you wish for it to be disabled.
+When RobotoMOD is updated you will be notified on the main thread. You will also be able to download updates aprox. 72 hours after they are published to the main hosting server, goo.im thanks to an update notification system installed called Goo Manager. There is an option to not install this software during the installation, if you wish for it to be disabled.
 
 Your information
 
@@ -15,7 +21,7 @@ We will NEVER collect, store or use your information in anyway when you're using
 
 This document
 
-We don't if anybody reads this document anyway, but any updates to it will be stated at the top of the document whenever it is updated. This will include what was changed briefly and when it was changed.
+We don't know if anybody reads this document anyway, but any updates to it will be stated at the top of the document whenever it is updated. This will include what was changed briefly and when it was changed.
 
 Packages
 

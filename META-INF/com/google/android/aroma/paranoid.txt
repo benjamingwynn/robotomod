@@ -9,8 +9,6 @@ Because you are selecting this core as your base, it means you will suffer the f
 
 - HQ videos don't work
 - Sometimes a pop up will appear saying a new SIM card has been inserted and wants you to restart the phone. Just press back when this message appears
-- Tablet mode doesn't work
-- Gyroscope/accelerometer doesn't work
 
 Credit to the following people:
 

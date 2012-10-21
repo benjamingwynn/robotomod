@@ -63,46 +63,6 @@ viewbox(
 
 
 ##########################################################################################
-# [[Device other than marvel(c/ct) warning - you never know if the ROM makes it's way to a device other than the WFS]]
-#
-#-
-#- Checks build.prop of the current ROM to see if it is anything other than marvel, marvelc or marvelct
-#-
-if file_getprop("/system/build.prop","ro.product.device")=="marvel" || file_getprop("/system/build.prop","ro.product.device")=="marvelc" || file_getprop("/system/build.prop","ro.product.device")=="marvelct" then
-
-#- If marvel, marvelc or marvelct, then just do something irrelevant
-setvar("somethingrandom","sowedontgeterrors");
-
-else
-
-#- If anything other than marvel, marvelc or marvelct, display an error and reboot the device
-viewbox(
-  #-- Title
-    "Sorry",
-  
-  #-- Text
-     "RobotoMOD is not yet designed for your phone. Please click 'Restart' to cancel the installation and return to your current ROM.",
-  
-  #-- Icon
-    "@alert"
-);
-
-#
-# Change the next button to a restart button
-#
-
-ini_set("text_next", "Restart");
-
-#
-# Restart the device
-#
-
-reboot("now");
-
-endif;
-
-
-##########################################################################################
 # [[Location information]] 
 #
 
